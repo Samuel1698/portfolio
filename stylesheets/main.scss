@@ -5,6 +5,15 @@ html {
   overflow-y: auto;
   font-family: 'Open Sans', sans-serif;
 }
+.sr-only {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}
 ul {
   margin: 0;
   padding: 0;
@@ -64,16 +73,54 @@ header {
   }
 }
 main {
-  .column {
-    box-shadow: 0 0 0 1px #E6ECF8;
-    margin: 12px;
-    padding: 12px;
+  margin-top: 10px;
+  .columns {
+    position: relative;
+    box-shadow: 0 0 0 1px $primary;
+    margin: 0 20px;
+    padding: 12px 0;
     border-radius: 12px;
-    h3, h4 {
+    h3, h4, h5 {
       font-family: 'Yanone Kaffeesatz', sans-serif;
       font-weight: normal;
       font-size: 1.2rem;
       text-align: center;
+    }
+    h4 {
+      margin-bottom: 10px;
+    }
+    h5 {
+      font-weight: lighter;
+      font-size: 1rem;
+      margin: 0 0 10px;
+    }
+  }
+  .column {
+    margin: 12px;
+    .border {
+      margin-top: 10px;
+      border-bottom: 1px solid $primary;
+      position: absolute;
+      left: 0;
+      right: 0;
+    }
+  }
+  .cert {
+    ul { 
+      li {
+        display: flex;
+        align-items: center;
+        button {
+          display: inline-block;
+          cursor: pointer;
+          margin-left: auto;
+          height: 22px;
+          width: 22px;
+          border: none;
+          background-color: white;
+          background: url("../images/image.svg") center/24px no-repeat;
+        }
+      }
     }
   }
 }
