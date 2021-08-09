@@ -1,0 +1,1 @@
+document.querySelector(".cert ul").addEventListener("click",(function(t){window.history.pushState("","","?"+t.target.classList[0])}));

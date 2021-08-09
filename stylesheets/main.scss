@@ -110,15 +110,12 @@ main {
       li {
         display: flex;
         align-items: center;
-        button {
+        cursor: pointer;
+        img {
           display: inline-block;
-          cursor: pointer;
           margin-left: auto;
           height: 22px;
           width: 22px;
-          border: none;
-          background-color: white;
-          background: url("../images/image.svg") center/24px no-repeat;
         }
       }
     }
