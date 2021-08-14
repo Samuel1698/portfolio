@@ -14,6 +14,11 @@ html {
   white-space: nowrap; 
   width: 1px;
 }
+.image-cropper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
 ul {
   margin: 0;
   padding: 0;
@@ -74,7 +79,7 @@ header {
   }
 }
 main {
-  margin-top: 10px;
+  margin: 10px auto;
   .columns {
     position: relative;
     box-shadow: 0 0 0 1px $primary;
@@ -104,7 +109,8 @@ main {
     }
   }
   .cert {
-    ul { 
+    ul {
+      margin: 30px 0;
       li {
         display: flex;
         align-items: center;
@@ -136,6 +142,26 @@ main {
           font-size: 0.9em;
         }
       }
+    }
+  }
+  .testimony {
+    // text-align: justify;
+    .title {
+      height: 48px;
+      text-align: center;
+      .image-cropper, p {
+        display: inline-block;
+        margin: 0;
+      }
+      p {
+        margin-left: 5px;
+        line-height: 48px;
+        vertical-align: bottom;
+        font-weight: normal;
+      }
+    }
+    p {
+      font-weight: lighter;
     }
   }
 }
