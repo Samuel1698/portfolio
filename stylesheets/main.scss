@@ -31,6 +31,7 @@ header {
   font-family: 'Yanone Kaffeesatz', sans-serif;
   font-weight: normal;
   background-color: $primary;
+  background-image: linear-gradient(180deg, $dark-slate-grey, $primary);
   color: white;
   text-align: center;
   position: relative;
