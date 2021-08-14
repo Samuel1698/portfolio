@@ -98,11 +98,8 @@ main {
   .column {
     margin: 12px;
     .border {
-      margin-top: 10px;
+      margin: 30px -12px;
       border-bottom: 1px solid $primary;
-      position: absolute;
-      left: 0;
-      right: 0;
     }
   }
   .cert {
@@ -117,6 +114,21 @@ main {
           height: 22px;
           width: 22px;
         }
+      }
+    }
+  }
+  .me {
+    ul li {
+      width: 49%;
+      display: inline-block;
+      text-align: center;
+      margin: 0.5em 0;
+      img {
+        width: 100%;
+      }
+      span {
+        font-weight: lighter;
+        font-size: 0.9em;
       }
     }
   }

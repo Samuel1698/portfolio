@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64" width="64px" height="64px">
+<defs>
+<linearGradient id="linear0" gradientUnits="userSpaceOnUse" x1="86" y1="68.980057" x2="86" y2="143.418442" gradientTransform="matrix(0.372093,0,0,0.372093,0,0)">
+<stop offset="0" style="stop-color:rgb(19.607843%,40.392157%,44.313726%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(17.254902%,54.901963%,60.000002%);stop-opacity:1;"/>
+</linearGradient>
+<linearGradient id="linear1" gradientUnits="userSpaceOnUse" x1="83.70488" y1="28.21875" x2="83.70488" y2="80.310562" gradientTransform="matrix(0.372093,0,0,0.372093,0,0)">
+<stop offset="0" style="stop-color:rgb(36.078432%,65.882355%,71.764708%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(38.82353%,76.862746%,82.352942%);stop-opacity:1;"/>
+</linearGradient>
+</defs>
+<g id="surface87461494">
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear0);" d="M 55 51 L 55 30 L 53 30 L 53 51 L 49 51 L 49 26 L 47 26 L 47 51 L 43 51 L 43 33 L 41 33 L 41 51 L 35 51 L 35 37 L 33 37 L 33 51 L 29 51 L 29 42 L 27 42 L 27 51 L 23 51 L 23 30 L 21 30 L 21 51 L 17 51 L 17 46 L 15 46 L 15 51 L 11 51 L 11 42 L 9 42 L 9 51 L 6 51 L 6 53 L 58 53 L 58 51 Z M 55 51 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear1);" d="M 50.8125 11.066406 L 45.632812 12.5 C 44.996094 12.679688 44.785156 13.476562 45.253906 13.945312 L 46.945312 15.640625 L 36.121094 26.464844 C 34.949219 27.636719 33.050781 27.636719 31.878906 26.464844 L 25.535156 20.121094 C 23.585938 18.171875 20.414062 18.171875 18.464844 20.121094 L 9.292969 29.292969 L 10.707031 30.707031 L 19.878906 21.535156 C 21.050781 20.363281 22.949219 20.363281 24.121094 21.535156 L 30.464844 27.878906 C 32.414062 29.828125 35.585938 29.828125 37.535156 27.878906 L 48.359375 17.054688 L 50.054688 18.746094 C 50.523438 19.214844 51.320312 19.003906 51.5 18.363281 L 52.933594 13.1875 C 53.292969 11.894531 52.105469 10.707031 50.8125 11.066406 Z M 50.8125 11.066406 "/>
+</g>
+</svg>
