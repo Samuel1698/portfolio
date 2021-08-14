@@ -118,17 +118,22 @@ main {
     }
   }
   .me {
-    ul li {
-      width: 49%;
-      display: inline-block;
-      text-align: center;
-      margin: 0.5em 0;
-      img {
-        width: 100%;
-      }
-      span {
-        font-weight: lighter;
-        font-size: 0.9em;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      li {
+        width: 50%;
+        display: inline-block;
+        text-align: center;
+        margin: 0.5em 0;
+        img {
+          width: 100%;
+        }
+        span {
+          font-weight: lighter;
+          font-size: 0.9em;
+        }
       }
     }
   }
