@@ -43,9 +43,10 @@ header {
   width: 100%;
   overflow: hidden;
   nav {
-    text-align: initial;
+    text-align: end;
     ul li {
       display: inline-block;
+      margin: 5px;
     }
   }
   .logo {
@@ -72,7 +73,7 @@ header {
       bottom: 0;
       right: -4rem;
       left: -4rem;
-      border-bottom: 1px solid #2E2C2A; //Color of shirt in drawing
+      border-bottom: 1px solid #1c1814; //Color of shirt in drawing
     }
   }
   h1 {
