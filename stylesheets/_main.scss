@@ -1,0 +1,108 @@
+@use 'variables' as v;
+
+main {
+  margin: 10px auto;
+  .columns {
+    position: relative;
+    box-shadow: 0 0 3px 1px v.$primary;
+    margin: 0 auto;
+    width: 300px;
+    border-radius: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    @media (min-width: 600px){
+      width: 600px;
+    }
+    @media (min-width: 900px){
+      width: 900px;
+    }
+    h3 {
+      margin-top: 20px;
+    }
+    h3, h4, h5 {
+      font-family: 'Yanone Kaffeesatz', sans-serif;
+      font-weight: normal;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+    h4 {
+      margin-bottom: 10px;
+    }
+    h5 {
+      font-weight: lighter;
+      font-size: 1rem;
+      margin: 0 0 40px;
+    }
+  }
+  .column {
+    display: flex;
+    flex-direction: column;
+    width: 256px;
+    padding: 12px;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: auto 0 20px;
+      li {
+        width: 50%;
+        display: inline-block;
+        text-align: center;
+        margin: 0.5em 0;
+        img {
+          width: 100%;
+        }
+        span {
+          font-weight: lighter;
+          font-size: 0.9em;
+        }
+      }
+    }
+  }
+  .cert {
+    ul {
+      display: block;
+      li {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        cursor: pointer;
+        img {
+          display: inline-block;
+          margin-left: auto;
+          height: 22px;
+          width: 22px;
+        }
+      }
+    }
+  }
+  .testimony {
+    p {
+      font-weight: lighter;
+    }
+    .title {
+      height: 48px;
+      text-align: center;
+      .image-cropper, p {
+        display: inline-block;
+        margin: 0;
+      }
+      p {
+        margin-left: 10px;
+        line-height: 48px;
+        vertical-align: bottom;
+        font-weight: normal;
+      }
+    }
+    .content {
+      margin: 16px 5px;
+      padding-left: 10px;
+      border-left: 2px solid v.$primary;
+    }
+  }
+  .work {
+    
+  }
+}

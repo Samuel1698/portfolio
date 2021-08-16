@@ -1,0 +1,79 @@
+@use 'variables' as v;
+
+header {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-weight: normal;
+  background-color: v.$primary;
+  background-image: linear-gradient(180deg, v.$dark-slate-grey, v.$primary);
+  color: white;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  nav {
+    text-align: end;
+    ul li {
+      display: inline-block;
+      margin: 5px;
+    }
+  }
+  .logo {
+    display: inline-block;
+    position: relative;
+    .underlay {
+      overflow: hidden;
+      border-radius: 50%;
+      height: 85%;
+      width: 85%;
+      position: absolute;
+      z-index: 0;
+      bottom: 0;
+      right: 5px;
+      background-color: v.$secundary;
+      background-image: linear-gradient(180deg, v.$secundary, v.$primary);
+    }
+    img {
+      position: relative;
+      z-index: 1;
+    }
+    .logo-border {
+      position: absolute;
+      bottom: 0;
+      right: -4rem;
+      left: -4rem;
+      border-bottom: 1px solid #1c1814; //Color of shirt in drawing
+    }
+  }
+  h1 {
+    margin-top: -2px;
+  }
+  h2 {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    margin: 0;
+    padding: 12px;
+    background-color: v.$secundary;
+    border-radius: 5px;
+  }
+  .border {
+    position: absolute;
+    height: 1.8rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    &::before {
+      background-color: white;
+      z-index: 1;
+      position: absolute;
+      content: '';
+      width: calc(100vw + 100rem);
+      height: 7.2rem;
+      top: 4px;
+      left: -50rem;
+      right: -50rem;
+      border-top-left-radius: 100% 14.4rem;
+      border-top-right-radius: 100% 14.4rem;
+    }
+  }
+}

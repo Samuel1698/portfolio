@@ -1,0 +1,33 @@
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: 'Open Sans', sans-serif;
+}
+.sr-only {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}
+.image-cropper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body {
+  min-width: 320px;
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
