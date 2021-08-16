@@ -1,4 +1,4 @@
-@import 'variables';
+@use 'variables' as v;
 html {
   max-width: 100%;
   overflow-x: hidden;
@@ -35,8 +35,8 @@ body {
 header {
   font-family: 'Yanone Kaffeesatz', sans-serif;
   font-weight: normal;
-  background-color: $primary;
-  background-image: linear-gradient(180deg, $dark-slate-grey, $primary);
+  background-color: v.$primary;
+  background-image: linear-gradient(180deg, v.$dark-slate-grey, v.$primary);
   color: white;
   text-align: center;
   position: relative;
@@ -61,8 +61,8 @@ header {
       z-index: 0;
       bottom: 0;
       right: 5px;
-      background-color: $secundary;
-      background-image: linear-gradient(180deg, $secundary, $primary);
+      background-color: v.$secundary;
+      background-image: linear-gradient(180deg, v.$secundary, v.$primary);
     }
     img {
       position: relative;
@@ -85,7 +85,7 @@ header {
     display: inline-block;
     margin: 0;
     padding: 12px;
-    background-color: $secundary;
+    background-color: v.$secundary;
     border-radius: 5px;
   }
   .border {
@@ -113,7 +113,7 @@ main {
   margin: 10px auto;
   .columns {
     position: relative;
-    box-shadow: 0 0 3px 1px $primary;
+    box-shadow: 0 0 3px 1px v.$primary;
     margin: 0 auto;
     width: 300px;
     border-radius: 12px;
@@ -121,6 +121,12 @@ main {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
+    @media (min-width: 600px){
+      width: 600px;
+    }
+    @media (min-width: 900px){
+      width: 900px;
+    }
     h3 {
       margin-top: 20px;
     }
@@ -207,7 +213,7 @@ main {
     .content {
       margin: 16px 5px;
       padding-left: 10px;
-      border-left: 2px solid $primary;
+      border-left: 2px solid v.$primary;
     }
   }
   .work {
