@@ -1,5 +1,23 @@
 @use 'variables' as v;
 
+
+// ------------------------------------------------------------------------
+// Media queries for about me image
+// ------------------------------------------------------------------------
+main .about img {
+  @media (min-width: 400px){
+    height: 320px;
+    left: -42px;
+  }
+  @media (min-width: 540px){
+    height: 275px;
+    left: -16px;
+  }
+  @media (min-width: 3400px){
+    height: 300px;
+  }
+}
+
 @media (min-width: v.$small){
   .container {
     max-width: v.$small;

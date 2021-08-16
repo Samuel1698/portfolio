@@ -209,7 +209,7 @@ body {
 .container {
   min-width: 300px;
   margin: 0 auto;
-  padding: 0 12px;
+  padding: 0 16px;
 }
 
 header {
@@ -293,7 +293,7 @@ header .border::before {
 }
 
 main {
-  margin: 10px auto;
+  margin: 10px 0;
 }
 main .columns {
   position: relative;
@@ -395,11 +395,23 @@ main .about {
   background-color: #2C8C99;
   padding-top: 40px;
   margin-top: 12px;
-  margin-bottom: -100px;
   position: relative;
   top: -52px;
   margin-bottom: -52px;
   z-index: -1;
+  overflow: hidden;
+}
+main .about img {
+  position: absolute;
+  left: -73px;
+  height: 375px;
+  width: initial;
+}
+main .about p {
+  padding-left: 124px;
+}
+main .about .container {
+  position: relative;
 }
 main .about .swoosh {
   position: relative;
@@ -433,6 +445,24 @@ main .testimony .content {
 }
 footer {
   margin-top: auto;
+}
+
+@media (min-width: 400px) {
+  main .about img {
+    height: 320px;
+    left: -42px;
+  }
+}
+@media (min-width: 540px) {
+  main .about img {
+    height: 275px;
+    left: -16px;
+  }
+}
+@media (min-width: 3400px) {
+  main .about img {
+    height: 300px;
+  }
 }
 
 @media (min-width: 640px) {

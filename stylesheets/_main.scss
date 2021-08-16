@@ -1,7 +1,7 @@
 @use 'variables' as v;
 
 main {
-  margin: 10px auto;
+  margin: 10px 0;
   .columns {
     position: relative;
     box-shadow: 0 0 3px 1px v.$primary;
@@ -82,11 +82,23 @@ main {
     background-color: v.$secundary;
     padding-top: 40px;
     margin-top: 12px;
-    margin-bottom: -100px;
     position: relative;
     top: -52px; //This -32 is the margin between columns and about me
     margin-bottom: -52px;
     z-index: -1;
+    overflow: hidden;
+    img {
+      position: absolute;
+      left: -73px;
+      height: 375px;
+      width: initial;
+    }
+    p {
+      padding-left: 124px;
+    }
+    .container {
+      position: relative;
+    }
     .swoosh {
       position: relative;
       bottom: -4px;
