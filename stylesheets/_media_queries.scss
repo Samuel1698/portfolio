@@ -1,8 +1,10 @@
 @use 'variables' as v;
 
 @media (min-width: v.$small){
-  main {
+  .container {
     max-width: v.$small;
+  }
+  main {
     .columns {
       width: 600px;
       .border.one {
@@ -29,8 +31,10 @@
   }
 }
 @media (min-width: v.$medium){
-  main {
+  .container {
     max-width: v.$medium;
+  }
+  main {
     .columns {
       width: 900px;
       .border.two {

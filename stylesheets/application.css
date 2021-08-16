@@ -206,6 +206,12 @@ body {
   overflow: hidden;
 }
 
+.container {
+  min-width: 300px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
 header {
   font-family: "Yanone Kaffeesatz", sans-serif;
   font-weight: normal;
@@ -307,6 +313,7 @@ main .columns {
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  background-color: white;
 }
 main .columns h3 {
   margin-top: 20px;
@@ -383,6 +390,25 @@ main .cert ul li img {
   height: 22px;
   width: 22px;
 }
+main .about {
+  color: white;
+  background-color: #2C8C99;
+  padding-top: 40px;
+  margin-top: 12px;
+  margin-bottom: -100px;
+  position: relative;
+  top: -52px;
+  margin-bottom: -52px;
+  z-index: -1;
+}
+main .about .swoosh {
+  position: relative;
+  bottom: -4px;
+  width: 100%;
+}
+main .about .swoosh path {
+  fill: white;
+}
 main .testimony p {
   font-weight: lighter;
 }
@@ -410,9 +436,10 @@ footer {
 }
 
 @media (min-width: 640px) {
-  main {
+  .container {
     max-width: 640px;
   }
+
   main .columns {
     width: 600px;
   }
@@ -448,9 +475,10 @@ footer {
   }
 }
 @media (min-width: 940px) {
-  main {
+  .container {
     max-width: 940px;
   }
+
   main .columns {
     width: 900px;
   }

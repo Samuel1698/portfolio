@@ -12,6 +12,7 @@ main {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
+    background-color: white;
     h3 {
       margin-top: 20px;
     }
@@ -73,6 +74,25 @@ main {
           height: 22px;
           width: 22px;
         }
+      }
+    }
+  }
+  .about {
+    color: white;
+    background-color: v.$secundary;
+    padding-top: 40px;
+    margin-top: 12px;
+    margin-bottom: -100px;
+    position: relative;
+    top: -52px; //This -32 is the margin between columns and about me
+    margin-bottom: -52px;
+    z-index: -1;
+    .swoosh {
+      position: relative;
+      bottom: -4px;
+      width: 100%;
+      path {
+        fill: white;
       }
     }
   }
