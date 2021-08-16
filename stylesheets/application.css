@@ -313,7 +313,7 @@ main .columns {
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  background-color: white;
+  background-color: #F0F0F0;
 }
 main .columns h3 {
   margin-top: 20px;
