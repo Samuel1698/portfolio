@@ -255,6 +255,10 @@ header nav ul li a img {
   right: -2px;
   top: -2px;
 }
+header nav ul li a:hover {
+  border-bottom: 2px dashed;
+  margin-bottom: -2px;
+}
 header .logo {
   display: inline-block;
   position: relative;
