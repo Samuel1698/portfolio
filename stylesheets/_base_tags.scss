@@ -25,6 +25,13 @@ ul {
   padding: 0;
   list-style: none;
 }
+a {
+  text-decoration: none;
+  color: initial;
+}
+img {
+  vertical-align: text-bottom;
+}
 body {
   min-width: 320px;
   background-color: v.$background;

@@ -192,6 +192,15 @@ ul {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+  color: initial;
+}
+
+img {
+  vertical-align: text-bottom;
+}
+
 body {
   min-width: 320px;
   background-color: #DBDBDB;
@@ -228,8 +237,23 @@ header nav {
   text-align: end;
 }
 header nav ul li {
+  margin-top: 5px;
   display: inline-block;
-  margin: 5px;
+  font-size: 1.2rem;
+  padding: 5px;
+}
+header nav ul li:not(:last-child) {
+  border-right: 1px solid #F0F0F0;
+}
+header nav ul li a {
+  padding: 5px;
+  color: white;
+}
+header nav ul li a img {
+  vertical-align: top;
+  position: relative;
+  right: -2px;
+  top: -2px;
 }
 header .logo {
   display: inline-block;
