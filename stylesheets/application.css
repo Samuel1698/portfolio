@@ -194,7 +194,7 @@ ul {
 
 body {
   min-width: 320px;
-  background-color: white;
+  background-color: #DBDBDB;
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -279,7 +279,7 @@ header .border {
   right: 0;
 }
 header .border::before {
-  background-color: white;
+  background-color: #DBDBDB;
   z-index: 1;
   position: absolute;
   content: "";
@@ -419,7 +419,7 @@ main .about .swoosh {
   width: 100%;
 }
 main .about .swoosh path {
-  fill: white;
+  fill: #DBDBDB;
 }
 main .testimony p {
   font-weight: lighter;

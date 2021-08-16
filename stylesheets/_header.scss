@@ -63,7 +63,7 @@ header {
     left: 0;
     right: 0;
     &::before {
-      background-color: white;
+      background-color: v.$background;
       z-index: 1;
       position: absolute;
       content: '';
