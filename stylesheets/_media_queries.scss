@@ -1,2 +1,22 @@
 @use 'variables' as v;
 
+@media (min-width: 620px){
+  main .columns {
+    width: 600px;
+    .border.one {
+      width: 0;
+      border-left: 1px solid v.$primary;
+      margin-left: 10px;
+    }
+  }
+}
+@media (min-width: 940px){
+  main .columns {
+    width: 900px;
+    .border.two {
+      width: 0;
+      border-left: 1px solid v.$primary;
+      margin-left: 10px;
+    }
+  }  
+}
