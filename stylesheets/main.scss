@@ -114,9 +114,16 @@ main {
   .columns {
     position: relative;
     box-shadow: 0 0 3px 1px $primary;
-    margin: 0 20px;
-    padding: 12px 0;
+    margin: 0 auto;
+    width: 300px;
     border-radius: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    h3 {
+      margin-top: 20px;
+    }
     h3, h4, h5 {
       font-family: 'Yanone Kaffeesatz', sans-serif;
       font-weight: normal;
@@ -129,19 +136,23 @@ main {
     h5 {
       font-weight: lighter;
       font-size: 1rem;
-      margin: 0 0 10px;
+      margin: 0 0 40px;
     }
   }
   .column {
-    margin: 12px;
-    .border {
-      margin: 30px -12px;
-      border-bottom: 1px solid $primary;
-    }
+    display: flex;
+    flex-direction: column;
+    width: 256px;
+    padding: 12px;
+    // .border {
+    //   margin: 30px -12px;
+    //   border-bottom: 1px solid $primary;
+    // }
     ul {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      margin: auto 0 20px;
       li {
         width: 50%;
         display: inline-block;
@@ -160,7 +171,7 @@ main {
   .cert {
     ul {
       display: block;
-      margin: 30px 0;
+      // margin: 30px 0;
       li {
         display: flex;
         width: 100%;
@@ -206,3 +217,5 @@ main {
 footer {
 	margin-top: auto;
 }
+
+@import 'media_queries';
