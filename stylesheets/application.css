@@ -435,7 +435,7 @@ main .about img {
   height: 375px;
   width: initial;
 }
-main .about p {
+main .about p, main .about h3 {
   padding-left: 124px;
 }
 main .about .container {

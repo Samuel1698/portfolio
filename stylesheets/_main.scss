@@ -93,7 +93,7 @@ main {
       height: 375px;
       width: initial;
     }
-    p {
+    p, h3 {
       padding-left: 124px;
     }
     .container {
@@ -166,11 +166,13 @@ main {
           position: relative;
           z-index: 0;
         }
-        // &:hover, &:focus-visible {
+        // &:hover img, &:focus-visible img {
         //   color: white;
+        //   position: relative;
         //   transition: all 0.5s ease;
-        //   background-color: black;
-        //   opacity: 0.4;
+        //   background-image: linear-gradient(black, black);
+        //   opacity: 0.8;
+        //   z-index: 1;
         // }
       }
     }
