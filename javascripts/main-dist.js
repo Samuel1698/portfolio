@@ -1,1 +1,1 @@
-document.querySelector(".cert ul").addEventListener("click",(function(t){window.history.pushState("","","?"+t.target.classList[0])}));
+document.querySelector(".cert ul").addEventListener("click",(function(e){window.history.pushState("","","?"+e.target.classList[0])}));const item=document.querySelectorAll(".flex_wrapper .item");document.addEventListener("mousemove",(function(){for(let e=0;e<item.length;e++)item[e].matches(":hover")?item[e].classList.add("hover"):item[e].classList.remove("hover")}));

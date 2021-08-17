@@ -428,8 +428,8 @@ main .about {
   padding-top: 40px;
   margin-top: 12px;
   position: relative;
-  top: -52px;
-  margin-bottom: -52px;
+  top: -50px;
+  margin-bottom: -50px;
   z-index: -1;
   overflow: hidden;
 }
@@ -504,37 +504,101 @@ main .work .flex_wrapper {
           justify-content: space-evenly;
   position: relative;
 }
-main .work .flex_wrapper > div {
+main .work .item {
+  position: relative;
+  overflow: hidden;
+  vertical-align: top;
   margin-top: 10px;
   -webkit-box-shadow: 0 0 1px 1px #326771;
           box-shadow: 0 0 1px 1px #326771;
 }
-main .work .flex_wrapper > div a {
-  position: relative;
+main .work .item a {
   display: inline-block;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-main .work .flex_wrapper > div a img {
+main .work .item a img {
   min-width: calc(100% * (16/9) - 100%);
   min-height: calc(100% * (9/16) - 100%);
   position: relative;
   z-index: 0;
 }
-main .work .flex_wrapper > div .overlay {
+main .work .item .image-cropper {
+  border: 4px solid #0CCE6B;
+  height: 30px;
+  width: 30px;
+  background-color: #E5F9EF;
+  margin: 0 auto;
   position: absolute;
+  bottom: 9px;
+  right: 30px;
+}
+main .work .item .image-cropper p {
+  color: #0CCE6B;
+  margin: 0;
+  margin-top: 5px;
+  margin-right: 2px;
+  font-size: 16px;
+}
+main .work .item .hidden, main .work .item .overlay {
+  position: absolute;
+  margin: 0;
+}
+main .work .item .hidden {
   top: 0;
   bottom: 0;
-  left: 0;
+  right: 100%;
+  left: -100%;
+  opacity: 1;
+  color: #DBDBDB;
+  padding: 0 16px;
+}
+main .work .item .hidden ul {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 80%;
+}
+main .work .item .hidden ul li {
+  padding: 4px;
+  margin-top: 4px;
+  background-color: grey;
+  border-radius: 4px;
+}
+main .work .item .hidden ul li, main .work .item .hidden p, main .work .item .hidden .image-cropper {
+  display: inline-block;
+}
+main .work .item .hidden > p {
+  margin: 0;
+  bottom: 20px;
+  position: absolute;
+  width: 100%;
+  left: -25px;
+  color: white;
+}
+main .work .item .overlay {
+  top: -106%;
   right: 0;
+  left: 0;
+  bottom: 100%;
+  opacity: 0.6;
+  background-color: black;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-main .work .flex_wrapper > div a:hover .overlay, main .work .flex_wrapper > div a:focus-visible .overlay {
-  background-color: black;
-  opacity: 0.6;
+main .work .item.hover .overlay {
+  top: 0;
+  bottom: 0;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+}
+main .work .item.hover .hidden {
+  left: 0;
+  right: 0;
+  -webkit-transition: all 1.5s ease;
+  transition: all 1.5s ease;
 }
 main .testimony {
   text-align: center;
