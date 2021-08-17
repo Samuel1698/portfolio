@@ -108,13 +108,76 @@ main {
       }
     }
   }
+  .work {
+    text-align: center;
+    .flex_wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      position: relative;
+     }
+     .bar {
+        display: block;
+        position: relative;
+        height: 24px;
+        line-height: 24px;
+        background-color: v.$secundary;
+        width: 100%;
+        color: white;
+        h4 {
+          font-size: 10px;
+          margin: 0;
+          text-transform: uppercase;
+        }
+        i, i::after, i::before {
+          height: 12px;
+          width: 12px;
+          display: inline-block;
+          background-color: #ff5f57;
+          border-radius: 50%;
+          position: absolute;
+          top: 6px;
+          left: 10px;
+        }
+        i::before {
+          content: " ";
+          left: 16px;
+          background-color: #ffbd2e;
+          top: 0;
+        }
+        i::after {
+          content: " ";
+          left: 32px;
+          background-color: #28ca41;
+          top: 0;
+        }
+      }
+    .flex_wrapper > div a {
+      display: inline-block;
+      transition: all 0.5s ease;
+      img {
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+        min-width: calc(100% * (16/9) - 100%);
+        min-height: calc(100% * (9/16) - 100%);
+        position: relative;
+        z-index: 0;
+      }
+      // &:hover, &:focus-visible {
+      //   color: white;
+      //   transition: all 0.5s ease;
+      //   background-color: black;
+      //   opacity: 0.4;
+      // }
+    }
+  }
   .testimony {
+    text-align: center; 
     p {
       font-weight: lighter;
     }
     .title {
       height: 48px;
-      text-align: center;
       .image-cropper, p {
         display: inline-block;
         margin: 0;
@@ -131,8 +194,5 @@ main {
       padding-left: 10px;
       border-left: 2px solid v.$primary;
     }
-  }
-  .work {
-    
   }
 }

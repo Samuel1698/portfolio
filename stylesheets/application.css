@@ -449,12 +449,77 @@ main .about .swoosh {
 main .about .swoosh path {
   fill: #DBDBDB;
 }
+main .work {
+  text-align: center;
+}
+main .work .flex_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  position: relative;
+}
+main .work .bar {
+  display: block;
+  position: relative;
+  height: 24px;
+  line-height: 24px;
+  background-color: #2C8C99;
+  width: 100%;
+  color: white;
+}
+main .work .bar h4 {
+  font-size: 10px;
+  margin: 0;
+  text-transform: uppercase;
+}
+main .work .bar i, main .work .bar i::after, main .work .bar i::before {
+  height: 12px;
+  width: 12px;
+  display: inline-block;
+  background-color: #ff5f57;
+  border-radius: 50%;
+  position: absolute;
+  top: 6px;
+  left: 10px;
+}
+main .work .bar i::before {
+  content: " ";
+  left: 16px;
+  background-color: #ffbd2e;
+  top: 0;
+}
+main .work .bar i::after {
+  content: " ";
+  left: 32px;
+  background-color: #28ca41;
+  top: 0;
+}
+main .work .flex_wrapper > div a {
+  display: inline-block;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+main .work .flex_wrapper > div a img {
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  min-width: calc(100% * (16/9) - 100%);
+  min-height: calc(100% * (9/16) - 100%);
+  position: relative;
+  z-index: 0;
+}
+main .testimony {
+  text-align: center;
+}
 main .testimony p {
   font-weight: lighter;
 }
 main .testimony .title {
   height: 48px;
-  text-align: center;
 }
 main .testimony .title .image-cropper, main .testimony .title p {
   display: inline-block;
@@ -471,6 +536,7 @@ main .testimony .content {
   padding-left: 10px;
   border-left: 2px solid #326771;
 }
+
 footer {
   margin-top: auto;
 }
