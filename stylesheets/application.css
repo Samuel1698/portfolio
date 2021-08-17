@@ -450,6 +450,7 @@ main .about .swoosh path {
   fill: #DBDBDB;
 }
 main .work {
+  padding: 0;
   text-align: center;
 }
 main .work .flex_wrapper {
@@ -498,6 +499,9 @@ main .work .bar i::after {
   left: 32px;
   background-color: #28ca41;
   top: 0;
+}
+main .work .flex_wrapper > div {
+  margin-top: 10px;
 }
 main .work .flex_wrapper > div a {
   display: inline-block;
