@@ -465,6 +465,7 @@ main .work .bar {
   background-color: #2C8C99;
   width: 100%;
   color: white;
+  z-index: 1;
 }
 main .work .bar h4 {
   font-size: 10px;
@@ -525,26 +526,28 @@ main .work .item a img {
 }
 main .work .item .image-cropper {
   border: 4px solid #0CCE6B;
-  height: 30px;
-  width: 30px;
+  height: 35px;
+  width: 35px;
   background-color: #E5F9EF;
   margin: 0 auto;
   position: absolute;
-  bottom: 9px;
-  right: 30px;
+  bottom: -8px;
+  right: -50px;
 }
-main .work .item .image-cropper p {
+main .work .item .image-cropper span {
   color: #0CCE6B;
   margin: 0;
-  margin-top: 5px;
-  margin-right: 2px;
   font-size: 16px;
+  position: relative;
+  bottom: -8px;
+  left: -1px;
 }
 main .work .item .hidden, main .work .item .overlay {
   position: absolute;
   margin: 0;
 }
 main .work .item .hidden {
+  cursor: pointer;
   top: 0;
   bottom: 0;
   right: 100%;
@@ -567,16 +570,29 @@ main .work .item .hidden ul li {
   background-color: grey;
   border-radius: 4px;
 }
-main .work .item .hidden ul li, main .work .item .hidden p, main .work .item .hidden .image-cropper {
+main .work .item .hidden ul li, main .work .item .hidden a, main .work .item .hidden .image-cropper {
   display: inline-block;
 }
-main .work .item .hidden > p {
-  margin: 0;
-  bottom: 20px;
+main .work .item .hidden a {
+  -webkit-transition: none;
+  transition: none;
+  bottom: 12px;
+  padding: 5px 0;
   position: absolute;
-  width: 100%;
-  left: -25px;
+  width: 132px;
+  left: 42%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   color: white;
+}
+main .work .item .hidden a p {
+  margin: 0;
+}
+main .work .item .hidden a:hover, main .work .item .hidden a:focus-visible {
+  -webkit-transition: none;
+  transition: none;
+  border-bottom: 2px dashed;
+  bottom: 10px;
 }
 main .work .item .overlay {
   top: -106%;
