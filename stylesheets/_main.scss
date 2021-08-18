@@ -210,7 +210,7 @@ main {
         ul {
           position: absolute;
           left: 50%;
-          top: 40%;
+          top: 50%;
           transform: translate(-50%, -50%);
           width: 80%;
           li {
@@ -260,7 +260,8 @@ main {
     .item.hover .hidden, .item > a:focus-visible ~ .hidden {
       left: 0;
       right: 0;
-      transition: all 1.5s ease;
+      transition: all 1s ease;
+      transition-delay: 0.5s;
     }
   }
   .testimony {

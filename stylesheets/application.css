@@ -559,7 +559,7 @@ main .work .item .hidden {
 main .work .item .hidden ul {
   position: absolute;
   left: 50%;
-  top: 40%;
+  top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 80%;
@@ -613,8 +613,10 @@ main .work .item.hover .overlay, main .work .item > a:focus-visible .overlay {
 main .work .item.hover .hidden, main .work .item > a:focus-visible ~ .hidden {
   left: 0;
   right: 0;
-  -webkit-transition: all 1.5s ease;
-  transition: all 1.5s ease;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
 }
 main .testimony {
   text-align: center;
