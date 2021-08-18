@@ -604,13 +604,13 @@ main .work .item .overlay {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-main .work .item.hover .overlay {
+main .work .item.hover .overlay, main .work .item > a:focus-visible .overlay {
   top: 0;
   bottom: 0;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-main .work .item.hover .hidden {
+main .work .item.hover .hidden, main .work .item > a:focus-visible ~ .hidden {
   left: 0;
   right: 0;
   -webkit-transition: all 1.5s ease;

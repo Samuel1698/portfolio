@@ -6,11 +6,17 @@ document.querySelector(".cert ul").addEventListener("click", function(event){
 const item = document.querySelectorAll('.flex_wrapper .item');
 document.addEventListener('mousemove', function checkHover() {
   for (let i=0; i < item.length; i++){
-    if (item[i].matches(':hover') ){
+    if (item[i].matches(':hover')){
       item[i].classList.add('hover');
     }
     else {
       item[i].classList.remove('hover');
     }
+  }
+});
+
+document.querySelector('.pinkwug .hidden').addEventListener('click', function(e){
+  if (!e.target.matches('span') || !e.target.matches('p') || !e.target.matches('a')) {
+    window.open('https://pinkwug.live');
   }
 });
