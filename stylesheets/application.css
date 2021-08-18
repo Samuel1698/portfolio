@@ -367,12 +367,12 @@ main .columns h3, main .columns h4, main .columns h5 {
   text-align: center;
 }
 main .columns h4 {
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
 main .columns h5 {
   font-weight: lighter;
   font-size: 1rem;
-  margin: 0 0 40px;
+  margin: 0 0 20px;
 }
 main .columns .border {
   width: 100%;
@@ -398,13 +398,13 @@ main .column ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: auto 0 20px;
+  margin: auto 0 0;
 }
 main .column ul li {
   width: 50%;
   display: inline-block;
   text-align: center;
-  margin: 0.5em 0;
+  margin: 1em 0 0;
   line-height: 18.4px;
 }
 main .column ul li img {
@@ -416,6 +416,7 @@ main .column ul li span {
 }
 main .cert ul {
   display: block;
+  margin-bottom: 10px;
 }
 main .cert ul li {
   display: -webkit-box;
