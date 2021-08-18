@@ -24,7 +24,7 @@ main .about img {
 // ------------------------------------------------------------------------
 @media (min-width: v.$small){
   .container {
-    max-width: v.$small;
+    max-width: calc(#{v.$small} - 40px);
   }
   main {
     .columns {
@@ -60,7 +60,7 @@ main .about img {
 // ------------------------------------------------------------------------
 @media (min-width: v.$medium){
   .container {
-    max-width: v.$medium;
+    max-width: calc(#{v.$medium} - 40px);
   }
   main {
     .columns {

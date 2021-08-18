@@ -695,7 +695,7 @@ footer {
 
 @media (min-width: 640px) {
   .container {
-    max-width: 640px;
+    max-width: calc(640px - 40px);
   }
 
   main .columns {
@@ -737,7 +737,7 @@ footer {
 }
 @media (min-width: 940px) {
   .container {
-    max-width: 940px;
+    max-width: calc(940px - 40px);
   }
 
   main .columns {
