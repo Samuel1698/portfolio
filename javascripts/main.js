@@ -14,6 +14,18 @@ document.addEventListener('mousemove', function checkHover() {
     }
   }
 });
+document.addEventListener('keydown', function(e){
+  if (e.keyCode == 9) {
+    for (let i=0; i < item.length; i++){
+      if (item[i].querySelector('.link').matches(':focus-visible')){
+        item[i].classList.add('hover');
+      }
+      else {
+        item[i].classList.remove('hover');
+      }
+    }
+  }
+});
 
 document.querySelector('.pinkwug .hidden').addEventListener('click', function(e){
   if (!e.target.matches('span') || !e.target.matches('p') || !e.target.matches('a')) {
