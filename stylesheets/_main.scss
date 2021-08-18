@@ -99,13 +99,13 @@ main {
     }
     img {
       position: absolute;
-      left: -73px;
-      height: 375px;
+      left: -90px;
+      height: 425px;
       width: initial;
     }
     .container {
       position: relative;
-      padding: 0 0 0 132px;
+      padding: 0 0 0 142px;
       min-width: 0;
       width: calc(100% - 152px);
     }
@@ -114,6 +114,7 @@ main {
       position: relative; // To show the svg on top of the image
       width: 100%;
       margin-top: 20px;
+      min-height: 42px;
       path {
         fill: v.$background;
       }

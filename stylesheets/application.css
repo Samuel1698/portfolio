@@ -453,13 +453,13 @@ main .about p:last-of-type {
 }
 main .about img {
   position: absolute;
-  left: -73px;
-  height: 375px;
+  left: -90px;
+  height: 425px;
   width: initial;
 }
 main .about .container {
   position: relative;
-  padding: 0 0 0 132px;
+  padding: 0 0 0 142px;
   min-width: 0;
   width: calc(100% - 152px);
 }
@@ -468,6 +468,7 @@ main .about .swoosh {
   position: relative;
   width: 100%;
   margin-top: 20px;
+  min-height: 42px;
 }
 main .about .swoosh path {
   fill: #DBDBDB;
@@ -675,19 +676,20 @@ footer {
 
 @media (min-width: 400px) {
   main .about img {
-    height: 320px;
+    height: 330px;
     left: -42px;
   }
 }
 @media (min-width: 540px) {
   main .about img {
-    height: 275px;
-    left: -16px;
+    height: 300px;
+    left: -28px;
   }
 }
-@media (min-width: 3400px) {
+@media (min-width: 2500px) {
   main .about img {
-    height: 300px;
+    height: 340px;
+    left: -50px;
   }
 }
 
@@ -730,7 +732,7 @@ footer {
             order: 5;
   }
   main .about .container {
-    width: calc(640px - 170px);
+    width: calc(640px - 180px);
   }
 }
 @media (min-width: 940px) {
@@ -752,6 +754,6 @@ footer {
     width: 256px;
   }
   main .about .container {
-    width: calc(940px - 170px);
+    width: calc(940px - 180px);
   }
 }

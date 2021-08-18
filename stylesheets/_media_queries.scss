@@ -6,15 +6,16 @@
 // ------------------------------------------------------------------------
 main .about img {
   @media (min-width: 400px){
-    height: 320px;
+    height: 330px;
     left: -42px;
   }
   @media (min-width: 540px){
-    height: 275px;
-    left: -16px;
-  }
-  @media (min-width: 3400px){
     height: 300px;
+    left: -28px;
+  }
+  @media (min-width: 2500px){
+    height: 340px;
+    left: -50px;
   }
 }
 
@@ -50,7 +51,7 @@ main .about img {
       order: 5;
     }
     .about .container {
-      width: calc(#{v.$small} - 170px);
+      width: calc(#{v.$small} - 180px);
     }
   }
 }
@@ -74,7 +75,7 @@ main .about img {
       width: 256px;
     }
     .about .container {
-      width: calc(#{v.$medium} - 170px);
+      width: calc(#{v.$medium} - 180px);
     }
   }
 }
