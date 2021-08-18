@@ -18,6 +18,9 @@ main .about img {
   }
 }
 
+// ------------------------------------------------------------------------
+// Rules applying to screens from 640px forward
+// ------------------------------------------------------------------------
 @media (min-width: v.$small){
   .container {
     max-width: v.$small;
@@ -46,8 +49,14 @@ main .about img {
       width: 320px;
       order: 5;
     }
+    .about .container {
+      width: calc(#{v.$small} - 170px);
+    }
   }
 }
+// ------------------------------------------------------------------------
+// Rules applying to screens from 940px forward
+// ------------------------------------------------------------------------
 @media (min-width: v.$medium){
   .container {
     max-width: v.$medium;
@@ -63,6 +72,9 @@ main .about img {
     .languages, .border.one, .skills, .border.two, .cert {
       order: initial;
       width: 256px;
+    }
+    .about .container {
+      width: calc(#{v.$medium} - 170px);
     }
   }
 }

@@ -45,3 +45,16 @@ body {
   margin: 0 auto;
   padding: 0 16px;
 }
+a:focus-visible, button:focus-visible, div:focus-visible, section:focus-visible, li:focus-visible {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    outline: 5px auto Highlight;
+    outline: 5px auto -webkit-focus-ring-color;
+  }
+}

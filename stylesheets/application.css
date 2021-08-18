@@ -221,6 +221,20 @@ body {
   padding: 0 16px;
 }
 
+a:focus-visible, button:focus-visible, div:focus-visible, section:focus-visible, li:focus-visible {
+  position: relative;
+}
+a:focus-visible::after, button:focus-visible::after, div:focus-visible::after, section:focus-visible::after, li:focus-visible::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
 header {
   font-family: "Yanone Kaffeesatz", sans-serif;
   font-weight: normal;
@@ -427,11 +441,15 @@ main .about {
   background-color: #2C8C99;
   padding-top: 40px;
   margin-top: 12px;
+  line-height: 18px;
   position: relative;
-  top: -50px;
-  margin-bottom: -50px;
+  top: -52px;
+  margin-bottom: -52px;
   z-index: -1;
   overflow: hidden;
+}
+main .about p:last-of-type {
+  margin-bottom: 0;
 }
 main .about img {
   position: absolute;
@@ -439,19 +457,27 @@ main .about img {
   height: 375px;
   width: initial;
 }
-main .about p, main .about h3 {
-  padding-left: 124px;
-}
 main .about .container {
   position: relative;
+  padding: 0 0 0 132px;
+  min-width: 0;
+  width: calc(100% - 152px);
 }
 main .about .swoosh {
+  vertical-align: top;
   position: relative;
-  bottom: -5px;
   width: 100%;
+  margin-top: 20px;
 }
 main .about .swoosh path {
   fill: #DBDBDB;
+}
+main .filler {
+  height: 2px;
+  display: block;
+  background-color: #DBDBDB;
+  position: relative;
+  top: -2px;
 }
 main .work {
   padding: 0;
@@ -703,6 +729,9 @@ footer {
         -ms-flex-order: 5;
             order: 5;
   }
+  main .about .container {
+    width: calc(640px - 170px);
+  }
 }
 @media (min-width: 940px) {
   .container {
@@ -721,5 +750,8 @@ footer {
         -ms-flex-order: initial;
             order: initial;
     width: 256px;
+  }
+  main .about .container {
+    width: calc(940px - 170px);
   }
 }

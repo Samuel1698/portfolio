@@ -88,31 +88,43 @@ main {
     background-color: v.$secundary;
     padding-top: 40px;
     margin-top: 12px;
+    line-height: 18px;
     position: relative;
-    top: -50px; //This -32 is the margin between columns and about me
-    margin-bottom: -50px;
+    top: -52px; //This -32 is the margin between columns and about me
+    margin-bottom: -52px;
     z-index: -1;
     overflow: hidden;
+    p:last-of-type {
+      margin-bottom: 0; // Needed to remove extra pixel of whitespace
+    }
     img {
       position: absolute;
       left: -73px;
       height: 375px;
       width: initial;
     }
-    p, h3 {
-      padding-left: 124px;
-    }
     .container {
       position: relative;
+      padding: 0 0 0 132px;
+      min-width: 0;
+      width: calc(100% - 152px);
     }
     .swoosh {
-      position: relative;
-      bottom: -5px;
+      vertical-align: top; //Needed to remove whitespace below
+      position: relative; // To show the svg on top of the image
       width: 100%;
+      margin-top: 20px;
       path {
         fill: v.$background;
       }
     }
+  }
+  .filler {
+    height: 2px;
+    display: block;
+    background-color: v.$background;
+    position: relative;
+    top: -2px;
   }
   .work {
     padding: 0;
