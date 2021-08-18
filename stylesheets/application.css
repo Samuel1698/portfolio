@@ -589,7 +589,7 @@ main .work .item .hidden ul {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 80%;
+  width: 90%;
 }
 main .work .item .hidden ul li {
   padding: 4px;
