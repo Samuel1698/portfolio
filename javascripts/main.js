@@ -1,9 +1,10 @@
 const overlay = document.querySelector('.columns .overlay');
 const img     = overlay.querySelectorAll('img');
-const buttons = document.querySelectorAll('.overlay .arrow');
+const button = document.querySelectorAll('.overlay .arrow');
 
 overlay.addEventListener('click', function(){
   this.classList.remove('active');
+  overlay.querySelector('.wrapper').classList.remove("active");
   for (let i=0; i < img.length; i++){
     img[i].classList.remove('active', 'before', 'after');
   }
@@ -15,6 +16,7 @@ document.querySelector(".cert ul").addEventListener("click", function(e){
 function activateOverlay(e){  
   // Activate overlay on click and enter
   overlay.classList.add("active");
+  overlay.querySelector('.wrapper').classList.add("active");
   // Add active state to corresponding certificate
   for (let i=0; i < img.length; i++){
     if (img[i].classList[0] == e.target.classList[0]){
@@ -32,14 +34,19 @@ function activateOverlay(e){
       });
     }
   }
-  for (let i=0; i < buttons.length; i++) {
-    buttons[i].addEventListener('click', function(event){
-      // Stop overlay click action
-      event.stopPropagation();
-      // Switch the certificate shown
-
-    });
-  }
+  // Prev
+  button[0].addEventListener('click', function(event){
+    // Stop overlay click action
+    event.stopPropagation();
+    // Switch the certificate shown
+  });
+  // After
+  button[1].addEventListener('click', function(event){
+    // Stop overlay click action
+    event.stopPropagation();
+    // Switch the certificate shown
+    
+  });
 };
  
 const item = document.querySelectorAll('.flex_wrapper .item');

@@ -33,8 +33,9 @@ main .about img {
         width: 0;
         border-left: 1px solid v.$secundary;
       }
-      .overlay img.active {
-        width: 90%;
+      .overlay .wrapper.active {
+        width: 90vw;
+        height: calc(90vw * 17/22);
       }
     }
     .languages {
@@ -72,8 +73,9 @@ main .about img {
         width: 0;
         border-left: 1px solid v.$secundary;
       }
-      .overlay img.active {
-        width: 70%;
+      .overlay .wrapper.active {
+        width: 70vw;
+        height: calc(70vw * 17/22);
       }
     }
     .languages, .border.one, .skills, .border.two, .cert {
