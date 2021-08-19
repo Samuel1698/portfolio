@@ -77,16 +77,26 @@ main {
         transform: translate(-50%, -50%);
         overflow: hidden;
         &.active {
+          padding: 7px;
           width: 95vw;
           height: calc(95vw * 17/22);
         }
       }
+      img {
+        position: absolute;
+        z-index: -1;
+        bottom: 50%;
+      }
       img.active {
         position: absolute;
-        transition: all 1s ease-in-out;
-        left: 0;
-        width: 100%;
-        height: 100%;
+        transition: left 1s ease-in-out, 
+                    bottom 1s ease-in-out,
+                    height 1s ease-in-out,
+                    width 1s ease-in-out;
+        left: 3.5px; //To center the image given the 7px buffer
+        bottom: 3.5px; 
+        width: calc(100% - 7px); // Buffer is here to be able to show the focus visible ring
+        height: calc(100% - 7px);
         &.before {
           left: -100%;
         }

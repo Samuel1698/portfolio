@@ -46,6 +46,7 @@ body {
   padding: 0 16px;
 }
 img:focus-visible {
+  margin: -2px;
   padding: 2px;
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;

@@ -222,6 +222,7 @@ body {
 }
 
 img:focus-visible {
+  margin: -2px;
   padding: 2px;
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
@@ -433,16 +434,23 @@ main .columns .overlay .wrapper {
   overflow: hidden;
 }
 main .columns .overlay .wrapper.active {
+  padding: 7px;
   width: 95vw;
   height: calc(95vw * 17/22);
 }
+main .columns .overlay img {
+  position: absolute;
+  z-index: -1;
+  bottom: 50%;
+}
 main .columns .overlay img.active {
   position: absolute;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  -webkit-transition: left 1s ease-in-out, bottom 1s ease-in-out, height 1s ease-in-out, width 1s ease-in-out;
+  transition: left 1s ease-in-out, bottom 1s ease-in-out, height 1s ease-in-out, width 1s ease-in-out;
+  left: 3.5px;
+  bottom: 3.5px;
+  width: calc(100% - 7px);
+  height: calc(100% - 7px);
 }
 main .columns .overlay img.active.before {
   left: -100%;
