@@ -6,6 +6,7 @@ const img     = overlay.querySelectorAll('img');
 const button  = document.querySelectorAll('.overlay .arrow');
 
 overlay.addEventListener('click', function(){
+  // Reset all classes that could be added
   this.classList.remove('active');
   overlay.querySelector('.wrapper').classList.remove("active");
   for (let i=0; i < img.length; i++){
@@ -27,6 +28,7 @@ button[0].addEventListener('click', function(event){
   event.stopPropagation();
   let index = detectActive();
   if (index !== 0) {
+    button[1].tabIndex = 0;
     resetClasses(index);
     assignClasses(index - 1);
   }
@@ -38,6 +40,7 @@ button[1].addEventListener('click', function(event){
   event.stopPropagation();
   let index = detectActive();
   if (index !== (img.length - 1)) {
+    button[0].tabIndex = 0;
     resetClasses(index);
     assignClasses(index + 1);
   }
@@ -69,14 +72,20 @@ function resetClasses(i){
 function assignClasses(i){
   img[i].tabIndex = 0;
   img[i].classList.add('active');
-  if (img[i - 1])
-  img[i - 1].classList.add('active', 'before');
-  else
-  button[0].classList.add('disabled');
-  if (img[i + 1])
-  img[i + 1].classList.add('active', 'after');
-  else 
-  button[1].classList.add('disabled');
+  if (img[i - 1]) {
+    img[i - 1].classList.add('active', 'before');
+  }
+  else {
+    button[0].classList.add('disabled');
+    button[0].tabIndex = -1;
+  }
+  if (img[i + 1]) {
+    img[i + 1].classList.add('active', 'after');
+  }
+  else {
+    button[1].classList.add('disabled');
+    button[1].tabIndex = -1;
+  }
 };
 function activateOverlay(e){  
   // Activate overlay on click and enter

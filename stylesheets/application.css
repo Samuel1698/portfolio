@@ -425,6 +425,9 @@ main .columns .overlay.active button.next {
   background: url("../images/right.svg") center/150px no-repeat;
   left: 90%;
 }
+main .columns .overlay.active button:hover, main .columns .overlay.active button:focus-visible {
+  background-size: 170px;
+}
 main .columns .overlay .wrapper {
   position: absolute;
   left: 50%;

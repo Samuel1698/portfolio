@@ -68,6 +68,9 @@ main {
             background: url("../images/right.svg") center/150px no-repeat;
             left: 90%;
           }
+          &:hover, &:focus-visible {
+            background-size: 170px;
+          }
         }
       }
       .wrapper {
