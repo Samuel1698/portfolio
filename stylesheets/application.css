@@ -394,6 +394,10 @@ main .columns .overlay button {
   width: 0;
   background-color: transparent;
 }
+main .columns .overlay button.disabled {
+  opacity: 0.4;
+  cursor: initial;
+}
 main .columns .overlay.active {
   height: initial;
   top: 0;
@@ -434,17 +438,17 @@ main .columns .overlay .wrapper.active {
   width: 95vw;
   height: calc(95vw * 17/22);
 }
-main .columns .overlay img {
+main .columns .overlay img.active {
   position: absolute;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   width: 100%;
   height: 100%;
 }
-main .columns .overlay img.before {
+main .columns .overlay img.active.before {
   left: -100%;
 }
-main .columns .overlay img.after {
+main .columns .overlay img.active.after {
   left: 100%;
 }
 main .columns .border {
