@@ -398,15 +398,13 @@ main .columns .overlay img {
 main .columns .overlay img.active {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  width: 80%;
+  width: 100%;
   height: auto;
   position: relative;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-color: white;
-  z-index: 3;
 }
 main .columns .border {
   width: 100%;
@@ -739,6 +737,9 @@ footer {
     width: 0;
     border-left: 1px solid #2C8C99;
   }
+  main .columns .overlay img.active {
+    width: 90%;
+  }
   main .languages {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
@@ -780,6 +781,9 @@ footer {
   main .columns .border.two {
     width: 0;
     border-left: 1px solid #2C8C99;
+  }
+  main .columns .overlay img.active {
+    width: 70%;
   }
   main .languages, main .border.one, main .skills, main .border.two, main .cert {
     -webkit-box-ordinal-group: initial;

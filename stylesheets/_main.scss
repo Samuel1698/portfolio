@@ -15,7 +15,7 @@ main {
     h3 {
       margin-top: 20px;
     }
-    h3, h4, h5 {
+    h3, h4, h5 {  
       font-family: 'Yanone Kaffeesatz', sans-serif;
       font-weight: normal;
       font-size: 1.2rem;
@@ -49,14 +49,12 @@ main {
       }
       img.active {
         transition: all 0.5s ease;
-        width: 80%;
+        width: 100%;
         height: auto;
         position: relative;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        background-color: white;
-        z-index: 3;
       }
     }
     .border {
