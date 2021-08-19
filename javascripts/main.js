@@ -1,7 +1,32 @@
-document.querySelector(".cert ul").addEventListener("click", function(event){
-  window.history.pushState("", "", '?' + event.target.classList[0]);
-  // window.location.search.substring(1)
+const overlay = document.querySelector('.columns .overlay');
+const img = overlay.querySelectorAll('img');
+
+overlay.addEventListener('click', function(){
+  this.classList.remove('active');
+  for (let i=0; i < img.length; i++){
+    img[i].classList.remove('active');
+  }
 });
+document.querySelector(".cert ul").addEventListener("click", function(e){
+  activateOverlay(e);
+}); 
+// Reset active states
+
+function activateOverlay(e){
+  // Also need to target pressing Enter on the element lol
+  
+  // Activate overlay on click and enter
+  overlay.classList.add("active");
+  // Add active state to corresponding certificate
+  for (let i=0; i < img.length; i++){
+    if (img[i].classList[0] == e.target.classList[0]){
+      img[i].classList.add('active');
+      img[i].addEventListener('click', function(event){
+        event.stopPropagation();
+      })
+    }
+  }
+};
  
 const item = document.querySelectorAll('.flex_wrapper .item');
 document.addEventListener('mousemove', function checkHover() {

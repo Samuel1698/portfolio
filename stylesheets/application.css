@@ -338,7 +338,6 @@ main {
   margin: 10px 0;
 }
 main .columns {
-  position: relative;
   -webkit-box-shadow: 0 0 3px 1px #326771;
           box-shadow: 0 0 3px 1px #326771;
   margin: 0 auto;
@@ -374,6 +373,41 @@ main .columns h5 {
   font-size: 1rem;
   margin: 0 0 20px;
 }
+main .columns .overlay {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 0;
+  font-size: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+main .columns .overlay.active {
+  height: initial;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+main .columns .overlay img {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+main .columns .overlay img.active {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  width: 80%;
+  height: 80%;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: white;
+  z-index: 3;
+}
 main .columns .border {
   width: 100%;
   border-bottom: 1px solid #2C8C99;
@@ -404,7 +438,7 @@ main .column ul li {
   width: 50%;
   display: inline-block;
   text-align: center;
-  margin: 1em 0 0;
+  padding: 0.5em 0;
   line-height: 18.4px;
 }
 main .column ul li img {
@@ -416,7 +450,6 @@ main .column ul li span {
 }
 main .cert ul {
   display: block;
-  margin-bottom: 10px;
 }
 main .cert ul li {
   display: -webkit-box;
