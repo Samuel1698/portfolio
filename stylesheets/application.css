@@ -399,7 +399,7 @@ main .columns .overlay img.active {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   width: 80%;
-  height: 80%;
+  height: auto;
   position: relative;
   left: 50%;
   top: 50%;
