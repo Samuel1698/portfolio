@@ -428,8 +428,6 @@ main .columns .overlay .wrapper {
   position: absolute;
   left: 50%;
   top: 50%;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   overflow: hidden;
@@ -440,8 +438,9 @@ main .columns .overlay .wrapper.active {
 }
 main .columns .overlay img.active {
   position: absolute;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  left: 0;
   width: 100%;
   height: 100%;
 }

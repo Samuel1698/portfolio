@@ -74,7 +74,6 @@ main {
         position: absolute;
         left: 50%;
         top: 50%;
-        transition: all 0.5s ease;
         transform: translate(-50%, -50%);
         overflow: hidden;
         &.active {
@@ -84,7 +83,8 @@ main {
       }
       img.active {
         position: absolute;
-        transition: all 0.5s ease;
+        transition: all 1s ease-in-out;
+        left: 0;
         width: 100%;
         height: 100%;
         &.before {
