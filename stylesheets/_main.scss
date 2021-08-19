@@ -84,15 +84,15 @@ main {
       }
       img {
         position: absolute;
-        z-index: -1;
+        right: 100%;
         bottom: 50%;
       }
       img.active {
         position: absolute;
         transition: left 1s ease-in-out, 
                     bottom 1s ease-in-out,
-                    height 1s ease-in-out,
-                    width 1s ease-in-out;
+                    height 0.9s ease-in-out,
+                    width 0.9s ease-in-out;
         left: 3.5px; //To center the image given the 7px buffer
         bottom: 3.5px; 
         width: calc(100% - 7px); // Buffer is here to be able to show the focus visible ring

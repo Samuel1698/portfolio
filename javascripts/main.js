@@ -1,6 +1,9 @@
+// ----------------------------------------------------------
+// Certificate carousel
+// ----------------------------------------------------------
 const overlay = document.querySelector('.columns .overlay');
 const img     = overlay.querySelectorAll('img');
-const button = document.querySelectorAll('.overlay .arrow');
+const button  = document.querySelectorAll('.overlay .arrow');
 
 overlay.addEventListener('click', function(){
   this.classList.remove('active');
@@ -10,7 +13,9 @@ overlay.addEventListener('click', function(){
     img[i].classList.remove('active', 'before', 'after');
   }
   button[0].classList.remove('disabled');
+  button[0].tabIndex = -1;
   button[1].classList.remove('disabled');
+  button[1].tabIndex = -1;
 });
 document.querySelector(".cert ul").addEventListener("click", function(e){
   activateOverlay(e);
@@ -65,18 +70,20 @@ function assignClasses(i){
   img[i].tabIndex = 0;
   img[i].classList.add('active');
   if (img[i - 1])
-    img[i - 1].classList.add('active', 'before');
+  img[i - 1].classList.add('active', 'before');
   else
-    button[0].classList.add('disabled');
+  button[0].classList.add('disabled');
   if (img[i + 1])
-    img[i + 1].classList.add('active', 'after');
+  img[i + 1].classList.add('active', 'after');
   else 
-    button[1].classList.add('disabled');
+  button[1].classList.add('disabled');
 };
 function activateOverlay(e){  
   // Activate overlay on click and enter
   overlay.classList.add("active");
   overlay.querySelector('.wrapper').classList.add("active");
+  button[0].tabIndex = 0;
+  button[1].tabIndex = 0;
   // Add active state to corresponding certificate
   for (let i=0; i < img.length; i++){
     if (img[i].classList[0] == e.target.classList[0]){
@@ -89,6 +96,9 @@ function activateOverlay(e){
   }
 };
 
+// ----------------------------------------------------------
+
+// ----------------------------------------------------------
 const item = document.querySelectorAll('.flex_wrapper .item');
 document.addEventListener('mousemove', function checkHover() {
   for (let i=0; i < item.length; i++){
