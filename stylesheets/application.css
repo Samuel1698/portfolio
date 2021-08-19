@@ -400,11 +400,17 @@ main .columns .overlay img.active {
   transition: all 0.5s ease;
   width: 100%;
   height: auto;
-  position: relative;
+  position: absolute;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+main .columns .overlay img.active.before {
+  left: -50%;
+}
+main .columns .overlay img.active.after {
+  left: 150%;
 }
 main .columns .border {
   width: 100%;

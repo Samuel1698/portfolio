@@ -4,7 +4,7 @@ const img = overlay.querySelectorAll('img');
 overlay.addEventListener('click', function(){
   this.classList.remove('active');
   for (let i=0; i < img.length; i++){
-    img[i].classList.remove('active');
+    img[i].classList.remove('active', 'before', 'after');
   }
 });
 document.querySelector(".cert ul").addEventListener("click", function(e){
@@ -12,18 +12,23 @@ document.querySelector(".cert ul").addEventListener("click", function(e){
 }); 
 // Reset active states
 
-function activateOverlay(e){
-  // Also need to target pressing Enter on the element lol
-  
+function activateOverlay(e){  
   // Activate overlay on click and enter
   overlay.classList.add("active");
   // Add active state to corresponding certificate
   for (let i=0; i < img.length; i++){
     if (img[i].classList[0] == e.target.classList[0]){
       img[i].classList.add('active');
+      if (img[i - 1]){
+        img[i - 1].classList.add('active', 'before');
+      }
+      if (img[i + 1]){
+        img[i + 1].classList.add('active', 'after');
+      }
       img[i].addEventListener('click', function(event){
+        // Add event listener to the image to stop propagation to the overlay
         event.stopPropagation();
-      })
+      });
     }
   }
 };
