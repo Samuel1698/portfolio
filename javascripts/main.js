@@ -1,9 +1,10 @@
 // ----------------------------------------------------------
 // Certificate carousel
 // ----------------------------------------------------------
-const overlay = document.querySelector('.columns .overlay');
-const img     = overlay.querySelectorAll('img');
-const button  = document.querySelectorAll('.overlay .arrow');
+const overlay  = document.querySelector('.columns .overlay');
+const img      = overlay.querySelectorAll('img');
+const button   = document.querySelectorAll('.overlay .arrow');
+const listItem = document.querySelectorAll(".cert ul li");
 
 overlay.addEventListener('click', function(){
   // Reset all classes that could be added
@@ -17,10 +18,19 @@ overlay.addEventListener('click', function(){
   button[0].tabIndex = -1;
   button[1].classList.remove('disabled');
   button[1].tabIndex = -1;
+
+  for (let i = 0; i < listItem.length; i++) {
+    listItem[i].tabIndex = 0;
+  }
 });
 document.querySelector(".cert ul").addEventListener("click", function(e){
   activateOverlay(e);
 });
+document.querySelector(".cert ul").addEventListener("keyup", function(e){
+  if (e.code === 'Enter') {
+    activateOverlay(e);
+  }
+})
 // Switch the certificate shown to the previous one
 button[0].addEventListener('click', function(event){
   // Stop overlay click action
@@ -93,6 +103,10 @@ function activateOverlay(e){
   overlay.querySelector('.wrapper').classList.add("active");
   button[0].tabIndex = 0;
   button[1].tabIndex = 0;
+  // Change tabindex of all list items
+  for (let i=0; i < listItem.length; i++) {
+    listItem[i].tabIndex = -1;
+  }
   // Add active state to corresponding certificate
   for (let i=0; i < img.length; i++){
     if (img[i].classList[0] == e.target.classList[0]){
@@ -106,7 +120,7 @@ function activateOverlay(e){
 };
 
 // ----------------------------------------------------------
-
+// Previous work
 // ----------------------------------------------------------
 const item = document.querySelectorAll('.flex_wrapper .item');
 document.addEventListener('mousemove', function checkHover() {
