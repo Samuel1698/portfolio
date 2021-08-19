@@ -120,7 +120,7 @@ document.addEventListener('mousemove', function checkHover() {
   }
 });
 document.addEventListener('keydown', function(e){
-  if (e.keyCode == 9) {
+  if (e.code === 'Tab') {
     for (let i=0; i < item.length; i++){
       if (item[i].querySelector('.link').matches(':focus-visible')){
         item[i].classList.add('hover');
