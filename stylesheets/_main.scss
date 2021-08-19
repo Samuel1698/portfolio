@@ -35,6 +35,13 @@ main {
       height: 0;
       font-size: 0; //Remove inline whitespace
       transition: all 0.5s ease;
+      button {
+        border: none;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+        background-color: transparent;
+      }
       &.active {
         height: initial;
         top: 0;
@@ -43,6 +50,21 @@ main {
         right: 0;
         z-index: 2;
         transition: all 0.5s ease;
+        button {
+          position: absolute;
+          height: 100px;
+          width: 100px;
+          top: 50%;
+          transform: translate(-50%,-50%);
+          &.prev {
+            background: url("../images/left.svg") center/150px no-repeat;
+            left: 10%;
+          }
+          &.next {
+            background: url("../images/right.svg") center/150px no-repeat;
+            left: 90%;
+          }
+        }
       }
       img {
         transition: all 0.5s ease;

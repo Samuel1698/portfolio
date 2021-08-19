@@ -221,6 +221,12 @@ body {
   padding: 0 16px;
 }
 
+img:focus-visible {
+  padding: 2px;
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
 a:focus-visible, button:focus-visible, div:focus-visible, section:focus-visible, li:focus-visible {
   position: relative;
 }
@@ -381,6 +387,13 @@ main .columns .overlay {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
+main .columns .overlay button {
+  border: none;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  background-color: transparent;
+}
 main .columns .overlay.active {
   height: initial;
   top: 0;
@@ -390,6 +403,22 @@ main .columns .overlay.active {
   z-index: 2;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+}
+main .columns .overlay.active button {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+main .columns .overlay.active button.prev {
+  background: url("../images/left.svg") center/150px no-repeat;
+  left: 10%;
+}
+main .columns .overlay.active button.next {
+  background: url("../images/right.svg") center/150px no-repeat;
+  left: 90%;
 }
 main .columns .overlay img {
   -webkit-transition: all 0.5s ease;
