@@ -457,6 +457,15 @@ main .columns .overlay .wrapper.active {
   width: 95vw;
   height: calc(95vw * 17/22);
 }
+main .columns .overlay .wrapper.active .img-border {
+  -webkit-box-shadow: inset 0px 0px 0px 7px #2d2d2d;
+          box-shadow: inset 0px 0px 0px 7px #2d2d2d;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
 main .columns .overlay img {
   position: absolute;
   right: 100%;

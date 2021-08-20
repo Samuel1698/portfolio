@@ -96,6 +96,14 @@ main {
           width: 95vw;
           height: calc(95vw * 17/22);
         }
+        &.active .img-border {
+          box-shadow: inset 0px 0px 0px 7px rgba(45, 45, 45);
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+        }
       }
       img {
         position: absolute;
