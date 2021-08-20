@@ -413,9 +413,9 @@ main .columns .overlay.active button {
   position: absolute;
   height: 100px;
   width: 100px;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  top: calc(50% + (95vw * 17/22)/2);
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
 }
 main .columns .overlay.active button.prev {
   background: url("../images/left.svg") center/150px no-repeat;
@@ -454,7 +454,6 @@ main .columns .overlay .wrapper {
   overflow: hidden;
 }
 main .columns .overlay .wrapper.active {
-  padding: 7px;
   width: 95vw;
   height: calc(95vw * 17/22);
 }
@@ -465,15 +464,12 @@ main .columns .overlay img {
 }
 main .columns .overlay img.active {
   position: absolute;
-  -webkit-transition: left 1s ease-in-out, bottom 1s ease-in-out, height 0.9s ease-in-out, width 0.9s ease-in-out;
-  transition: left 1s ease-in-out, bottom 1s ease-in-out, height 0.9s ease-in-out, width 0.9s ease-in-out;
+  -webkit-transition: left 1s ease-in-out;
+  transition: left 1s ease-in-out;
   left: 3.5px;
   bottom: 3.5px;
   width: calc(100% - 7px);
   height: calc(100% - 7px);
-}
-main .columns .overlay img.active.before {
-  left: -100%;
 }
 main .columns .overlay img.active.after {
   left: 100%;
@@ -858,6 +854,11 @@ footer {
   main .columns .overlay .wrapper.active {
     width: 70vw;
     height: calc(70vw * 17/22);
+  }
+  main .columns .overlay.active button {
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
   main .languages, main .border.one, main .skills, main .border.two, main .cert {
     -webkit-box-ordinal-group: initial;

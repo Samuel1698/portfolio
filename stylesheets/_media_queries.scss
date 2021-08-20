@@ -73,9 +73,15 @@ main .about img {
         width: 0;
         border-left: 1px solid v.$secundary;
       }
-      .overlay .wrapper.active {
-        width: 70vw;
-        height: calc(70vw * 17/22);
+      .overlay {
+        .wrapper.active {
+          width: 70vw;
+          height: calc(70vw * 17/22);
+        }
+        &.active button {
+          top: 50%;
+          transform: translate(-50%,-50%);
+        }
       }
     }
     .languages, .border.one, .skills, .border.two, .cert {

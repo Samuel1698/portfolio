@@ -58,8 +58,8 @@ main {
           position: absolute;
           height: 100px;
           width: 100px;
-          top: 50%;
-          transform: translate(-50%,-50%);
+          top: calc(50% + (95vw * 17/22)/2);
+          transform: translate(-50%, 0%);
           &.prev {
             background: url("../images/left.svg") center/150px no-repeat;
             left: 10%;
@@ -93,7 +93,6 @@ main {
         transform: translate(-50%, -50%);
         overflow: hidden;
         &.active {
-          padding: 7px;
           width: 95vw;
           height: calc(95vw * 17/22);
         }
@@ -105,17 +104,14 @@ main {
       }
       img.active {
         position: absolute;
-        transition: left 1s ease-in-out, 
-                    bottom 1s ease-in-out,
-                    height 0.9s ease-in-out,
-                    width 0.9s ease-in-out;
+        transition: left 1s ease-in-out;
+                    // bottom 1s ease-in-out,
+                    // height 0.9s ease-in-out,
+                    // width 0.9s ease-in-out;
         left: 3.5px; //To center the image given the 7px buffer
         bottom: 3.5px; 
         width: calc(100% - 7px); // Buffer is here to be able to show the focus visible ring
         height: calc(100% - 7px);
-        &.before {
-          left: -100%;
-        }
         &.after {
           left: 100%;
         }
