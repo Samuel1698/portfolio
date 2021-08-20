@@ -26,6 +26,9 @@ main .about img {
   .container {
     max-width: calc(#{v.$small} - 40px);
   }
+  .work.container {
+    max-width: v.$small;
+  }
   main {
     .columns {
       width: 600px;

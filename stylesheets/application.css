@@ -636,7 +636,7 @@ main .work .item {
   position: relative;
   overflow: hidden;
   vertical-align: top;
-  margin-top: 10px;
+  margin: 5px;
   -webkit-box-shadow: 0 0 1px 1px #326771;
           box-shadow: 0 0 1px 1px #326771;
 }
@@ -796,6 +796,10 @@ footer {
 @media (min-width: 640px) {
   .container {
     max-width: calc(640px - 40px);
+  }
+
+  .work.container {
+    max-width: 640px;
   }
 
   main .columns {
