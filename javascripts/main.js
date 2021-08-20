@@ -33,11 +33,14 @@ document.querySelector(".cert ul").addEventListener("keyup", function(e){
 })
 // Switch the certificate shown to the previous one
 button[0].addEventListener('click', function(event){
-  // Stop overlay click action
+  // Reset the other button
   button[1].classList.remove('disabled');
+  // Stop overlay click action
   event.stopPropagation();
   let index = detectActive();
   if (index !== 0) {
+    button[0].classList.add('pressed');
+    setTimeout(function(){button[0].classList.remove('pressed')}, 500);
     button[1].tabIndex = 0;
     resetClasses(index);
     assignClasses(index - 1);
@@ -45,11 +48,14 @@ button[0].addEventListener('click', function(event){
 });
 // Switch the certificate shown to the next one
 button[1].addEventListener('click', function(event){
-  // Stop overlay click action
+  // Reset the other button
   button[0].classList.remove('disabled');
+  // Stop overlay click action
   event.stopPropagation();
   let index = detectActive();
   if (index !== (img.length - 1)) {
+    button[1].classList.add('pressed');
+    setTimeout(function(){button[1].classList.remove('pressed')}, 500);
     button[0].tabIndex = 0;
     resetClasses(index);
     assignClasses(index + 1);

@@ -63,13 +63,26 @@ main {
           &.prev {
             background: url("../images/left.svg") center/150px no-repeat;
             left: 10%;
+            transition: left 0.5s cubic-bezier(.55,.09,.68,.53);
+            &.pressed {
+              transition: left 0.5s cubic-bezier(.55,.09,.68,.53);
+              left: 8%;
+            }
           }
           &.next {
             background: url("../images/right.svg") center/150px no-repeat;
             left: 90%;
+            transition: left 0.5s cubic-bezier(.55,.09,.68,.53);
+            &.pressed {
+              transition: left 0.5s cubic-bezier(.55,.09,.68,.53);
+              left: 92%;
+            }
           }
           &:hover, &:focus-visible {
             background-size: 170px;
+          }
+          &.disabled:hover, &.disabled:focus-visible {
+            background-size: 150px;
           }
         }
       }

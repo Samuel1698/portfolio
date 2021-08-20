@@ -420,13 +420,30 @@ main .columns .overlay.active button {
 main .columns .overlay.active button.prev {
   background: url("../images/left.svg") center/150px no-repeat;
   left: 10%;
+  -webkit-transition: left 0.5s cubic-bezier(0.55, 0.09, 0.68, 0.53);
+  transition: left 0.5s cubic-bezier(0.55, 0.09, 0.68, 0.53);
+}
+main .columns .overlay.active button.prev.pressed {
+  -webkit-transition: left 0.5s cubic-bezier(0.55, 0.09, 0.68, 0.53);
+  transition: left 0.5s cubic-bezier(0.55, 0.09, 0.68, 0.53);
+  left: 8%;
 }
 main .columns .overlay.active button.next {
   background: url("../images/right.svg") center/150px no-repeat;
   left: 90%;
+  -webkit-transition: left 0.5s cubic-bezier(0.55, 0.09, 0.68, 0.53);
+  transition: left 0.5s cubic-bezier(0.55, 0.09, 0.68, 0.53);
+}
+main .columns .overlay.active button.next.pressed {
+  -webkit-transition: left 0.5s cubic-bezier(0.55, 0.09, 0.68, 0.53);
+  transition: left 0.5s cubic-bezier(0.55, 0.09, 0.68, 0.53);
+  left: 92%;
 }
 main .columns .overlay.active button:hover, main .columns .overlay.active button:focus-visible {
   background-size: 170px;
+}
+main .columns .overlay.active button.disabled:hover, main .columns .overlay.active button.disabled:focus-visible {
+  background-size: 150px;
 }
 main .columns .overlay .wrapper {
   position: absolute;
