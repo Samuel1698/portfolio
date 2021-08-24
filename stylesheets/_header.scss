@@ -1,11 +1,11 @@
 @use 'variables' as v;
 
 header {
-  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-family: "Yanone Kaffeesatz", sans-serif;
   font-weight: normal;
   background-color: v.$primary;
-  background-image: linear-gradient(180deg, v.$dark-slate-grey, v.$primary);
-  color: white;
+  background-image: linear-gradient(180deg, v.$secundary -50%, v.$primary);
+  color: v.$color;
   text-align: center;
   position: relative;
   width: 100%;
@@ -17,12 +17,12 @@ header {
       display: inline-block;
       font-size: 1.2rem;
       padding: 5px;
-      &:not(:last-child){
+      &:not(:last-child) {
         border-right: 1px solid v.$columns;
       }
       a {
         padding: 5px;
-        color: white;
+        color: v.$color;
         img {
           vertical-align: top;
           position: relative;
@@ -48,8 +48,8 @@ header {
       z-index: 0;
       bottom: 0;
       right: 5px;
-      background-color: v.$secundary;
-      background-image: linear-gradient(180deg, v.$secundary, v.$primary);
+      background-color: v.$background;
+      // background-image: linear-gradient(180deg, v.$primary, v.$secundary);
     }
     img {
       position: relative;
@@ -60,7 +60,9 @@ header {
       bottom: 0;
       right: -4rem;
       left: -4rem;
-      border-bottom: 1px solid #1c1814; //Color of shirt in drawing
+      z-index: 1;
+      border-bottom: 1px solid v.$color;
+      // border-bottom: 1px solid #1c1814; //Color of shirt in drawing
     }
   }
   h1 {
@@ -85,7 +87,7 @@ header {
       background-color: v.$background;
       z-index: 1;
       position: absolute;
-      content: '';
+      content: "";
       width: calc(100vw + 100rem);
       height: 7.2rem;
       top: 4px;

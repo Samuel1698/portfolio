@@ -1,3 +1,8 @@
+@use 'variables' as v;
+
 footer {
   margin-top: auto;
+  background-color: v.$secundary;
+  padding: 80px 0;
+  color: v.$color;
 }

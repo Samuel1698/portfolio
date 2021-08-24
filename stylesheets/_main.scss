@@ -12,6 +12,7 @@ main {
     flex-direction: row;
     justify-content: space-around;
     background-color: v.$columns;
+    color: black;
     h3 {
       margin-top: 20px;
     }
@@ -186,7 +187,7 @@ main {
     }
   }
   .about {
-    color: white;
+    color: v.$color;
     background-color: v.$secundary;
     padding-top: 40px;
     margin-top: 12px;
@@ -237,9 +238,9 @@ main {
       position: relative;
       height: 24px;
       line-height: 24px;
-      background-color: v.$secundary;
+      background-color: lightgrey;
       width: 100%;
-      color: white;
+      color: black;
       z-index: 1;
       h4 {
         font-size: 10px;
@@ -282,7 +283,7 @@ main {
       overflow: hidden;
       vertical-align: top; //Fix extra space caused by hidden overflow
       margin: 5px;
-      box-shadow: 0 0 1px 1px v.$primary;
+      box-shadow: 0 0 1px 1px v.$tertiary;
       a {
         display: inline-block;
         transition: all 0.5s ease;
@@ -351,7 +352,7 @@ main {
           width: 132px;
           left: 42%;
           transform: translateX(-50%);
-          color: white;
+          color: v.$color;
           p {
             margin: 0;
           }

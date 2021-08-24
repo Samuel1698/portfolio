@@ -203,7 +203,7 @@ img {
 
 body {
   min-width: 320px;
-  background-color: #DBDBDB;
+  background-color: #d6cfcb;
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -245,9 +245,9 @@ a:focus-visible::after, button:focus-visible::after, div:focus-visible::after, s
 header {
   font-family: "Yanone Kaffeesatz", sans-serif;
   font-weight: normal;
-  background-color: #326771;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#28464B), to(#326771));
-  background-image: linear-gradient(180deg, #28464B, #326771);
+  background-color: #565264;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(-50%, #706677), to(#565264));
+  background-image: linear-gradient(180deg, #706677 -50%, #565264);
   color: white;
   text-align: center;
   position: relative;
@@ -264,7 +264,7 @@ header nav ul li {
   padding: 5px;
 }
 header nav ul li:not(:last-child) {
-  border-right: 1px solid #F0F0F0;
+  border-right: 1px solid #dce1de;
 }
 header nav ul li a {
   padding: 5px;
@@ -293,9 +293,7 @@ header .logo .underlay {
   z-index: 0;
   bottom: 0;
   right: 5px;
-  background-color: #2C8C99;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#2C8C99), to(#326771));
-  background-image: linear-gradient(180deg, #2C8C99, #326771);
+  background-color: #d6cfcb;
 }
 header .logo img {
   position: relative;
@@ -306,7 +304,8 @@ header .logo .logo-border {
   bottom: 0;
   right: -4rem;
   left: -4rem;
-  border-bottom: 1px solid #1c1814;
+  z-index: 1;
+  border-bottom: 1px solid white;
 }
 header h1 {
   margin-top: -2px;
@@ -317,7 +316,7 @@ header h2 {
   display: inline-block;
   margin: 0;
   padding: 12px;
-  background-color: #2C8C99;
+  background-color: #706677;
   border-radius: 5px;
 }
 header .border {
@@ -328,7 +327,7 @@ header .border {
   right: 0;
 }
 header .border::before {
-  background-color: #DBDBDB;
+  background-color: #d6cfcb;
   z-index: 1;
   position: absolute;
   content: "";
@@ -345,8 +344,8 @@ main {
   margin: 10px 0;
 }
 main .columns {
-  -webkit-box-shadow: 0 0 3px 1px #326771;
-          box-shadow: 0 0 3px 1px #326771;
+  -webkit-box-shadow: 0 0 3px 1px #565264;
+          box-shadow: 0 0 3px 1px #565264;
   margin: 0 auto;
   width: 300px;
   border-radius: 12px;
@@ -361,7 +360,8 @@ main .columns {
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  background-color: #F0F0F0;
+  background-color: #dce1de;
+  color: black;
 }
 main .columns h3 {
   margin-top: 20px;
@@ -487,7 +487,7 @@ main .columns .overlay img.active.after {
 }
 main .columns .border {
   width: 100%;
-  border-bottom: 1px solid #2C8C99;
+  border-bottom: 1px solid #706677;
 }
 main .column {
   display: -webkit-box;
@@ -550,7 +550,7 @@ main .skills ul li {
 }
 main .about {
   color: white;
-  background-color: #2C8C99;
+  background-color: #706677;
   padding-top: 40px;
   margin-top: 12px;
   line-height: 18px;
@@ -583,12 +583,12 @@ main .about .swoosh {
   min-height: 42px;
 }
 main .about .swoosh path {
-  fill: #DBDBDB;
+  fill: #d6cfcb;
 }
 main .filler {
   height: 2px;
   display: block;
-  background-color: #DBDBDB;
+  background-color: #d6cfcb;
   position: relative;
   top: -2px;
 }
@@ -601,9 +601,9 @@ main .work .bar {
   position: relative;
   height: 24px;
   line-height: 24px;
-  background-color: #2C8C99;
+  background-color: lightgrey;
   width: 100%;
-  color: white;
+  color: black;
   z-index: 1;
 }
 main .work .bar h4 {
@@ -651,8 +651,8 @@ main .work .item {
   overflow: hidden;
   vertical-align: top;
   margin: 5px;
-  -webkit-box-shadow: 0 0 1px 1px #326771;
-          box-shadow: 0 0 1px 1px #326771;
+  -webkit-box-shadow: 0 0 1px 1px #ccb7ae;
+          box-shadow: 0 0 1px 1px #ccb7ae;
 }
 main .work .item a {
   display: inline-block;
@@ -695,7 +695,7 @@ main .work .item .hidden {
   right: 100%;
   left: -100%;
   opacity: 1;
-  color: #DBDBDB;
+  color: #d6cfcb;
   padding: 0 16px;
 }
 main .work .item .hidden ul {
@@ -788,11 +788,14 @@ main .testimony .title p {
 main .testimony .content {
   margin: 16px 5px;
   padding-left: 10px;
-  border-left: 2px solid #326771;
+  border-left: 2px solid #565264;
 }
 
 footer {
   margin-top: auto;
+  background-color: #706677;
+  padding: 80px 0;
+  color: white;
 }
 
 @media (min-width: 400px) {
@@ -828,7 +831,7 @@ footer {
   }
   main .columns .border.one {
     width: 0;
-    border-left: 1px solid #2C8C99;
+    border-left: 1px solid #706677;
   }
   main .columns .overlay .wrapper.active {
     width: 90vw;
@@ -874,7 +877,7 @@ footer {
   }
   main .columns .border.two {
     width: 0;
-    border-left: 1px solid #2C8C99;
+    border-left: 1px solid #706677;
   }
   main .columns .overlay .wrapper.active {
     width: 70vw;
@@ -915,5 +918,29 @@ main .cert {
   }
   main .columns .overlay.active button.prev.pressed {
     left: 13%;
+  }
+}
+@media (min-width: 640px) and (max-width: 940px) {
+  main .cert.column {
+    width: 570px;
+  }
+  main .cert ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  main .cert ul li {
+    width: 50%;
+  }
+  main .cert ul li img {
+    margin-right: 20px;
   }
 }

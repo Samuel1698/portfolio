@@ -1,15 +1,61 @@
-$tyrian-purple: #6A0136;
-$ruby-red: #931621;
-$dark-slate-grey: #28464B;
+// ----------------------------------
+// Blue
+// ----------------------------------
+$dark-slate-grey: #28464b;
 $ming: #326771;
-$blue-munsell: #2C8C99;
-$turquoise: #42D9C8;
+$blue-munsell: #2c8c99;
+$turquoise: #42d9c8;
+// ----------------------------------
 
-$primary: $ming;
-$secundary: $blue-munsell;
-$tertiary: $turquoise;
-$background: #DBDBDB;
-$columns: #F0F0F0;
+// ----------------------------------
+// Dracula
+// ----------------------------------
+$dracula-background: #282a36;
+$dracula-current-line: #44475a;
+$dracula-foreground: #f8f8f2;
+$dracula-comment: #6272a4;
+$dracula-cyan: #8be9fd;
+$dracula-green: #50fa7b;
+$dracula-orange: #ffb86c;
+$dracula-pink: #ff79c6;
+$dracula-purple: #bd93f9;
+$dracula-red: #ff5555;
+$dracula-yellow: #f1fa8c;
+// ----------------------------------
+
+// ----------------------------------
+// Purple
+// ----------------------------------
+$dark-purple: #210b2c;
+$eminence: #55286f;
+$wisteria: #bc96e6;
+$pink-lavender: #d8b4e2;
+$pearly-purple: #ae759f;
+// ----------------------------------
+
+// ----------------------------------
+// Green
+// ----------------------------------
+$dark-jungle-green: #1f2421;
+$skobeloff: #216869;
+$shiny-shamrock: #49a078;
+$eton-blue: #9cc5a1;
+$gainsboro: #dce1de;
+// ----------------------------------
+
+$primary: #565264;
+$secundary: #706677;
+$tertiary: #ccb7ae;
+$background: #d6cfcb;
+$columns: $gainsboro;
+$color: white;
+
+// $primary: $ming;
+// $secundary: $blue-munsell;
+// $tertiary: $turquoise;
+// $background: #ececec;
+// $columns: #f0f0f0;
+// $color: white;
 
 $small: 640px;
 $medium: 940px;

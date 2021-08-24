@@ -126,3 +126,25 @@ main .about img {
     }
   }
 }
+// ---------------------------------------------------------------------------
+// Between small and medium
+// ---------------------------------------------------------------------------
+@media (min-width: v.$small) and (max-width: v.$medium) {
+  main .cert {
+    &.column {
+      width: 570px;
+    }
+    ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      li {
+        width: 50%;
+        img {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}
