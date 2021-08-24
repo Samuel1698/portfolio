@@ -248,7 +248,7 @@ header {
   background-color: #565264;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(-50%, #706677), to(#565264));
   background-image: linear-gradient(180deg, #706677 -50%, #565264);
-  color: white;
+  color: #f6f0ed;
   text-align: center;
   position: relative;
   width: 100%;
@@ -268,7 +268,7 @@ header nav ul li:not(:last-child) {
 }
 header nav ul li a {
   padding: 5px;
-  color: white;
+  color: #f6f0ed;
 }
 header nav ul li a img {
   vertical-align: top;
@@ -305,7 +305,7 @@ header .logo .logo-border {
   right: -4rem;
   left: -4rem;
   z-index: 1;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #f6f0ed;
 }
 header h1 {
   margin-top: -2px;
@@ -549,7 +549,7 @@ main .skills ul li {
   height: calc(2.4rem + 48px);
 }
 main .about {
-  color: white;
+  color: #f6f0ed;
   background-color: #706677;
   padding-top: 40px;
   margin-top: 12px;
@@ -695,7 +695,7 @@ main .work .item .hidden {
   right: 100%;
   left: -100%;
   opacity: 1;
-  color: #d6cfcb;
+  color: #f6f0ed;
   padding: 0 16px;
 }
 main .work .item .hidden ul {
@@ -727,7 +727,7 @@ main .work .item .hidden a {
   left: 42%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  color: white;
+  color: #f6f0ed;
 }
 main .work .item .hidden a p {
   margin: 0;
@@ -795,7 +795,7 @@ footer {
   margin-top: auto;
   background-color: #706677;
   padding: 80px 0;
-  color: white;
+  color: #f6f0ed;
 }
 
 @media (min-width: 400px) {

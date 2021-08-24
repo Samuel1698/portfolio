@@ -43,17 +43,30 @@ $eton-blue: #9cc5a1;
 $gainsboro: #dce1de;
 // ----------------------------------
 
-$primary: #565264;
-$secundary: #706677;
-$tertiary: #ccb7ae;
-$background: #d6cfcb;
-$columns: $gainsboro;
-$color: white;
+// ----------------------------------
+// Lavender
+// ----------------------------------
+$english-lavender: #a6808c;
+$independence: #565264;
+$old-lavender: #706677;
+$silver-pink: #ccb7ae;
+$timberwolf: #d6cfcb;
+$isabelline: #f6f0ed;
+// ----------------------------------
 
-// $primary: $ming;
-// $secundary: $blue-munsell;
-// $tertiary: $turquoise;
-// $background: #ececec;
+$primary: $independence;
+$secundary: $old-lavender;
+$tertiary: $silver-pink;
+$background: $timberwolf;
+// ----------------------------------
+$highlight: $english-lavender;
+$columns: $gainsboro;
+$color: $isabelline;
+
+// $primary: $dark-purple;
+// $secundary: $eminence;
+// $tertiary: $wisteria;
+// $background: lightgrey;
 // $columns: #f0f0f0;
 // $color: white;
 
