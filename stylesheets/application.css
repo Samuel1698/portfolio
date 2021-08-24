@@ -790,6 +790,25 @@ main .testimony .content {
   padding-left: 10px;
   border-left: 2px solid #565264;
 }
+main .contact {
+  -webkit-box-shadow: 0 0 3px 1px #565264;
+          box-shadow: 0 0 3px 1px #565264;
+  background-color: #44475a;
+  color: #f6f0ed;
+  padding: 12px;
+  border-radius: 7px;
+  margin-bottom: -5.7rem;
+  position: relative;
+  margin-top: 1rem;
+  text-align: center;
+}
+main .contact button {
+  border: 1px solid #a6808c;
+  border-radius: 7px;
+  padding: 12px;
+  background-color: #44475a;
+  color: #f6f0ed;
+}
 
 footer {
   margin-top: auto;
@@ -866,6 +885,9 @@ footer {
   main .about .container {
     width: calc(640px - 180px);
   }
+  main .contact.container {
+    max-width: 640px;
+  }
 }
 @media (min-width: 940px) {
   .container {
@@ -900,6 +922,24 @@ main .cert {
   }
   main .about .container {
     width: calc(940px - 180px);
+  }
+  main .contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: -4rem;
+  }
+  main .contact h3 {
+    width: 120px;
+  }
+  main .contact.container {
+    max-width: 940px;
   }
 }
 @media (min-width: 1240px) {

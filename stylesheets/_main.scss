@@ -413,4 +413,22 @@ main {
       border-left: 2px solid v.$primary;
     }
   }
+  .contact {
+    box-shadow: 0 0 3px 1px v.$primary;
+    background-color: v.$accent;
+    color: v.$color;
+    padding: 12px;
+    border-radius: 7px;
+    margin-bottom: -5.7rem;
+    position: relative;
+    margin-top: 1rem;
+    text-align: center;
+    button {
+      border: 1px solid v.$highlight;
+      border-radius: 7px;
+      padding: 12px;
+      background-color: v.$accent;
+      color: v.$color;
+    }
+  }
 }

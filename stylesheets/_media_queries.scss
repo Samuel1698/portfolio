@@ -59,6 +59,9 @@ main .about img {
     .about .container {
       width: calc(#{v.$small} - 180px);
     }
+    .contact.container {
+      max-width: v.$small;
+    }
   }
 }
 // ------------------------------------------------------------------------
@@ -96,6 +99,18 @@ main .about img {
     }
     .about .container {
       width: calc(#{v.$medium} - 180px);
+    }
+    .contact {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: -4rem;
+      h3 {
+        width: 120px;
+      }
+      &.container {
+        max-width: v.$medium;
+      }
     }
   }
 }
