@@ -1,19 +1,18 @@
 @use 'variables' as v;
 
-
 // ------------------------------------------------------------------------
 // Media queries for about me image
 // ------------------------------------------------------------------------
 main .about img {
-  @media (min-width: 400px){
+  @media (min-width: 400px) {
     height: 330px;
     left: -42px;
   }
-  @media (min-width: 540px){
+  @media (min-width: 540px) {
     height: 300px;
     left: -28px;
   }
-  @media (min-width: 2500px){
+  @media (min-width: 2500px) {
     height: 340px;
     left: -50px;
   }
@@ -22,7 +21,7 @@ main .about img {
 // ------------------------------------------------------------------------
 // Rules applying to screens from 640px forward
 // ------------------------------------------------------------------------
-@media (min-width: v.$small){
+@media (min-width: v.$small) {
   .container {
     max-width: calc(#{v.$small} - 40px);
   }
@@ -38,7 +37,7 @@ main .about img {
       }
       .overlay .wrapper.active {
         width: 90vw;
-        height: calc(90vw * 17/22);
+        height: calc(90vw * 17 / 22);
       }
     }
     .languages {
@@ -65,7 +64,7 @@ main .about img {
 // ------------------------------------------------------------------------
 // Rules applying to screens from 940px forward
 // ------------------------------------------------------------------------
-@media (min-width: v.$medium){
+@media (min-width: v.$medium) {
   .container {
     max-width: calc(#{v.$medium} - 40px);
   }
@@ -79,20 +78,51 @@ main .about img {
       .overlay {
         .wrapper.active {
           width: 70vw;
-          height: calc(70vw * 17/22);
+          height: calc(70vw * 17 / 22);
         }
         &.active button {
           top: 50%;
-          transform: translate(-50%,-50%);
+          transform: translate(-50%, -50%);
         }
       }
     }
-    .languages, .border.one, .skills, .border.two, .cert {
+    .languages,
+    .border.one,
+    .skills,
+    .border.two,
+    .cert {
       order: initial;
       width: 256px;
     }
     .about .container {
       width: calc(#{v.$medium} - 180px);
+    }
+  }
+}
+// ------------------------------------------------------------------------
+// Rules applying to screens from 1240px forward
+// ------------------------------------------------------------------------
+@media (min-width: v.$big) {
+  main .columns {
+    .overlay {
+      .wrapper.active {
+        width: 60vw;
+        height: calc(60vw * 17 / 22);
+      }
+      &.active button {
+        &.next {
+          left: 85%;
+          &.pressed {
+            left: 87%;
+          }
+        }
+        &.prev {
+          left: 15%;
+          &.pressed {
+            left: 13%;
+          }
+        }
+      }
     }
   }
 }

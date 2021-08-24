@@ -117,12 +117,12 @@ function activateOverlay(e){
   for (let i=0; i < img.length; i++){
     if (img[i].classList[0] == e.target.classList[0]){
       assignClasses(i);
-      // Add event listener to the image to stop propagation to the overlay
-      img[i].addEventListener('click', function(event){
-        event.stopPropagation();
-      });
+      }
     }
-  }
+  // Add event listener to the image border to stop propagation to the overlay
+  document.querySelector('.img-border').addEventListener('click', function(event){
+    event.stopPropagation();
+  })
 };
 
 // ----------------------------------------------------------

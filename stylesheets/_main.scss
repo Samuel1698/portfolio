@@ -15,8 +15,10 @@ main {
     h3 {
       margin-top: 20px;
     }
-    h3, h4, h5 {  
-      font-family: 'Yanone Kaffeesatz', sans-serif;
+    h3,
+    h4,
+    h5 {
+      font-family: "Yanone Kaffeesatz", sans-serif;
       font-weight: normal;
       font-size: 1.2rem;
       text-align: center;
@@ -58,30 +60,32 @@ main {
           position: absolute;
           height: 100px;
           width: 100px;
-          top: calc(50% + (95vw * 17/22)/2);
+          top: calc(50% + (95vw * 17 / 22) / 2);
           transform: translate(-50%, 0%);
           &.prev {
             background: url("../images/left.svg") center/150px no-repeat;
             left: 10%;
-            transition: left 0.5s cubic-bezier(.55,.09,.68,.53);
+            transition: left 0.5s cubic-bezier(0.55, 0.09, 0.68, 0.53);
             &.pressed {
-              transition: left 0.5s cubic-bezier(.55,.09,.68,.53);
+              transition: left 0.5s cubic-bezier(0.55, 0.09, 0.68, 0.53);
               left: 8%;
             }
           }
           &.next {
             background: url("../images/right.svg") center/150px no-repeat;
             left: 90%;
-            transition: left 0.5s cubic-bezier(.55,.09,.68,.53);
+            transition: left 0.5s cubic-bezier(0.55, 0.09, 0.68, 0.53);
             &.pressed {
-              transition: left 0.5s cubic-bezier(.55,.09,.68,.53);
+              transition: left 0.5s cubic-bezier(0.55, 0.09, 0.68, 0.53);
               left: 92%;
             }
           }
-          &:hover, &:focus-visible {
+          &:hover,
+          &:focus-visible {
             background-size: 170px;
           }
-          &.disabled:hover, &.disabled:focus-visible {
+          &.disabled:hover,
+          &.disabled:focus-visible {
             background-size: 150px;
           }
         }
@@ -94,7 +98,7 @@ main {
         overflow: hidden;
         &.active {
           width: 95vw;
-          height: calc(95vw * 17/22);
+          height: calc(95vw * 17 / 22);
         }
         &.active .img-border {
           box-shadow: inset 0px 0px 0px 7px rgba(45, 45, 45);
@@ -113,12 +117,14 @@ main {
       img.active {
         position: absolute;
         transition: left 1s ease-in-out;
-                    // bottom 1s ease-in-out,
-                    // height 0.9s ease-in-out,
-                    // width 0.9s ease-in-out;
+        // bottom 1s ease-in-out,
+        // height 0.9s ease-in-out,
+        // width 0.9s ease-in-out;
         left: 3.5px; //To center the image given the 7px buffer
-        bottom: 3.5px; 
-        width: calc(100% - 7px); // Buffer is here to be able to show the focus visible ring
+        bottom: 3.5px;
+        width: calc(
+          100% - 7px
+        ); // Buffer is here to be able to show the focus visible ring
         height: calc(100% - 7px);
         &.after {
           left: 100%;
@@ -173,7 +179,8 @@ main {
       }
     }
   }
-  .languages, .skills {
+  .languages,
+  .skills {
     ul li {
       height: calc(2.4rem + 48px); // 48px is the height of the image
     }
@@ -225,49 +232,51 @@ main {
   .work {
     padding: 0;
     text-align: center;
-     .bar {
-        display: block;
-        position: relative;
-        height: 24px;
-        line-height: 24px;
-        background-color: v.$secundary;
-        width: 100%;
-        color: white;
-        z-index: 1;
-        h4 {
-          font-size: 10px;
-          margin: 0;
-          text-transform: uppercase;
-        }
-        i, i::after, i::before {
-          height: 12px;
-          width: 12px;
-          display: inline-block;
-          background-color: #ff5f57;
-          border-radius: 50%;
-          position: absolute;
-          top: 6px;
-          left: 10px;
-        }
-        i::before {
-          content: " ";
-          left: 16px;
-          background-color: #ffbd2e;
-          top: 0;
-        }
-        i::after {
-          content: " ";
-          left: 32px;
-          background-color: #28ca41;
-          top: 0;
-        }
+    .bar {
+      display: block;
+      position: relative;
+      height: 24px;
+      line-height: 24px;
+      background-color: v.$secundary;
+      width: 100%;
+      color: white;
+      z-index: 1;
+      h4 {
+        font-size: 10px;
+        margin: 0;
+        text-transform: uppercase;
       }
+      i,
+      i::after,
+      i::before {
+        height: 12px;
+        width: 12px;
+        display: inline-block;
+        background-color: #ff5f57;
+        border-radius: 50%;
+        position: absolute;
+        top: 6px;
+        left: 10px;
+      }
+      i::before {
+        content: " ";
+        left: 16px;
+        background-color: #ffbd2e;
+        top: 0;
+      }
+      i::after {
+        content: " ";
+        left: 32px;
+        background-color: #28ca41;
+        top: 0;
+      }
+    }
     .flex_wrapper {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-evenly;
       position: relative;
-     }
+    }
     .item {
       position: relative;
       overflow: hidden;
@@ -278,23 +287,23 @@ main {
         display: inline-block;
         transition: all 0.5s ease;
         img {
-          min-width: calc(100% * (16/9) - 100%);
-          min-height: calc(100% * (9/16) - 100%);
+          min-width: calc(100% * (16 / 9) - 100%);
+          min-height: calc(100% * (9 / 16) - 100%);
           position: relative;
           z-index: 0;
         }
       }
       .image-cropper {
-        border: 4px solid #0CCE6B;
+        border: 4px solid #0cce6b;
         height: 35px;
         width: 35px;
-        background-color: #E5F9EF;
+        background-color: #e5f9ef;
         margin: 0 auto;
         position: absolute;
         bottom: -8px;
         right: -50px;
         span {
-          color: #0CCE6B;
+          color: #0cce6b;
           margin: 0;
           font-size: 16px;
           position: relative;
@@ -302,7 +311,8 @@ main {
           left: -1px;
         }
       }
-      .hidden, .overlay {
+      .hidden,
+      .overlay {
         position: absolute;
         margin: 0;
       }
@@ -328,7 +338,9 @@ main {
             border-radius: 4px;
           }
         }
-        ul li, a, .image-cropper {
+        ul li,
+        a,
+        .image-cropper {
           display: inline-block;
         }
         a {
@@ -344,7 +356,8 @@ main {
             margin: 0;
           }
         }
-        a:hover, a:focus-visible {
+        a:hover,
+        a:focus-visible {
           transition: none;
           border-bottom: 2px dashed;
           bottom: 10px; //Two less than a bottom
@@ -360,12 +373,14 @@ main {
         transition: all 0.5s ease;
       }
     }
-    .item.hover .overlay, .item > a:focus-visible .overlay {
+    .item.hover .overlay,
+    .item > a:focus-visible .overlay {
       top: 0;
       bottom: 0;
       transition: all 0.5s ease;
     }
-    .item.hover .hidden, .item > a:focus-visible ~ .hidden {
+    .item.hover .hidden,
+    .item > a:focus-visible ~ .hidden {
       left: 0;
       right: 0;
       transition: all 1s ease;
@@ -373,13 +388,14 @@ main {
     }
   }
   .testimony {
-    text-align: center; 
+    text-align: center;
     p {
       font-weight: lighter;
     }
     .title {
       height: 48px;
-      .image-cropper, p {
+      .image-cropper,
+      p {
         display: inline-block;
         margin: 0;
       }
