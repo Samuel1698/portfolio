@@ -363,9 +363,6 @@ main .columns {
   background-color: #dce1de;
   color: black;
 }
-main .columns h3 {
-  margin-top: 20px;
-}
 main .columns h3,
 main .columns h4,
 main .columns h5 {
@@ -373,6 +370,10 @@ main .columns h5 {
   font-weight: normal;
   font-size: 1.2rem;
   text-align: center;
+}
+main .columns h3 {
+  margin-top: 20px;
+  font-size: 1.7rem;
 }
 main .columns h4 {
   margin: 10px 0;
