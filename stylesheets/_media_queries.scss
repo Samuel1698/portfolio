@@ -68,6 +68,9 @@ main .about img {
 // Rules applying to screens from 940px forward
 // ------------------------------------------------------------------------
 @media (min-width: v.$medium) {
+  :root {
+    --carousel-size: 70vw;
+  }
   .container {
     max-width: calc(#{v.$medium} - 40px);
   }
@@ -80,12 +83,12 @@ main .about img {
       }
       .overlay {
         .wrapper.active {
-          width: 70vw;
-          height: calc(70vw * 17 / 22);
+          width: var(--carousel-size);
+          height: calc(var(--carousel-size) * 17 / 22);
         }
-        .wrapper.trans {
-          width: calc(70vw - 3.5px);
-        }
+        // .wrapper.trans {
+        //   width: calc(70vw - 3.5px);
+        // }
         &.active button {
           top: 50%;
           transform: translate(-50%, -50%);
@@ -121,14 +124,14 @@ main .about img {
 // Rules applying to screens from 1240px forward
 // ------------------------------------------------------------------------
 @media (min-width: v.$big) {
+  :root {
+    --carousel-size: 60vw;
+  }
   main .columns {
     .overlay {
       .wrapper.active {
-        width: 60vw;
-        height: calc(60vw * 17 / 22);
-      }
-      .wrapper.trans {
-        width: calc(60vw - 3.5px);
+        width: var(--carousel-size);
+        height: calc(var(--carousel-size) * 17 / 22);
       }
       &.active button {
         &.next {

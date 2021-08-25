@@ -47,10 +47,6 @@ button[0].addEventListener("click", function (event) {
     button[1].tabIndex = 0;
     resetClasses(index);
     assignClasses(index - 1);
-    wrapper.classList.add("trans");
-    setTimeout(function () {
-      wrapper.classList.remove("trans");
-    }, 1000);
   }
 });
 // Switch the certificate shown to the next one
@@ -68,10 +64,6 @@ button[1].addEventListener("click", function (event) {
     button[0].tabIndex = 0;
     resetClasses(index);
     assignClasses(index + 1);
-    wrapper.classList.add("trans");
-    setTimeout(function () {
-      wrapper.classList.remove("trans");
-    }, 1000);
   }
 });
 // Detect which image is the current active one

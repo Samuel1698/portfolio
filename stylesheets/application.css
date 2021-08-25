@@ -470,21 +470,13 @@ main .columns .overlay .wrapper.active {
   width: 95vw;
   height: calc(95vw * 17 / 22);
 }
-main .columns .overlay .wrapper.active .img-border {
+main .columns .overlay .img-border {
   position: absolute;
-}
-main .columns .overlay .wrapper.trans {
-  width: calc(95vw - 3.5px);
-  left: calc(50% - 1.5px);
-}
-main .columns .overlay .wrapper.trans img.active {
-  width: calc(100% - 3.5px);
-}
-main .columns .overlay .wrapper.trans .img-border {
-  right: -1px;
-  bottom: 3.5px;
-  border-left: 4px solid #2d2d2d;
-  height: calc(100% - 7px);
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: clamp(3px, 70vw * 0.0055, 6px);
+  background-color: #2d2d2d;
 }
 main .columns .overlay img {
   position: absolute;
@@ -495,13 +487,25 @@ main .columns .overlay img.active {
   position: absolute;
   -webkit-transition: left 1s ease-in-out;
   transition: left 1s ease-in-out;
-  left: 3.5px;
-  bottom: 3.5px;
-  width: calc(100% - 7px);
-  height: calc(100% - 7px);
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
 }
 main .columns .overlay img.active.after {
   left: 100%;
+}
+main .columns .overlay img.active:focus-visible {
+  -webkit-transition: none;
+  transition: none;
+  left: unset;
+  right: 4px;
+  bottom: 3.5px;
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+}
+main .columns .overlay img.active:focus-visible ~ .img-border {
+  background-color: initial;
 }
 main .columns .border {
   width: 100%;
@@ -908,6 +912,10 @@ footer {
   }
 }
 @media (min-width: 940px) {
+  :root {
+    --carousel-size: 70vw;
+  }
+
   .container {
     max-width: calc(940px - 40px);
   }
@@ -920,11 +928,8 @@ footer {
     border-left: 1px solid #706677;
   }
   main .columns .overlay .wrapper.active {
-    width: 70vw;
-    height: calc(70vw * 17 / 22);
-  }
-  main .columns .overlay .wrapper.trans {
-    width: calc(70vw - 3.5px);
+    width: var(--carousel-size);
+    height: calc(var(--carousel-size) * 17 / 22);
   }
   main .columns .overlay.active button {
     top: 50%;
@@ -964,12 +969,13 @@ main .cert {
   }
 }
 @media (min-width: 1240px) {
-  main .columns .overlay .wrapper.active {
-    width: 60vw;
-    height: calc(60vw * 17 / 22);
+  :root {
+    --carousel-size: 60vw;
   }
-  main .columns .overlay .wrapper.trans {
-    width: calc(60vw - 3.5px);
+
+  main .columns .overlay .wrapper.active {
+    width: var(--carousel-size);
+    height: calc(var(--carousel-size) * 17 / 22);
   }
   main .columns .overlay.active button.next {
     left: 85%;
