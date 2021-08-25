@@ -1,68 +1,27 @@
-// ----------------------------------
-// Blue
-// ----------------------------------
-$dark-slate-grey: #28464b;
-$ming: #326771;
-$blue-munsell: #2c8c99;
-$turquoise: #42d9c8;
-// ----------------------------------
+:root {
+  // Primary
+  --independence: #565264;
+  --old-lavender: #706677;
+  --silver-pink: #ccb7ae;
+  // Backgrounds
+  --timberwolf: #d6cfcb;
+  --dracula-grey: #44475a;
+  --english-lavender: #a6808c;
+  // Whites
+  --gainsboro: #dce1de;
+  --isabelline: #f6f0ed;
+}
 
-// ----------------------------------
-// Dracula
-// ----------------------------------
-$dracula-background: #282a36;
-$dracula-current-line: #44475a;
-$dracula-foreground: #f8f8f2;
-$dracula-comment: #6272a4;
-$dracula-cyan: #8be9fd;
-$dracula-green: #50fa7b;
-$dracula-orange: #ffb86c;
-$dracula-pink: #ff79c6;
-$dracula-purple: #bd93f9;
-$dracula-red: #ff5555;
-$dracula-yellow: #f1fa8c;
-// ----------------------------------
+$primary: var(--independence);
+$secundary: var(--old-lavender);
+$tertiary: var(--silver-pink);
 
-// ----------------------------------
-// Purple
-// ----------------------------------
-$dark-purple: #210b2c;
-$eminence: #55286f;
-$wisteria: #bc96e6;
-$pink-lavender: #d8b4e2;
-$pearly-purple: #ae759f;
-// ----------------------------------
+$background: var(--timberwolf);
+$accent: var(--dracula-grey);
+$highlight: var(--english-lavender);
 
-// ----------------------------------
-// Green
-// ----------------------------------
-$dark-jungle-green: #1f2421;
-$skobeloff: #216869;
-$shiny-shamrock: #49a078;
-$eton-blue: #9cc5a1;
-$gainsboro: #dce1de;
-// ----------------------------------
-
-// ----------------------------------
-// Lavender
-// ----------------------------------
-$english-lavender: #a6808c;
-$independence: #565264;
-$old-lavender: #706677;
-$silver-pink: #ccb7ae;
-$timberwolf: #d6cfcb;
-$isabelline: #f6f0ed;
-// ----------------------------------
-
-$primary: $independence;
-$secundary: $old-lavender;
-$tertiary: $silver-pink;
-$background: $timberwolf;
-// ----------------------------------
-$accent: $dracula-current-line;
-$highlight: $english-lavender;
-$columns: $gainsboro;
-$color: $isabelline;
+$columns: var(--gainsboro);
+$color: var(--isabelline);
 
 $small: 640px;
 $medium: 940px;

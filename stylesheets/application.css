@@ -162,6 +162,17 @@ template {
   display: none;
 }
 
+:root {
+  --independence: #565264;
+  --old-lavender: #706677;
+  --silver-pink: #ccb7ae;
+  --timberwolf: #d6cfcb;
+  --dracula-grey: #44475a;
+  --english-lavender: #a6808c;
+  --gainsboro: #dce1de;
+  --isabelline: #f6f0ed;
+}
+
 html {
   max-width: 100%;
   overflow-x: hidden;
@@ -203,7 +214,7 @@ img {
 
 body {
   min-width: 320px;
-  background-color: #d6cfcb;
+  background-color: var(--timberwolf);
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -224,7 +235,7 @@ body {
 img:focus-visible {
   margin: -2px;
   padding: 2px;
-  outline: 5px auto #a6808c;
+  outline: 5px auto var(--english-lavender);
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
@@ -247,7 +258,7 @@ li:focus-visible::after {
   left: -2px;
   right: -2px;
   bottom: -2px;
-  outline: 5px auto #a6808c;
+  outline: 5px auto var(--english-lavender);
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
@@ -255,10 +266,10 @@ li:focus-visible::after {
 header {
   font-family: "Yanone Kaffeesatz", sans-serif;
   font-weight: normal;
-  background-color: #565264;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(-50%, #706677), to(#565264));
-  background-image: linear-gradient(180deg, #706677 -50%, #565264);
-  color: #f6f0ed;
+  background-color: var(--independence);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(-50%, var(--old-lavender)), to(var(--independence)));
+  background-image: linear-gradient(180deg, var(--old-lavender) -50%, var(--independence));
+  color: var(--isabelline);
   text-align: center;
   position: relative;
   width: 100%;
@@ -274,11 +285,11 @@ header nav ul li {
   padding: 5px;
 }
 header nav ul li:not(:last-child) {
-  border-right: 1px solid #dce1de;
+  border-right: 1px solid var(--gainsboro);
 }
 header nav ul li a {
   padding: 5px;
-  color: #f6f0ed;
+  color: var(--isabelline);
 }
 header nav ul li a img {
   vertical-align: top;
@@ -303,7 +314,7 @@ header .logo .underlay {
   z-index: 0;
   bottom: 0;
   right: 5px;
-  background-color: #d6cfcb;
+  background-color: var(--timberwolf);
 }
 header .logo img {
   position: relative;
@@ -315,7 +326,7 @@ header .logo .logo-border {
   right: -4rem;
   left: -4rem;
   z-index: 1;
-  border-bottom: 1px solid #f6f0ed;
+  border-bottom: 1px solid var(--isabelline);
 }
 header h1 {
   margin-top: -2px;
@@ -326,7 +337,7 @@ header h2 {
   display: inline-block;
   margin: 0;
   padding: 12px;
-  background-color: #706677;
+  background-color: var(--old-lavender);
   border-radius: 5px;
 }
 header .border {
@@ -337,7 +348,7 @@ header .border {
   right: 0;
 }
 header .border::before {
-  background-color: #d6cfcb;
+  background-color: var(--timberwolf);
   z-index: 1;
   position: absolute;
   content: "";
@@ -354,8 +365,8 @@ main {
   margin: 10px 0;
 }
 main .columns {
-  -webkit-box-shadow: 0 0 3px 1px #565264;
-          box-shadow: 0 0 3px 1px #565264;
+  -webkit-box-shadow: 0 0 3px 1px var(--independence);
+          box-shadow: 0 0 3px 1px var(--independence);
   margin: 0 auto;
   width: 300px;
   border-radius: 12px;
@@ -370,7 +381,7 @@ main .columns {
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  background-color: #dce1de;
+  background-color: var(--gainsboro);
   color: black;
 }
 main .columns h3,
@@ -509,7 +520,7 @@ main .columns .overlay img.active:focus-visible ~ .img-border {
 }
 main .columns .border {
   width: 100%;
-  border-bottom: 1px solid #706677;
+  border-bottom: 1px solid var(--old-lavender);
 }
 main .column {
   display: -webkit-box;
@@ -571,8 +582,8 @@ main .skills ul li {
   height: calc(2.4rem + 48px);
 }
 main .about {
-  color: #f6f0ed;
-  background-color: #706677;
+  color: var(--isabelline);
+  background-color: var(--old-lavender);
   padding-top: 40px;
   margin-top: 12px;
   line-height: 18px;
@@ -605,12 +616,12 @@ main .about .swoosh {
   min-height: 42px;
 }
 main .about .swoosh path {
-  fill: #d6cfcb;
+  fill: var(--timberwolf);
 }
 main .filler {
   height: 2px;
   display: block;
-  background-color: #d6cfcb;
+  background-color: var(--timberwolf);
   position: relative;
   top: -2px;
 }
@@ -673,8 +684,8 @@ main .work .item {
   overflow: hidden;
   vertical-align: top;
   margin: 5px;
-  -webkit-box-shadow: 0 0 1px 1px #ccb7ae;
-          box-shadow: 0 0 1px 1px #ccb7ae;
+  -webkit-box-shadow: 0 0 1px 1px var(--silver-pink);
+          box-shadow: 0 0 1px 1px var(--silver-pink);
 }
 main .work .item a {
   display: inline-block;
@@ -717,7 +728,7 @@ main .work .item .hidden {
   right: 100%;
   left: -100%;
   opacity: 1;
-  color: #f6f0ed;
+  color: var(--isabelline);
   padding: 0 16px;
 }
 main .work .item .hidden ul {
@@ -749,7 +760,7 @@ main .work .item .hidden a {
   left: 42%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  color: #f6f0ed;
+  color: var(--isabelline);
 }
 main .work .item .hidden a p {
   margin: 0;
@@ -810,13 +821,13 @@ main .testimony .title p {
 main .testimony .content {
   margin: 16px 5px;
   padding-left: 10px;
-  border-left: 2px solid #565264;
+  border-left: 2px solid var(--independence);
 }
 main .contact {
-  -webkit-box-shadow: 0 0 3px 1px #565264;
-          box-shadow: 0 0 3px 1px #565264;
-  background-color: #44475a;
-  color: #f6f0ed;
+  -webkit-box-shadow: 0 0 3px 1px var(--independence);
+          box-shadow: 0 0 3px 1px var(--independence);
+  background-color: var(--dracula-grey);
+  color: var(--isabelline);
   padding: 12px;
   border-radius: 7px;
   margin-bottom: -5.7rem;
@@ -825,18 +836,18 @@ main .contact {
   text-align: center;
 }
 main .contact button {
-  border: 1px solid #a6808c;
+  border: 1px solid var(--english-lavender);
   border-radius: 7px;
   padding: 12px;
-  background-color: #44475a;
-  color: #f6f0ed;
+  background-color: var(--dracula-grey);
+  color: var(--isabelline);
 }
 
 footer {
   margin-top: auto;
-  background-color: #706677;
+  background-color: var(--old-lavender);
   padding: 80px 0;
-  color: #f6f0ed;
+  color: var(--isabelline);
 }
 
 @media (min-width: 400px) {
@@ -872,7 +883,7 @@ footer {
   }
   main .columns .border.one {
     width: 0;
-    border-left: 1px solid #706677;
+    border-left: 1px solid var(--old-lavender);
   }
   main .columns .overlay.active button {
     width: 100px;
@@ -935,7 +946,7 @@ footer {
   }
   main .columns .border.two {
     width: 0;
-    border-left: 1px solid #706677;
+    border-left: 1px solid var(--old-lavender);
   }
   main .columns .overlay .wrapper.active {
     width: var(--carousel-size);
