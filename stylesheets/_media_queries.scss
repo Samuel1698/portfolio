@@ -35,6 +35,18 @@ main .about img {
         width: 0;
         border-left: 1px solid v.$secundary;
       }
+      .overlay.active button {
+        width: 100px;
+        height: 100px;
+        &.next,
+        &.prev {
+          background-size: 150px;
+          &:hover,
+          &:focus-visible {
+            background-size: 170px;
+          }
+        }
+      }
       .overlay .wrapper.active {
         width: 90vw;
         height: calc(90vw * 17 / 22);

@@ -424,14 +424,14 @@ main .columns .overlay.active {
 }
 main .columns .overlay.active button {
   position: absolute;
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
   top: calc(50% + (95vw * 17 / 22) / 2);
   -webkit-transform: translate(-50%, 0%);
           transform: translate(-50%, 0%);
 }
 main .columns .overlay.active button.prev {
-  background: url("../images/left.svg") center/150px no-repeat;
+  background: url("../images/left.svg") center/100px no-repeat;
   left: 10%;
   -webkit-transition: left 0.5s cubic-bezier(0.55, 0.09, 0.68, 0.53);
   transition: left 0.5s cubic-bezier(0.55, 0.09, 0.68, 0.53);
@@ -442,7 +442,7 @@ main .columns .overlay.active button.prev.pressed {
   left: 8%;
 }
 main .columns .overlay.active button.next {
-  background: url("../images/right.svg") center/150px no-repeat;
+  background: url("../images/right.svg") center/100px no-repeat;
   left: 90%;
   -webkit-transition: left 0.5s cubic-bezier(0.55, 0.09, 0.68, 0.53);
   transition: left 0.5s cubic-bezier(0.55, 0.09, 0.68, 0.53);
@@ -453,10 +453,10 @@ main .columns .overlay.active button.next.pressed {
   left: 92%;
 }
 main .columns .overlay.active button:hover, main .columns .overlay.active button:focus-visible {
-  background-size: 170px;
+  background-size: 120px;
 }
 main .columns .overlay.active button.disabled:hover, main .columns .overlay.active button.disabled:focus-visible {
-  background-size: 150px;
+  background-size: 100px;
 }
 main .columns .overlay .wrapper {
   position: absolute;
@@ -873,6 +873,16 @@ footer {
   main .columns .border.one {
     width: 0;
     border-left: 1px solid #706677;
+  }
+  main .columns .overlay.active button {
+    width: 100px;
+    height: 100px;
+  }
+  main .columns .overlay.active button.next, main .columns .overlay.active button.prev {
+    background-size: 150px;
+  }
+  main .columns .overlay.active button.next:hover, main .columns .overlay.active button.next:focus-visible, main .columns .overlay.active button.prev:hover, main .columns .overlay.active button.prev:focus-visible {
+    background-size: 170px;
   }
   main .columns .overlay .wrapper.active {
     width: 90vw;
