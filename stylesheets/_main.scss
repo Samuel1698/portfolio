@@ -101,35 +101,41 @@ main {
         &.active {
           width: 95vw;
           height: calc(95vw * 17 / 22);
+          .img-border {
+            position: absolute;
+          }
         }
-        &.active .img-border {
-          box-shadow: inset 0px 0px 0px 7px rgba(45, 45, 45);
-          position: absolute;
-          left: 0;
-          right: 0;
-          top: 0;
-          bottom: 0;
+        &.trans {
+          // In transition, resize the parent wrapper and move it
+          // In order to properly align the border on the left
+          width: calc(95vw - 3.5px);
+          left: calc(50% - 1.5px);
+          img.active {
+            width: calc(100% - 3.5px);
+          }
+          .img-border {
+            right: -1px;
+            bottom: 3.5px;
+            border-left: 4px solid #2d2d2d;
+            height: calc(100% - 7px);
+          }
         }
       }
       img {
         position: absolute;
         right: 100%;
         bottom: 50%;
-      }
-      img.active {
-        position: absolute;
-        transition: left 1s ease-in-out;
-        // bottom 1s ease-in-out,
-        // height 0.9s ease-in-out,
-        // width 0.9s ease-in-out;
-        left: 3.5px; //To center the image given the 7px buffer
-        bottom: 3.5px;
-        width: calc(
-          100% - 7px
-        ); // Buffer is here to be able to show the focus visible ring
-        height: calc(100% - 7px);
-        &.after {
-          left: 100%;
+        &.active {
+          position: absolute;
+          transition: left 1s ease-in-out;
+          left: 3.5px; //To center the image given the 7px buffer
+          bottom: 3.5px;
+          // Buffer is here to be able to show the focus visible ring
+          width: calc(100% - 7px);
+          height: calc(100% - 7px);
+          &.after {
+            left: 100%;
+          }
         }
       }
     }

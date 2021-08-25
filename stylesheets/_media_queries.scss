@@ -83,6 +83,9 @@ main .about img {
           width: 70vw;
           height: calc(70vw * 17 / 22);
         }
+        .wrapper.trans {
+          width: calc(70vw - 3.5px);
+        }
         &.active button {
           top: 50%;
           transform: translate(-50%, -50%);
@@ -123,6 +126,9 @@ main .about img {
       .wrapper.active {
         width: 60vw;
         height: calc(60vw * 17 / 22);
+      }
+      .wrapper.trans {
+        width: calc(60vw - 3.5px);
       }
       &.active button {
         &.next {

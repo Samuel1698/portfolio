@@ -224,20 +224,30 @@ body {
 img:focus-visible {
   margin: -2px;
   padding: 2px;
+  outline: 5px auto #a6808c;
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-a:focus-visible, button:focus-visible, div:focus-visible, section:focus-visible, li:focus-visible {
+a:focus-visible,
+button:focus-visible,
+div:focus-visible,
+section:focus-visible,
+li:focus-visible {
   position: relative;
 }
-a:focus-visible::after, button:focus-visible::after, div:focus-visible::after, section:focus-visible::after, li:focus-visible::after {
+a:focus-visible::after,
+button:focus-visible::after,
+div:focus-visible::after,
+section:focus-visible::after,
+li:focus-visible::after {
   content: "";
   position: absolute;
   top: -2px;
   left: -2px;
   right: -2px;
   bottom: -2px;
+  outline: 5px auto #a6808c;
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
@@ -461,13 +471,20 @@ main .columns .overlay .wrapper.active {
   height: calc(95vw * 17 / 22);
 }
 main .columns .overlay .wrapper.active .img-border {
-  -webkit-box-shadow: inset 0px 0px 0px 7px #2d2d2d;
-          box-shadow: inset 0px 0px 0px 7px #2d2d2d;
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+}
+main .columns .overlay .wrapper.trans {
+  width: calc(95vw - 3.5px);
+  left: calc(50% - 1.5px);
+}
+main .columns .overlay .wrapper.trans img.active {
+  width: calc(100% - 3.5px);
+}
+main .columns .overlay .wrapper.trans .img-border {
+  right: -1px;
+  bottom: 3.5px;
+  border-left: 4px solid #2d2d2d;
+  height: calc(100% - 7px);
 }
 main .columns .overlay img {
   position: absolute;
@@ -480,7 +497,7 @@ main .columns .overlay img.active {
   transition: left 1s ease-in-out;
   left: 3.5px;
   bottom: 3.5px;
-  width: calc( 100% - 7px );
+  width: calc(100% - 7px);
   height: calc(100% - 7px);
 }
 main .columns .overlay img.active.after {
@@ -906,6 +923,9 @@ footer {
     width: 70vw;
     height: calc(70vw * 17 / 22);
   }
+  main .columns .overlay .wrapper.trans {
+    width: calc(70vw - 3.5px);
+  }
   main .columns .overlay.active button {
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
@@ -947,6 +967,9 @@ main .cert {
   main .columns .overlay .wrapper.active {
     width: 60vw;
     height: calc(60vw * 17 / 22);
+  }
+  main .columns .overlay .wrapper.trans {
+    width: calc(60vw - 3.5px);
   }
   main .columns .overlay.active button.next {
     left: 85%;
