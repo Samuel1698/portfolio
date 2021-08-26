@@ -1,0 +1,1 @@
+:root{--independence:#565264;--old-lavender:#706677;--silver-pink:#ccb7ae;--timberwolf:#d6cfcb;--dracula-grey:#44475a;--english-lavender:#a6808c;--gainsboro:#dce1de;--isabelline:#f6f0ed}main form{background-color:var(--gainsboro);color:black;border-radius:7px;padding:8px;margin:0 16px;max-width:clamp(270px,500px,800px)}

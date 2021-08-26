@@ -430,8 +430,6 @@ main {
     margin: 1rem auto -5rem;
     text-align: center;
     width: clamp(260px, 80%, 940px);
-    // min-width: 260px;
-    // max-width: 80%;
     button {
       border: 1px solid v.$highlight;
       border-radius: 7px;

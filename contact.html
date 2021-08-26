@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Yanone+Kaffeesatz:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="stylesheets/application.css" />
+    <link rel="stylesheet" href="stylesheets/contact.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <ul>
+          <li>
+            <a href="Samuel_G_Munoz_Resume.PDF" download target="_blank">
+              Resume
+              <img
+                src="images/link.svg"
+                alt="Resume Link"
+                height="20px"
+                width="20px"
+              />
+            </a>
+          </li>
+          <li><a href="#">Contact Me</a></li>
+        </ul>
+      </nav>
+      <div class="logo" style="width: 64px; height: 64px">
+        <div class="underlay"></div>
+        <picture>
+          <source
+            type="image/webp"
+            srcset="
+              images/samuel-g-munoz-profile_64x64_@1x.webp   1x,
+              images/samuel-g-munoz-profile_128x128_@2x.webp 2x,
+              images/samuel-g-munoz-profile_192x192_@3x.webp 3x,
+              images/samuel-g-munoz-profile_256x256_@4x.webp 4x
+            "
+          />
+          <source
+            type="image/png"
+            srcset="
+              images/samuel-g-munoz-profile_64x64_@1x.png   1x,
+              images/samuel-g-munoz-profile_128x128_@2x.png 2x,
+              images/samuel-g-munoz-profile_192x192_@3x.png 3x,
+              images/samuel-g-munoz-profile_256x256_@4x.png 4x
+            "
+          />
+          <img
+            src="images/samuel-g-munoz-profile.png"
+            alt="Samuel G Munoz logo"
+            width="64px"
+            height="64px"
+          />
+        </picture>
+        <div class="logo-border"></div>
+      </div>
+      <h1>Samuel G. Muñoz</h1>
+      <h2>Full-Stack Web Developer</h2>
+      <div class="border"></div>
+    </header>
+    <main>
+      <form action="contact-form-process.php" name="contact_form" method="post">
+        <label for="name">Name</label>
+        <input type="text" id="Name" name="Name" required />
+
+        <label for="Email">Email Address</label>
+        <input type="email" id="Email" name="Email" required />
+
+        <label for="Type">Project Type</label>
+        <select name="Type" id="Type">
+          <option value="zero"></option>
+          <option value="one">Static Page</option>
+          <option value="two">Web App</option>
+        </select>
+
+        <label for="Budget">Budget</label>
+        <select name="Budget" id="Budget">
+          <option value="zero"></option>
+          <option value="one">$500 - $1,000</option>
+          <option value="two">$1000 - $2,000</option>
+          <option value="three">$2000+</option>
+        </select>
+
+        <label for="Message">Message</label>
+        <textarea
+          name="Message"
+          id="Message"
+          cols="30"
+          rows="10"
+          required
+        ></textarea>
+
+        <button type="submit">Send Email</button>
+      </form>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer_module">
+          <a href="https://twitter.com/Samuel_G_Munoz" class="twitter">
+            <img src="" alt="Samuel G Munoz twitter link" />
+          </a>
+          <a href="https://github.com/samuel1698" class="github">
+            <img src="" alt="Samuel1698 github page" />
+          </a>
+        </div>
+      </div>
+      <small>Copyright © Samuel G. Muñoz</small>
+    </footer>
+  </body>
+</html>

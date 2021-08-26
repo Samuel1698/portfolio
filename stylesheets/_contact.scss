@@ -1,0 +1,12 @@
+@use 'variables' as v;
+
+main {
+  form {
+    background-color: v.$columns;
+    color: black;
+    border-radius: 7px;
+    padding: 8px;
+    margin: 0 16px;
+    max-width: clamp(270px, 500px, 800px);
+  }
+}
