@@ -79,9 +79,10 @@ main .about img {
       h3 {
         width: 120px;
       }
-      &.container {
-        max-width: v.$small;
-      }
+      // &.container {
+      //   --offset: calc(#{v.$small} - 40px);
+      //   max-width: clamp(80%, var(--offset), #{v.$small});
+      // }
     }
   }
 }
@@ -124,9 +125,10 @@ main .about img {
     section.about .container {
       width: calc(#{v.$medium} - 180px);
     }
-    section.contact.container {
-      max-width: v.$medium;
-    }
+    // section.contact.container {
+    //   --offset: calc(v.$medium - 40px);
+    //   max-width: clamp(80%, var(--offset), #{v.$medium});
+    // }
   }
 }
 // ------------------------------------------------------------------------

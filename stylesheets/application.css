@@ -833,8 +833,7 @@ main section.contact {
   position: relative;
   margin: 1rem auto -5rem;
   text-align: center;
-  min-width: 260px;
-  max-width: 80%;
+  width: clamp(260px, 80%, 940px);
 }
 main section.contact button {
   border: 1px solid var(--english-lavender);
@@ -944,9 +943,6 @@ footer {
   main section.contact h3 {
     width: 120px;
   }
-  main section.contact.container {
-    max-width: 640px;
-  }
 }
 @media (min-width: 940px) {
   :root {
@@ -985,9 +981,6 @@ main section.cert {
   }
   main section.about .container {
     width: calc(940px - 180px);
-  }
-  main section.contact.container {
-    max-width: 940px;
   }
 }
 @media (min-width: 1240px) {
