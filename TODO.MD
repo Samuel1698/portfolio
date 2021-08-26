@@ -6,3 +6,4 @@
 - [ ] Navbar on header
 - [ ] Home link on profile
 - [ ] Footer
+- [ ] Under the hood website with dracula markdown

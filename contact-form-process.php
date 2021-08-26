@@ -31,10 +31,10 @@
               />
             </a>
           </li>
-          <li><a href="#">Contact Me</a></li>
+          <li><a href="contact.html">Contact Me</a></li>
         </ul>
       </nav>
-      <div class="logo" style="width: 64px; height: 64px">
+      <a href="main.html" class="logo" style="width: 64px; height: 64px">
         <div class="underlay"></div>
         <picture>
           <source
@@ -63,7 +63,7 @@
           />
         </picture>
         <div class="logo-border"></div>
-      </div>
+      </a>
       <h1>Samuel G. Muñoz</h1>
       <h2>Full-Stack Web Developer</h2>
       <div class="border"></div>

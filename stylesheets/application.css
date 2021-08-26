@@ -845,6 +845,7 @@ main section.contact button {
   padding: 12px;
   background-color: var(--dracula-grey);
   color: var(--isabelline);
+  cursor: pointer;
 }
 
 footer {
