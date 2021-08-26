@@ -171,6 +171,10 @@ template {
   --english-lavender: #a6808c;
   --gainsboro: #dce1de;
   --isabelline: #f6f0ed;
+  --pink: #ff79c6;
+  --purple: #bd93f9;
+  --blue: #8be9fd;
+  --orange: #ffb86c;
 }
 
 html {

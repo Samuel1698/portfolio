@@ -9,16 +9,23 @@ main {
     > * {
       font-size: 1rem; //Reset fontsize for all child elements
     }
-    background-color: v.$columns;
-    color: black;
-    border-radius: 7px;
+    background-color: v.$accent;
+    color: white;
+    border-radius: 12px;
     padding: 12px;
     margin: 0 auto;
     max-width: clamp(270px, 80%, 600px);
+    // Prevent chrome's white boxshadow from overriding the set color
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0 30px v.$color inset !important;
+    }
     h1 {
       text-align: center;
       font-size: 1.2rem;
-      margin: 0 0 10px;
+      margin: 0 0 20px;
     }
     label {
       display: block;
@@ -31,7 +38,7 @@ main {
         font-size: 0.9em;
         padding: 6px;
         min-width: 50%;
-        background-color: white;
+        background-color: v.$color;
         border: 0;
         border-radius: 7px;
         margin-bottom: 10px;
@@ -55,6 +62,7 @@ main {
       border: 0;
       border-radius: 7px;
       margin-bottom: 10px;
+      background-color: v.$color;
     }
     textarea {
       width: 96%;
@@ -63,13 +71,16 @@ main {
       border-radius: 7px;
       resize: vertical;
       margin-bottom: 10px;
+      background-color: v.$color;
     }
     button {
       border: 1px solid v.$highlight;
-      background-color: v.$background;
-      color: black;
+      background-color: initial;
+      color: v.$color;
       border-radius: 7px;
       padding: 12px;
+      margin: 0 auto;
+      display: block;
     }
   }
   p {
