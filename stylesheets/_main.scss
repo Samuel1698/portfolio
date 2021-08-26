@@ -141,7 +141,7 @@ main {
     }
     .border {
       width: 100%;
-      border-bottom: 1px solid v.$secundary;
+      border-bottom: 1px solid v.$secondary;
     }
   }
   .column {
@@ -170,7 +170,7 @@ main {
       }
     }
   }
-  .cert {
+  section.cert {
     ul {
       display: block;
       li {
@@ -187,15 +187,15 @@ main {
       }
     }
   }
-  .languages,
-  .skills {
+  section.languages,
+  section.skills {
     ul li {
       height: calc(2.4rem + 48px); // 48px is the height of the image
     }
   }
-  .about {
+  section.about {
     color: v.$color;
-    background-color: v.$secundary;
+    background-color: v.$secondary;
     padding-top: 40px;
     margin-top: 12px;
     line-height: 18px;
@@ -237,7 +237,7 @@ main {
     position: relative;
     top: -2px;
   }
-  .work {
+  section.work {
     padding: 0;
     text-align: center;
     .bar {
@@ -395,7 +395,7 @@ main {
       transition-delay: 0.5s;
     }
   }
-  .testimony {
+  section.testimony {
     text-align: center;
     p {
       font-weight: lighter;
@@ -420,16 +420,17 @@ main {
       border-left: 2px solid v.$primary;
     }
   }
-  .contact {
+  section.contact {
     box-shadow: 0 0 3px 1px v.$primary;
     background-color: v.$accent;
     color: v.$color;
-    padding: 12px;
+    padding: 12px 20px;
     border-radius: 7px;
-    margin-bottom: -5.7rem;
     position: relative;
-    margin-top: 1rem;
+    margin: 1rem auto -5rem;
     text-align: center;
+    min-width: 260px;
+    max-width: 80%;
     button {
       border: 1px solid v.$highlight;
       border-radius: 7px;

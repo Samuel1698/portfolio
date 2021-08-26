@@ -558,10 +558,10 @@ main .column ul li span {
   font-weight: lighter;
   font-size: 0.9em;
 }
-main .cert ul {
+main section.cert ul {
   display: block;
 }
-main .cert ul li {
+main section.cert ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -571,17 +571,17 @@ main .cert ul li {
           align-items: center;
   cursor: pointer;
 }
-main .cert ul li img {
+main section.cert ul li img {
   display: inline-block;
   margin-left: auto;
   height: 22px;
   width: 22px;
 }
-main .languages ul li,
-main .skills ul li {
+main section.languages ul li,
+main section.skills ul li {
   height: calc(2.4rem + 48px);
 }
-main .about {
+main section.about {
   color: var(--isabelline);
   background-color: var(--old-lavender);
   padding-top: 40px;
@@ -593,29 +593,29 @@ main .about {
   z-index: -1;
   overflow: hidden;
 }
-main .about p:last-of-type {
+main section.about p:last-of-type {
   margin-bottom: 0;
 }
-main .about img {
+main section.about img {
   position: absolute;
   left: -90px;
   height: 425px;
   width: initial;
 }
-main .about .container {
+main section.about .container {
   position: relative;
   padding: 0 0 0 142px;
   min-width: 0;
   width: calc(100% - 152px);
 }
-main .about .swoosh {
+main section.about .swoosh {
   vertical-align: top;
   position: relative;
   width: 100%;
   margin-top: 20px;
   min-height: 42px;
 }
-main .about .swoosh path {
+main section.about .swoosh path {
   fill: var(--timberwolf);
 }
 main .filler {
@@ -625,11 +625,11 @@ main .filler {
   position: relative;
   top: -2px;
 }
-main .work {
+main section.work {
   padding: 0;
   text-align: center;
 }
-main .work .bar {
+main section.work .bar {
   display: block;
   position: relative;
   height: 24px;
@@ -639,14 +639,14 @@ main .work .bar {
   color: black;
   z-index: 1;
 }
-main .work .bar h4 {
+main section.work .bar h4 {
   font-size: 10px;
   margin: 0;
   text-transform: uppercase;
 }
-main .work .bar i,
-main .work .bar i::after,
-main .work .bar i::before {
+main section.work .bar i,
+main section.work .bar i::after,
+main section.work .bar i::before {
   height: 12px;
   width: 12px;
   display: inline-block;
@@ -656,19 +656,19 @@ main .work .bar i::before {
   top: 6px;
   left: 10px;
 }
-main .work .bar i::before {
+main section.work .bar i::before {
   content: " ";
   left: 16px;
   background-color: #ffbd2e;
   top: 0;
 }
-main .work .bar i::after {
+main section.work .bar i::after {
   content: " ";
   left: 32px;
   background-color: #28ca41;
   top: 0;
 }
-main .work .flex_wrapper {
+main section.work .flex_wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -679,7 +679,7 @@ main .work .flex_wrapper {
           justify-content: space-evenly;
   position: relative;
 }
-main .work .item {
+main section.work .item {
   position: relative;
   overflow: hidden;
   vertical-align: top;
@@ -687,18 +687,18 @@ main .work .item {
   -webkit-box-shadow: 0 0 1px 1px var(--silver-pink);
           box-shadow: 0 0 1px 1px var(--silver-pink);
 }
-main .work .item a {
+main section.work .item a {
   display: inline-block;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-main .work .item a img {
+main section.work .item a img {
   min-width: calc(100% * (16 / 9) - 100%);
   min-height: calc(100% * (9 / 16) - 100%);
   position: relative;
   z-index: 0;
 }
-main .work .item .image-cropper {
+main section.work .item .image-cropper {
   border: 4px solid #0cce6b;
   height: 35px;
   width: 35px;
@@ -708,7 +708,7 @@ main .work .item .image-cropper {
   bottom: -8px;
   right: -50px;
 }
-main .work .item .image-cropper span {
+main section.work .item .image-cropper span {
   color: #0cce6b;
   margin: 0;
   font-size: 16px;
@@ -716,12 +716,12 @@ main .work .item .image-cropper span {
   bottom: -8px;
   left: -1px;
 }
-main .work .item .hidden,
-main .work .item .overlay {
+main section.work .item .hidden,
+main section.work .item .overlay {
   position: absolute;
   margin: 0;
 }
-main .work .item .hidden {
+main section.work .item .hidden {
   cursor: pointer;
   top: 0;
   bottom: 0;
@@ -731,7 +731,7 @@ main .work .item .hidden {
   color: var(--isabelline);
   padding: 0 16px;
 }
-main .work .item .hidden ul {
+main section.work .item .hidden ul {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -739,18 +739,18 @@ main .work .item .hidden ul {
           transform: translate(-50%, -50%);
   width: 90%;
 }
-main .work .item .hidden ul li {
+main section.work .item .hidden ul li {
   padding: 4px;
   margin-top: 4px;
   background-color: grey;
   border-radius: 4px;
 }
-main .work .item .hidden ul li,
-main .work .item .hidden a,
-main .work .item .hidden .image-cropper {
+main section.work .item .hidden ul li,
+main section.work .item .hidden a,
+main section.work .item .hidden .image-cropper {
   display: inline-block;
 }
-main .work .item .hidden a {
+main section.work .item .hidden a {
   -webkit-transition: none;
   transition: none;
   bottom: 12px;
@@ -762,17 +762,17 @@ main .work .item .hidden a {
           transform: translateX(-50%);
   color: var(--isabelline);
 }
-main .work .item .hidden a p {
+main section.work .item .hidden a p {
   margin: 0;
 }
-main .work .item .hidden a:hover,
-main .work .item .hidden a:focus-visible {
+main section.work .item .hidden a:hover,
+main section.work .item .hidden a:focus-visible {
   -webkit-transition: none;
   transition: none;
   border-bottom: 2px dashed;
   bottom: 10px;
 }
-main .work .item .overlay {
+main section.work .item .overlay {
   top: -106%;
   right: 0;
   left: 0;
@@ -782,15 +782,15 @@ main .work .item .overlay {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-main .work .item.hover .overlay,
-main .work .item > a:focus-visible .overlay {
+main section.work .item.hover .overlay,
+main section.work .item > a:focus-visible .overlay {
   top: 0;
   bottom: 0;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-main .work .item.hover .hidden,
-main .work .item > a:focus-visible ~ .hidden {
+main section.work .item.hover .hidden,
+main section.work .item > a:focus-visible ~ .hidden {
   left: 0;
   right: 0;
   -webkit-transition: all 1s ease;
@@ -798,44 +798,45 @@ main .work .item > a:focus-visible ~ .hidden {
   -webkit-transition-delay: 0.5s;
           transition-delay: 0.5s;
 }
-main .testimony {
+main section.testimony {
   text-align: center;
 }
-main .testimony p {
+main section.testimony p {
   font-weight: lighter;
 }
-main .testimony .title {
+main section.testimony .title {
   height: 48px;
 }
-main .testimony .title .image-cropper,
-main .testimony .title p {
+main section.testimony .title .image-cropper,
+main section.testimony .title p {
   display: inline-block;
   margin: 0;
 }
-main .testimony .title p {
+main section.testimony .title p {
   margin-left: 10px;
   line-height: 48px;
   vertical-align: bottom;
   font-weight: normal;
 }
-main .testimony .content {
+main section.testimony .content {
   margin: 16px 5px;
   padding-left: 10px;
   border-left: 2px solid var(--independence);
 }
-main .contact {
+main section.contact {
   -webkit-box-shadow: 0 0 3px 1px var(--independence);
           box-shadow: 0 0 3px 1px var(--independence);
   background-color: var(--dracula-grey);
   color: var(--isabelline);
-  padding: 12px;
+  padding: 12px 20px;
   border-radius: 7px;
-  margin-bottom: -5.7rem;
   position: relative;
-  margin-top: 1rem;
+  margin: 1rem auto -5rem;
   text-align: center;
+  min-width: 260px;
+  max-width: 80%;
 }
-main .contact button {
+main section.contact button {
   border: 1px solid var(--english-lavender);
   border-radius: 7px;
   padding: 12px;
@@ -899,7 +900,7 @@ footer {
     width: 90vw;
     height: calc(90vw * 17 / 22);
   }
-  main .languages {
+  main section.languages {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
@@ -909,7 +910,7 @@ footer {
         -ms-flex-order: 2;
             order: 2;
   }
-  main .skills {
+  main section.skills {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
@@ -919,16 +920,31 @@ footer {
         -ms-flex-order: 4;
             order: 4;
   }
-  main .cert {
+  main section.cert {
     width: 320px;
     -webkit-box-ordinal-group: 6;
         -ms-flex-order: 5;
             order: 5;
   }
-  main .about .container {
+  main section.about .container {
     width: calc(640px - 180px);
   }
-  main .contact.container {
+  main section.contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: -4rem;
+  }
+  main section.contact h3 {
+    width: 120px;
+  }
+  main section.contact.container {
     max-width: 640px;
   }
 }
@@ -957,35 +973,20 @@ footer {
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
   }
-  main .languages,
+  main section.languages,
 main .border.one,
-main .skills,
+main section.skills,
 main .border.two,
-main .cert {
+main section.cert {
     -webkit-box-ordinal-group: initial;
         -ms-flex-order: initial;
             order: initial;
     width: 256px;
   }
-  main .about .container {
+  main section.about .container {
     width: calc(940px - 180px);
   }
-  main .contact {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    margin-bottom: -4rem;
-  }
-  main .contact h3 {
-    width: 120px;
-  }
-  main .contact.container {
+  main section.contact.container {
     max-width: 940px;
   }
 }
@@ -1012,10 +1013,10 @@ main .cert {
   }
 }
 @media (min-width: 640px) and (max-width: 940px) {
-  main .cert.column {
+  main section.cert.column {
     width: 570px;
   }
-  main .cert ul {
+  main section.cert ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1028,10 +1029,10 @@ main .cert {
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
-  main .cert ul li {
+  main section.cert ul li {
     width: 50%;
   }
-  main .cert ul li img {
+  main section.cert ul li img {
     margin-right: 20px;
   }
 }

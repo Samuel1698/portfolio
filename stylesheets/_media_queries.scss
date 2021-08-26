@@ -33,7 +33,7 @@ main .about img {
       width: 600px;
       .border.one {
         width: 0;
-        border-left: 1px solid v.$secundary;
+        border-left: 1px solid v.$secondary;
       }
       .overlay.active button {
         width: 100px;
@@ -52,27 +52,36 @@ main .about img {
         height: calc(90vw * 17 / 22);
       }
     }
-    .languages {
+    section.languages {
       order: 1;
     }
     .border.one {
       order: 2;
     }
-    .skills {
+    section.skills {
       order: 3;
     }
     .border.two {
       order: 4;
     }
-    .cert {
+    section.cert {
       width: 320px;
       order: 5;
     }
-    .about .container {
+    section.about .container {
       width: calc(#{v.$small} - 180px);
     }
-    .contact.container {
-      max-width: v.$small;
+    section.contact {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: -4rem;
+      h3 {
+        width: 120px;
+      }
+      &.container {
+        max-width: v.$small;
+      }
     }
   }
 }
@@ -91,44 +100,32 @@ main .about img {
       width: 900px;
       .border.two {
         width: 0;
-        border-left: 1px solid v.$secundary;
+        border-left: 1px solid v.$secondary;
       }
       .overlay {
         .wrapper.active {
           width: var(--carousel-size);
           height: calc(var(--carousel-size) * 17 / 22);
         }
-        // .wrapper.trans {
-        //   width: calc(70vw - 3.5px);
-        // }
         &.active button {
           top: 50%;
           transform: translate(-50%, -50%);
         }
       }
     }
-    .languages,
+    section.languages,
     .border.one,
-    .skills,
+    section.skills,
     .border.two,
-    .cert {
+    section.cert {
       order: initial;
       width: 256px;
     }
-    .about .container {
+    section.about .container {
       width: calc(#{v.$medium} - 180px);
     }
-    .contact {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: -4rem;
-      h3 {
-        width: 120px;
-      }
-      &.container {
-        max-width: v.$medium;
-      }
+    section.contact.container {
+      max-width: v.$medium;
     }
   }
 }
@@ -166,7 +163,7 @@ main .about img {
 // Between small and medium
 // ---------------------------------------------------------------------------
 @media (min-width: v.$small) and (max-width: v.$medium) {
-  main .cert {
+  main section.cert {
     &.column {
       width: 570px;
     }
