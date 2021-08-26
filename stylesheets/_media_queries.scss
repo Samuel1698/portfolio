@@ -79,10 +79,6 @@ main .about img {
       h3 {
         width: 120px;
       }
-      // &.container {
-      //   --offset: calc(#{v.$small} - 40px);
-      //   max-width: clamp(80%, var(--offset), #{v.$small});
-      // }
     }
   }
 }
@@ -125,10 +121,6 @@ main .about img {
     section.about .container {
       width: calc(#{v.$medium} - 180px);
     }
-    // section.contact.container {
-    //   --offset: calc(v.$medium - 40px);
-    //   max-width: clamp(80%, var(--offset), #{v.$medium});
-    // }
   }
 }
 // ------------------------------------------------------------------------
@@ -164,7 +156,7 @@ main .about img {
 // ---------------------------------------------------------------------------
 // Between small and medium
 // ---------------------------------------------------------------------------
-@media (min-width: v.$small) and (max-width: v.$medium) {
+@media (min-width: v.$small) and (max-width: v.$medium - 1) {
   main section.cert {
     &.column {
       width: 570px;

@@ -1005,7 +1005,7 @@ main section.cert {
     left: 13%;
   }
 }
-@media (min-width: 640px) and (max-width: 940px) {
+@media (min-width: 640px) and (max-width: 939px) {
   main section.cert.column {
     width: 570px;
   }
