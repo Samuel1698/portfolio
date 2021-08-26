@@ -5,3 +5,4 @@
 - [ ] Add transition border between header and content to prevent 1px overflow in chrome
 - [ ] Navbar on header
 - [ ] Home link on profile
+- [ ] Footer

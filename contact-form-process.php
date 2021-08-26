@@ -127,11 +127,23 @@
               'X-Mailer: PHP/' . phpversion();
           @mail($email_to, $email_subject, $email_message, $headers);
       ?>
-          <!-- include your success message below -->
-          <p>Thank you for contacting me. I will be in touch with you very soon.</p>
+      <p>Thank you for contacting me. I will be in touch with you very soon.</p>
       <?php
       }
       ?>
     </main>
+    <footer>
+      <div class="container">
+        <div class="footer_module">
+          <a href="https://twitter.com/Samuel_G_Munoz" class="twitter">
+            <img src="" alt="Samuel G Munoz twitter link" />
+          </a>
+          <a href="https://github.com/samuel1698" class="github">
+            <img src="" alt="Samuel1698 github page" />
+          </a>
+        </div>
+      </div>
+      <small>Copyright © Samuel G. Muñoz</small>
+    </footer>
   </body>
 </html>

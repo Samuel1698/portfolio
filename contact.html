@@ -70,32 +70,41 @@
     </header>
     <main>
       <form action="contact-form-process.php" name="contact_form" method="post">
-        <label for="name">Name</label>
-        <input type="text" id="Name" name="Name" required />
+        <h1>Contact Me</h1>
+        <div class="medium-inline">
+          <label for="name">Name</label>
+          <input type="text" id="Name" name="Name" required />
+        </div>
 
-        <label for="Email">Email Address</label>
-        <input type="email" id="Email" name="Email" required />
+        <div class="medium-inline two">
+          <label for="Email">Email Address</label>
+          <input type="email" id="Email" name="Email" required />
+        </div>
 
-        <label for="Type">Project Type</label>
-        <select name="Type" id="Type">
-          <option value="zero"></option>
-          <option value="one">Static Page</option>
-          <option value="two">Web App</option>
-        </select>
+        <div class="inline">
+          <label for="Type">Project Type</label>
+          <select name="Type" id="Type">
+            <option value="zero"></option>
+            <option value="one">Static Page</option>
+            <option value="two">Web App</option>
+          </select>
+        </div>
 
-        <label for="Budget">Budget</label>
-        <select name="Budget" id="Budget">
-          <option value="zero"></option>
-          <option value="one">$500 - $1,000</option>
-          <option value="two">$1000 - $2,000</option>
-          <option value="three">$2000+</option>
-        </select>
+        <div class="inline two">
+          <label for="Budget">Budget</label>
+          <select name="Budget" id="Budget">
+            <option value="zero"></option>
+            <option value="one">$500 - $1,000</option>
+            <option value="two">$1000 - $2,000</option>
+            <option value="three">$2000+</option>
+          </select>
+        </div>
 
         <label for="Message">Message</label>
         <textarea
           name="Message"
           id="Message"
-          cols="30"
+          cols="25"
           rows="10"
           required
         ></textarea>
