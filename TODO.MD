@@ -9,5 +9,7 @@
 - [ ] Under the hood website with dracula markdown
 - [ ] Hover over work items not working on mac
 - [ ] Resize carousel sizing to have a max height and max width to attempt to fix arrows not showing in landscape mode
-- [ ] Safari dropdown box shadow
+- [x] Safari dropdown box shadow
 - [ ] Expand icon on projects for devices without hover
+- [ ] Fix select issue where relativel position input breaks element flow if empty option is selected
+- [ ] Style contact me button on hover

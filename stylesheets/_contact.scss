@@ -36,7 +36,6 @@ main {
       display: inline-block;
       width: 49%;
       margin-bottom: 10px;
-      min-height: $inline-height;
       cursor: pointer;
       &.two {
         margin-left: 2%;
@@ -53,12 +52,10 @@ main {
         background-color: $labels;
         color: $inline-color;
         border-radius: 7px;
-        position: absolute;
-        z-index: 2;
         &::after {
           position: absolute;
           content: "";
-          top: 50%;
+          top: 70%;
           right: 3%;
           width: 0;
           height: 0;
@@ -70,26 +67,33 @@ main {
         }
         &.select-arrow-active:after {
           border-color: transparent transparent var(--purple) transparent;
-          top: 20%;
+          top: 50%;
         }
       }
       .select-items {
         background-color: v.$secondary;
         color: $inline-color;
         position: absolute;
-        top: $inline-height;
+        top: 100%;
         left: 0;
         right: 0;
         z-index: 1;
-        min-width: 10rem;
+        min-width: 8rem;
         width: 50%;
         border-bottom-left-radius: 7px;
         border-bottom-right-radius: 7px;
         div {
-          padding: 8px 16px;
+          padding: 8px;
+          padding-right: 0;
           min-height: $line-height;
           border-bottom: 1px solid darken(#706677, 5%);
           //v.$secondary
+        }
+        @media (min-width: 410px) {
+          min-width: 10rem;
+          div {
+            padding-left: 16px;
+          }
         }
       }
       .select-items div:hover,
