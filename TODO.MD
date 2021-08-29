@@ -7,3 +7,4 @@
 - [x] Home link on profile
 - [ ] Footer
 - [ ] Under the hood website with dracula markdown
+- [ ] Hover over work items not working on mac
