@@ -1,9 +1,9 @@
 - [ ] Close button on carousel
 - [ ] Up-sizing previous work items on resolutions that allow it
 - [ ] Different pages for each work item with more details of technologies used, and involvement by me
-- [ ] Contact Me page
+- [x] Contact Me page
 - [ ] Add transition border between header and content to prevent 1px overflow in chrome
 - [ ] Navbar on header
-- [ ] Home link on profile
+- [x] Home link on profile
 - [ ] Footer
 - [ ] Under the hood website with dracula markdown
