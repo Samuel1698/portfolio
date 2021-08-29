@@ -68,6 +68,7 @@
       <h2>Full-Stack Web Developer</h2>
       <div class="border"></div>
     </header>
+    <div class="filler"></div>
     <main>
       <?php
       if (isset($_POST['Email'])) {
