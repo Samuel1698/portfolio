@@ -101,6 +101,8 @@ main {
         &.active {
           width: 95vw;
           height: calc(95vw * 17 / 22);
+          max-width: calc(100vh * 22 / 17);
+          max-height: 100vh;
         }
       }
       .img-border {
