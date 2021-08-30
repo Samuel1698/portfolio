@@ -152,7 +152,7 @@ main {
       &:focus-visible {
         border: 2px solid v.$tertiary;
         background-color: v.$accent;
-        color: 
+        color: v.$tertiary;
       }
     }
   }
