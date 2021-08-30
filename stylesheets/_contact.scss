@@ -44,6 +44,7 @@ main {
         display: none;
       }
       .select-selected {
+        user-select: none;
         font-size: 0.9em;
         height: $line-height;
         line-height: $line-height;
@@ -52,25 +53,36 @@ main {
         background-color: $labels;
         color: $inline-color;
         border-radius: 7px;
+        span {
+          font-size: 1em;
+        }
         &::after {
           position: absolute;
           content: "";
           top: 70%;
+          left: initial;
+          bottom: initial;
           right: 3%;
           width: 0;
           height: 0;
           border: 8px solid transparent;
           border-color: var(--purple) transparent transparent transparent;
+          outline: none;
         }
         &.select-arrow-active {
           border-bottom-left-radius: 0;
         }
-        &.select-arrow-active:after {
+        &.select-arrow-active::after {
           border-color: transparent transparent var(--purple) transparent;
           top: 50%;
         }
+        // &.select-arrow-active:focus-visible::after {
+        //   top: 15%;
+        //   transition: none;
+        // }
       }
       .select-items {
+        user-select: none;
         background-color: v.$tertiary;
         color: v.$accent;
         position: absolute;
