@@ -2,7 +2,7 @@
 $labels: v.$secondary;
 $inline-color: v.$color;
 $line-height: 1.375rem;
-$inline-height: calc(1rem + 5px + #{$line-height} + 10px);
+
 main {
   form {
     font-size: 0; // Get rid of whitespace
@@ -136,14 +136,19 @@ main {
       color: $inline-color;
     }
     button {
-      border: 2px solid v.$accent;
+      border: 2px solid v.$highlight;
       background-color: v.$tertiary;
-      color: v.$accent;
+      color: black;
       cursor: pointer;
       border-radius: 7px;
       padding: 12px 22px;
       margin: 0 auto;
       display: block;
+      &:hover, &:focus-visible {
+        border: 2px solid v.$tertiary;
+        background-color: v.$accent;
+        color: v.$tertiary;
+      }
     }
   }
   p {
@@ -153,4 +158,18 @@ main {
 }
 footer {
   margin-top: 0;
+}
+@media (any-hover: hover) and (pointer: fine) {
+  main form button {
+    &:focus-visible {
+      border: 2px solid v.$tertiary;
+      background-color: v.$accent;
+      color: v.$tertiary;
+    }
+    &:hover {
+      border: 2px solid v.$tertiary;
+      background-color: v.$accent;
+      color: v.$tertiary;
+    }
+  }
 }

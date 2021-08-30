@@ -7,7 +7,7 @@
 - [x] Home link on profile
 - [ ] Footer
 - [ ] Under the hood website with dracula markdown
-- [ ] Hover over work items not working on mac
+- [ ] Hover over work items not working on safari
 - [ ] Resize carousel sizing to have a max height and max width to attempt to fix arrows not showing in landscape mode
 - [x] Safari dropdown box shadow
 - [ ] Expand icon on projects for devices without hover
