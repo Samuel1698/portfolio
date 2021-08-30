@@ -144,10 +144,15 @@ main {
       padding: 12px 22px;
       margin: 0 auto;
       display: block;
-      &:hover, &:focus-visible {
+      &:hover {
         border: 2px solid v.$tertiary;
         background-color: v.$accent;
         color: v.$tertiary;
+      }
+      &:focus-visible {
+        border: 2px solid v.$tertiary;
+        background-color: v.$accent;
+        color: 
       }
     }
   }

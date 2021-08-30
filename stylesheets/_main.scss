@@ -432,6 +432,10 @@ main {
       background-color: v.$accent;
       color: v.$color;
       cursor: pointer;
+      &:hover {
+        background-color: v.$color;
+        color: v.$accent;
+      }
     }
   }
 }
