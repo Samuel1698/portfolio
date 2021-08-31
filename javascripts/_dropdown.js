@@ -1,103 +1,117 @@
-var x, i, j, l, ll, selElmnt, a, b, c, span;
-/* Look for any elements with the class "custom-select": */
-x = document.getElementsByClassName("inline");
-l = x.length;
+var wrapper, i, j, realSelect, button, content, option, span;
+// Look for any elements with the class "custom-select":
+wrapper = document.getElementsByClassName("inline");
 
-for (i = 0; i < l; i++) {
-  selElmnt = x[i].getElementsByTagName("select")[0];
-  ll = selElmnt.length;
-  /* For each element, create a new DIV that will act as the selected item: */
-  a = document.createElement("DIV");
-  a.setAttribute("class", "select-selected");
-  // a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
-  a.tabIndex = 0;
+for (i = 0; i < wrapper.length; i++) {
+  realSelect = wrapper[i].getElementsByTagName("select")[0];
+  // For each element, create a new DIV that will act as the selected item:
+  button = document.createElement("div");
+  button.setAttribute("class", "select-selected");
+  button.tabIndex = 0;
   span = document.createElement("SPAN");
-  span.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
-  x[i].appendChild(a);
-  a.appendChild(span);
-  /* For each element, create a new DIV that will contain the option list: */
-  b = document.createElement("DIV");
-  b.setAttribute("class", "select-items select-hide");
-  for (j = 0; j < ll; j++) {
-    /* For each option in the original select element,
-    create a new DIV that will act as an option item: */
-    c = document.createElement("DIV");
-    c.innerHTML = selElmnt.options[j].innerHTML;
-    c.tabIndex = 0;
-    c.addEventListener("click", function(e){
+  span.innerHTML = realSelect.options[realSelect.selectedIndex].innerHTML;
+  wrapper[i].appendChild(button);
+  button.appendChild(span);
+  // For each element, create a new DIV that will contain the option list:
+  content = document.createElement("DIV");
+  content.setAttribute("class", "select-items select-hide");
+  for (j = 0; j < realSelect.length; j++) {
+    // For each option in the original select element, create a new DIV that will act as an option item:
+    option = document.createElement("DIV");
+    option.innerHTML = realSelect.options[j].innerHTML;
+    option.setAttribute("class", "select-item");
+    option.addEventListener("click", function (e) {
       updateOriginal(this);
     });
-    c.addEventListener("keyup", function(e){
-      if (e.code == 'Enter') {
-        e.preventDefault();
-        updateOriginal(this);
-      }
-    })
-    b.appendChild(c);
+    content.appendChild(option);
   }
-  x[i].appendChild(b);
-  a.addEventListener("click", function (e) {
+  wrapper[i].appendChild(content);
+  button.addEventListener("click", function (e) {
     e.stopPropagation();
-    toggleSelextBox(this);
+    toggleSelectBox(this);
   });
-  a.addEventListener("keyup", function(e){
-    e.stopPropagation();
-    if (e.code == 'Enter'){
-      toggleSelextBox(this);
+  // Add event listener to up down key to the div
+  button.addEventListener("keydown", function (event) {
+    if (event.key == "ArrowUp" || event.key == "ArrowDown") {
+      event.preventDefault();
+      // Move selection up and down with corresponding arrow key
+      var i, k, selected, realSelect, child;
+      realSelect = this.parentNode.getElementsByTagName("select")[0];
+      child = this.nextElementSibling.querySelectorAll("div");
+      for (i = 0; i < realSelect.length; i++) {
+        // Check the current button content
+        if (realSelect.options[i].innerHTML == this.innerText) {
+          // Figure out it's index in the select node
+          realSelect.selectedIndex = i;
+          if (event.key == "ArrowUp" && realSelect.options[i - 1]) {
+            this.querySelector("span").innerHTML = realSelect.options[i - 1].innerHTML;
+          }
+          if (event.key == "ArrowDown" && realSelect.options[i + 1]) {
+            this.querySelector("span").innerHTML = realSelect.options[i + 1].innerHTML;
+          }
+          selected = this.nextSibling.getElementsByClassName("same-as-selected");
+          for (k = 0; k < selected.length; k++) {
+            // Reset the 'same as selected' class
+            selected[k].removeAttribute("class");
+          }
+          for (i = 0; i < child.length; i++) {
+            // Assign 'same as selected' class to the child of fake select if it matches the selected text
+            if (this.querySelector("span").innerHTML == child[i].innerHTML) {
+              child[i].setAttribute("class", "same-as-selected");
+              break;
+            }
+          }
+          break;
+        }
+      }
     }
-  })
+  });
 }
-function toggleSelextBox(that){
-  /* When the select box is clicked, close any other select boxes,
-  and open/close the current select box: */
+function toggleSelectBox(that) {
+  // When the select box is clicked, close any other select boxes, and open / close the current select box:
   closeAllSelect(that);
   that.nextSibling.classList.toggle("select-hide");
   that.classList.toggle("select-arrow-active");
 }
 function updateOriginal(that) {
-  /* When an item is clicked, update the original select box, and the selected item: */
-  var y, i, k, s, h, sl, yl;
-  s = that.parentNode.parentNode.getElementsByTagName("select")[0];
-  sl = s.length;
-  h = that.parentNode.previousSibling;
-  for (i = 0; i < sl; i++) {
-    if (s.options[i].innerHTML == that.innerHTML) {
-      s.selectedIndex = i;
-      // h.innerHTML = that.innerHTML;
-      h.querySelector("span").innerHTML = that.innerHTML;
-      y = that.parentNode.getElementsByClassName("same-as-selected");
-      yl = y.length;
-      for (k = 0; k < yl; k++) {
-        y[k].removeAttribute("class");
+  // When an item is clicked, update the original select box, and the selected item:
+  var selected, i, k, select, button;
+  select = that.parentNode.parentNode.getElementsByTagName("select")[0];
+  button = that.parentNode.previousSibling;
+  for (i = 0; i < select.length; i++) {
+    if (select.options[i].innerHTML == that.innerHTML) {
+      select.selectedIndex = i;
+      button.querySelector("span").innerHTML = that.innerHTML;
+      selected = that.parentNode.getElementsByClassName("same-as-selected");
+      for (k = 0; k < selected.length; k++) {
+        selected[k].removeAttribute("class");
       }
       that.setAttribute("class", "same-as-selected");
       break;
     }
   }
-  h.click();
+  button.click();
 }
-function closeAllSelect(elmnt) {
-  /* A function that will close all select boxes in the document,
-  except the current select box: */
-  var x, y, i, xl, yl, arrNo = [];
-  x = document.getElementsByClassName("select-items");
-  y = document.getElementsByClassName("select-selected");
-  xl = x.length;
-  yl = y.length;
-  for (i = 0; i < yl; i++) {
-    if (elmnt == y[i]) {
+function closeAllSelect(element) {
+  // A function that will close all select boxes in the document, except the current select box:
+  var wrapper, div, i, arrNo = [];
+  wrapper = document.getElementsByClassName("select-items");
+  button = document.getElementsByClassName("select-selected");
+  for (i = 0; i < button.length; i++) {
+    if (element == button[i]) {
       arrNo.push(i);
     } else {
-      y[i].classList.remove("select-arrow-active");
+      button[i].classList.remove("select-arrow-active");
     }
   }
-  for (i = 0; i < xl; i++) {
+  for (i = 0; i < wrapper.length; i++) {
     if (arrNo.indexOf(i)) {
-      x[i].classList.add("select-hide");
+      wrapper[i].classList.add("select-hide");
     }
   }
 }
+// function moveUpDown(button, key, i) {
 
-/* If the user clicks anywhere outside the select box,
-then close all select boxes: */
+// }
+// If the user clicks anywhere outside the select box, then close all select boxes:
 document.addEventListener("click", closeAllSelect);
