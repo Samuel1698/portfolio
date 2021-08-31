@@ -65,6 +65,10 @@ for (i = 0; i < wrapper.length; i++) {
         }
       }
     }
+    if (event.key == "Enter" || event.key == "Tab") {
+      event.stopPropagation();
+      closeAllSelect();
+    }
   });
 }
 function toggleSelectBox(that) {
@@ -110,8 +114,5 @@ function closeAllSelect(element) {
     }
   }
 }
-// function moveUpDown(button, key, i) {
-
-// }
 // If the user clicks anywhere outside the select box, then close all select boxes:
 document.addEventListener("click", closeAllSelect);
