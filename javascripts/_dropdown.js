@@ -38,7 +38,7 @@ for (i = 0; i < wrapper.length; i++) {
       // Move selection up and down with corresponding arrow key
       var i, k, selected, realSelect, child;
       realSelect = this.parentNode.getElementsByTagName("select")[0];
-      child = this.nextElementSibling.querySelectorAll("div");
+      child = this.nextElementSibling.querySelectorAll("li");
       for (i = 0; i < realSelect.length; i++) {
         // Check the current button content
         if (realSelect.options[i].innerHTML == this.innerText) {
@@ -102,8 +102,8 @@ function updateOriginal(that) {
 }
 function closeAllSelect(element) {
   // A function that will close all select boxes in the document, except the current select box:
-  var wrapper, div, i, arrNo = [];
-  wrapper = document.getElementsByClassName("select-items");
+  var ul, i, arrNo = [];
+  ul = document.getElementsByClassName("select-items");
   button = document.getElementsByClassName("select-button");
   for (i = 0; i < button.length; i++) {
     if (element == button[i]) {
@@ -112,9 +112,9 @@ function closeAllSelect(element) {
       button[i].classList.remove("select-arrow-active");
     }
   }
-  for (i = 0; i < wrapper.length; i++) {
+  for (i = 0; i < ul.length; i++) {
     if (arrNo.indexOf(i)) {
-      wrapper[i].classList.add("select-hide");
+      ul[i].classList.add("select-hide");
     }
   }
 }
