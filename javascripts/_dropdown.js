@@ -5,9 +5,10 @@ wrapper = document.getElementsByClassName("inline");
 for (i = 0; i < wrapper.length; i++) {
   realSelect = wrapper[i].getElementsByTagName("select")[0];
   // For each element, create a new DIV that will act as the selected item:
-  button = document.createElement("div");
+  button = document.createElement("button");
   button.setAttribute("class", "select-selected");
   button.tabIndex = 0;
+  button.setAttribute("type", "button");
   span = document.createElement("SPAN");
   span.innerHTML = realSelect.options[realSelect.selectedIndex].innerHTML;
   wrapper[i].appendChild(button);
@@ -68,6 +69,9 @@ for (i = 0; i < wrapper.length; i++) {
     if (event.key == "Enter" || event.key == "Tab") {
       event.stopPropagation();
       closeAllSelect();
+    }
+    if (event.key == "Enter") {
+      event.preventDefault();
     }
   });
 }

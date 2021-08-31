@@ -45,12 +45,14 @@ main {
       }
       .select-selected {
         user-select: none;
+        text-align: left;
         font-size: 0.9em;
-        height: $line-height;
         line-height: $line-height;
+        margin: 0;
         padding: 2%;
-        width: 96%;
+        width: 100%;
         color: $inline-color;
+        border: 0;
         border-radius: 7px;
         background: url("../images/caret-down.svg") right bottom/2em no-repeat $labels;
         span {
