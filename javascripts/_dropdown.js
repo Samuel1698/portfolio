@@ -20,14 +20,14 @@ for (i = 0; i < wrapper.length; i++) {
     option = document.createElement("DIV");
     option.innerHTML = realSelect.options[j].innerHTML;
     option.setAttribute("class", "select-item");
-    option.addEventListener("click", function (e) {
+    option.addEventListener("click", function () {
       updateOriginal(this);
     });
     content.appendChild(option);
   }
   wrapper[i].appendChild(content);
-  button.addEventListener("click", function (e) {
-    e.stopPropagation();
+  button.addEventListener("click", function (event) {
+    event.stopPropagation();
     toggleSelectBox(this);
   });
   // Add event listener to up down key to the div
