@@ -6,7 +6,7 @@ for (i = 0; i < wrapper.length; i++) {
   realSelect = wrapper[i].getElementsByTagName("select")[0];
   // For each element, create a new DIV that will act as the selected item:
   button = document.createElement("button");
-  button.setAttribute("class", "select-selected");
+  button.setAttribute("class", "select-button");
   button.tabIndex = 0;
   button.setAttribute("type", "button");
   span = document.createElement("SPAN");
@@ -14,11 +14,11 @@ for (i = 0; i < wrapper.length; i++) {
   wrapper[i].appendChild(button);
   button.appendChild(span);
   // For each element, create a new DIV that will contain the option list:
-  content = document.createElement("DIV");
+  content = document.createElement("ul");
   content.setAttribute("class", "select-items select-hide");
   for (j = 0; j < realSelect.length; j++) {
     // For each option in the original select element, create a new DIV that will act as an option item:
-    option = document.createElement("DIV");
+    option = document.createElement("li");
     option.innerHTML = realSelect.options[j].innerHTML;
     option.setAttribute("class", "select-item");
     option.addEventListener("click", function () {
@@ -104,7 +104,7 @@ function closeAllSelect(element) {
   // A function that will close all select boxes in the document, except the current select box:
   var wrapper, div, i, arrNo = [];
   wrapper = document.getElementsByClassName("select-items");
-  button = document.getElementsByClassName("select-selected");
+  button = document.getElementsByClassName("select-button");
   for (i = 0; i < button.length; i++) {
     if (element == button[i]) {
       arrNo.push(i);

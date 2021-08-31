@@ -7,7 +7,7 @@ main {
   form {
     font-size: 0; // Get rid of whitespace
     > * {
-      font-size: 1rem; //Reset fontsize for all child elements
+      font-size: 1rem; //Reset font-size for all child elements
     }
     // background-color: v.$columns;
     color: black;
@@ -15,7 +15,7 @@ main {
     padding: 12px;
     margin: 0 auto;
     max-width: clamp(270px, 80%, 600px);
-    // Prevent chrome's white boxshadow from overriding the set color
+    // Prevent chrome's white box-shadow from overriding the set color
     input:-webkit-autofill,
     input:-webkit-autofill:hover,
     input:-webkit-autofill:focus,
@@ -43,7 +43,7 @@ main {
       select {
         display: none;
       }
-      .select-selected {
+      button.select-button {
         user-select: none;
         text-align: left;
         font-size: 0.9em;
@@ -61,12 +61,10 @@ main {
         }
         &.select-arrow-active {
           border-bottom-left-radius: 0;
-        }
-        &.select-arrow-active {
           background: url("../images/caret-up.svg") right top/2em no-repeat $labels;
         }
       }
-      .select-items {
+      ul {
         user-select: none;
         background-color: v.$tertiary;
         color: v.$accent;
@@ -79,7 +77,7 @@ main {
         width: 50%;
         border-bottom-left-radius: 7px;
         border-bottom-right-radius: 7px;
-        div {
+        li {
           padding: 8px;
           padding-right: 0;
           min-height: $line-height;
@@ -88,13 +86,12 @@ main {
         }
         @media (min-width: 410px) {
           min-width: 10rem;
-          div {
+          li {
             padding-left: 16px;
           }
         }
       }
-      .select-items div:hover,
-      .same-as-selected {
+      ul li:hover, .same-as-selected {
         cursor: pointer;
         background-color: rgba(0, 0, 0, 0.1);
       }
