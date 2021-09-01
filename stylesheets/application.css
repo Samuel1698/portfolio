@@ -748,6 +748,12 @@ main section.work .item a img {
   position: relative;
   z-index: 0;
 }
+main section.work .item a:focus-visible::after {
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+}
 main section.work .item .image-cropper {
   border: 4px solid #0cce6b;
   height: 35px;

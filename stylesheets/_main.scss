@@ -318,6 +318,12 @@ main {
           position: relative;
           z-index: 0;
         }
+        &:focus-visible::after {
+        top: 2px;
+        left: 2px;
+        right: 2px;
+        bottom: 2px;
+      }
       }
       .image-cropper {
         border: 4px solid #0cce6b;
