@@ -45,12 +45,15 @@ for (i = 0; i < wrapper.length; i++) {
           // Figure out it's index in the select node
           realSelect.selectedIndex = i;
           if (event.key == "ArrowUp" && realSelect.options[i - 1]) {
-            this.querySelector("span").innerHTML = realSelect.options[i - 1].innerHTML;
+            this.querySelector("span").innerHTML =
+              realSelect.options[i - 1].innerHTML;
           }
           if (event.key == "ArrowDown" && realSelect.options[i + 1]) {
-            this.querySelector("span").innerHTML = realSelect.options[i + 1].innerHTML;
+            this.querySelector("span").innerHTML =
+              realSelect.options[i + 1].innerHTML;
           }
-          selected = this.nextSibling.getElementsByClassName("same-as-selected");
+          selected =
+            this.nextSibling.getElementsByClassName("same-as-selected");
           for (k = 0; k < selected.length; k++) {
             // Reset the 'same as selected' class
             selected[k].removeAttribute("class");
@@ -102,7 +105,9 @@ function updateOriginal(that) {
 }
 function closeAllSelect(element) {
   // A function that will close all select boxes in the document, except the current select box:
-  var ul, i, arrNo = [];
+  var ul,
+    i,
+    arrNo = [];
   ul = document.getElementsByClassName("select-items");
   button = document.getElementsByClassName("select-button");
   for (i = 0; i < button.length; i++) {

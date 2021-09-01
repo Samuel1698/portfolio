@@ -14,3 +14,4 @@
 - [x] Fix select issue where relative position input breaks element flow if empty option is selected
 - [ ] Style contact me button on hover
 - [ ] Contact page - select options prevent text highlighting
+- [ ] Certificate Page
