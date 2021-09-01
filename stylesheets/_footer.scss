@@ -3,6 +3,25 @@
 footer {
   margin-top: auto;
   background-color: v.$secondary;
-  padding: 80px 0;
+  padding: 5em 0 0.625em;
+  font-size: 1em;
   color: v.$color;
+  text-align: center;
+  .footer_module {
+    margin-bottom: 0.625em;
+    a {
+      color: v.$color;
+      &:hover {
+        border-bottom: 2px dashed;
+        margin-bottom: -2px;
+      }
+      &:focus-visible {
+        border-bottom: 2px dashed;
+        margin-bottom: -2px;
+      }
+    }
+  }
+  small {
+    font-size: 0.7em;
+  }
 }

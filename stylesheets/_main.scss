@@ -444,7 +444,8 @@ main {
     margin: 1rem auto -5rem;
     text-align: center;
     width: clamp(260px, 80%, 940px);
-    button {
+    a {
+      display: inline-block;
       border: 1px solid v.$highlight;
       border-radius: 7px;
       padding: 12px;
