@@ -908,34 +908,64 @@ footer {
   color: var(--isabelline);
   text-align: center;
 }
+footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
 footer .footer_module {
   font-size: 0;
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+footer .footer_module p {
+  font-size: 1rem;
+  margin: 0;
+  margin-bottom: 5px;
 }
 footer .footer_module a {
-  display: inline-block;
+  display: block;
   padding: 4px;
+  margin-left: 10px;
   font-size: 0;
   height: 1.5rem;
   color: var(--isabelline);
 }
-footer .footer_module a:hover {
-  border-bottom: 2px dashed;
-  margin-bottom: -2px;
-}
-footer .footer_module a:focus-visible {
-  border-bottom: 2px dashed;
-  margin-bottom: -2px;
-}
-footer .footer_module a img {
+footer .footer_module a svg {
+  fill: var(--isabelline);
   vertical-align: bottom;
+  position: relative;
+  top: 2px;
 }
 footer .footer_module a span {
   font-size: 1rem;
-  margin-left: 0.3rem;
+  padding-left: 0.3rem;
+}
+footer .footer_module a:hover {
+  color: var(--silver-pink);
+}
+footer .footer_module a:hover svg {
+  fill: var(--silver-pink);
+}
+footer .footer_module a:hover span, footer .footer_module a:hover svg {
+  border-bottom: 2px solid;
+  margin-bottom: -2px;
+}
+footer .footer_module a:focus-visible {
+  color: var(--silver-pink);
+}
+footer .footer_module a:focus-visible svg {
+  fill: var(--silver-pink);
+}
+footer .footer_module a:focus-visible span, footer .footer_module a:focus-visible svg {
+  border-bottom: 2px solid;
+  margin-bottom: -2px;
 }
 footer small {
-  font-size: 0.7em;
+  font-size: 0.8em;
 }
 
 @media (min-width: 400px) {
