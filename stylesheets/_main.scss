@@ -319,11 +319,11 @@ main {
           z-index: 0;
         }
         &:focus-visible::after {
-        top: 2px;
-        left: 2px;
-        right: 2px;
-        bottom: 2px;
-      }
+          top: 2px;
+          left: 2px;
+          right: 2px;
+          bottom: 2px;
+        }
       }
       .image-cropper {
         border: 4px solid #0cce6b;
@@ -450,6 +450,8 @@ main {
     margin: 1rem auto -5rem;
     text-align: center;
     width: clamp(260px, 80%, 940px);
+    position: relative;
+    z-index: 1;
     a {
       display: inline-block;
       border: 1px solid v.$highlight;

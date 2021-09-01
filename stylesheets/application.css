@@ -885,6 +885,8 @@ main section.contact {
   margin: 1rem auto -5rem;
   text-align: center;
   width: clamp(260px, 80%, 940px);
+  position: relative;
+  z-index: 1;
 }
 main section.contact a {
   display: inline-block;
@@ -907,18 +909,27 @@ footer {
   font-size: 1em;
   color: var(--isabelline);
   text-align: center;
+  position: relative;
 }
 footer .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: initial;
+}
+footer .footer_about {
+  border-left: 2px solid var(--english-lavender);
+  border-top: 2px solid var(--english-lavender);
+}
+footer .footer_about img {
+  float: left;
 }
 footer .footer_module {
   font-size: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   text-align: left;
 }
 footer .footer_module p {
@@ -943,6 +954,7 @@ footer .footer_module a svg {
 footer .footer_module a span {
   font-size: 1rem;
   padding-left: 0.3rem;
+  border-bottom: 2px solid var(--english-lavender);
 }
 footer .footer_module a:hover {
   color: var(--silver-pink);
@@ -950,7 +962,8 @@ footer .footer_module a:hover {
 footer .footer_module a:hover svg {
   fill: var(--silver-pink);
 }
-footer .footer_module a:hover span, footer .footer_module a:hover svg {
+footer .footer_module a:hover span,
+footer .footer_module a:hover svg {
   border-bottom: 2px solid;
   margin-bottom: -2px;
 }
@@ -960,12 +973,21 @@ footer .footer_module a:focus-visible {
 footer .footer_module a:focus-visible svg {
   fill: var(--silver-pink);
 }
-footer .footer_module a:focus-visible span, footer .footer_module a:focus-visible svg {
+footer .footer_module a:focus-visible span,
+footer .footer_module a:focus-visible svg {
   border-bottom: 2px solid;
   margin-bottom: -2px;
 }
 footer small {
   font-size: 0.8em;
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+}
+footer small a {
+  color: var(--isabelline);
+  border-bottom: 2px solid var(--english-lavender);
 }
 
 @media (min-width: 400px) {

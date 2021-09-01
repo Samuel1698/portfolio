@@ -7,13 +7,22 @@ footer {
   font-size: 1em;
   color: v.$color;
   text-align: center;
+  position: relative;
   .container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    max-width: initial;
+  }
+  .footer_about {
+    border-left: 2px solid v.$highlight;
+    border-top: 2px solid v.$highlight;
+    img {
+      float: left;
+    }
   }
   .footer_module {
     font-size: 0; // Reset whitespace
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     text-align: left;
     p {
       font-size: 1rem;
@@ -36,13 +45,15 @@ footer {
       span {
         font-size: 1rem;
         padding-left: 0.3rem;
+        border-bottom: 2px solid v.$highlight;
       }
       &:hover {
         color: v.$tertiary;
         svg {
           fill: v.$tertiary;
         }
-        span, svg {
+        span,
+        svg {
           border-bottom: 2px solid;
           margin-bottom: -2px;
         }
@@ -52,7 +63,8 @@ footer {
         svg {
           fill: v.$tertiary;
         }
-        span, svg {
+        span,
+        svg {
           border-bottom: 2px solid;
           margin-bottom: -2px;
         }
@@ -61,5 +73,13 @@ footer {
   }
   small {
     font-size: 0.8em;
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    right: 0;
+    a {
+      color: v.$color;
+      border-bottom: 2px solid v.$highlight;
+    }
   }
 }
