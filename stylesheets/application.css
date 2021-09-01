@@ -903,9 +903,14 @@ footer {
   text-align: center;
 }
 footer .footer_module {
-  margin-bottom: 0.625em;
+  font-size: 0;
+  margin-bottom: 1em;
 }
 footer .footer_module a {
+  display: inline-block;
+  padding: 4px;
+  font-size: 0;
+  height: 1.5rem;
   color: var(--isabelline);
 }
 footer .footer_module a:hover {
@@ -915,6 +920,13 @@ footer .footer_module a:hover {
 footer .footer_module a:focus-visible {
   border-bottom: 2px dashed;
   margin-bottom: -2px;
+}
+footer .footer_module a img {
+  vertical-align: bottom;
+}
+footer .footer_module a span {
+  font-size: 1rem;
+  margin-left: 0.3rem;
 }
 footer small {
   font-size: 0.7em;

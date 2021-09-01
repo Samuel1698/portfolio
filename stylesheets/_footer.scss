@@ -8,8 +8,13 @@ footer {
   color: v.$color;
   text-align: center;
   .footer_module {
-    margin-bottom: 0.625em;
+    font-size: 0; // Reset whitespace
+    margin-bottom: 1em;
     a {
+      display: inline-block;
+      padding: 4px;
+      font-size: 0; // Reset whitespace
+      height: 1.5rem;
       color: v.$color;
       &:hover {
         border-bottom: 2px dashed;
@@ -18,6 +23,13 @@ footer {
       &:focus-visible {
         border-bottom: 2px dashed;
         margin-bottom: -2px;
+      }
+      img {
+        vertical-align: bottom;
+      }
+      span {
+        font-size: 1rem;
+        margin-left: 0.3rem;
       }
     }
   }

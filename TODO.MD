@@ -15,3 +15,4 @@
 - [ ] Style contact me button on hover
 - [ ] Contact page - select options prevent text highlighting
 - [ ] Certificate Page
+- [ ] Piano performances page
