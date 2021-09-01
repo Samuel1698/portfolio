@@ -1,17 +1,23 @@
 window.onload = function () {
-  ulAnimation();
-}
+  preventAnimation();
+};
 window.onscroll = function () {
   ulAnimation();
 };
-function ulAnimation(){
+function preventAnimation() {
   var ul = document.querySelectorAll(
     "main section.skills ul, main section.languages ul"
   );
   for (let i = 0; i < ul.length; i++) {
-    checkVisible(ul[i])
-      ? ul[i].setAttribute("class", "animation")
-      : ul[i].removeAttribute("class");
+    if (checkVisible(ul[i])) ul[i].setAttribute("class", "loaded");
+  }
+}
+function ulAnimation() {
+  var ul = document.querySelectorAll(
+    "main section.skills ul, main section.languages ul"
+  );
+  for (let i = 0; i < ul.length; i++) {
+    if (checkVisible(ul[i])) ul[i].classList.add("animation");
   }
 }
 function checkVisible(elm) {

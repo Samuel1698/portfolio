@@ -596,6 +596,13 @@ main section.languages ul.animation,
 main section.skills ul.animation {
   -webkit-animation: skills 1s ease;
           animation: skills 1s ease;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+main section.languages ul.loaded,
+main section.skills ul.loaded {
+  -webkit-animation: none;
+          animation: none;
 }
 main section.languages ul li,
 main section.skills ul li {
