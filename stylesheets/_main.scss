@@ -193,7 +193,7 @@ main {
   section.skills {
     ul.animation {
       animation: skills 1s ease;
-      animation-iteration-count: 1
+      animation-iteration-count: 1;
     }
     ul.loaded {
       animation: none;
@@ -267,8 +267,8 @@ main {
         text-transform: uppercase;
       }
       i,
-      i::after,
-      i::before {
+      i::before,
+      i::after {
         height: 12px;
         width: 12px;
         display: inline-block;
@@ -289,6 +289,12 @@ main {
         left: 32px;
         background-color: #28ca41;
         top: 0;
+      }
+      img {
+        position: absolute;
+        right: 2px;
+        bottom: 2px;
+        cursor: pointer;
       }
     }
     .flex_wrapper {
@@ -359,11 +365,11 @@ main {
           }
         }
         ul li,
-        a,
+        .pageSpeed,
         .image-cropper {
           display: inline-block;
         }
-        a {
+        .pageSpeed {
           transition: none;
           bottom: 12px;
           padding: 5px 0;
@@ -376,12 +382,6 @@ main {
             margin: 0;
           }
         }
-        a:hover,
-        a:focus-visible {
-          transition: none;
-          border-bottom: 2px dashed;
-          bottom: 10px; //Two less than a bottom
-        }
       }
       .overlay {
         top: -106%;
@@ -393,14 +393,16 @@ main {
         transition: all 0.5s ease;
       }
     }
-    .item.hover .overlay,
-    .item > a:focus-visible .overlay {
+    .item.toggle .overlay,
+    .item.focus .overlay,
+    .item.hover .overlay {
       top: 0;
       bottom: 0;
       transition: all 0.5s ease;
     }
-    .item.hover .hidden,
-    .item > a:focus-visible ~ .hidden {
+    .item.toggle .hidden,
+    .item.focus .hidden,
+    .item.hover .hidden {
       left: 0;
       right: 0;
       transition: all 1s ease;

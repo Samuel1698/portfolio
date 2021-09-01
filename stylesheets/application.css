@@ -689,8 +689,8 @@ main section.work .bar h4 {
   text-transform: uppercase;
 }
 main section.work .bar i,
-main section.work .bar i::after,
-main section.work .bar i::before {
+main section.work .bar i::before,
+main section.work .bar i::after {
   height: 12px;
   width: 12px;
   display: inline-block;
@@ -711,6 +711,12 @@ main section.work .bar i::after {
   left: 32px;
   background-color: #28ca41;
   top: 0;
+}
+main section.work .bar img {
+  position: absolute;
+  right: 2px;
+  bottom: 2px;
+  cursor: pointer;
 }
 main section.work .flex_wrapper {
   display: -webkit-box;
@@ -790,11 +796,11 @@ main section.work .item .hidden ul li {
   border-radius: 4px;
 }
 main section.work .item .hidden ul li,
-main section.work .item .hidden a,
+main section.work .item .hidden .pageSpeed,
 main section.work .item .hidden .image-cropper {
   display: inline-block;
 }
-main section.work .item .hidden a {
+main section.work .item .hidden .pageSpeed {
   -webkit-transition: none;
   transition: none;
   bottom: 12px;
@@ -806,15 +812,8 @@ main section.work .item .hidden a {
           transform: translateX(-50%);
   color: var(--isabelline);
 }
-main section.work .item .hidden a p {
+main section.work .item .hidden .pageSpeed p {
   margin: 0;
-}
-main section.work .item .hidden a:hover,
-main section.work .item .hidden a:focus-visible {
-  -webkit-transition: none;
-  transition: none;
-  border-bottom: 2px dashed;
-  bottom: 10px;
 }
 main section.work .item .overlay {
   top: -106%;
@@ -826,15 +825,17 @@ main section.work .item .overlay {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-main section.work .item.hover .overlay,
-main section.work .item > a:focus-visible .overlay {
+main section.work .item.toggle .overlay,
+main section.work .item.focus .overlay,
+main section.work .item.hover .overlay {
   top: 0;
   bottom: 0;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-main section.work .item.hover .hidden,
-main section.work .item > a:focus-visible ~ .hidden {
+main section.work .item.toggle .hidden,
+main section.work .item.focus .hidden,
+main section.work .item.hover .hidden {
   left: 0;
   right: 0;
   -webkit-transition: all 1s ease;

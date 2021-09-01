@@ -1,35 +1,28 @@
-// ----------------------------------------------------------
-// Previous work
-// ----------------------------------------------------------
-const item = document.querySelectorAll(".flex_wrapper .item");
+var item = document.querySelectorAll(".flex_wrapper .item .link");
 document.addEventListener("mousemove", function checkHover() {
   for (let i = 0; i < item.length; i++) {
-    if (item[i].matches(":hover")) {
-      item[i].classList.add("hover");
-    } else {
-      item[i].classList.remove("hover");
-    }
+    item[i].matches(":hover") || item[i].nextElementSibling.matches(":hover")
+      ? item[i].parentNode.classList.add("hover")
+      : item[i].parentNode.classList.remove("hover");
   }
 });
-document.addEventListener("keydown", function (e) {
+document.addEventListener("keyup", function (e) {
   if (e.code === "Tab") {
     for (let i = 0; i < item.length; i++) {
-      if (item[i].querySelector(".link").matches(":focus-visible")) {
-        item[i].classList.add("hover");
-      } else {
-        item[i].classList.remove("hover");
-      }
+      item[i].matches(":focus-visible")
+        ? item[i].parentNode.classList.add("focus")
+        : item[i].parentNode.classList.remove("focus");
     }
   }
 });
+var expand = document.querySelectorAll(".bar .expand");
+for (let i = 0; i < expand.length; i++) {
+  expand[i].addEventListener("click", function () {
+    this.parentNode.parentNode.classList.toggle("toggle");
+  });
+}
 document
   .querySelector(".pinkwug .hidden")
   .addEventListener("click", function (e) {
-    if (
-      !e.target.matches("span") ||
-      !e.target.matches("p") ||
-      !e.target.matches("a")
-    ) {
-      window.open("https://pinkwug.live");
-    }
+    window.open("https://pinkwug.live");
   });
