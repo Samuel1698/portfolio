@@ -99,6 +99,9 @@ main {
             background-size: 100px;
           }
         }
+        button.close.hide {
+          display: none;
+        }
         button.close {
           display: initial;
           position: absolute;

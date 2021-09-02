@@ -500,6 +500,9 @@ main .columns .overlay.active button.arrow:hover, main .columns .overlay.active 
 main .columns .overlay.active button.arrow.disabled:hover, main .columns .overlay.active button.arrow.disabled:focus-visible {
   background-size: 100px;
 }
+main .columns .overlay.active button.close.hide {
+  display: none;
+}
 main .columns .overlay.active button.close {
   display: initial;
   position: absolute;

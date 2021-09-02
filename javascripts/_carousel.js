@@ -42,14 +42,14 @@ button[0].addEventListener("click", function (event) {
   let index = detectActive();
   if (index !== 0) {
     // Toggle visibility of close button while transition happens
-    closeBtn.style.display = "none";
+    closeBtn.classList.toggle("hide");
     // Add pressed class to button
     button[0].classList.add("pressed");
     setTimeout(function () {
       button[0].classList.remove("pressed");
     }, 500);
     setTimeout(function () {
-      closeBtn.style.display = "initial";
+      closeBtn.classList.toggle("hide");
     }, 1000);
     button[1].tabIndex = 0;
     resetClasses(index);
@@ -65,14 +65,15 @@ button[1].addEventListener("click", function (event) {
   let index = detectActive();
   if (index !== img.length - 1) {
     // Toggle visibility of close button while transition happens
-    closeBtn.style.display = "none";
+    closeBtn.classList.toggle("hide");
+
     // Add pressed class to button
     button[1].classList.add("pressed");
     setTimeout(function () {
       button[1].classList.remove("pressed");
     }, 500);
     setTimeout(function () {
-      closeBtn.style.display = "initial";
+      closeBtn.classList.toggle("hide");
     }, 1000);
     button[0].tabIndex = 0;
     resetClasses(index);
