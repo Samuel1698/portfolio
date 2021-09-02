@@ -19,6 +19,7 @@ var expand = document.querySelectorAll(".bar .expand");
 for (let i = 0; i < expand.length; i++) {
   expand[i].addEventListener("click", function () {
     this.parentNode.parentNode.classList.toggle("toggle");
+    this.classList.toggle("on");
   });
 }
 document

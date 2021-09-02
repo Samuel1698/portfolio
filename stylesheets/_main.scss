@@ -298,7 +298,32 @@ main {
         right: 0;
         bottom: 0;
         cursor: pointer;
-        background: url("../images/expand-in-out.gif") center top/20px no-repeat;
+        svg {
+          transition: all 0.5s ease-in-out;
+          position: absolute;
+          left: 0;
+          &:nth-child(1) {
+            filter: alpha(opacity=100); /* IE stuff */
+            opacity: 1;
+          }
+          &:nth-child(2) {
+            filter: alpha(opacity=0); /* IE stuff */
+            opacity: 0;
+          }
+        }
+        &.on {
+          svg {
+            transition: all 0.5s ease-in-out;
+            &:nth-child(1) {
+              filter: alpha(opacity=0); /* IE stuff */
+              opacity: 0;
+            }
+            &:nth-child(2) {
+              filter: alpha(opacity=100); /* IE stuff */
+              opacity: 1;
+            }
+          }
+        }
       }
     }
     .flex_wrapper {
@@ -403,20 +428,20 @@ main {
         transition: all 0.5s ease;
       }
     }
-    .item.toggle .overlay,
-    .item.focus .overlay,
-    .item.hover .overlay {
-      top: 0;
-      bottom: 0;
-      transition: all 0.5s ease;
-    }
-    .item.toggle .hidden,
-    .item.focus .hidden,
-    .item.hover .hidden {
-      left: 0;
-      right: 0;
-      transition: all 1s ease;
-      transition-delay: 0.5s;
+    .item.toggle,
+    .item.focus,
+    .item.hover {
+      .overlay {
+        top: 0;
+        bottom: 0;
+        transition: all 0.5s ease;
+      }
+      .hidden {
+        left: 0;
+        right: 0;
+        transition: all 1s ease;
+        transition-delay: 0.5s;
+      }
     }
   }
   section.testimony {

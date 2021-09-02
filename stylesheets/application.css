@@ -722,7 +722,36 @@ main section.work .bar span {
   right: 0;
   bottom: 0;
   cursor: pointer;
-  background: url("../images/expand-in-out.gif") center top/20px no-repeat;
+}
+main section.work .bar span svg {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  left: 0;
+}
+main section.work .bar span svg:nth-child(1) {
+  filter: alpha(opacity=100);
+  /* IE stuff */
+  opacity: 1;
+}
+main section.work .bar span svg:nth-child(2) {
+  filter: alpha(opacity=0);
+  /* IE stuff */
+  opacity: 0;
+}
+main section.work .bar span.on svg {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+main section.work .bar span.on svg:nth-child(1) {
+  filter: alpha(opacity=0);
+  /* IE stuff */
+  opacity: 0;
+}
+main section.work .bar span.on svg:nth-child(2) {
+  filter: alpha(opacity=100);
+  /* IE stuff */
+  opacity: 1;
 }
 main section.work .flex_wrapper {
   display: -webkit-box;
