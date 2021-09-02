@@ -726,6 +726,7 @@ main section.about .swoosh path {
   fill: var(--timberwolf);
 }
 main section.work {
+  margin-bottom: 3em;
   padding: 0;
   text-align: center;
 }
@@ -969,6 +970,9 @@ main section.testimony .content {
   padding-left: 10px;
   border-left: 2px solid var(--independence);
 }
+main section.why {
+  margin-bottom: 2em;
+}
 main section.why h3, main section.why h4 {
   color: var(--dracula-grey);
   font-weight: bold;
@@ -993,6 +997,7 @@ main section.contact {
   width: clamp(260px, 80%, 940px);
   position: relative;
   z-index: 1;
+  font-weight: bold;
 }
 main section.contact h3 {
   font-size: 1.5em;
@@ -1007,7 +1012,7 @@ main section.contact a {
   color: var(--isabelline);
   cursor: pointer;
   font-size: 1rem;
-  margin-left: calc(10em - (5.3114em + 26px));
+  margin-left: calc(10em - (5.693125em + 26px));
 }
 main section.contact a:hover {
   background-color: var(--isabelline);

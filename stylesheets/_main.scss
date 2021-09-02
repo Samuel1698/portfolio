@@ -288,6 +288,7 @@ main {
     }
   }
   section.work {
+    margin-bottom: 3em;
     padding: 0;
     text-align: center;
     h3 {
@@ -514,6 +515,7 @@ main {
     }
   }
   section.why {
+    margin-bottom: 2em;
     h3, h4 {
       color: v.$accent;
       font-weight: bold;
@@ -538,6 +540,7 @@ main {
     width: clamp(260px, 80%, 940px);
     position: relative;
     z-index: 1;
+    font-weight: bold;
     h3 {
       font-size: 1.5em;
       margin: 1rem 0;
@@ -551,8 +554,8 @@ main {
       color: v.$color;
       cursor: pointer;
       font-size: 1rem;
-      // 10em = size of left text div, 5.3114em = size of inner span, 26px = 12px padding + 1px border
-      margin-left: calc(10em - (5.3114em + 26px));
+      margin-left: calc(10em - (5.693125em + 26px));
+      // 10em = size of left text div, 5.693125em = size of inner span, 26px = 12px padding + 1px border
       &:hover {
         background-color: v.$color;
         color: v.$accent;
