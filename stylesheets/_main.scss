@@ -290,11 +290,14 @@ main {
         background-color: #28ca41;
         top: 0;
       }
-      img {
+      span {
+        height: 22px;
+        width: 22px;
         position: absolute;
-        right: 2px;
-        bottom: 2px;
+        right: 0;
+        bottom: 0;
         cursor: pointer;
+        background: url("../images/expand-in-out.gif") center top/20px no-repeat;
       }
     }
     .flex_wrapper {

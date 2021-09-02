@@ -712,11 +712,14 @@ main section.work .bar i::after {
   background-color: #28ca41;
   top: 0;
 }
-main section.work .bar img {
+main section.work .bar span {
+  height: 22px;
+  width: 22px;
   position: absolute;
-  right: 2px;
-  bottom: 2px;
+  right: 0;
+  bottom: 0;
   cursor: pointer;
+  background: url("../images/expand-in-out.gif") center top/20px no-repeat;
 }
 main section.work .flex_wrapper {
   display: -webkit-box;
@@ -944,17 +947,19 @@ footer .footer_module a {
   font-size: 0;
   height: 1.5rem;
   color: var(--isabelline);
+  position: relative;
 }
 footer .footer_module a svg {
   fill: var(--isabelline);
-  vertical-align: bottom;
-  position: relative;
-  top: 2px;
+  position: absolute;
+  top: -1px;
+  left: 4px;
 }
 footer .footer_module a span {
   font-size: 1rem;
-  padding-left: 0.3rem;
+  padding-left: 1.8rem;
   border-bottom: 2px solid var(--english-lavender);
+  display: inline-block;
 }
 footer .footer_module a:hover {
   color: var(--silver-pink);
@@ -962,8 +967,7 @@ footer .footer_module a:hover {
 footer .footer_module a:hover svg {
   fill: var(--silver-pink);
 }
-footer .footer_module a:hover span,
-footer .footer_module a:hover svg {
+footer .footer_module a:hover span {
   border-bottom: 2px solid;
   margin-bottom: -2px;
 }
@@ -973,8 +977,7 @@ footer .footer_module a:focus-visible {
 footer .footer_module a:focus-visible svg {
   fill: var(--silver-pink);
 }
-footer .footer_module a:focus-visible span,
-footer .footer_module a:focus-visible svg {
+footer .footer_module a:focus-visible span {
   border-bottom: 2px solid;
   margin-bottom: -2px;
 }
