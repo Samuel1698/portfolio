@@ -445,6 +445,21 @@ main .columns .overlay.active {
   z-index: 2;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 main .columns .overlay.active button {
   position: absolute;
@@ -483,16 +498,12 @@ main .columns .overlay.active button.disabled:hover, main .columns .overlay.acti
   background-size: 100px;
 }
 main .columns .overlay .wrapper {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  position: relative;
   overflow: hidden;
 }
 main .columns .overlay .wrapper.active {
-  width: 95vw;
-  height: calc(95vw * 17 / 22);
+  width: calc(75vw * 22 / 17);
+  height: 75vw;
   max-width: calc(100vh * 22 / 17);
   max-height: 100vh;
 }
@@ -1054,6 +1065,10 @@ footer small a {
 }
 
 @media (min-width: 40rem) {
+  :root {
+    --carousel-size: 70vw;
+  }
+
   .container {
     max-width: calc(40rem - 40px);
   }
@@ -1080,8 +1095,8 @@ footer small a {
     background-size: 170px;
   }
   main .columns .overlay .wrapper.active {
-    width: 90vw;
-    height: calc(90vw * 17 / 22);
+    width: calc(var(--carousel-size) * 22 / 17);
+    height: var(--carousel-size);
   }
   main section.cert {
     -webkit-box-ordinal-group: 2;
@@ -1129,7 +1144,7 @@ footer small a {
 }
 @media (min-width: 58.75rem) {
   :root {
-    --carousel-size: 70vw;
+    --carousel-size: 55vw;
   }
 
   .container {
@@ -1144,13 +1159,26 @@ footer small a {
     border-left: 1px solid var(--old-lavender);
   }
   main .columns .overlay .wrapper.active {
-    width: var(--carousel-size);
-    height: calc(var(--carousel-size) * 17 / 22);
+    width: calc(var(--carousel-size) * 22 / 17);
+    height: var(--carousel-size);
   }
   main .columns .overlay.active button {
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    position: relative;
+    top: initial;
+    -webkit-transform: initial;
+            transform: initial;
+  }
+  main .columns .overlay.active button.prev {
+    left: 0;
+  }
+  main .columns .overlay.active button.prev.pressed {
+    left: -2%;
+  }
+  main .columns .overlay.active button.next {
+    left: 0;
+  }
+  main .columns .overlay.active button.next.pressed {
+    left: 2%;
   }
   main section.languages,
 main .border.one,
@@ -1175,18 +1203,6 @@ main section.cert {
     width: var(--carousel-size);
     height: calc(var(--carousel-size) * 17 / 22);
   }
-  main .columns .overlay.active button.next {
-    left: 85%;
-  }
-  main .columns .overlay.active button.next.pressed {
-    left: 87%;
-  }
-  main .columns .overlay.active button.prev {
-    left: 15%;
-  }
-  main .columns .overlay.active button.prev.pressed {
-    left: 13%;
-  }
 }
 @media (min-width: 40rem) and (max-width: calc(58.75rem - 1px)) {
   main section.cert ul {
@@ -1207,5 +1223,25 @@ main section.cert {
   }
   main section.cert ul li img {
     margin-right: 20px;
+  }
+}
+@media screen and (orientation: landscape) {
+  main .columns .overlay.active button {
+    position: relative;
+    top: initial;
+    -webkit-transform: initial;
+            transform: initial;
+  }
+  main .columns .overlay.active button.prev {
+    left: 0;
+  }
+  main .columns .overlay.active button.prev.pressed {
+    left: -2%;
+  }
+  main .columns .overlay.active button.next {
+    left: 0;
+  }
+  main .columns .overlay.active button.next.pressed {
+    left: 2%;
   }
 }

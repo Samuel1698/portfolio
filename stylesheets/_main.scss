@@ -58,6 +58,11 @@ main {
         right: 0;
         z-index: 2;
         transition: all 0.5s ease;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
         button {
           position: absolute;
           height: 80px;
@@ -93,14 +98,11 @@ main {
         }
       }
       .wrapper {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+        position: relative;
         overflow: hidden;
         &.active {
-          width: 95vw;
-          height: calc(95vw * 17 / 22);
+          width: calc(75vw * 22 / 17);
+          height: 75vw;
           max-width: calc(100vh * 22 / 17);
           max-height: 100vh;
         }

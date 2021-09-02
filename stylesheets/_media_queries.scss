@@ -17,11 +17,13 @@ main .about img {
     left: -50px;
   }
 }
-
 // ------------------------------------------------------------------------
 // Rules applying to screens from 640px forward
 // ------------------------------------------------------------------------
 @media (min-width: v.$small) {
+  :root {
+    --carousel-size: 70vw;
+  }
   .container {
     max-width: calc(#{v.$small} - 40px);
   }
@@ -48,8 +50,8 @@ main .about img {
         }
       }
       .overlay .wrapper.active {
-        width: 90vw;
-        height: calc(90vw * 17 / 22);
+        width: calc(var(--carousel-size) * 22 / 17);
+        height: var(--carousel-size);
       }
     }
     section.cert {
@@ -86,7 +88,7 @@ main .about img {
 // ------------------------------------------------------------------------
 @media (min-width: v.$medium) {
   :root {
-    --carousel-size: 70vw;
+    --carousel-size: 55vw;
   }
   .container {
     max-width: calc(#{v.$medium} - 40px);
@@ -100,12 +102,25 @@ main .about img {
       }
       .overlay {
         .wrapper.active {
-          width: var(--carousel-size);
-          height: calc(var(--carousel-size) * 17 / 22);
+          width: calc(var(--carousel-size) * 22 / 17);
+          height: var(--carousel-size);
         }
         &.active button {
-          top: 50%;
-          transform: translate(-50%, -50%);
+          position: relative;
+          top: initial;
+          transform: initial;
+          &.prev {
+            left: 0;
+            &.pressed {
+              left: -2%;
+            }
+          }
+          &.next {
+            left: 0;
+            &.pressed {
+              left: 2%;
+            }
+          }
         }
       }
     }
@@ -130,25 +145,9 @@ main .about img {
     --carousel-size: 60vw;
   }
   main .columns {
-    .overlay {
-      .wrapper.active {
-        width: var(--carousel-size);
-        height: calc(var(--carousel-size) * 17 / 22);
-      }
-      &.active button {
-        &.next {
-          left: 85%;
-          &.pressed {
-            left: 87%;
-          }
-        }
-        &.prev {
-          left: 15%;
-          &.pressed {
-            left: 13%;
-          }
-        }
-      }
+    .overlay .wrapper.active {
+      width: var(--carousel-size);
+      height: calc(var(--carousel-size) * 17 / 22);
     }
   }
 }
@@ -167,6 +166,29 @@ main .about img {
         img {
           margin-right: 20px;
         }
+      }
+    }
+  }
+}
+
+// ------------------------------------------------------------------------
+// Rules for landscape mobile devices
+// ------------------------------------------------------------------------
+@media screen and (orientation: landscape) {
+  main .columns .overlay.active button {
+    position: relative;
+    top: initial;
+    transform: initial;
+    &.prev {
+      left: 0;
+      &.pressed {
+        left: -2%;
+      }
+    }
+    &.next {
+      left: 0;
+      &.pressed {
+        left: 2%;
       }
     }
   }

@@ -1,8 +1,9 @@
 - [ ] Close button on carousel
+ - [ ] First element animation error on chrome only
 - [ ] Up-sizing previous work items on resolutions that allow it
 - [ ] Different pages for each work item with more details of technologies used, and involvement by me
 - [x] Contact Me page
-- [ ] Add transition border between header and content to prevent 1px overflow in chrome
+- [x] Add transition border between header and content to prevent 1px overflow in chrome
 - [ ] Navbar on header
 - [x] Home link on profile
 - [ ] Footer
