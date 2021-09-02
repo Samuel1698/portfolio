@@ -1,19 +1,18 @@
 - [ ] Close button on carousel
  - [ ] First element animation error on chrome only
-- [ ] Up-sizing previous work items on resolutions that allow it
 - [ ] Different pages for each work item with more details of technologies used, and involvement by me
 - [x] Contact Me page
 - [x] Add transition border between header and content to prevent 1px overflow in chrome
 - [ ] Navbar on header
 - [x] Home link on profile
-- [ ] Footer
+- [x] Footer
 - [ ] Under the hood website with dracula markdown
 - [ ] Hover over work items not working on safari
-- [ ] Resize carousel sizing to have a max height and max width to attempt to fix arrows not showing in landscape mode
+- [x] Resize carousel sizing to have a max height and max width to attempt to fix arrows not showing in landscape mode
 - [x] Safari dropdown box shadow
 - [x] Expand icon on projects for devices without hover
 - [x] Fix select issue where relative position input breaks element flow if empty option is selected
-- [ ] Style contact me button on hover
+- [x] Style contact me button on hover
 - [ ] Contact page - select options prevent text highlighting
 - [ ] Certificate Page
 - [ ] Piano performances page

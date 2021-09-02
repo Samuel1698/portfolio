@@ -407,6 +407,7 @@ main .columns h5 {
 }
 main .columns h3 {
   margin-top: 20px;
+  margin-bottom: 10px;
   font-size: 1.7rem;
 }
 main .columns h4 {
