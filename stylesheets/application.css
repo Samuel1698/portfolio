@@ -1064,6 +1064,14 @@ footer small a {
   color: var(--isabelline);
   border-bottom: 2px solid var(--english-lavender);
 }
+footer small a:hover {
+  color: var(--silver-pink);
+  border-color: var(--silver-pink);
+}
+footer small a:focus-visible {
+  color: var(--silver-pink);
+  border-color: var(--silver-pink);
+}
 
 @media (min-width: 400px) {
   main .about img {

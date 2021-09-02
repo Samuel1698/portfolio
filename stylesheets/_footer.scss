@@ -81,6 +81,14 @@ footer {
     a {
       color: v.$color;
       border-bottom: 2px solid v.$highlight;
+      &:hover {
+        color: v.$tertiary;
+        border-color: v.$tertiary;
+      }
+      &:focus-visible {
+        color: v.$tertiary;
+        border-color: v.$tertiary;
+      }
     }
   }
 }
