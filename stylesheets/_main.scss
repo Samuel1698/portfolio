@@ -518,11 +518,15 @@ main {
     padding: 12px 20px;
     border-radius: 7px;
     position: relative;
-    margin: 1rem auto -5rem;
+    margin: 1em auto -5.5em;
     text-align: center;
     width: clamp(260px, 80%, 940px);
     position: relative;
     z-index: 1;
+    h3 {
+      font-size: 1.5em;
+      margin: 1rem 0;
+    }
     a {
       display: inline-block;
       border: 1px solid v.$highlight;
