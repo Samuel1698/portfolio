@@ -425,16 +425,19 @@ main .columns .overlay {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-main .columns .overlay button {
+main .columns .overlay button.arrow {
   border: none;
   cursor: pointer;
   height: 0;
   width: 0;
   background-color: transparent;
 }
-main .columns .overlay button.disabled {
+main .columns .overlay button.arrow.disabled {
   opacity: 0.4;
   cursor: initial;
+}
+main .columns .overlay button.close {
+  display: none;
 }
 main .columns .overlay.active {
   height: initial;
@@ -461,7 +464,7 @@ main .columns .overlay.active {
       -ms-flex-pack: center;
           justify-content: center;
 }
-main .columns .overlay.active button {
+main .columns .overlay.active button.arrow {
   position: absolute;
   height: 80px;
   width: 80px;
@@ -469,33 +472,50 @@ main .columns .overlay.active button {
   -webkit-transform: translate(-50%, 0%);
           transform: translate(-50%, 0%);
 }
-main .columns .overlay.active button.prev {
+main .columns .overlay.active button.arrow.prev {
   background: url("../images/left.svg") center/100px no-repeat;
   left: 10%;
   -webkit-transition: left 0.5s cubic-bezier(0.55, 0.09, 0.68, 0.53);
   transition: left 0.5s cubic-bezier(0.55, 0.09, 0.68, 0.53);
 }
-main .columns .overlay.active button.prev.pressed {
+main .columns .overlay.active button.arrow.prev.pressed {
   -webkit-transition: left 0.5s cubic-bezier(0.55, 0.09, 0.68, 0.53);
   transition: left 0.5s cubic-bezier(0.55, 0.09, 0.68, 0.53);
   left: 8%;
 }
-main .columns .overlay.active button.next {
+main .columns .overlay.active button.arrow.next {
   background: url("../images/right.svg") center/100px no-repeat;
   left: 90%;
   -webkit-transition: left 0.5s cubic-bezier(0.55, 0.09, 0.68, 0.53);
   transition: left 0.5s cubic-bezier(0.55, 0.09, 0.68, 0.53);
 }
-main .columns .overlay.active button.next.pressed {
+main .columns .overlay.active button.arrow.next.pressed {
   -webkit-transition: left 0.5s cubic-bezier(0.55, 0.09, 0.68, 0.53);
   transition: left 0.5s cubic-bezier(0.55, 0.09, 0.68, 0.53);
   left: 92%;
 }
-main .columns .overlay.active button:hover, main .columns .overlay.active button:focus-visible {
+main .columns .overlay.active button.arrow:hover, main .columns .overlay.active button.arrow:focus-visible {
   background-size: 120px;
 }
-main .columns .overlay.active button.disabled:hover, main .columns .overlay.active button.disabled:focus-visible {
+main .columns .overlay.active button.arrow.disabled:hover, main .columns .overlay.active button.arrow.disabled:focus-visible {
   background-size: 100px;
+}
+main .columns .overlay.active button.close {
+  display: initial;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: url("../images/close.svg") center center no-repeat;
+  background-size: 25px;
+}
+main .columns .overlay.active button.close:hover {
+  background-size: 30px;
 }
 main .columns .overlay .wrapper {
   position: relative;
@@ -524,7 +544,7 @@ main .columns .overlay img.active {
   position: absolute;
   -webkit-transition: left 1s ease-in-out;
   transition: left 1s ease-in-out;
-  left: 0;
+  left: 0%;
   bottom: 0;
   width: 100%;
   height: 100%;
@@ -1084,15 +1104,25 @@ footer small a {
     width: 0;
     border-left: 1px solid var(--old-lavender);
   }
-  main .columns .overlay.active button {
+  main .columns .overlay.active button.arrow {
     width: 100px;
     height: 100px;
   }
-  main .columns .overlay.active button.next, main .columns .overlay.active button.prev {
+  main .columns .overlay.active button.arrow.next, main .columns .overlay.active button.arrow.prev {
     background-size: 150px;
   }
-  main .columns .overlay.active button.next:hover, main .columns .overlay.active button.next:focus-visible, main .columns .overlay.active button.prev:hover, main .columns .overlay.active button.prev:focus-visible {
+  main .columns .overlay.active button.arrow.next:hover, main .columns .overlay.active button.arrow.next:focus-visible, main .columns .overlay.active button.arrow.prev:hover, main .columns .overlay.active button.arrow.prev:focus-visible {
     background-size: 170px;
+  }
+  main .columns .overlay button.close {
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    background-size: 30px;
+  }
+  main .columns .overlay button.close:hover {
+    background-size: 35px;
   }
   main .columns .overlay .wrapper.active {
     width: calc(var(--carousel-size) * 22 / 17);
@@ -1102,6 +1132,25 @@ footer small a {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+  }
+  main section.cert ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  main section.cert ul li {
+    width: 50%;
+  }
+  main section.cert ul li img {
+    margin-right: 20px;
   }
   main .border.two {
     -webkit-box-ordinal-group: 3;
@@ -1162,22 +1211,22 @@ footer small a {
     width: calc(var(--carousel-size) * 22 / 17);
     height: var(--carousel-size);
   }
-  main .columns .overlay.active button {
+  main .columns .overlay.active button.arrow {
     position: relative;
     top: initial;
     -webkit-transform: initial;
             transform: initial;
   }
-  main .columns .overlay.active button.prev {
+  main .columns .overlay.active button.arrow.prev {
     left: 0;
   }
-  main .columns .overlay.active button.prev.pressed {
+  main .columns .overlay.active button.arrow.prev.pressed {
     left: -2%;
   }
-  main .columns .overlay.active button.next {
+  main .columns .overlay.active button.arrow.next {
     left: 0;
   }
-  main .columns .overlay.active button.next.pressed {
+  main .columns .overlay.active button.arrow.next.pressed {
     left: 2%;
   }
   main section.languages,
@@ -1189,6 +1238,15 @@ main section.cert {
         -ms-flex-order: initial;
             order: initial;
     width: 256px;
+  }
+  main section.cert ul {
+    display: initial;
+  }
+  main section.cert ul li {
+    width: 100%;
+  }
+  main section.cert ul li img {
+    margin-right: 0;
   }
   main section.about .container {
     width: calc(58.75rem - 180px);
@@ -1204,44 +1262,23 @@ main section.cert {
     height: calc(var(--carousel-size) * 17 / 22);
   }
 }
-@media (min-width: 40rem) and (max-width: calc(58.75rem - 1px)) {
-  main section.cert ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-  main section.cert ul li {
-    width: 50%;
-  }
-  main section.cert ul li img {
-    margin-right: 20px;
-  }
-}
 @media screen and (orientation: landscape) {
-  main .columns .overlay.active button {
+  main .columns .overlay.active button.arrow {
     position: relative;
     top: initial;
     -webkit-transform: initial;
             transform: initial;
   }
-  main .columns .overlay.active button.prev {
+  main .columns .overlay.active button.arrow.prev {
     left: 0;
   }
-  main .columns .overlay.active button.prev.pressed {
+  main .columns .overlay.active button.arrow.prev.pressed {
     left: -2%;
   }
-  main .columns .overlay.active button.next {
+  main .columns .overlay.active button.arrow.next {
     left: 0;
   }
-  main .columns .overlay.active button.next.pressed {
+  main .columns .overlay.active button.arrow.next.pressed {
     left: 2%;
   }
 }

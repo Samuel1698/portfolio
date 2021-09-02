@@ -37,7 +37,7 @@ main .about img {
         width: 0;
         border-left: 1px solid v.$secondary;
       }
-      .overlay.active button {
+      .overlay.active button.arrow {
         width: 100px;
         height: 100px;
         &.next,
@@ -49,6 +49,16 @@ main .about img {
           }
         }
       }
+      .overlay button.close {
+        top: 10px;
+        right: 10px;
+        width: 50px;
+        height: 50px;
+        background-size: 30px;
+        &:hover {
+          background-size: 35px;
+        }
+      }
       .overlay .wrapper.active {
         width: calc(var(--carousel-size) * 22 / 17);
         height: var(--carousel-size);
@@ -56,6 +66,18 @@ main .about img {
     }
     section.cert {
       order: 1;
+      ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      li {
+        width: 50%;
+        img {
+          margin-right: 20px;
+        }
+      }
+    }
     }
     .border.two {
       order: 2;
@@ -105,7 +127,7 @@ main .about img {
           width: calc(var(--carousel-size) * 22 / 17);
           height: var(--carousel-size);
         }
-        &.active button {
+        &.active button.arrow {
           position: relative;
           top: initial;
           transform: initial;
@@ -132,6 +154,17 @@ main .about img {
       order: initial;
       width: 256px;
     }
+    section.cert {
+      ul {
+        display: initial;
+        li {
+          width: 100%;
+          img {
+            margin-right: 0;
+          }
+        }
+      }
+    }
     section.about .container {
       width: calc(#{v.$medium} - 180px);
     }
@@ -151,31 +184,11 @@ main .about img {
     }
   }
 }
-// ---------------------------------------------------------------------------
-// Between small and medium
-// ---------------------------------------------------------------------------
-@media (min-width: v.$small) and (max-width: calc(#{v.$medium} - 1px)) {
-  main section.cert {
-    ul {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      li {
-        width: 50%;
-        img {
-          margin-right: 20px;
-        }
-      }
-    }
-  }
-}
-
 // ------------------------------------------------------------------------
 // Rules for landscape mobile devices
 // ------------------------------------------------------------------------
 @media screen and (orientation: landscape) {
-  main .columns .overlay.active button {
+  main .columns .overlay.active button.arrow {
     position: relative;
     top: initial;
     transform: initial;

@@ -39,7 +39,7 @@ main {
       height: 0;
       font-size: 0; //Remove inline whitespace
       transition: all 0.5s ease;
-      button {
+      button.arrow {
         border: none;
         cursor: pointer;
         height: 0;
@@ -49,6 +49,9 @@ main {
           opacity: 0.4;
           cursor: initial;
         }
+      }
+      button.close {
+        display: none;
       }
       &.active {
         height: initial;
@@ -63,7 +66,7 @@ main {
         align-items: center;
         flex-wrap: wrap;
         justify-content: center;
-        button {
+        button.arrow {
           position: absolute;
           height: 80px;
           width: 80px;
@@ -96,6 +99,23 @@ main {
             background-size: 100px;
           }
         }
+        button.close {
+          display: initial;
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 40px;
+          height: 40px;
+          cursor: pointer;
+          padding: 0;
+          border: 0;
+          border-radius: 0;
+          background: url("../images/close.svg") center center no-repeat;
+          background-size: 25px;
+          &:hover {
+            background-size: 30px;
+          }
+        }
       }
       .wrapper {
         position: relative;
@@ -122,7 +142,7 @@ main {
         &.active {
           position: absolute;
           transition: left 1s ease-in-out;
-          left: 0;
+          left: 0%;
           bottom: 0;
           width: 100%;
           height: 100%;
