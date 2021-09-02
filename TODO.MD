@@ -16,4 +16,4 @@
 - [ ] Contact page - select options prevent text highlighting
 - [ ] Certificate Page
 - [ ] Piano performances page
-- [ ] switch order of columns on medium screens
+- [x] switch order of columns on medium screens

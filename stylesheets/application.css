@@ -950,6 +950,7 @@ footer .footer_module a {
   position: relative;
 }
 footer .footer_module a svg {
+  stroke: var(--isabelline);
   fill: var(--isabelline);
   position: absolute;
   top: -1px;
@@ -1042,28 +1043,28 @@ footer small a {
     width: 90vw;
     height: calc(90vw * 17 / 22);
   }
-  main section.languages {
+  main section.cert {
+    width: 320px;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
   }
-  main .border.one {
+  main .border.two {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
   }
-  main section.skills {
+  main section.languages {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
   }
-  main .border.two {
+  main .border.one {
     -webkit-box-ordinal-group: 5;
         -ms-flex-order: 4;
             order: 4;
   }
-  main section.cert {
-    width: 320px;
+  main section.skills {
     -webkit-box-ordinal-group: 6;
         -ms-flex-order: 5;
             order: 5;

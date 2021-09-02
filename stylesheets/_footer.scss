@@ -38,6 +38,7 @@ footer {
       color: v.$color;
       position: relative;
       svg {
+        stroke: v.$color;
         fill: v.$color;
         position: absolute;
         top: -1px;

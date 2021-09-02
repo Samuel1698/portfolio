@@ -52,20 +52,20 @@ main .about img {
         height: calc(90vw * 17 / 22);
       }
     }
-    section.languages {
-      order: 1;
-    }
-    .border.one {
-      order: 2;
-    }
-    section.skills {
-      order: 3;
-    }
-    .border.two {
-      order: 4;
-    }
     section.cert {
       width: 320px;
+      order: 1;
+    }
+    .border.two {
+      order: 2;
+    }
+    section.languages {
+      order: 3;
+    }
+    .border.one {
+      order: 4;
+    }
+    section.skills {
       order: 5;
     }
     section.about .container {
