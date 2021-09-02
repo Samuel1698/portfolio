@@ -6,6 +6,7 @@ const img = overlay.querySelectorAll("img");
 const wrapper = overlay.querySelector(".wrapper");
 const button = document.querySelectorAll(".overlay .arrow");
 const listItem = document.querySelectorAll(".cert ul li");
+const closeBtn = wrapper.querySelector(".close");
 
 overlay.addEventListener("click", function () {
   // Reset all classes that could be added
@@ -40,10 +41,16 @@ button[0].addEventListener("click", function (event) {
   event.stopPropagation();
   let index = detectActive();
   if (index !== 0) {
+    // Toggle visibility of close button while transition happens
+    closeBtn.style.display = "none";
+    // Add pressed class to button
     button[0].classList.add("pressed");
     setTimeout(function () {
       button[0].classList.remove("pressed");
     }, 500);
+    setTimeout(function () {
+      closeBtn.style.display = "initial";
+    }, 1000);
     button[1].tabIndex = 0;
     resetClasses(index);
     assignClasses(index - 1);
@@ -57,10 +64,16 @@ button[1].addEventListener("click", function (event) {
   event.stopPropagation();
   let index = detectActive();
   if (index !== img.length - 1) {
+    // Toggle visibility of close button while transition happens
+    closeBtn.style.display = "none";
+    // Add pressed class to button
     button[1].classList.add("pressed");
     setTimeout(function () {
       button[1].classList.remove("pressed");
     }, 500);
+    setTimeout(function () {
+      closeBtn.style.display = "initial";
+    }, 1000);
     button[0].tabIndex = 0;
     resetClasses(index);
     assignClasses(index + 1);
