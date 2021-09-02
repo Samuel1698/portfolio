@@ -595,6 +595,14 @@ main section.cert ul li img {
   height: 22px;
   width: 22px;
 }
+main section.cert ul li span {
+  font-weight: normal;
+  font-size: 1em;
+}
+main section.cert ul li:hover span {
+  border-bottom: 2px solid var(--english-lavender);
+  margin-bottom: -2px;
+}
 main section.languages ul.animation,
 main section.skills ul.animation {
   -webkit-animation: skills 1s ease;

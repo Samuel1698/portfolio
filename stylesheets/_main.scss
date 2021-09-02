@@ -187,6 +187,14 @@ main {
           height: 22px;
           width: 22px;
         }
+        span {
+          font-weight: normal;
+          font-size: 1em;
+        }
+      }
+      li:hover span {
+        border-bottom: 2px solid v.$highlight;
+        margin-bottom: -2px;
       }
     }
   }
