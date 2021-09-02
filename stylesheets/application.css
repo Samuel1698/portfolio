@@ -573,6 +573,9 @@ main .column ul li span {
   font-weight: lighter;
   font-size: 0.9em;
 }
+main section.cert {
+  width: 100%;
+}
 main section.cert ul {
   display: block;
 }
@@ -1013,13 +1016,13 @@ footer small a {
   }
 }
 
-@media (min-width: 40em) {
+@media (min-width: 40rem) {
   .container {
-    max-width: calc(40em - 40px);
+    max-width: calc(40rem - 40px);
   }
 
   .work.container {
-    max-width: 40em;
+    max-width: 40rem;
   }
 
   main .columns {
@@ -1044,7 +1047,6 @@ footer small a {
     height: calc(90vw * 17 / 22);
   }
   main section.cert {
-    width: 320px;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
@@ -1070,7 +1072,7 @@ footer small a {
             order: 5;
   }
   main section.about .container {
-    width: calc(40em - 180px);
+    width: calc(40rem - 180px);
   }
   main section.contact {
     display: -webkit-box;
@@ -1088,13 +1090,13 @@ footer small a {
     width: 120px;
   }
 }
-@media (min-width: 58.75em) {
+@media (min-width: 58.75rem) {
   :root {
     --carousel-size: 70vw;
   }
 
   .container {
-    max-width: calc(58.75em - 40px);
+    max-width: calc(58.75rem - 40px);
   }
 
   main .columns {
@@ -1124,10 +1126,10 @@ main section.cert {
     width: 256px;
   }
   main section.about .container {
-    width: calc(58.75em - 180px);
+    width: calc(58.75rem - 180px);
   }
 }
-@media (min-width: 77.5em) {
+@media (min-width: 77.5rem) {
   :root {
     --carousel-size: 60vw;
   }
@@ -1149,10 +1151,7 @@ main section.cert {
     left: 13%;
   }
 }
-@media (min-width: 40em) and (max-width: 57.75em) {
-  main section.cert.column {
-    width: 570px;
-  }
+@media (min-width: 40rem) and (max-width: calc(58.75rem - 1px)) {
   main section.cert ul {
     display: -webkit-box;
     display: -ms-flexbox;

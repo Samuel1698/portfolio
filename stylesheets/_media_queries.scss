@@ -53,7 +53,6 @@ main .about img {
       }
     }
     section.cert {
-      width: 320px;
       order: 1;
     }
     .border.two {
@@ -156,11 +155,8 @@ main .about img {
 // ---------------------------------------------------------------------------
 // Between small and medium
 // ---------------------------------------------------------------------------
-@media (min-width: v.$small) and (max-width: v.$medium - 1) {
+@media (min-width: v.$small) and (max-width: calc(#{v.$medium} - 1px)) {
   main section.cert {
-    &.column {
-      width: 570px;
-    }
     ul {
       display: flex;
       flex-direction: row;
