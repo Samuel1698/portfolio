@@ -171,6 +171,7 @@ template {
   --english-lavender: #a6808c;
   --alabaster: #f1f0ea;
   --isabelline: #f6f0ed;
+  --opal: #a0b9bf;
   --pink: #ff79c6;
   --purple: #bd93f9;
   --blue: #8be9fd;
@@ -183,6 +184,11 @@ html {
   overflow-x: hidden;
   overflow-y: auto;
   font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Yanone Kaffeesatz", cursive;
 }
 
 .sr-only {
@@ -277,8 +283,6 @@ li:focus-visible::after {
 }
 
 header {
-  font-family: "Yanone Kaffeesatz", sans-serif;
-  font-weight: normal;
   background-color: var(--independence);
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(-50%, var(--old-lavender)), to(var(--independence)));
   background-image: linear-gradient(180deg, var(--old-lavender) -50%, var(--independence));
@@ -294,7 +298,7 @@ header nav {
 header nav ul li {
   margin-top: 5px;
   display: inline-block;
-  font-size: 1.2rem;
+  font-size: 1em;
   padding: 5px;
 }
 header nav ul li:not(:last-child) {
@@ -341,8 +345,11 @@ header .logo .logo-border {
   z-index: 1;
   border-bottom: 1px solid var(--isabelline);
 }
+header h1, header h2 {
+  font-weight: bold;
+}
 header h1 {
-  margin-top: -2px;
+  margin-top: 0;
 }
 header h2 {
   position: relative;
@@ -400,7 +407,6 @@ main .columns {
 main .columns h3,
 main .columns h4,
 main .columns h5 {
-  font-family: "Yanone Kaffeesatz", sans-serif;
   font-weight: normal;
   font-size: 1.2rem;
   text-align: center;
@@ -699,6 +705,10 @@ main section.about img {
   height: 425px;
   width: initial;
 }
+main section.about h3 {
+  font-weight: bold;
+  font-size: 1.5em;
+}
 main section.about .container {
   position: relative;
   padding: 0 0 0 142px;
@@ -718,6 +728,11 @@ main section.about .swoosh path {
 main section.work {
   padding: 0;
   text-align: center;
+}
+main section.work h3 {
+  color: var(--dracula-grey);
+  font-weight: bold;
+  font-size: 2em;
 }
 main section.work .bar {
   display: block;

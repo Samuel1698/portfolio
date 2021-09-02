@@ -16,7 +16,6 @@ main {
     h3,
     h4,
     h5 {
-      font-family: "Yanone Kaffeesatz", sans-serif;
       font-weight: normal;
       font-size: 1.2rem;
       text-align: center;
@@ -267,6 +266,10 @@ main {
       height: 425px;
       width: initial;
     }
+    h3 {
+      font-weight: bold;
+      font-size: 1.5em;
+    }
     .container {
       position: relative;
       padding: 0 0 0 142px;
@@ -287,6 +290,11 @@ main {
   section.work {
     padding: 0;
     text-align: center;
+    h3 {
+      color: v.$accent;
+      font-weight: bold;
+      font-size: 2em;
+    }
     .bar {
       display: block;
       position: relative;
