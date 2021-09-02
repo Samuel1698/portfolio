@@ -17,3 +17,4 @@
 - [ ] Certificate Page
 - [ ] Piano performances page
 - [x] switch order of columns on medium screens
+- [x] Align contact me section's center text through flex. Problem caused by different sized outer elements

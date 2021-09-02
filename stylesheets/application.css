@@ -972,6 +972,7 @@ main section.testimony .content {
 main section.why h3, main section.why h4 {
   color: var(--dracula-grey);
   font-weight: bold;
+  margin: 1em auto;
 }
 main section.why h3 {
   font-size: 2em;
@@ -1005,6 +1006,8 @@ main section.contact a {
   background-color: var(--dracula-grey);
   color: var(--isabelline);
   cursor: pointer;
+  font-size: 1rem;
+  margin-left: calc(10em - (5.3114em + 26px));
 }
 main section.contact a:hover {
   background-color: var(--isabelline);
