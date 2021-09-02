@@ -1,20 +1,64 @@
-- [ ] Close button on carousel
- - [ ] First element animation error on chrome only
-- [ ] Different pages for each work item with more details of technologies used, and involvement by me
-- [x] Contact Me page
-- [x] Add transition border between header and content to prevent 1px overflow in chrome
-- [ ] Navbar on header
-- [x] Home link on profile
-- [x] Footer
-- [ ] Under the hood website with dracula markdown
+<!-- Work Items -->
+- [ ] Page template
+- [ ] Explanation of technologies used, purpose of the website and relevant info
+- [ ] Include SEO score, PageSpeed insights, and accessibility score
+- [ ] Testimonial
+<!-- Certificates Page -->
+- [ ] Image gallery
+- [ ] Informational box on the right of screen with info about selected Cert/Class
+  - [ ] How to switch info depending on selected image?
+  - [ ] Get each certificate link
+- [ ] Noble Desktop description/section
+<!-- Piano performances page -->
+
+<!-- Front page -->
+- [ ] Header
+  - [x] Logo
+    - [x] Optimize Images
+    - [x] image circle
+  - [x] Title
+  - [x] Swoosh
+  - [ ] Make header hover match footer
+  - [ ] Menu
+  - [x] Filler
+- [ ] Main
+  - [x] Certificates, Skills & Language columns
+  - [x] Carousel
+    - [x] Navigation buttons
+    - [x] Close button
+    - [x] Javascript
+    - [x] Animation
+  - [x] About me
+    - [x] Image
+    - [x] Content
+    - [x] Swoosh
+      -[ ] Style filler differently on this swoosh than in between header and main
+    - [x] Position behind columns and use negative margins
+  - [x] Recent Work
+    - [x] Box style  
+    - [x] Overlay 
+    - [x] Animation
+    - [x] Expand/Minimize button
+    - [ ] Images
+  - [x] Why Hire a Developer?
+    - [x] Content
+    - [x] Style
+    - [ ] Under the hood website with dracula markdown ?
+  - [x] Contact
+    - [x] Position halfway through footer
+    - [x] Negative margin
+- [ ] Footer
+  - [x] Top padding
+  - [x] Copyright
+  - [x] Useful links
+  - [x] Link hover states
+  - [ ] Left section
+  - [ ] Second navigation bar
+
+<!-- Bugs -->
 - [ ] Hover over work items not working on safari
-- [x] Resize carousel sizing to have a max height and max width to attempt to fix arrows not showing in landscape mode
-- [x] Safari dropdown box shadow
-- [x] Expand icon on projects for devices without hover
-- [x] Fix select issue where relative position input breaks element flow if empty option is selected
-- [x] Style contact me button on hover
-- [ ] Contact page - select options prevent text highlighting
-- [ ] Certificate Page
-- [ ] Piano performances page
-- [x] switch order of columns on medium screens
-- [x] Align contact me section's center text through flex. Problem caused by different sized outer elements
+- [ ] First element animation error on chrome only
+<!-- Deployment -->
+- [ ] Optimize images
+- [ ] Make copy of folder and remove unused css/javascript (only include minified versions)
+- [ ] Consider moving all images to root folder and referencing them there all throughout the code. Sort of like webpacker
