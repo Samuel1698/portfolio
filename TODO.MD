@@ -1,5 +1,4 @@
 <!-- Work Items -->
-
 - [ ] Page template
 - [ ] Explanation of technologies used, purpose of the website and relevant info
 - [ ] Include SEO score, PageSpeed insights, and accessibility score
@@ -45,11 +44,10 @@
     - [x] Overlay
     - [x] Animation
     - [x] Expand/Minimize button
-    - [ ] Update Images
+    - [x] Update Images
   - [x] Why Hire a Developer?
     - [x] Content
     - [x] Style
-    - [ ] Under the hood website with dracula markdown ?
   - [x] Contact
     - [x] Position halfway through footer
     - [x] Negative margin
@@ -59,7 +57,7 @@
   - [x] Useful links
   - [x] Link hover states
   - [ ] Left section
-  - [ ] Second navigation bar
+  - [ ] Remove useful links title
 
 <!-- Bugs -->
 - [ ] Hover over work items not working on safari
