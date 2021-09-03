@@ -308,16 +308,20 @@ header nav ul li a {
   padding: 5px;
   color: var(--isabelline);
 }
-header nav ul li a img {
+header nav ul li a svg {
   vertical-align: top;
   position: relative;
   right: -2px;
   top: -2px;
+  stroke: var(--isabelline);
 }
 header nav ul li a:hover {
   color: var(--silver-pink);
   border-bottom: 2px solid var(--silver-pink);
   margin-bottom: -2px;
+}
+header nav ul li a:hover svg {
+  stroke: var(--silver-pink);
 }
 header .logo {
   display: inline-block;
@@ -947,31 +951,6 @@ main section.work .item.hover .hidden {
   -webkit-transition-delay: 0.5s;
           transition-delay: 0.5s;
 }
-main section.testimony {
-  text-align: center;
-}
-main section.testimony p {
-  font-weight: lighter;
-}
-main section.testimony .title {
-  height: 48px;
-}
-main section.testimony .title .image-cropper,
-main section.testimony .title p {
-  display: inline-block;
-  margin: 0;
-}
-main section.testimony .title p {
-  margin-left: 10px;
-  line-height: 48px;
-  vertical-align: bottom;
-  font-weight: normal;
-}
-main section.testimony .content {
-  margin: 16px 5px;
-  padding-left: 10px;
-  border-left: 2px solid var(--independence);
-}
 main section.why {
   margin-bottom: 2em;
 }
@@ -982,6 +961,7 @@ main section.why h3, main section.why h4 {
 }
 main section.why h3 {
   font-size: 2em;
+  margin-bottom: 0.5em;
 }
 main section.why h4 {
   font-size: 1.5em;

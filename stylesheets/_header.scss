@@ -21,17 +21,21 @@ header {
       a {
         padding: 5px;
         color: v.$color;
-        img {
+        svg {
           vertical-align: top;
           position: relative;
           right: -2px;
           top: -2px;
+          stroke: v.$color;
         }
       }
       a:hover {
         color: v.$tertiary;
         border-bottom: 2px solid v.$tertiary;
         margin-bottom: -2px;
+        svg {
+          stroke: v.$tertiary;
+        }
       }
     }
   }
