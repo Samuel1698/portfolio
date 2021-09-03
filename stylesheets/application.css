@@ -292,8 +292,13 @@ header {
   width: 100%;
   overflow: hidden;
 }
-header nav {
-  text-align: end;
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 header nav ul li {
   margin-top: 5px;
@@ -303,6 +308,10 @@ header nav ul li {
 }
 header nav ul li:not(:last-child) {
   border-right: 1px solid var(--alabaster);
+}
+header nav ul li:first-child {
+  border-right: 0;
+  margin-right: auto;
 }
 header nav ul li a {
   padding: 5px;

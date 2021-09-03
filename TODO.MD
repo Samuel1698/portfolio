@@ -20,7 +20,6 @@
 <!-- Piano performances page -->
 
 <!-- Front page -->
-
 - [ ] Header
   - [x] Logo
     - [x] Optimize Images
@@ -47,7 +46,7 @@
     - [x] Overlay
     - [x] Animation
     - [x] Expand/Minimize button
-    - [ ] Images
+    - [ ] Update Images
   - [x] Why Hire a Developer?
     - [x] Content
     - [x] Style
@@ -64,7 +63,6 @@
   - [ ] Second navigation bar
 
 <!-- Bugs -->
-
 - [ ] Hover over work items not working on safari
 - [ ] First element animation error on chrome only
 <!-- Deployment -->

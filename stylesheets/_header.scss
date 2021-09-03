@@ -8,15 +8,21 @@ header {
   position: relative;
   width: 100%;
   overflow: hidden;
-  nav {
-    text-align: end;
-    ul li {
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+    li {
       margin-top: 5px;
       display: inline-block;
       font-size: 0.9em;
       padding: 5px;
       &:not(:last-child) {
+        // Border to the right of all nav items except last item
         border-right: 1px solid v.$columns;
+      }
+      &:first-child {
+        border-right: 0;
+        margin-right: auto;
       }
       a {
         padding: 5px;
