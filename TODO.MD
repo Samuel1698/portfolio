@@ -18,7 +18,7 @@
     - [x] image circle
   - [x] Title
   - [x] Swoosh
-  - [ ] Make header hover match footer
+  - [x] Make header hover match footer
   - [ ] Menu
   - [x] Filler
 - [ ] Main
@@ -61,4 +61,4 @@
 <!-- Deployment -->
 - [ ] Optimize images
 - [ ] Make copy of folder and remove unused css/javascript (only include minified versions)
-- [ ] Consider moving all images to root folder and referencing them there all throughout the code. Sort of like webpacker
+- [ ] Consider moving all images to root folder and referencing them there all throughout the code. Sort of like webpack

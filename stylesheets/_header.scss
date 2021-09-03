@@ -29,7 +29,8 @@ header {
         }
       }
       a:hover {
-        border-bottom: 2px dashed;
+        color: v.$tertiary;
+        border-bottom: 2px solid v.$tertiary;
         margin-bottom: -2px;
       }
     }

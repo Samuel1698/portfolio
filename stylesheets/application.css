@@ -315,7 +315,8 @@ header nav ul li a img {
   top: -2px;
 }
 header nav ul li a:hover {
-  border-bottom: 2px dashed;
+  color: var(--silver-pink);
+  border-bottom: 2px solid var(--silver-pink);
   margin-bottom: -2px;
 }
 header .logo {
