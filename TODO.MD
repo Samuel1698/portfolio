@@ -20,14 +20,13 @@
 <!-- Piano performances page -->
 
 <!-- Front page -->
-- [ ] Header
+- [x] Header
   - [x] Logo
     - [x] Optimize Images
     - [x] image circle
   - [x] Title
   - [x] Swoosh
   - [x] Make header hover match footer
-  - [ ] Menu
   - [x] Filler
 - [ ] Main
   - [x] Certificates, Skills & Language columns
