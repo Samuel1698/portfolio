@@ -279,6 +279,7 @@ main {
     .swoosh {
       vertical-align: top; //Needed to remove whitespace below
       position: relative; // To show the svg on top of the image
+      bottom: -1px;
       width: 100%;
       margin-top: 20px;
       min-height: 42px;

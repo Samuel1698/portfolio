@@ -32,7 +32,7 @@
     - [x] Image
     - [x] Content
     - [x] Swoosh
-      -[ ] Style filler differently on this swoosh than in between header and main
+      -[x] Remove fillers and position the svg better instead
     - [x] Position behind columns and use negative margins
   - [x] Recent Work
     - [x] Box style  
