@@ -45,6 +45,7 @@
     - [x] Animation
     - [x] Expand/Minimize button
     - [x] Update Images
+    - [ ] Banner about projects being open source
   - [x] Why Hire a Developer?
     - [x] Content
     - [x] Style

@@ -62,16 +62,17 @@
     <div class="border"></div>
   </header>
   <main>
-    <form action="contact-form-process.php" name="contact_form" method="post">
+    <form action="https://formsubmit.co/samuel1698500@gmail.com" name="contact_form" method="post">
       <h1><span>Contact Me</span></h1>
+      <input type="hidden" name="_subject" value="Someone Contacted You Through Your Portfolio">
       <div class="medium-inline">
         <label for="name">Name</label>
-        <input type="text" id="Name" name="Name" required />
+        <input type="text" id="name" name="name" required />
       </div>
 
       <div class="medium-inline two">
-        <label for="Email">Email Address</label>
-        <input type="email" id="Email" name="Email" required />
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required />
       </div>
 
       <div class="inline">
@@ -96,6 +97,8 @@
       <label for="Message">Message</label>
       <textarea name="Message" id="Message" cols="25" rows="10" tabindex="0" required></textarea>
 
+      <input type="hidden" name="_next" value="/thanks.html">
+      <input type="text" name="_honey" style="display:none">
       <button type="submit" tabindex="0">Send Email</button>
     </form>
   </main>
