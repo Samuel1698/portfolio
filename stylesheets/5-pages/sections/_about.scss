@@ -1,0 +1,45 @@
+@use '../Stylesheets/1-utilities/variables' as v;
+
+section.about {
+  color: v.$color;
+  background-color: v.$secondary;
+  padding-top: 40px;
+  margin-top: 12px;
+  line-height: 18px;
+  position: relative;
+  top: -52px; //This -32 is the margin between columns and about me
+  margin-bottom: -52px;
+  z-index: -1;
+  overflow: hidden;
+  p:last-of-type {
+    margin-bottom: 0; // Needed to remove extra pixel of whitespace
+  }
+  img {
+    position: absolute;
+    left: -90px;
+    top: -10px;
+    height: 425px;
+    width: initial;
+  }
+  h3 {
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+  .container {
+    position: relative;
+    padding: 0 0 0 142px;
+    min-width: 0;
+    width: calc(100% - 152px);
+  }
+  .swoosh {
+    vertical-align: top; //Needed to remove whitespace below
+    position: relative; // To show the svg on top of the image
+    bottom: -1px;
+    width: 100%;
+    margin-top: 20px;
+    min-height: 42px;
+    path {
+      fill: v.$background;
+    }
+  }
+}

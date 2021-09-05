@@ -1,0 +1,37 @@
+@use '../Stylesheets/1-utilities/variables' as v;
+@use '../Stylesheets/1-utilities/mixins' as m;
+
+section.contact {
+  box-shadow: 0 0 3px 1px v.$primary;
+  background-color: v.$accent;
+  color: v.$color;
+  padding: 12px 20px;
+  border-radius: 7px;
+  position: relative;
+  margin: 1em auto -5.5em;
+  text-align: center;
+  width: clamp(260px, 80%, 940px);
+  position: relative;
+  z-index: 1;
+  font-weight: bold;
+  h3 {
+    font-size: 1.5em;
+    margin: 1rem 0;
+  }
+  a {
+    display: inline-block;
+    border: 1px solid v.$highlight;
+    border-radius: 7px;
+    padding: 12px;
+    background-color: v.$accent;
+    color: v.$color;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: calc(10em - (5.693125em + 26px));
+    // 10em = size of left text div, 5.693125em = size of inner span, 26px = 12px padding + 1px border
+    @include m.hover {
+      background-color: v.$color;
+      color: v.$accent;
+    }
+  }
+}

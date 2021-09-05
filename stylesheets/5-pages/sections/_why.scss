@@ -1,0 +1,17 @@
+@use '../Stylesheets/1-utilities/variables' as v;
+
+section.why {
+  margin-bottom: 2em;
+  h3, h4 {
+    color: v.$accent;
+    font-weight: bold;
+    margin: 1em auto;
+  }
+  h3 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+  h4 {
+    font-size: 1.5em;
+  }
+}

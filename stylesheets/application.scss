@@ -1,18 +1,22 @@
+// Utilities
 @use '../Stylesheets/1-utilities/variables';
 @use '../Stylesheets/1-utilities/mixins';
 
+// Base
 @use '../Stylesheets/2-base/normalize';
 @use '../Stylesheets/2-base/typography';
 @use '../Stylesheets/2-base/base';
 
+// Components
 @use '../Stylesheets/3-components/buttons';
 @use '../Stylesheets/3-components/carousel';
 @use '../Stylesheets/3-components/forms';
 
+// Layout
 @use '../Stylesheets/4-layout/header';
 @use '../Stylesheets/4-layout/main';
 @use '../Stylesheets/4-layout/footer';
 @use '../Stylesheets/4-layout/media_queries';
 
-@use '../Stylesheets/5-pages/home';
-@use '../Stylesheets/5-pages/contact';
+// Pages
+@use '../Stylesheets/5-pages/global';
