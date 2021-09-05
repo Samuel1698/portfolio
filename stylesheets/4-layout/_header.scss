@@ -1,4 +1,4 @@
-@use 'variables' as v;
+@use '../Stylesheets/1-utilities/variables' as v;
 
 header {
   background-color: v.$primary;

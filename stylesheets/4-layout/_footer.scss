@@ -1,4 +1,6 @@
-@use 'variables' as v;
+@use '../Stylesheets/1-utilities/variables' as v;
+@use '../Stylesheets/1-utilities/mixins' as m;
+
 
 footer {
   margin-top: auto;
@@ -50,17 +52,7 @@ footer {
         border-bottom: 2px solid v.$highlight;
         display: inline-block;
       }
-      &:hover {
-        color: v.$tertiary;
-        svg {
-          fill: v.$tertiary;
-        }
-        span {
-          border-bottom: 2px solid;
-          margin-bottom: -2px;
-        }
-      }
-      &:focus-visible {
+      @include m.hover {
         color: v.$tertiary;
         svg {
           fill: v.$tertiary;
@@ -81,11 +73,7 @@ footer {
     a {
       color: v.$color;
       border-bottom: 2px solid v.$highlight;
-      &:hover {
-        color: v.$tertiary;
-        border-color: v.$tertiary;
-      }
-      &:focus-visible {
+      @include m.hover {
         color: v.$tertiary;
         border-color: v.$tertiary;
       }

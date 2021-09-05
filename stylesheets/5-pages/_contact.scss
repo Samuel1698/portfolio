@@ -1,27 +1,14 @@
-@use 'variables' as v;
+@use '../Stylesheets/1-utilities/variables' as v;
+@use '../Stylesheets/1-utilities/mixins' as m;
 $labels: v.$secondary;
 $inline-color: v.$color;
 $line-height: 1.375rem;
 
-main {
+main.contact {
   form {
-    font-size: 0; // Get rid of whitespace
-    > * {
-      font-size: 1rem; //Reset font-size for all child elements
-    }
     // background-color: v.$columns;
     color: black;
-    border-radius: 12px;
-    padding: 12px;
-    margin: 0 auto;
     max-width: clamp(270px, 80%, 600px);
-    // Prevent chrome's white box-shadow from overriding the set color
-    input:-webkit-autofill,
-    input:-webkit-autofill:hover,
-    input:-webkit-autofill:focus,
-    input:-webkit-autofill:active {
-      box-shadow: 0 0 0 30px v.$highlight inset !important;
-    }
     h1 {
       text-align: center;
       font-size: 2rem;
@@ -116,9 +103,6 @@ main {
     input {
       width: 96%;
       padding: 2%;
-      border: 0;
-      border-radius: 7px;
-      margin-bottom: 10px;
       line-height: $line-height;
       background-color: $labels;
       color: $inline-color;
@@ -126,30 +110,18 @@ main {
     textarea {
       width: 96%;
       padding: 2%;
-      border: 0;
-      border-radius: 7px;
-      resize: vertical;
-      margin-bottom: 10px;
       line-height: $line-height;
       background-color: $labels;
       color: $inline-color;
     }
-    button {
+    button[type=submit] {
       border: 2px solid v.$highlight;
       background-color: v.$tertiary;
       color: black;
-      cursor: pointer;
-      border-radius: 7px;
       width: 100%;
-      padding: 12px 22px;
       margin: 0 auto;
       display: block;
-      &:hover {
-        border: 2px solid v.$tertiary;
-        background-color: v.$accent;
-        color: v.$tertiary;
-      }
-      &:focus-visible {
+      @include m.hover {
         border: 2px solid v.$tertiary;
         background-color: v.$accent;
         color: v.$tertiary;
@@ -162,13 +134,8 @@ main {
   }
 }
 @media (any-hover: hover) and (pointer: fine) {
-  main form button {
-    &:focus-visible {
-      border: 2px solid v.$tertiary;
-      background-color: v.$accent;
-      color: v.$tertiary;
-    }
-    &:hover {
+  main form button[type=submit] {
+    @include m.hover {
       border: 2px solid v.$tertiary;
       background-color: v.$accent;
       color: v.$tertiary;

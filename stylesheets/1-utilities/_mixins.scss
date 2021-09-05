@@ -1,0 +1,10 @@
+@use '../Stylesheets/1-utilities/variables' as v;
+
+@mixin hover {
+  &:not([disabled]):hover {
+    @content;
+  }
+  &:focus-visible {
+    @content;
+  }
+}

@@ -1,0 +1,28 @@
+@use '../Stylesheets/1-utilities/variables' as v;
+body {
+  min-width: 320px;
+  background-color: v.$background;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.container {
+  min-width: 300px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+.sr-only {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+.image-cropper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}

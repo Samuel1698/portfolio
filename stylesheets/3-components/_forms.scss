@@ -1,0 +1,27 @@
+@use '../Stylesheets/1-utilities/variables' as v;
+
+form {
+  font-size: 0; // Get rid of whitespace
+  > * {
+    font-size: 1rem; //Reset font-size for all child elements
+  }
+  border-radius: 12px;
+  padding: 12px;
+  margin: 0 auto;
+  // Prevent chrome's white box-shadow from overriding the set color
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    box-shadow: 0 0 0 30px v.$highlight inset !important;
+  }
+  input,
+  textarea {
+    border: 0;
+    border-radius: 7px;
+    margin-bottom: 10px;
+  }
+  textarea {
+    resize: vertical;
+  }
+}
