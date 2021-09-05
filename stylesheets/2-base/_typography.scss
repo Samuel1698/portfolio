@@ -5,12 +5,14 @@ html {
   overflow-y: auto;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
+  font-display: fallback;
 }
 p {
   font-size: 1em;
 }
 h1, h2, h3, h4, h5 {
   font-family: 'Yanone Kaffeesatz', cursive;
+  font-display: fallback;
 }
 img:focus-visible {
   margin: -2px;
