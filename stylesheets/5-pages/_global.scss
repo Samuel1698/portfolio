@@ -1,6 +1,6 @@
-@use '../Stylesheets/5-pages/contact';
-@use '../Stylesheets/5-pages/home';
-@use '../Stylesheets/5-pages/sections/about';
-@use '../Stylesheets/5-pages/sections/work';
-@use '../Stylesheets/5-pages/sections/why';
-@use '../Stylesheets/5-pages/sections/contact' as section;
+@use 'contact-me';
+@use 'home';
+@use 'sections/about';
+@use 'sections/work';
+@use 'sections/why';
+@use 'sections/contact';

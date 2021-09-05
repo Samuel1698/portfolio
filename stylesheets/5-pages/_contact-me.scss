@@ -1,5 +1,5 @@
-@use '../Stylesheets/1-utilities/variables' as v;
-@use '../Stylesheets/1-utilities/mixins' as m;
+@use '../1-utilities/variables' as v;
+@use '../1-utilities/mixins' as m;
 $labels: v.$secondary;
 $inline-color: v.$color;
 $line-height: 1.375rem;

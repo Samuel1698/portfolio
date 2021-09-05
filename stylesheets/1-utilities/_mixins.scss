@@ -1,4 +1,4 @@
-@use '../Stylesheets/1-utilities/variables' as v;
+@use 'variables' as v;
 
 @mixin hover {
   &:not([disabled]):hover {

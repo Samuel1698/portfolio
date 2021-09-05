@@ -29,6 +29,7 @@
   - [x] Filler
 - [ ] Main
   - [x] Certificates, Skills & Language columns
+    - [ ] Animate columns ul
   - [x] Carousel
     - [x] Navigation buttons
     - [x] Close button
@@ -37,7 +38,8 @@
   - [x] About me
     - [x] Image
     - [x] Content
-    - [x] Swoosh -[x] Remove fillers and position the svg better instead
+    - [x] Swoosh 
+      -[x] Remove fillers and position the svg better instead
     - [x] Position behind columns and use negative margins
   - [x] Recent Work
     - [x] Box style
@@ -46,6 +48,7 @@
     - [x] Expand/Minimize button
     - [x] Update Images
     - [ ] Banner about projects being open source
+    - [ ] Animate coming from the side on scroll
   - [x] Why Hire a Developer?
     - [x] Content
     - [x] Style
@@ -60,6 +63,7 @@
   - [x] Link hover states
   - [ ] Left section
   - [ ] Remove useful links title
+  - [ ] Language section
 
 <!-- Bugs -->
 - [ ] Hover over work items not working on safari

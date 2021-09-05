@@ -1,5 +1,5 @@
-@use '../Stylesheets/1-utilities/variables' as v;
-@use '../Stylesheets/1-utilities/mixins' as m;
+@use '../../1-utilities/variables' as v;
+@use '../../1-utilities/mixins' as m;
 
 section.contact {
   box-shadow: 0 0 3px 1px v.$primary;

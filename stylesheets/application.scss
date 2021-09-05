@@ -1,22 +1,22 @@
 // Utilities
-@use '../Stylesheets/1-utilities/variables';
-@use '../Stylesheets/1-utilities/mixins';
+@use '1-utilities/_variables';
+@use '1-utilities/_mixins';
 
 // Base
-@use '../Stylesheets/2-base/normalize';
-@use '../Stylesheets/2-base/typography';
-@use '../Stylesheets/2-base/base';
+@use '2-base/_normalize';
+@use '2-base/_typography';
+@use '2-base/_base';
 
 // Components
-@use '../Stylesheets/3-components/buttons';
-@use '../Stylesheets/3-components/carousel';
-@use '../Stylesheets/3-components/forms';
+@use '3-components/_buttons';
+@use '3-components/_carousel';
+@use '3-components/_forms';
 
 // Layout
-@use '../Stylesheets/4-layout/header';
-@use '../Stylesheets/4-layout/main';
-@use '../Stylesheets/4-layout/footer';
-@use '../Stylesheets/4-layout/media_queries';
+@use '4-layout/_header';
+@use '4-layout/_main';
+@use '4-layout/_footer';
+@use '4-layout/_media_queries';
 
 // Pages
-@use '../Stylesheets/5-pages/global';
+@use '5-pages/_global';

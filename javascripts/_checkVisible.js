@@ -1,12 +1,13 @@
 window.onload = function () {
-  preventAnimation();
+  ulAnimation();
+  // preventAnimation();
 };
 window.onscroll = function () {
   ulAnimation();
 };
 function preventAnimation() {
   var ul = document.querySelectorAll(
-    "main section.skills ul, main section.languages ul"
+    "main section.column ul"
   );
   for (let i = 0; i < ul.length; i++) {
     if (checkVisible(ul[i])) ul[i].setAttribute("class", "loaded");
@@ -14,7 +15,7 @@ function preventAnimation() {
 }
 function ulAnimation() {
   var ul = document.querySelectorAll(
-    "main section.skills ul, main section.languages ul"
+    "main section.column ul"
   );
   for (let i = 0; i < ul.length; i++) {
     if (checkVisible(ul[i])) ul[i].classList.add("animation");

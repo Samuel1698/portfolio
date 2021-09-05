@@ -1,5 +1,5 @@
-@use '../Stylesheets/1-utilities/variables' as v;
-@use '../Stylesheets/1-utilities/mixins' as m;
+@use '../1-utilities/variables' as v;
+@use '../1-utilities/mixins' as m;
 
 .columns {
   box-shadow: 0 0 3px 1px v.$primary;
@@ -41,12 +41,18 @@
   flex-direction: column;
   width: 256px;
   padding: 12px;
+  ul.animation {
+    animation: bounce-in-top 1.5s both;
+  } 
+  ul.loaded {
+    animation: none;
+  } 
   ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: auto 0 0;
-    li {
+    li { 
       width: 50%;
       display: inline-block;
       text-align: center;
@@ -58,7 +64,44 @@
       span {
         font-weight: lighter;
         font-size: 0.9em;
-      }
+      } 
+    }
+  }
+  
+  @keyframes bounce-in-top {
+    0% {
+      transform: translateY(-500px);
+      animation-timing-function: ease-in;
+      opacity: 0;
+    }
+    38% {
+      transform: translateY(0);
+      animation-timing-function: ease-out;
+      opacity: 1;
+    }
+    55% {
+      transform: translateY(-65px);
+      animation-timing-function: ease-in;
+    }
+    72% {
+      transform: translateY(0);
+      animation-timing-function: ease-out;
+    }
+    81% {
+      transform: translateY(-28px);
+      animation-timing-function: ease-in;
+    }
+    90% {
+      transform: translateY(0);
+      animation-timing-function: ease-out;
+    }
+    95% {
+      transform: translateY(-8px);
+      animation-timing-function: ease-in;
+    }
+    100% {
+      transform: translateY(0);
+      animation-timing-function: ease-out;
     }
   }
 }
@@ -69,6 +112,7 @@ section.cert {
     li {
       display: flex;
       width: 100%;
+      padding: 0.5em 0 0;
       align-items: center;
       cursor: pointer;
       img {
@@ -92,24 +136,7 @@ section.cert {
 }
 section.languages,
 section.skills {
-  ul.animation {
-    animation: skills 1s ease;
-    animation-iteration-count: 1;
-  }
-  ul.loaded {
-    animation: none;
-  }
   ul li {
     height: calc(2.4rem + 48px); // 48px is the height of the image
-  }
-  @keyframes skills {
-    0% {
-      opacity: 0;
-      transform: translateY(-30%);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0%);
-    }
   }
 }
