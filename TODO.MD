@@ -65,7 +65,9 @@
   - [ ] Left section
   - [ ] Remove useful links title
   - [ ] Language section
-
+<!-- Contact Page-->
+- [x] Form
+- [ ] Animate submit button left and right on hover
 <!-- Bugs -->
 - [ ] Hover over work items not working on safari
 - [ ] First element animation error on chrome only

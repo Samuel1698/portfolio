@@ -65,17 +65,17 @@
       <h1><span>Contact Me</span></h1>
       <input type="hidden" name="_subject" value="Someone Contacted You Through Your Portfolio">
       <div class="medium-inline">
-        <label for="name">Name</label>
+        <label style="--order: 0" for="name">Name</label>
         <input type="text" id="name" name="name" required />
       </div>
 
       <div class="medium-inline two">
-        <label for="email">Email Address</label>
+        <label style="--order: 1" for="email">Email Address</label>
         <input type="email" id="email" name="email" required />
       </div>
 
       <div class="inline">
-        <label for="Type">Project Type</label>
+        <label style="--order: 2" for="Type">Project Type</label>
         <select name="Type" id="Type">
           <option value="0"></option>
           <option value="1">Static Page</option>
@@ -84,7 +84,7 @@
       </div>
 
       <div class="inline two">
-        <label for="Budget">Budget</label>
+        <label style="--order: 3" for="Budget">Budget</label>
         <select name="Budget" id="Budget">
           <option value="0"></option>
           <option value="1">$500 - $1,000</option>
@@ -93,12 +93,12 @@
         </select>
       </div>
 
-      <label for="Message">Message</label>
+      <label style="--order: 4" for="Message">Message</label>
       <textarea name="Message" id="Message" cols="25" rows="10" tabindex="0" required></textarea>
 
       <input type="hidden" name="_next" value="/thanks.html">
       <input type="text" name="_honey" style="display:none">
-      <button type="submit" tabindex="0">Send Email</button>
+      <button type="submit" tabindex="0"><span>Send Email</span></button>
     </form>
   </main>
   <footer>

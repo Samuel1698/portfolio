@@ -46,14 +46,16 @@ main.contact {
         color: $inline-color;
         border: 0;
         border-radius: 7px;
-        background: url("../images/caret-down.svg") right bottom/2em no-repeat $labels;
+        background: url("../images/caret-down.svg") right bottom/2em no-repeat
+          $labels;
         span {
           font-size: 1em;
           display: inline-block;
         }
         &.select-arrow-active {
           border-bottom-left-radius: 0;
-          background: url("../images/caret-up.svg") right top/2em no-repeat $labels;
+          background: url("../images/caret-up.svg") right top/2em no-repeat
+            $labels;
         }
       }
       ul {
@@ -83,7 +85,8 @@ main.contact {
           }
         }
       }
-      ul li:hover, .same-as-selected {
+      ul li:hover,
+      .same-as-selected {
         cursor: pointer;
         background-color: rgba(0, 0, 0, 0.1);
       }
@@ -114,17 +117,63 @@ main.contact {
       background-color: $labels;
       color: $inline-color;
     }
-    button[type=submit] {
+    button[type="submit"] {
       border: 2px solid v.$highlight;
       background-color: v.$tertiary;
       color: black;
       width: 100%;
       margin: 0 auto;
       display: block;
+      @keyframes wobble {
+        0%,
+        100% {
+          transform: translateX(0%);
+          transform-origin: 50% 50%;
+        }
+        15% {
+          transform: translateY(-10%);
+        }
+        30% {
+          transform: translateY(10%);
+        }
+        45% {
+          transform: translateY(-5%);
+        }
+        60% {
+          transform: translateY(5%);
+        }
+        75% {
+          transform: translateY(-2.5%);
+        }
+      }
       @include m.hover {
         border: 2px solid v.$tertiary;
         background-color: v.$accent;
         color: v.$tertiary;
+        span {
+          display: inline-block;
+          animation: wobble 0.8s both;
+        }
+      }
+    }
+  }
+  form.animation {
+    label {
+      animation: tracking-in-expand-fwd-top 0.8s
+        cubic-bezier(0.215, 0.61, 0.355, 1) both calc(var(--order) * 300ms);
+    }
+    @keyframes tracking-in-expand-fwd-top {
+      0% {
+        letter-spacing: -0.5em;
+        transform: translateZ(-700px) translateY(-500px);
+        opacity: 0;
+      }
+      40% {
+        opacity: 0.6;
+      }
+      100% {
+        transform: translateZ(0) translateY(0);
+        opacity: 1;
       }
     }
   }
@@ -134,7 +183,7 @@ main.contact {
   }
 }
 @media (any-hover: hover) and (pointer: fine) {
-  main form button[type=submit] {
+  main form button[type="submit"] {
     @include m.hover {
       border: 2px solid v.$tertiary;
       background-color: v.$accent;
