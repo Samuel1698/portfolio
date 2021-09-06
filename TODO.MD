@@ -49,8 +49,7 @@
     - [x] Expand/Minimize button
     - [x] Update Images
     - [ ] Banner about projects being open source
-    - [ ] Animate coming from the side on scroll
-      - [ ] Use js to assign class depending on which side of the screen it's closer to, and animate FROM there
+    - [x] Animate coming from the side on scroll
   - [x] Why Hire a Developer?
     - [x] Content
     - [x] Style

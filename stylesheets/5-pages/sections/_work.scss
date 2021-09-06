@@ -92,7 +92,7 @@ section.work {
     position: relative;
   }
   .item.animation {
-    animation: scale-up-center 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both 0.5s;
+    animation: scale-up-center 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both calc(var(--order) * 400ms);
     @keyframes scale-up-center {
       0% {
         transform: scale(0);
