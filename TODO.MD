@@ -29,7 +29,7 @@
   - [x] Filler
 - [ ] Main
   - [x] Certificates, Skills & Language columns
-    - [ ] Animate columns ul
+    - [x] Animate columns ul
   - [x] Carousel
     - [x] Navigation buttons
     - [x] Close button
@@ -48,8 +48,8 @@
     - [x] Animation
     - [x] Expand/Minimize button
     - [x] Update Images
-    - [ ] Banner about projects being open source
     - [x] Animate coming from the side on scroll
+    - [x] Resize images as screen size changes
   - [x] Why Hire a Developer?
     - [x] Content
     - [x] Style

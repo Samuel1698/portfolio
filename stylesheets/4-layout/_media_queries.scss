@@ -27,9 +27,6 @@ main .about img {
   .container {
     max-width: calc(#{v.$small} - 40px);
   }
-  .work.container {
-    max-width: v.$small;
-  }
   main {
     .columns {
       width: 600px;
@@ -92,6 +89,14 @@ main .about img {
     }
     section.about .container {
       width: calc(#{v.$small} - 180px);
+    }
+    section.work .item .hidden {
+      ul {
+        width: 70%;
+      }
+      .pageSpeed {
+        bottom: 40px;
+      }
     }
     section.contact {
       display: flex;
@@ -170,6 +175,12 @@ main .about img {
     }
     section.about .container {
       width: calc(#{v.$medium} - 180px);
+    }
+    section.work .item {
+      width: 48%;
+      .hidden .pageSpeed {
+        bottom: 30px;
+      }
     }
   }
 }
