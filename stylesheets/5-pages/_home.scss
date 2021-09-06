@@ -29,10 +29,11 @@
   flex-direction: column;
   width: 256px;
   padding: 12px;
-  ul.animation {
+  ul.animation li {
     animation: bounce-in-top 1.5s both;
+    animation-delay: calc(var(--order) * 400ms);
   }
-  ul.loaded {
+  ul.loaded li {
     animation: none;
   }
   ul {
