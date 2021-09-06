@@ -66,17 +66,17 @@ main .about img {
     section.cert {
       order: 1;
       ul {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      li {
-        width: 50%;
-        img {
-          margin-right: 20px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        li {
+          width: 50%;
+          img {
+            margin-right: 20px;
+          }
         }
       }
-    }
     }
     .border.two {
       order: 2;
@@ -100,6 +100,10 @@ main .about img {
       margin-bottom: -3.5em;
       h3 {
         width: 6.666em;
+      }
+      a {
+        margin-left: calc(10em - (5.693125em + 26px));
+        // 10em = size of left text div, 5.693125em = size of inner span, 26px = 12px padding + 1px border
       }
     }
   }

@@ -1,10 +1,12 @@
 window.onload = function () {
   ulAnimation();
   workItemAnimation();
+  contactAnimation();
 };
 window.onscroll = function () {
   ulAnimation();
   workItemAnimation();
+  contactAnimation();
 };
 function ulAnimation() {
   var ul = document.querySelectorAll(
@@ -19,6 +21,10 @@ function workItemAnimation(){
   for (let i = 0; i < WorkItem.length; i++) {
     if (checkVisible(WorkItem[i])) WorkItem[i].classList.add("animation");
   }
+}
+function contactAnimation(){
+  var contact = document.querySelector("section.contact");
+  if (checkVisible(contact)) contact.classList.add("animation");
 }
 function checkVisible(elm) {
   var rect = elm.getBoundingClientRect();

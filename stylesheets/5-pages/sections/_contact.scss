@@ -27,11 +27,33 @@ section.contact {
     color: v.$color;
     cursor: pointer;
     font-size: 1rem;
-    margin-left: calc(10em - (5.693125em + 26px));
-    // 10em = size of left text div, 5.693125em = size of inner span, 26px = 12px padding + 1px border
     @include m.hover {
       background-color: v.$color;
       color: v.$accent;
+    }
+  }
+}
+section.contact.animation {
+  h3 {
+    animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    @keyframes slide-right {
+      0% {
+        transform: translateX(-200%);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+  }
+  a {
+    animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    @keyframes slide-left {
+      0% {
+        transform: translateX(200%);
+      }
+      100% {
+        transform: translateX(0);
+      }
     }
   }
 }

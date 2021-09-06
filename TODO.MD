@@ -56,7 +56,7 @@
   - [x] Contact
     - [x] Position halfway through footer
     - [x] Negative margin
-    - [ ] Fix button margin on small screens
+    - [x] Fix button margin on small screens
 - [ ] Footer
   - [x] Top padding
   - [x] Copyright
