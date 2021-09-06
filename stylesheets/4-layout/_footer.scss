@@ -24,17 +24,12 @@ footer {
   }
   .footer_module {
     font-size: 0; // Reset whitespace
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    margin-right: 1rem;
     text-align: left;
-    p {
-      font-size: 1rem;
-      margin: 0;
-      margin-bottom: 5px;
-    }
     a {
       display: block;
       padding: 4px;
-      margin-left: 10px;
       font-size: 0; // Reset whitespace
       height: 1.5rem;
       color: v.$color;

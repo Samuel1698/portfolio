@@ -30,7 +30,7 @@
 - [ ] Main
   - [x] Certificates, Skills & Language columns
     - [x] Animate columns ul
-  - [x] Carousel
+  - [ ] Carousel
     - [x] Navigation buttons
     - [x] Close button
     - [x] Javascript
