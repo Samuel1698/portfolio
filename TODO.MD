@@ -67,7 +67,15 @@
   - [ ] Language section
 <!-- Contact Page-->
 - [x] Form
-- [ ] Animate submit button left and right on hover
+  - [x] Use FormSubmit
+  - [x] Custom dropdown
+    - [x] Javascript
+    - [x] Arrow navigation
+    - [x] Icons
+  - [x] Responsiveness
+  - [x] Styling
+- [x] Animate submit button left and right on hover
+- [ ] Footer
 <!-- Bugs -->
 - [ ] Hover over work items not working on safari
 - [ ] First element animation error on chrome only
