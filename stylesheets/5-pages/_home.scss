@@ -33,9 +33,6 @@
     animation: bounce-in-top 1.5s both;
     animation-delay: calc(var(--order) * 400ms);
   }
-  ul.loaded li {
-    animation: none;
-  }
   ul {
     display: flex;
     flex-wrap: wrap;

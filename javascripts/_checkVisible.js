@@ -1,24 +1,23 @@
 window.onload = function () {
   ulAnimation();
-  // preventAnimation();
+  workItemAnimation();
 };
 window.onscroll = function () {
   ulAnimation();
+  workItemAnimation();
 };
-function preventAnimation() {
-  var ul = document.querySelectorAll(
-    "main section.column ul"
-  );
-  for (let i = 0; i < ul.length; i++) {
-    if (checkVisible(ul[i])) ul[i].setAttribute("class", "loaded");
-  }
-}
 function ulAnimation() {
   var ul = document.querySelectorAll(
     "main section.column ul"
   );
   for (let i = 0; i < ul.length; i++) {
     if (checkVisible(ul[i])) ul[i].classList.add("animation");
+  }
+}
+function workItemAnimation(){
+  var WorkItem = document.querySelectorAll(".work.container .item");
+  for (let i = 0; i < WorkItem.length; i++) {
+    if (checkVisible(WorkItem[i])) WorkItem[i].classList.add("animation");
   }
 }
 function checkVisible(elm) {
