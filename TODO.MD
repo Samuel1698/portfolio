@@ -30,12 +30,12 @@
 - [ ] Main
   - [x] Certificates, Skills & Language columns
     - [x] Animate columns ul
-  - [ ] Carousel
+  - [x] Carousel
     - [x] Navigation buttons
     - [x] Close button
     - [x] Javascript
     - [x] Animation
-    - [ ] Disabled buttons should not animate on hover 
+    - [x] Disabled buttons should not animate on hover 
   - [x] About me
     - [x] Image
     - [x] Content

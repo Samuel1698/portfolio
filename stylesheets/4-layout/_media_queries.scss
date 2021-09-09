@@ -44,6 +44,11 @@ main .about img {
             background-size: 170px;
           }
         }
+        &.disabled {
+          @include m.hover {
+            background-size: 150px;
+          }
+        }
       }
       .overlay button.close {
         top: 10px;
