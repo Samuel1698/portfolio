@@ -37,8 +37,8 @@ main .about img {
       .overlay.active button.arrow {
         width: 100px;
         height: 100px;
-        &.next,
-        &.prev {
+        /* prettier-ignore */
+        &.next, &.prev {
           background-size: 150px;
           @include m.hover {
             background-size: 170px;
@@ -154,11 +154,8 @@ main .about img {
         }
       }
     }
-    section.languages,
-    .border.one,
-    section.skills,
-    .border.two,
-    section.cert {
+    /* prettier-ignore */
+    section.languages, .border.one, section.skills, .border.two, section.cert {
       order: initial;
       width: 256px;
     }

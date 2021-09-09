@@ -118,8 +118,8 @@ section.cert {
     }
   }
 }
-section.languages,
-section.skills {
+/* prettier-ignore */
+section.languages, section.skills {
   ul li {
     padding: 0.5em 0 0;
     height: calc(2.4rem + 48px); // 48px is the height of the image

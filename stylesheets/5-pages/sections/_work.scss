@@ -77,9 +77,8 @@ section.work {
         margin: 0;
         text-transform: uppercase;
       }
-      i,
-      i::before,
-      i::after {
+      /* prettier-ignore */
+      i, i::before, i::after {
         height: 12px;
         width: 12px;
         display: inline-block;
@@ -154,8 +153,8 @@ section.work {
         left: -1px;
       }
     }
-    .hidden,
-    .overlay {
+    /* prettier-ignore */
+    .hidden, .overlay {
       position: absolute;
       margin: 0;
     }
@@ -181,9 +180,8 @@ section.work {
           border-radius: 4px;
         }
       }
-      ul li,
-      .pageSpeed,
-      .image-cropper {
+      /* prettier-ignore */
+      ul li, .pageSpeed, .image-cropper {
         display: inline-block;
       }
       .pageSpeed {
