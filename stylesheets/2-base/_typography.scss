@@ -1,18 +1,46 @@
 @use '../1-utilities/variables' as v;
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/open_sans/opensans-regular.ttf');
+  font-weight: normal;
+  font-display: fallback;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/open_sans/opensans-bold.ttf');
+  font-weight: bold;
+  font-display: fallback;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/Open_Sans/opensans-light.ttf');
+  font-weight: lighter;
+  font-display: fallback;
+}
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  src: url('../fonts/yanone_kaffeesatz/static/yanonekaffeesatz-regular.ttf');
+  font-weight: normal;
+  font-display: fallback;
+}
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  src: url('../fonts/yanone_kaffeesatz/static/yanonekaffeesatz-bold.ttf');
+  font-weight: bold;
+  font-display: fallback;
+}
 html {
   max-width: 100%;
   overflow-x: hidden;
   overflow-y: auto;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
-  font-display: fallback;
 }
 p {
   font-size: 1em;
 }
 h1, h2, h3, h4, h5 {
   font-family: 'Yanone Kaffeesatz', cursive;
-  font-display: fallback;
 }
 img:focus-visible {
   margin: -2px;
