@@ -1,31 +1,47 @@
 @use '../1-utilities/variables' as v;
 @font-face {
-  font-family: 'Open Sans';
-  src: url('../fonts/open_sans/opensans-regular.ttf');
+  font-family: "Open Sans";
+  src: url("../fonts/open_sans/opensans-regular.woff2") format("woff2"),
+    url("../fonts/open_sans/opensans-regular.woff") format("woff"),
+    url("../fonts/open_sans/opensans-regular.ttf") format("truetype");
   font-weight: normal;
   font-display: fallback;
 }
 @font-face {
-  font-family: 'Open Sans';
-  src: url('../fonts/open_sans/opensans-bold.ttf');
+  font-family: "Open Sans";
+  src: url("../fonts/open_sans/opensans-bold.woff2") format("woff2"),
+    url("../fonts/open_sans/opensans-bold.woff") format("woff"),
+    url("../fonts/open_sans/opensans-bold.ttf") format("truetype");
   font-weight: bold;
   font-display: fallback;
 }
 @font-face {
-  font-family: 'Open Sans';
-  src: url('../fonts/Open_Sans/opensans-light.ttf');
+  font-family: "Open Sans";
+  src: url("../fonts/Open_Sans/opensans-light.woff2") format("woff2"),
+    url("../fonts/Open_Sans/opensans-light.woff") format("woff"),
+    url("../fonts/Open_Sans/opensans-light.ttf") format("truetype");
   font-weight: lighter;
   font-display: fallback;
 }
 @font-face {
-  font-family: 'Yanone Kaffeesatz';
-  src: url('../fonts/yanone_kaffeesatz/static/yanonekaffeesatz-regular.ttf');
+  font-family: "Yanone Kaffeesatz";
+  src: url("../fonts/yanone_kaffeesatz/yanonekaffeesatz-regular.woff2")
+      format("woff2"),
+    url("../fonts/yanone_kaffeesatz/yanonekaffeesatz-regular.woff")
+      format("woff"),
+    url("../fonts/yanone_kaffeesatz/yanonekaffeesatz-regular.ttf")
+      format("truetype");
   font-weight: normal;
   font-display: fallback;
 }
 @font-face {
-  font-family: 'Yanone Kaffeesatz';
-  src: url('../fonts/yanone_kaffeesatz/static/yanonekaffeesatz-bold.ttf');
+  font-family: "Yanone Kaffeesatz";
+  src: url("../fonts/yanone_kaffeesatz/yanonekaffeesatz-bold.woff2")
+      format("woff2"),
+    url("../fonts/yanone_kaffeesatz/yanonekaffeesatz-bold.woff")
+      format("woff"),
+    url("../fonts/yanone_kaffeesatz/yanonekaffeesatz-bold.ttf")
+      format("truetype");
   font-weight: bold;
   font-display: fallback;
 }
@@ -33,14 +49,18 @@ html {
   max-width: 100%;
   overflow-x: hidden;
   overflow-y: auto;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
 }
 p {
   font-size: 1em;
 }
-h1, h2, h3, h4, h5 {
-  font-family: 'Yanone Kaffeesatz', cursive;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Yanone Kaffeesatz", cursive;
 }
 img:focus-visible {
   margin: -2px;
