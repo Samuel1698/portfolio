@@ -36,7 +36,9 @@
     - [x] Close button
     - [x] Javascript
     - [x] Animation
-    - [x] Disabled buttons should not animate on hover 
+    - [x] Disabled buttons should not animate on hover
+    - [ ] Arrow navigation
+    - [ ] Left Arrow focus visible not properly positioned
     - [ ] Close icon not padded correctly on big screens
   - [x] About me
     - [x] Image
