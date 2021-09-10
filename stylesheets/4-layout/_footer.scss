@@ -42,13 +42,20 @@ footer {
     button.select-button {
       padding: 0.375rem 1.75rem 0.375rem 0.75rem;
       color: v.$color;
+      box-shadow: 0 0 3px 1px v.$primary;
       background-color: v.$accent;
       border: 2px solid v.$accent;
       min-width: 7.4rem;
+      @include m.hover {
+        box-shadow: 0 0 3px 2px v.$highlight;
+      }
       &.select-arrow-active {
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
         background-color: v.$accent;
+        @include m.hover {
+          box-shadow: 0 0 3px 1px v.$primary;
+        }
       }
     }
     ul.select-items {
@@ -69,12 +76,10 @@ footer {
     button[type="submit"] {
       font-size: 0.85rem;
       margin-left: 1em;
-      padding: 6px;
-      background-color: initial;
+      padding: 6px 12px;
+      background-color: v.$accent;
       color: v.$color;
-      border-radius: 0;
-      border-right: 2px solid v.$highlight;
-      border-bottom: 2px solid v.$highlight;
+      border: 2px solid v.$highlight;
       svg {
         height: 20px;
         width: 20px;
@@ -83,10 +88,11 @@ footer {
         fill: v.$color;
       }
       @include m.hover {
-        color: v.$tertiary;
-        border-color: v.$tertiary;
+        color: v.$accent;
+        background-color: v.$color;
+        border-color: v.$highlight;
         svg {
-          fill: v.$tertiary;
+          fill: v.$accent;
         }
       }
     }
