@@ -75,6 +75,7 @@
     - [x] Flags
     - [x] Remove arrow class from button when closed
     - [x] Make it arrow navigable
+    - [ ] Change -> Cambia animation on span with javascript class for two separate span tags to use css keyframe animations
     - [ ] Aria labels when opened and closed
 <!-- Contact Page-->
 - [ ] Synch Header

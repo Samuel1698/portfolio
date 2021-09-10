@@ -42,20 +42,13 @@ footer {
     button.select-button {
       padding: 0.375rem 1.75rem 0.375rem 0.75rem;
       color: v.$color;
-      box-shadow: 0 0 3px 1px v.$primary;
-      background-color: v.$accent;
-      border: 2px solid v.$accent;
+      background-color: v.$primary;
+      border: 2px solid v.$primary;
       min-width: 5.2rem;
-      @include m.hover {
-        box-shadow: 0 0 3px 2px v.$highlight;
-      }
       &.select-arrow-active {
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
         background-color: v.$accent;
-        @include m.hover {
-          box-shadow: 0 0 3px 1px v.$primary;
-        }
       }
     }
     ul.select-items {
@@ -73,24 +66,27 @@ footer {
     button[type="submit"] {
       font-size: 0.85rem;
       margin-left: 1em;
-      padding: 6px 12px;
+      padding: 6px 6px 6px 12px;
       background-color: v.$background;
       color: v.$accent;
       border: 2px solid v.$highlight;
+      position: relative;
+      &:before {
+        position: absolute;
+        content: "";
+        top: 0;
+        bottom: 0;
+        right: 0;
+        // 20px svg size plus 6px padding on right and 6px margin on left
+        left: calc(100% - 32px);
+        background-color: rgba(0, 0, 0, 0.05);
+      }
       svg {
         height: 20px;
         width: 20px;
-        margin-left: 4px;
+        margin-left: 6px;
         vertical-align: middle;
         fill: v.$accent;
-      }
-      @include m.hover {
-        color: v.$background;
-        background-color: v.$accent;
-        border-color: v.$background;
-        svg {
-          fill: v.$color;
-        }
       }
     }
   }
