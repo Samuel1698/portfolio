@@ -25,6 +25,7 @@ for (let i = 0; i < li.length; i++){
     }
     this.classList.add("same-as-selected");
     this.parentElement.classList.toggle("select-hide");
+    button.classList.remove("select-arrow-active");
     // Redirect to subdomain on button click depending on the clicked li
   })
 }

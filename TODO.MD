@@ -36,6 +36,7 @@
     - [x] Javascript
     - [x] Animation
     - [x] Disabled buttons should not animate on hover 
+    - [ ] Close icon not padded correctly on big screens
   - [x] About me
     - [x] Image
     - [x] Content
@@ -68,7 +69,8 @@
     - [x] Dropdown
     - [x] Form style
     - [ ] Subdomain link change
-    - [ ] Flags
+    - [x] Flags
+    - [x] Remove arrow class from button when closed
 <!-- Contact Page-->
 - [x] Header
 - [x] Form
