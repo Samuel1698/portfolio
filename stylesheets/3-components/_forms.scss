@@ -45,8 +45,16 @@ form {
     right: 0;
     z-index: 1;
     li {
-      border-bottom: 1px solid darken(#706677, 5%);
-      //v.$secondary
+      position: relative;
+    }
+    li:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      background-color: rgba(0, 0, 0, 0.2);
     }
   }
   ul li:hover,
