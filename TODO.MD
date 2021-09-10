@@ -71,6 +71,7 @@
     - [ ] Subdomain link change
     - [x] Flags
     - [x] Remove arrow class from button when closed
+    - [ ] Make it arrow navigable
 <!-- Contact Page-->
 - [x] Header
 - [x] Form
