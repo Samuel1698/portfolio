@@ -23,13 +23,12 @@ section.contact {
     border: 1px solid v.$highlight;
     border-radius: 7px;
     padding: 12px;
-    background-color: v.$accent;
-    color: v.$color;
+    background-color: v.$color;
+    color: v.$accent;
     cursor: pointer;
     font-size: 1rem;
     @include m.hover {
-      background-color: v.$color;
-      color: v.$accent;
+      background-color: v.$background;
     }
   }
 }
