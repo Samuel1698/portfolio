@@ -1,4 +1,5 @@
 @use '../1-utilities/variables' as v;
+@use '../1-utilities/mixins' as m;
 
 header {
   background-color: v.$primary;
@@ -8,6 +9,23 @@ header {
   position: relative;
   width: 100%;
   overflow: hidden;
+  a.skip-link {
+    background: v.$tertiary;
+    color: v.$accent;
+    font-weight: bold;
+    left: 50%;
+    padding: 6px 12px;
+    border-radius: 5px;
+    position: absolute;
+    transform: translate(-50%, -100%);
+    span {
+      vertical-align: text-top;
+    }
+    @include m.hover {
+      z-index: 2;
+      transform: translate(-50%, 4px);
+    }
+  }
   nav ul {
     display: flex;
     justify-content: flex-end;

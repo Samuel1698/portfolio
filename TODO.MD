@@ -20,6 +20,7 @@
 
 <!-- Front page -->
 - [x] Header
+  - [x] Jump to content link
   - [x] Logo
     - [x] Optimize Images
     - [x] image circle
@@ -71,9 +72,10 @@
     - [ ] Subdomain link change
     - [x] Flags
     - [x] Remove arrow class from button when closed
-    - [ ] Make it arrow navigable
+    - [x] Make it arrow navigable
+    - [ ] Aria labels when opened and closed
 <!-- Contact Page-->
-- [x] Header
+- [ ] Synch Header
 - [x] Form
   - [x] Use FormSubmit
   - [x] Custom dropdown
@@ -85,7 +87,7 @@
   - [x] Responsiveness
   - [x] Styling
 - [x] Animate submit button left and right on hover
-- [ ] Footer
+- [ ] Synch Footer
 <!-- Bugs -->
 - [ ] Hover over work items not working on safari
 - [ ] First element animation error on chrome only
