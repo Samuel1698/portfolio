@@ -1,6 +1,5 @@
 @use '../1-utilities/variables' as v;
 @use '../1-utilities/mixins' as m;
-$labels: v.$secondary;
 $inline-color: v.$color;
 $line-height: 1.375rem;
 
@@ -32,66 +31,39 @@ main.contact {
       &.two {
         margin-left: 2%;
       }
-      select {
-        display: none;
+    }
+    select {
+      display: none;
+    }
+    button.select-button {
+      font-size: 0.9em;
+      line-height: $line-height;
+      padding: 2%;
+      width: 100%;
+      color: $inline-color;
+      span {
+        font-size: 1em;
+        display: inline-block;
       }
-      button.select-button {
-        user-select: none;
-        text-align: left;
-        font-size: 0.9em;
-        line-height: $line-height;
-        margin: 0;
-        padding: 2%;
-        width: 100%;
-        color: $inline-color;
-        border: 0;
-        border-radius: 7px;
-        background: url("../images/caret-down.svg") right bottom/2em no-repeat
-          $labels;
-        span {
-          font-size: 1em;
-          display: inline-block;
-        }
-        &.select-arrow-active {
-          border-bottom-left-radius: 0;
-          background: url("../images/caret-up.svg") right top/2em no-repeat
-            $labels;
-        }
+    }
+    ul.select-items {
+      background-color: v.$tertiary;
+      color: v.$accent;
+      min-width: 8rem;
+      width: 50%;
+      border-bottom-left-radius: 7px;
+      border-bottom-right-radius: 7px;
+      //select-item
+      li {
+        padding: 8px;
+        padding-right: 0;
+        min-height: $line-height;
       }
-      ul {
-        user-select: none;
-        background-color: v.$tertiary;
-        color: v.$accent;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        z-index: 1;
-        min-width: 8rem;
-        width: 50%;
-        border-bottom-left-radius: 7px;
-        border-bottom-right-radius: 7px;
+      @media (min-width: 410px) {
+        min-width: 10rem;
         li {
-          padding: 8px;
-          padding-right: 0;
-          min-height: $line-height;
-          border-bottom: 1px solid darken(#706677, 5%);
-          //v.$secondary
+          padding-left: 16px;
         }
-        @media (min-width: 410px) {
-          min-width: 10rem;
-          li {
-            padding-left: 16px;
-          }
-        }
-      }
-      ul li:hover,
-      .same-as-selected {
-        cursor: pointer;
-        background-color: rgba(0, 0, 0, 0.1);
-      }
-      .select-hide {
-        display: none;
       }
     }
     .medium-inline {
@@ -107,14 +79,14 @@ main.contact {
       width: 96%;
       padding: 2%;
       line-height: $line-height;
-      background-color: $labels;
+      background-color: v.$labels;
       color: $inline-color;
     }
     textarea {
       width: 96%;
       padding: 2%;
       line-height: $line-height;
-      background-color: $labels;
+      background-color: v.$labels;
       color: $inline-color;
     }
     button[type="submit"] {

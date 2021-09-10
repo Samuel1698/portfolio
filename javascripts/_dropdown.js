@@ -56,12 +56,12 @@ for (i = 0; i < wrapper.length; i++) {
             this.nextSibling.getElementsByClassName("same-as-selected");
           for (k = 0; k < selected.length; k++) {
             // Reset the 'same as selected' class
-            selected[k].removeAttribute("class");
+            selected[k].classList.remove("same-as-selected");
           }
           for (i = 0; i < child.length; i++) {
             // Assign 'same as selected' class to the child of fake select if it matches the selected text
             if (this.querySelector("span").innerHTML == child[i].innerHTML) {
-              child[i].setAttribute("class", "same-as-selected");
+              child[i].classList.add("same-as-selected");
               break;
             }
           }
@@ -95,9 +95,9 @@ function updateOriginal(that) {
       button.querySelector("span").innerHTML = that.innerHTML;
       selected = that.parentNode.getElementsByClassName("same-as-selected");
       for (k = 0; k < selected.length; k++) {
-        selected[k].removeAttribute("class");
+        selected[k].classList.remove("same-as-selected");
       }
-      that.setAttribute("class", "same-as-selected");
+      that.classList.add("same-as-selected");
       break;
     }
   }
@@ -105,9 +105,8 @@ function updateOriginal(that) {
 }
 function closeAllSelect(element) {
   // A function that will close all select boxes in the document, except the current select box:
-  var ul,
-    i,
-    arrNo = [];
+  /* prettier-ignore */
+  var ul, i, arrNo = [];
   ul = document.getElementsByClassName("select-items");
   button = document.getElementsByClassName("select-button");
   for (i = 0; i < button.length; i++) {

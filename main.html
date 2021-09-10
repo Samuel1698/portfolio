@@ -272,7 +272,21 @@
   <footer>
     <div class="container">
       <div class="footer_about">
-
+        <form action="/main.html" name="language_form" >
+          <label for="language" class="sr-only">Select Language</label>
+          <div class="languages-wrap">
+            <button name="language" id="language" class="select-button" tabindex="0" type="button">
+              <span>English</span>
+            </button>
+            <ul class="select-items select-hide">
+              <li class="select-item same-as-selected">English</li>
+              <li class="select-item">Español</li>
+            </ul>
+          </div>
+          <button type="submit" tabindex="0" formaction="/main.html">
+            <span>Change Language</span>
+          </button>
+        </form>
       </div>
       <div class="footer_module">
         <a href="Samuel_G_Munoz_Resume.PDF" download target="_blank">

@@ -63,15 +63,22 @@
   - [x] Useful links
   - [x] Link hover states
   - [ ] Left section
-  - [ ] Remove useful links title
+  - [x] Remove useful links title
   - [ ] Language section
+    - [x] Dropdown
+    - [x] Form style
+    - [ ] Subdomain link change
+    - [ ] Flags
 <!-- Contact Page-->
+- [x] Header
 - [x] Form
   - [x] Use FormSubmit
   - [x] Custom dropdown
     - [x] Javascript
     - [x] Arrow navigation
     - [x] Icons
+    - [x] Removing 'same as selected' class removes the class attribute instead of removing that specific class
+    - [ ] Aria labels when opened and closed
   - [x] Responsiveness
   - [x] Styling
 - [x] Animate submit button left and right on hover
@@ -81,5 +88,6 @@
 - [ ] First element animation error on chrome only
 <!-- Deployment -->
 - [ ] Optimize images
+- [ ] Fix links
 - [ ] Make copy of folder and remove unused css/javascript (only include minified versions)
 - [ ] Consider moving all images to root folder and referencing them there all throughout the code. Sort of like webpack

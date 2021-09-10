@@ -5,6 +5,7 @@ form {
   > * {
     font-size: 1rem; //Reset font-size for all child elements
   }
+  position: relative;
   border-radius: 12px;
   padding: 12px;
   margin: 0 auto;
@@ -23,5 +24,37 @@ form {
   }
   textarea {
     resize: vertical;
+  }
+  button.select-button {
+    user-select: none;
+    text-align: left;
+    margin: 0;
+    background: url("../images/caret-down.svg") right bottom/2em no-repeat
+      v.$labels;
+    &.select-arrow-active {
+      border-bottom-left-radius: 0;
+      background: url("../images/caret-up.svg") right top/2em no-repeat
+        v.$labels;
+    }
+  }
+  ul.select-items {
+    user-select: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    li {
+      border-bottom: 1px solid darken(#706677, 5%);
+      //v.$secondary
+    }
+  }
+  ul li:hover,
+  .same-as-selected {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  .select-hide {
+    display: none;
   }
 }
