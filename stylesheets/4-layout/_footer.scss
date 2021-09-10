@@ -45,7 +45,7 @@ footer {
       box-shadow: 0 0 3px 1px v.$primary;
       background-color: v.$accent;
       border: 2px solid v.$accent;
-      min-width: 7.4rem;
+      min-width: 5.2rem;
       @include m.hover {
         box-shadow: 0 0 3px 2px v.$highlight;
       }
@@ -74,22 +74,22 @@ footer {
       font-size: 0.85rem;
       margin-left: 1em;
       padding: 6px 12px;
-      background-color: v.$accent;
-      color: v.$color;
+      background-color: v.$background;
+      color: v.$accent;
       border: 2px solid v.$highlight;
       svg {
         height: 20px;
         width: 20px;
         margin-left: 4px;
         vertical-align: middle;
-        fill: v.$color;
+        fill: v.$accent;
       }
       @include m.hover {
-        color: v.$accent;
-        background-color: v.$color;
-        border-color: v.$highlight;
+        color: v.$background;
+        background-color: v.$accent;
+        border-color: v.$background;
         svg {
-          fill: v.$accent;
+          fill: v.$color;
         }
       }
     }
