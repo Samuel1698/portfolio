@@ -34,7 +34,7 @@ footer {
     button.select-button {
       color: v.$color;
       background-color: v.$accent;
-      padding: 0.375rem 1.5rem 0.375rem 0.75rem;
+      padding: 0.375rem 1.75rem 0.375rem 0.75rem;
       border: 2px solid v.$accent;
       &.select-arrow-active {
         border-bottom-left-radius: 0;
@@ -56,9 +56,9 @@ footer {
       background-color: initial;
     }
     button[type="submit"] {
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       margin-left: 2em;
-      padding: 6px;
+      padding: 6px 12px;
       background-color: initial;
       color: v.$color;
       border: 2px solid v.$highlight;
