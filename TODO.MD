@@ -66,7 +66,6 @@
   - [x] Copyright
   - [x] Useful links
   - [x] Link hover states
-  - [ ] Left section
   - [x] Remove useful links title
   - [ ] Language section
     - [x] Dropdown
@@ -77,6 +76,8 @@
     - [x] Make it arrow navigable
     - [ ] Change -> Cambia animation on span with javascript class for two separate span tags to use css keyframe animations
     - [ ] Aria labels when opened and closed
+    - [ ] Match the style of the language selection to other footer items
+  - [ ] Switch to Dark Mode toggle
 <!-- Contact Page-->
 - [ ] Synch Header
 - [x] Form
@@ -89,6 +90,7 @@
     - [ ] Aria labels when opened and closed
   - [x] Responsiveness
   - [x] Styling
+  - [ ] Form validation
 - [x] Animate submit button left and right on hover
 - [ ] Synch Footer
 <!-- Bugs -->
