@@ -70,19 +70,16 @@ footer {
       color: v.$accent;
       border: 2px solid v.$highlight;
       position: relative;
-      min-width: 6.5rem;
       overflow: hidden; // This needs to be on this button to prevent mozilla bug with block elements, overflow hidden causing layout shift
       div.button_wrap {
         position: relative;
         span {
           position: absolute;
           left: 125%;
-          transition: left 750ms ease-in-out;
         }
         span.shown {
           position: relative;
           left: 0;
-          transition: left 750ms ease-in-out;
         }
       }
       &::before {
