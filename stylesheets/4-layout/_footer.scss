@@ -70,6 +70,21 @@ footer {
       color: v.$accent;
       border: 2px solid v.$highlight;
       position: relative;
+      div.button_wrap {
+        position: relative;
+        span {
+          display: none;
+          position: absolute;
+          left: 125%;
+          transition: left 750ms ease-in-out;
+        }
+        span.shown {
+          display: inline-block;
+          position: relative;
+          left: 0;
+          transition: left 750ms ease-in-out;
+        }
+      }
       &::before {
         position: absolute;
         content: "";
@@ -79,6 +94,12 @@ footer {
         // 20px svg size plus 6px padding on right and 6px margin on left
         left: calc(100% - 32px);
         background-color: rgba(0, 0, 0, 0.05);
+        transition: left 750ms ease-in-out;
+      }
+      @include m.hover {
+        &::before {
+          left: 0;
+        }
       }
       svg {
         height: 20px;
