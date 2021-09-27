@@ -34,6 +34,8 @@ button.addEventListener("keydown", function (e) {
           li[k].classList.add("same-as-selected");
         }
       }
+      // Display the submit button
+      submit.removeAttribute("style");
     }
   }
   if (e.key == "Enter" || e.key == "Tab") {
@@ -62,6 +64,8 @@ for (let i = 0; i < li.length; i++) {
     this.classList.add("same-as-selected");
     this.parentElement.classList.toggle("select-hide");
     button.classList.remove("select-arrow-active");
+    // Display the submit button
+    submit.removeAttribute("style");
     // Assign 'shown' class depending on which list item is selected
     changeLang(this);
     // Redirect to subdomain on button click depending on the clicked li

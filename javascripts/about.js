@@ -1,4 +1,5 @@
 import "./_dropdown.js";
+import "./_footer-drop";
 
 window.onload = function () {
   formAnimation();

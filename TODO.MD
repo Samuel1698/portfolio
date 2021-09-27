@@ -76,7 +76,6 @@
     - [x] Make it arrow navigable
     - [ ] Aria labels when opened and closed
     - [ ] Match the style of the language selection to other footer items
-  - [ ] Switch to Dark Mode toggle
 <!-- Contact Page-->
 - [ ] Synch Header
 - [x] Form
