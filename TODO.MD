@@ -74,7 +74,6 @@
     - [x] Flags
     - [x] Remove arrow class from button when closed
     - [x] Make it arrow navigable
-    - [ ] Change -> Cambia animation on span with javascript class for two separate span tags to use css keyframe animations
     - [ ] Aria labels when opened and closed
     - [ ] Match the style of the language selection to other footer items
   - [ ] Switch to Dark Mode toggle
