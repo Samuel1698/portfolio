@@ -34,7 +34,7 @@ form {
     &.select-arrow-active {
       border-bottom-left-radius: 0;
       background: url("../images/caret-up.svg") right top/2em no-repeat
-        v.$labels;
+      v.$labels;
     }
   }
   ul.select-items {
