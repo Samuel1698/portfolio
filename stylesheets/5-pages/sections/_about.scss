@@ -1,19 +1,16 @@
-@use '../../1-utilities/variables' as v;
+@use "../../1-utilities/variables" as v;
 
 section.about {
-  color: v.$color;
-  background-color: v.$secondary;
-  padding-top: 40px;
-  margin-top: 12px;
-  line-height: 18px;
+  color: v.$color-2;
+  background-color: v.$primary;
+  overflow: hidden;
+  // Top offset
+  padding-top: 52px;
   position: relative;
   top: -52px; //This -32 is the margin between columns and about me
   margin-bottom: -52px;
   z-index: -1;
-  overflow: hidden;
-  p:last-of-type {
-    margin-bottom: 0; // Needed to remove extra pixel of whitespace
-  }
+  // End of offset
   img {
     position: absolute;
     left: -90px;
@@ -25,20 +22,24 @@ section.about {
     font-weight: bold;
     font-size: 1.5em;
   }
+  p:last-of-type {
+    margin-bottom: 0;
+  }
   .container {
     position: relative;
-    padding: 0 0 0 142px;
+    padding: 0 0 2em 142px;
     min-width: 0;
     width: calc(100% - 152px);
   }
   .swoosh {
     vertical-align: top; //Needed to remove whitespace below
-    position: relative; // To show the svg on top of the image
-    bottom: -1px;
-    width: 100%;
-    min-height: 85px;
+    position: absolute;
+    bottom: -24px;
+    left: -6px;
+    width: 110px;
     path {
-      fill: v.$background;
+      fill: v.$primary;
+      stroke: v.$primary;
     }
   }
 }

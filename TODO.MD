@@ -67,6 +67,7 @@
   - [x] Useful links
   - [x] Link hover states
   - [x] Remove useful links title
+  - [ ] Replace github logo with completely fillable one*/
   - [ ] Language section
     - [x] Dropdown
     - [x] Form style
@@ -90,10 +91,13 @@
   - [x] Styling
   - [ ] Form validation
 - [x] Animate submit button left and right on hover
-- [ ] Synch Footer
+- [ ] Footer
+  - [ ] Synch after it's done
+  - [ ] Similar box to Contact box on main page 
 <!-- Bugs -->
 - [ ] Hover over work items not working on safari
 - [ ] First element animation error on chrome only
+- [ ] Setting minHeight to work items with javascript breaks mobile-view after resize, reset style after item has loaded?
 <!-- Deployment -->
 - [ ] Optimize images
 - [ ] Fix links

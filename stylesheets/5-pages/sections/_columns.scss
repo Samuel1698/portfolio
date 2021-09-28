@@ -1,5 +1,5 @@
-@use '../1-utilities/variables' as v;
-@use '../1-utilities/mixins' as m;
+@use '../../1-utilities/variables' as v;
+@use '../../1-utilities/mixins' as m;
 
 .columns {
   @include m.shadow;
@@ -10,8 +10,8 @@
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
-  background-color: v.$columns;
-  color: black;
+  background-color: v.$background-2;
+  color: v.$primary;
   h3 {
     font-weight: normal;
     font-size: 1.2rem;
@@ -21,7 +21,7 @@
   }
   .border {
     width: 100%;
-    border-bottom: 1px solid v.$secondary;
+    border-bottom: 1px solid;
   }
 }
 .column {
@@ -48,7 +48,7 @@
         width: 100%;
       }
       span {
-        color: v.$accent;
+        color: v.$secondary;
         font-size: 0.9em;
       }
     }
@@ -111,7 +111,7 @@ section.cert {
       }
       @include m.hover {
         span {
-          border-bottom: 2px solid v.$highlight;
+          border-bottom: 2px solid;
           margin-bottom: -2px;
         }
       }

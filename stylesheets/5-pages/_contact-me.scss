@@ -12,7 +12,7 @@ main.contact {
       text-align: center;
       font-size: 2rem;
       margin: 0 0 1em;
-      color: v.$accent;
+      color: v.$primary;
       span {
         padding-bottom: 0.3em;
         border-bottom: 2px solid;
@@ -48,7 +48,7 @@ main.contact {
     }
     ul.select-items {
       background-color: v.$tertiary;
-      color: v.$accent;
+      color: v.$primary;
       min-width: 8rem;
       width: 50%;
       border-bottom-left-radius: 7px;
@@ -120,7 +120,7 @@ main.contact {
       }
       @include m.hover {
         border: 2px solid v.$tertiary;
-        background-color: v.$accent;
+        background-color: v.$primary;
         color: v.$tertiary;
         span {
           display: inline-block;
@@ -152,14 +152,5 @@ main.contact {
   p {
     text-align: center;
     font-size: 1.5rem;
-  }
-}
-@media (any-hover: hover) and (pointer: fine) {
-  main form button[type="submit"] {
-    @include m.hover {
-      border: 2px solid v.$tertiary;
-      background-color: v.$accent;
-      color: v.$tertiary;
-    }
   }
 }

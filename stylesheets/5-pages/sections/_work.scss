@@ -1,20 +1,22 @@
-@use '../../1-utilities/variables' as v;
-@use '../../1-utilities/mixins' as m;
+@use "../../1-utilities/variables" as v;
+@use "../../1-utilities/mixins" as m;
 
 section.work {
-  margin-bottom: 3em;
-  padding: 0;
+  color: v.$color-2;
+  background-color: v.$primary;
   text-align: center;
   h3 {
-    color: v.$accent;
     font-weight: bold;
     font-size: 2em;
+    margin: 0 auto 1em;
+    padding-top: 0.5em;
   }
   .flex_wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     position: relative;
+    z-index: 0;
   }
   .item.animation {
     animation: scale-up-center 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both
@@ -38,7 +40,6 @@ section.work {
     }
   }
   .item {
-    @include m.shadow;
     position: relative;
     overflow: hidden;
     vertical-align: top; //Fix extra space caused by hidden overflow
@@ -221,6 +222,16 @@ section.work {
       right: 0;
       transition: all 1s ease;
       transition-delay: 0.5s;
+    }
+  }
+  .swoosh {
+    vertical-align: top; //Needed to remove whitespace below
+    position: relative; // To show the svg on top of the image
+    bottom: -1px;
+    width: 100%;
+    min-height: 85px;
+    path {
+      fill: v.$background;
     }
   }
 }

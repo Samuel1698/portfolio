@@ -1,17 +1,16 @@
 :root {
-  // Primary
-  --independence: #565264;
-  --old-lavender: #706677;
-  --silver-pink: #ccb7ae;
-  // Backgrounds
-  --timberwolf: #d6cfcb;
-  --dracula-grey: #44475a;
-  --english-lavender: #a6808c;
+  // Endeavor palette
+  --endeavor: #08243B;
+  --nevada : #5E6F7C;
+  --twine: #C79360;
+  --coffee:  #756151;
+  --ruby: #a20021;
   // Whites
-  --alabaster: #f1f0ea;
+  --iron:  #D4D4D6;
   --isabelline: #f6f0ed;
-  --opal: #a0b9bf;
+  --silver: #f1f0ea;
   // Dracula
+  --grey: #44475a;
   --pink: #ff79c6;
   --purple: #bd93f9;
   --blue: #8be9fd;
@@ -20,17 +19,19 @@
   --green: #50fa7b;
 }
 
-$primary: var(--independence);
-$secondary: var(--old-lavender);
-$tertiary: var(--silver-pink);
+$primary: var(--endeavor);
+$secondary: var(--nevada);
+$tertiary: var(--twine);
 
-$background: var(--timberwolf);
-$accent: var(--dracula-grey);
-$highlight: var(--english-lavender);
+$highlight: var(--coffee);
+$highlight-2: var(--ruby);
 
-$columns: var(--alabaster);
+$background: var(--iron);
+$background-2: var(--silver);
+
 $color: var(--isabelline);
-$ribbon: var(--green);
+$color-2: var(--iron);
+
 $labels: $secondary;
 
 $small: 40rem; // 640px

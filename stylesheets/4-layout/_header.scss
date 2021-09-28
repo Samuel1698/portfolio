@@ -10,7 +10,7 @@ header {
   overflow: hidden;
   a.skip-link {
     background: v.$tertiary;
-    color: v.$accent;
+    color: v.$primary;
     font-weight: bold;
     left: 50%;
     padding: 6px 12px;
@@ -33,17 +33,17 @@ header {
       margin-top: 5px;
       display: inline-block;
       font-size: 0.9em;
-      padding: 5px;
+      padding: 5px 10px;
       &:not(:last-child) {
         // Border to the right of all nav items except last item
-        border-right: 1px solid v.$columns;
+        border-right: 1px solid;
       }
       &:first-child {
         border-right: 0;
         margin-right: auto;
       }
       a {
-        padding: 5px;
+        padding: 5px 0;
         color: v.$color;
         svg {
           vertical-align: top;
@@ -102,7 +102,7 @@ header {
     position: relative;
     z-index: 2;
     display: inline-block;
-    margin: 0;
+    margin: 0 0 1.8rem;
     padding: 12px;
     background-color: v.$secondary;
     border-radius: 5px;
@@ -110,7 +110,7 @@ header {
   }
   .border {
     position: absolute;
-    height: 1.8rem;
+    height: 3.6rem;
     bottom: 0;
     left: 0;
     right: 0;

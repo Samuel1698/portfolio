@@ -4,7 +4,7 @@
 footer {
   margin-top: auto;
   background-color: v.$primary;
-  padding: 5.5em 0 0.625em;
+  padding: 4.5em 0 0.625em;
   font-size: 1em;
   color: v.$color;
   text-align: center;
@@ -14,13 +14,8 @@ footer {
     justify-content: space-between;
     max-width: initial;
   }
-  .footer_about {
-    border-left: 2px solid v.$highlight;
-    border-top: 2px solid v.$highlight;
-    margin-bottom: 2rem;
-  }
   form {
-    padding-right: 2px;
+    padding: 0;
     button {
       font-size: 0.8rem;
       span {
@@ -52,7 +47,7 @@ footer {
     }
     ul.select-items {
       background-color: v.$tertiary;
-      color: v.$accent;
+      // color: v.$accent;
       border-bottom-left-radius: 7px;
       border-bottom-right-radius: 7px;
       li {
@@ -67,7 +62,7 @@ footer {
       margin-left: 1em;
       padding: 6px 6px 6px 12px;
       background-color: v.$background;
-      color: v.$accent;
+      // color: v.$accent;
       border: 2px solid v.$highlight;
       position: relative;
       overflow: hidden; // This needs to be on this button to prevent mozilla bug with block elements, overflow hidden causing layout shift
@@ -103,7 +98,8 @@ footer {
         width: 20px;
         margin-left: 6px;
         vertical-align: middle;
-        fill: v.$accent;
+        // fill: v.$accent;
+        // stroke: v.$accent;
         position: relative;
       }
     }
