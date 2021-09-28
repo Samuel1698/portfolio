@@ -70,7 +70,8 @@ footer {
     button[type="submit"] {
       font-size: 0.85rem;
       margin-left: 1em;
-      padding: 6px 6px 4px 12px;
+      padding: 6px 6px 6px 12px;
+      vertical-align: bottom;
       background-color: v.$background;
       position: relative;
       overflow: hidden; // This needs to be on this button to prevent mozilla bug with block elements, overflow hidden causing layout shift
@@ -105,7 +106,7 @@ footer {
         height: 20px;
         width: 20px;
         margin-left: 6px;
-        vertical-align: middle;
+        vertical-align: text-top;
         position: relative;
       }
     }
