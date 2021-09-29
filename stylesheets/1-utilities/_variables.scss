@@ -1,12 +1,12 @@
 :root {
   // Endeavor palette
-  --endeavor: #08243B;
-  --nevada : #5E6F7C;
-  --twine: #C79360;
-  --coffee:  #756151;
+  --endeavor: #08243b;
+  --nevada: #5e6f7c;
+  --twine: #c79360;
+  --coffee: #756151;
   --ruby: #a20021;
   // Whites
-  --iron:  #D4D4D6;
+  --iron: #d4d4d6;
   --isabelline: #f6f0ed;
   --silver: #f1f0ea;
   // Dracula
@@ -18,21 +18,21 @@
   --yellow: #f1fa8c;
   --green: #50fa7b;
 }
+// Dark Mode
+$dark-background: var(--endeavor); //Blue
+$dark-background-2: var(--nevada); //Grey
+$dark-color: var(--iron); //Grey-White
+$dark-color-2: var(--isabelline); //White
+$dark-focus: var(--twine); //Orange
+$dark-outline: var(--coffee); //Brown
+// White Mode
+$white-background: var(--iron); //Grey-White
+$white-background-2: var(--silver); //Silver
+$white-color: black;
+$white-color-2: var(--endeavor);
+$white-outline: var(--ruby); //Red
 
-$primary: var(--endeavor);
-$secondary: var(--nevada);
-$tertiary: var(--twine);
-
-$highlight: var(--coffee);
-$highlight-2: var(--ruby);
-
-$background: var(--iron);
-$background-2: var(--silver);
-
-$color: var(--isabelline);
-$color-2: var(--iron);
-
-$labels: $secondary;
+$inputs: $dark-background;
 
 $small: 40rem; // 640px
 $medium: 58.75rem; // 940px

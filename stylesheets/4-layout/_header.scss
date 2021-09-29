@@ -2,15 +2,15 @@
 @use '../1-utilities/mixins' as m;
 
 header {
-  background-color: v.$primary;
-  color: v.$color;
+  background-color: v.$dark-background;
+  color: v.$dark-color-2;
   text-align: center;
   position: relative;
   width: 100%;
   overflow: hidden;
   a.skip-link {
-    background: v.$tertiary;
-    color: v.$primary;
+    background: v.$dark-background-2;
+    color: v.$dark-color-2;
     font-weight: bold;
     left: 50%;
     padding: 6px 12px;
@@ -44,21 +44,21 @@ header {
       }
       a {
         padding: 5px 0;
-        color: v.$color;
+        color: v.$dark-color-2;
         svg {
           vertical-align: top;
           position: relative;
           right: -2px;
           top: -2px;
-          stroke: v.$color;
+          stroke: v.$dark-color-2;
         }
       }
       a:hover {
-        color: v.$tertiary;
-        border-bottom: 2px solid v.$tertiary;
+        color: v.$dark-focus;
+        border-bottom: 2px solid v.$dark-focus;
         margin-bottom: -2px;
         svg {
-          stroke: v.$tertiary;
+          stroke: v.$dark-focus;
         }
       }
     }
@@ -75,7 +75,7 @@ header {
       z-index: 0;
       bottom: 0;
       right: 5px;
-      background-color: v.$background;
+      background-color: v.$dark-background-2;
       // background-image: linear-gradient(180deg, v.$primary, v.$secondary);
     }
     img {
@@ -88,7 +88,7 @@ header {
       right: -4rem;
       left: -4rem;
       z-index: 1;
-      border-bottom: 1px solid v.$color;
+      border-bottom: 1px solid v.$dark-color-2;
     }
   }
   /* prettier-ignore */
@@ -104,7 +104,7 @@ header {
     display: inline-block;
     margin: 0 0 1.8rem;
     padding: 12px;
-    background-color: v.$secondary;
+    background-color: v.$dark-background-2;
     border-radius: 5px;
     @include m.shadow;
   }
@@ -115,7 +115,7 @@ header {
     left: 0;
     right: 0;
     &::before {
-      background-color: v.$background;
+      background-color: v.$white-background;
       z-index: 1;
       position: absolute;
       content: "";

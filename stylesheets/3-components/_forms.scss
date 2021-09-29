@@ -14,7 +14,7 @@ form {
   input:-webkit-autofill:hover,
   input:-webkit-autofill:focus,
   input:-webkit-autofill:active {
-    box-shadow: 0 0 0 30px v.$highlight inset !important;
+    box-shadow: 0 0 0 30px var(--yellow) inset !important;
   }
   /* prettier-ignore */
   input, textarea {
@@ -30,11 +30,11 @@ form {
     text-align: left;
     margin: 0;
     background: url("../images/caret-down.svg") right bottom/2em no-repeat
-      v.$labels;
+      v.$inputs;
     &.select-arrow-active {
       border-bottom-left-radius: 0;
       background: url("../images/caret-up.svg") right top/2em no-repeat
-      v.$labels;
+      v.$inputs;
     }
   }
   ul.select-items {

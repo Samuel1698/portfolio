@@ -10,8 +10,8 @@
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
-  background-color: v.$background-2;
-  color: v.$primary;
+  background-color: v.$white-background-2;
+  color: v.$white-color-2;
   h3 {
     font-weight: normal;
     font-size: 1.2rem;
@@ -48,7 +48,7 @@
         width: 100%;
       }
       span {
-        color: v.$secondary;
+        color: v.$white-color-2;
         font-size: 0.9em;
       }
     }

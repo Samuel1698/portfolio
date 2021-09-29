@@ -3,8 +3,8 @@
 
 section.contact {
   @include m.shadow;
-  background-color: v.$background-2;
-  color: v.$primary;
+  background-color: v.$white-background-2;
+  color: v.$white-color-2;
   padding: 12px 20px;
   border-radius: 7px;
   position: relative;
@@ -20,14 +20,14 @@ section.contact {
   }
   a {
     display: inline-block;
-    border: 1px solid v.$highlight-2;
+    border: 1px solid v.$white-outline;
     border-radius: 7px;
     padding: 12px;
     cursor: pointer;
     font-size: 1rem;
-    background-color: v.$color;
+    background-color: v.$white-background-2;
     @include m.hover {
-      background-color: v.$background;
+      background-color: v.$white-background;
     }
   }
 }

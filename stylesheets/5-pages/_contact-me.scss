@@ -1,18 +1,16 @@
 @use '../1-utilities/variables' as v;
 @use '../1-utilities/mixins' as m;
-$inline-color: v.$color;
+$inline-color: v.$dark-color;
 $line-height: 1.375rem;
 
 main.contact {
   form {
-    // background-color: v.$columns;
-    color: black;
     max-width: clamp(270px, 80%, 600px);
     h1 {
       text-align: center;
       font-size: 2rem;
       margin: 0 0 1em;
-      color: v.$primary;
+      color: v.$dark-background;
       span {
         padding-bottom: 0.3em;
         border-bottom: 2px solid;
@@ -41,14 +39,15 @@ main.contact {
       padding: 2%;
       width: 100%;
       color: $inline-color;
+      @include m.shadow;
       span {
         font-size: 1em;
         display: inline-block;
       }
     }
     ul.select-items {
-      background-color: v.$tertiary;
-      color: v.$primary;
+      background-color: v.$dark-background-2;
+      color: v.$dark-color-2;
       min-width: 8rem;
       width: 50%;
       border-bottom-left-radius: 7px;
@@ -79,23 +78,26 @@ main.contact {
       width: 96%;
       padding: 2%;
       line-height: $line-height;
-      background-color: v.$labels;
+      background-color: v.$inputs;
       color: $inline-color;
+      @include m.shadow;
     }
     textarea {
       width: 96%;
       padding: 2%;
       line-height: $line-height;
-      background-color: v.$labels;
+      background-color: v.$inputs;
       color: $inline-color;
+      @include m.shadow;
     }
     button[type="submit"] {
-      border: 2px solid v.$highlight;
-      background-color: v.$tertiary;
-      color: black;
+      border: 2px solid v.$dark-outline;
+      background-color: v.$white-background-2;
+      color: v.$white-color-2;
       width: 100%;
-      margin: 0 auto;
+      margin: 10px auto;
       display: block;
+      @include m.shadow;
       @keyframes wobble {
         0%,
         100% {
@@ -119,9 +121,9 @@ main.contact {
         }
       }
       @include m.hover {
-        border: 2px solid v.$tertiary;
-        background-color: v.$primary;
-        color: v.$tertiary;
+        // border: 2px solid v.$dark-outline-2;
+        background-color: v.$white-background;
+        color: v.$white-color-2;
         span {
           display: inline-block;
           animation: wobble 0.8s both;

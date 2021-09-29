@@ -1,8 +1,8 @@
 @use "../../1-utilities/variables" as v;
 
 section.about {
-  color: v.$color-2;
-  background-color: v.$primary;
+  background-color: v.$dark-background;
+  color: v.$dark-color;
   overflow: hidden;
   // Top offset
   padding-top: 52px;
@@ -38,8 +38,8 @@ section.about {
     left: -6px;
     width: 110px;
     path {
-      fill: v.$primary;
-      stroke: v.$primary;
+      fill: v.$dark-background;
+      stroke: v.$dark-background;
     }
   }
 }
