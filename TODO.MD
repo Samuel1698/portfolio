@@ -61,13 +61,13 @@
     - [x] Position halfway through footer
     - [x] Negative margin
     - [x] Fix button margin on small screens
+    - [ ] Color change?
 - [ ] Footer
   - [x] Top padding
   - [x] Copyright
   - [x] Useful links
   - [x] Link hover states
   - [x] Remove useful links title
-  - [ ] Replace github logo with completely fillable one*/
   - [ ] Language section
     - [x] Dropdown
     - [x] Form style
@@ -76,7 +76,7 @@
     - [x] Remove arrow class from button when closed
     - [x] Make it arrow navigable
     - [ ] Aria labels when opened and closed
-    - [ ] Match the style of the language selection to other footer items
+    - [x] Match the style of the language selection to other footer items
 <!-- Contact Page-->
 - [ ] Synch Header
 - [x] Form
@@ -98,6 +98,7 @@
 - [ ] Hover over work items not working on safari
 - [ ] First element animation error on chrome only
 - [ ] Setting minHeight to work items with javascript breaks mobile-view after resize, reset style after item has loaded?
+- [ ] Footer responsiveness broken
 <!-- Deployment -->
 - [ ] Optimize images
 - [ ] Fix links
