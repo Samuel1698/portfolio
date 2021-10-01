@@ -46,6 +46,7 @@
     - [x] Swoosh 
       -[x] Remove fillers and position the svg better instead
     - [x] Position behind columns and use negative margins
+    - [ ] Read more button for expanded content
   - [x] Recent Work
     - [x] Box style
     - [x] Overlay
@@ -54,6 +55,7 @@
     - [x] Update Images
     - [x] Animate coming from the side on scroll
     - [x] Resize images as screen size changes
+    - [ ] Click me! thingy
   - [x] Why Hire a Developer?
     - [x] Content
     - [x] Style

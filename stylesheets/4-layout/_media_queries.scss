@@ -118,6 +118,7 @@ main section.about {
       align-items: center;
       justify-content: space-between;
       margin-bottom: -2.5em;
+      padding: 12px 20px;
       h3 {
         width: 6.666em;
       }
@@ -126,6 +127,9 @@ main section.about {
         // 10em = size of left text div, 5.693125em = size of inner span, 26px = 12px padding + 1px border
       }
     }
+  }
+  footer {
+    padding-top: 4.5em;
   }
 }
 // ------------------------------------------------------------------------
