@@ -99,8 +99,8 @@
 <!-- Bugs -->
 - [ ] Hover over work items not working on safari
 - [ ] First element animation error on chrome only
-- [ ] Setting minHeight to work items with javascript breaks mobile-view after resize, reset style after item has loaded?
-- [ ] Footer responsiveness broken
+- [x] Setting minHeight to work items with javascript breaks mobile-view after resize, reset style after item has loaded?
+- [x] Footer responsiveness broken
 <!-- Deployment -->
 - [ ] Optimize images
 - [ ] Fix links
