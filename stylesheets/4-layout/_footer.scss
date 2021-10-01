@@ -16,8 +16,14 @@ footer {
   }
   form {
     padding: 0;
+    margin: 0;
+    margin-bottom: 2rem; //Same margin as the link module to align the buttons
     position: relative;
     top: -0.275rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
     button {
       font-size: 0.9rem;
       span {
@@ -36,6 +42,8 @@ footer {
     .languages-wrap {
       position: relative;
       display: inline-block;
+      margin-right: 1em;
+      margin-bottom: 1.6em;
     }
     button.select-button {
       padding: 0.275rem 1.75rem 0.275rem 0.75rem;
@@ -58,18 +66,17 @@ footer {
         font-weight: bold;
         padding: 8px 0.75rem;
         margin: 0 auto;
+        background-color: v.$dark-background;
         border-right: 2px solid v.$dark-outline;
         border-bottom: 2px solid v.$dark-outline;
         @include m.hover {
           color: v.$dark-focus;
           border-bottom: 2px solid v.$dark-focus;
-          background-color: initial;
         }
       }
     }
     button[type="submit"] {
       font-size: 0.85rem;
-      margin-left: 1em;
       padding: 6px 6px 6px 12px;
       vertical-align: bottom;
       background-color: v.$white-background;
