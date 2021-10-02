@@ -77,7 +77,8 @@
     - [x] Flags
     - [x] Remove arrow class from button when closed
     - [x] Make it arrow navigable
-    - [ ] Aria labels when opened and closed
+    - [x] Aria labels
+    - [ ] Aria expanded
     - [x] Match the style of the language selection to other footer items
 <!-- Contact Page-->
 - [ ] Synch Header
@@ -88,7 +89,7 @@
     - [x] Arrow navigation
     - [x] Icons
     - [x] Removing 'same as selected' class removes the class attribute instead of removing that specific class
-    - [ ] Aria labels when opened and closed
+    - [x] Aria labels when opened and closed
   - [x] Responsiveness
   - [x] Styling
   - [ ] Form validation

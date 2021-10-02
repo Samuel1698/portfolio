@@ -1,4 +1,4 @@
-var wrapper, i, j, realSelect, button, content, option, span;
+var wrapper, i, j, label_id, realSelect, button, content, option, span;
 // Look for any elements with the class "custom-select":
 wrapper = document.getElementsByClassName("inline");
 
@@ -9,6 +9,10 @@ for (i = 0; i < wrapper.length; i++) {
   button.setAttribute("class", "select-button");
   button.tabIndex = 0;
   button.setAttribute("type", "button");
+  // Find aria label
+  label_id = wrapper[i].querySelector("label").id
+  button.setAttribute("aria-labelledby", label_id);
+  button.setAttribute("aria-expanded", "false");
   span = document.createElement("SPAN");
   span.innerHTML = realSelect.options[realSelect.selectedIndex].innerHTML;
   wrapper[i].appendChild(button);
@@ -79,8 +83,9 @@ for (i = 0; i < wrapper.length; i++) {
   });
 }
 function toggleSelectBox(that) {
-  // When the select box is clicked, close any other select boxes, and open / close the current select box:
+  // When the select box is clicked, close any other select boxes, toggle the current select box and set the aria labels
   closeAllSelect(that);
+  toggleAriaExpanded(that);
   that.nextSibling.classList.toggle("select-hide");
   that.classList.toggle("select-arrow-active");
 }
@@ -103,6 +108,14 @@ function updateOriginal(that) {
   }
   button.click();
 }
+function toggleAriaExpanded(element) {
+  let attr = element.getAttribute("aria-expanded");
+  if (attr == "true")
+    attr = "false"
+  else
+    attr = "true"
+  element.setAttribute("aria-expanded", attr);
+}
 function closeAllSelect(element) {
   // A function that will close all select boxes in the document, except the current select box:
   /* prettier-ignore */
@@ -119,6 +132,7 @@ function closeAllSelect(element) {
   for (i = 0; i < ul.length; i++) {
     if (arrNo.indexOf(i)) {
       ul[i].classList.add("select-hide");
+      button[i].setAttribute("aria-expanded", "false");
     }
   }
 }
