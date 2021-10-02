@@ -73,11 +73,9 @@ for (let i = 0; i < li.length; i++) {
 }
 function changeLang(element) {
   if (element.querySelector("span").innerText == "ES") {
-    submit.querySelector(".ES").classList.add("shown");
-    submit.querySelector(".EN").classList.remove("shown");
+    submit.querySelector("span.text").innerText = "Aplicar Cambio"
   }
   else if (element.querySelector("span").innerText == "EN"){
-    submit.querySelector(".EN").classList.add("shown");
-    submit.querySelector(".ES").classList.remove("shown");
+    submit.querySelector("span.text").innerText = "Save Change"
   }
 }

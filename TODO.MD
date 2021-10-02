@@ -46,7 +46,7 @@
     - [x] Swoosh 
       -[x] Remove fillers and position the svg better instead
     - [x] Position behind columns and use negative margins
-    - [ ] Read more button for expanded content
+    - [ ] Read more button for expanded content using image svg's top border to draw the button itself
   - [x] Recent Work
     - [x] Box style
     - [x] Overlay
