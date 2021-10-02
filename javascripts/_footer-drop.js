@@ -8,11 +8,15 @@ button.addEventListener("click", function (e) {
   // Toggle select-hide on click
   ul.classList.toggle("select-hide");
   button.classList.toggle("select-arrow-active");
+  // Set aria-expanded to true
+  button.setAttribute("aria-expanded", "true");
 });
 document.addEventListener("click", function () {
   // Hide the selection box
   ul.classList.add("select-hide");
   button.classList.remove("select-arrow-active");
+  // Set aria-expanded to false
+  button.setAttribute("aria-expanded", "false");
 });
 button.addEventListener("keydown", function (e) {
   if (e.key == "ArrowUp" || e.key == "ArrowDown") {
@@ -43,6 +47,8 @@ button.addEventListener("keydown", function (e) {
     //  Hide the selection box
     ul.classList.add("select-hide");
     button.classList.remove("select-arrow-active");
+    // Set aria expanded to false
+    button.setAttribute("aria-expanded", "false");
   }
   if (e.key == "Enter") {
     e.preventDefault();
@@ -62,8 +68,11 @@ for (let i = 0; i < li.length; i++) {
       selected[k].classList.remove("same-as-selected");
     }
     this.classList.add("same-as-selected");
+    // Hide the selection box
     this.parentElement.classList.toggle("select-hide");
     button.classList.remove("select-arrow-active");
+    // Set aria expanded to false
+    button.setAttribute("aria-expanded", "false");
     // Display the submit button
     submit.removeAttribute("style");
     // Assign 'shown' class depending on which list item is selected
