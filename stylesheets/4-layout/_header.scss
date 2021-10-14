@@ -66,6 +66,11 @@ header {
   .logo {
     display: inline-block;
     position: relative;
+    @include m.hover {
+      .underlay {
+        background-color: v.$dark-focus;
+      }
+    }
     .underlay {
       overflow: hidden;
       border-radius: 50%;
@@ -76,7 +81,6 @@ header {
       bottom: 0;
       right: 5px;
       background-color: v.$dark-background-2;
-      // background-image: linear-gradient(180deg, v.$primary, v.$secondary);
     }
     img {
       position: relative;

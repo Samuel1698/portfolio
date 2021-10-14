@@ -24,6 +24,7 @@
   - [x] Logo
     - [x] Optimize Images
     - [x] image circle
+    - [ ] change circle color on hover
   - [x] Title
   - [x] Swoosh
   - [x] Make header hover match footer
