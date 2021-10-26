@@ -1,14 +1,9 @@
 <!-- Work Items -->
 - [ ] Page template
-- [ ] Explanation of technologies used, purpose of the website and relevant info
+- [ ] Showcase Hero Gif
+- [x] Explanation of technologies used, purpose of the website and relevant info
 - [ ] Include SEO score, PageSpeed insights, and accessibility score
-- [ ] Testimonial
-  - [ ] Content:
-      <!-- "Working with Sam was a pleasant and professional experience. Not
-            only did he flawlessly implement all the features I had in mind, he
-            took the initiative to propose pertinent features and revisions. You
-            can rely on his expertise to help you make informed decisions
-            regarding all the steps of building a website you can be proud of." -->
+- [x] Testimonial
 
 <!-- Certificates Page -->
 - [ ] Image gallery
@@ -79,7 +74,7 @@
     - [x] Remove arrow class from button when closed
     - [x] Make it arrow navigable
     - [x] Aria labels
-    - [ ] Aria expanded
+    - [x] Aria expanded
     - [x] Match the style of the language selection to other footer items
 <!-- Contact Page-->
 - [ ] Synch Header

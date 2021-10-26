@@ -25,5 +25,5 @@ for (let i = 0; i < expand.length; i++) {
 document
   .querySelector(".pinkwug .hidden")
   .addEventListener("click", function (e) {
-    window.open("https://pinkwug.live");
+    window.open("/pinkwug.html");
   });

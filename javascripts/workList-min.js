@@ -1,0 +1,1 @@
+function contactHeight(){let t=document.querySelector("section.contact"),e=-t.offsetHeight/2+"px";t.style.marginBottom=e}window.addEventListener("load",(()=>{contactHeight()})),window.addEventListener("resize",(()=>{contactHeight()}));
