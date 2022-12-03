@@ -91,7 +91,7 @@
   - [ ] Form validation
 - [x] Animate submit button left and right on hover
 - [ ] Footer
-  - [ ] Language select doesn't work on different pages
+  - [x] Language select doesn't work on different pages
   - [ ] Synch after it's done
   - [ ] Lower 'Send Email' box to match Main Page style
 <!-- Bugs -->

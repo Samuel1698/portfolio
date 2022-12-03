@@ -1,3 +1,5 @@
+import "./_footer-drop";
+
 window.addEventListener("load", () => {
   contactHeight();
 });

@@ -1,4 +1,4 @@
-import "./_dropdown.js";
+import "./_dropdown";
 import "./_footer-drop";
 
 window.onload = function () {
