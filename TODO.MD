@@ -34,7 +34,7 @@
     - [x] Animation
     - [x] Disabled buttons should not animate on hover
     - [x] Arrow navigation
-    - [ ] Left Arrow focus visible not properly positioned
+    - [x] Left Arrow focus visible not properly positioned
     - [ ] Close icon not padded correctly on big screens
   - [x] About me
     - [x] Image

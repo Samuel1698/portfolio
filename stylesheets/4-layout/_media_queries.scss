@@ -159,13 +159,13 @@ main section.about {
           top: initial;
           transform: initial;
           &.prev {
-            left: 0;
+            left: -4px;
             &.pressed {
               left: -2%;
             }
           }
           &.next {
-            left: 0;
+            left: 4px;
             &.pressed {
               left: 2%;
             }
