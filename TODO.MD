@@ -1,10 +1,7 @@
 <!-- Work Items -->
-- [ ] Page template
-- [ ] Instead of video, showcase 4 or 5 preview images
-  - [ ] phone, tablet and laptop screenshots
+- [x] Page template
 - [x] Explanation of technologies used, purpose of the website and relevant info
-- [ ] Include SEO score, PageSpeed insights, and accessibility score
-  - [ ] Link css
+- [x] Include SEO score, PageSpeed insights, and accessibility score
 - [x] Testimonial
 
 <!-- Certificates Page -->
@@ -94,6 +91,7 @@
   - [ ] Form validation
 - [x] Animate submit button left and right on hover
 - [ ] Footer
+  - [ ] Language select doesn't work on different pages
   - [ ] Synch after it's done
   - [ ] Lower 'Send Email' box to match Main Page style
 <!-- Bugs -->
