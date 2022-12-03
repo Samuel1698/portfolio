@@ -1,6 +1,7 @@
 <!-- Work Items -->
 - [ ] Page template
-- [ ] Showcase Hero Gif
+- [ ] Instead of video, showcase 4 or 5 preview images
+  - [ ] phone, tablet and laptop screenshots
 - [x] Explanation of technologies used, purpose of the website and relevant info
 - [ ] Include SEO score, PageSpeed insights, and accessibility score
 - [x] Testimonial
@@ -11,7 +12,6 @@
   - [ ] How to switch info depending on selected image?
   - [ ] Get each certificate link
 - [ ] Noble Desktop description/section
-<!-- Piano performances page -->
 
 <!-- Front page -->
 - [x] Header
@@ -33,7 +33,7 @@
     - [x] Javascript
     - [x] Animation
     - [x] Disabled buttons should not animate on hover
-    - [ ] Arrow navigation
+    - [x] Arrow navigation
     - [ ] Left Arrow focus visible not properly positioned
     - [ ] Close icon not padded correctly on big screens
   - [x] About me
@@ -52,6 +52,7 @@
     - [x] Animate coming from the side on scroll
     - [x] Resize images as screen size changes
     - [ ] Click me! thingy
+    
   - [x] Why Hire a Developer?
     - [x] Content
     - [x] Style
@@ -77,6 +78,7 @@
     - [x] Aria expanded
     - [x] Match the style of the language selection to other footer items
 <!-- Contact Page-->
+- [ ] Skip to Content dropdown
 - [ ] Synch Header
 - [x] Form
   - [x] Use FormSubmit
@@ -95,11 +97,13 @@
   - [ ] Similar box to Contact box on main page 
 <!-- Bugs -->
 - [ ] Hover over work items not working on safari
-- [ ] First element animation error on chrome only
+- [ ] First element animation error on chrome
+        Does work with arrow keys, but not with Focused Enter or Click
 - [x] Setting minHeight to work items with javascript breaks mobile-view after resize, reset style after item has loaded?
 - [x] Footer responsiveness broken
 <!-- Deployment -->
 - [ ] Optimize images
+- [ ] Contact page arrows should be one image flipped or positionally changed to avoid spamming network request every time it's clicked
 - [ ] Fix links
 - [ ] Make copy of folder and remove unused css/javascript (only include minified versions)
 - [ ] Consider moving all images to root folder and referencing them there all throughout the code. Sort of like webpack

@@ -33,8 +33,9 @@ document.querySelector(".cert ul").addEventListener("keyup", function (e) {
     activateOverlay(e);
   }
 });
+
 // Switch the certificate shown to the previous one
-button[0].addEventListener("click", function (event) {
+function previousImage(event) {
   // Reset the other button
   button[1].classList.remove("disabled");
   // Stop overlay click action
@@ -55,9 +56,9 @@ button[0].addEventListener("click", function (event) {
     resetClasses(index);
     assignClasses(index - 1);
   }
-});
+}
 // Switch the certificate shown to the next one
-button[1].addEventListener("click", function (event) {
+function nextImage(event) {
   // Reset the other button
   button[0].classList.remove("disabled");
   // Stop overlay click action
@@ -79,7 +80,28 @@ button[1].addEventListener("click", function (event) {
     resetClasses(index);
     assignClasses(index + 1);
   }
+}
+// Add 'click' event to the button
+button[0].addEventListener("click", (event) => {
+  previousImage(event);
 });
+// Add 'left arrow' key press
+document.addEventListener("keydown", (event) => {
+  if (event.key === "ArrowLeft") {
+    previousImage(event);
+  }
+});
+// Add 'click' event to the button
+button[1].addEventListener("click", function (event) {
+  nextImage(event);
+});
+// Add 'right arrow' key press 
+document.addEventListener("keydown", (event) => {
+  if (event.key === "ArrowRight") {
+    nextImage(event);
+  }
+});
+
 // Detect which image is the current active one
 function detectActive() {
   for (let i = 0; i < img.length; i++) {
