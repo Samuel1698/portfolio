@@ -4,6 +4,7 @@
   - [ ] phone, tablet and laptop screenshots
 - [x] Explanation of technologies used, purpose of the website and relevant info
 - [ ] Include SEO score, PageSpeed insights, and accessibility score
+  - [ ] Link css
 - [x] Testimonial
 
 <!-- Certificates Page -->
@@ -35,7 +36,8 @@
     - [x] Disabled buttons should not animate on hover
     - [x] Arrow navigation
     - [x] Left Arrow focus visible not properly positioned
-    - [ ] Close icon not padded correctly on big screens
+    - [x] Close icon not padded correctly on big screens
+            Seems fine
   - [x] About me
     - [x] Image
     - [x] Content
@@ -60,7 +62,6 @@
     - [x] Position halfway through footer
     - [x] Negative margin
     - [x] Fix button margin on small screens
-    - [ ] Color change?
 - [ ] Footer
   - [x] Top padding
   - [x] Copyright
@@ -78,8 +79,8 @@
     - [x] Aria expanded
     - [x] Match the style of the language selection to other footer items
 <!-- Contact Page-->
-- [ ] Skip to Content dropdown
-- [ ] Synch Header
+- [x] Skip to Content dropdown
+- [x] Synch Header
 - [x] Form
   - [x] Use FormSubmit
   - [x] Custom dropdown
@@ -94,7 +95,7 @@
 - [x] Animate submit button left and right on hover
 - [ ] Footer
   - [ ] Synch after it's done
-  - [ ] Similar box to Contact box on main page 
+  - [ ] Lower 'Send Email' box to match Main Page style
 <!-- Bugs -->
 - [ ] Hover over work items not working on safari
 - [ ] First element animation error on chrome
