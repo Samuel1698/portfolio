@@ -1,3 +1,5 @@
+<!-- Previous work Page -->
+- [ ] When more pages have been made, only showcase latest 2 on front page and have a separate page for everything else
 <!-- Work Items -->
 - [x] Page template
 - [x] Explanation of technologies used, purpose of the website and relevant info
@@ -56,7 +58,7 @@
     - [x] Position halfway through footer
     - [x] Negative margin
     - [x] Fix button margin on small screens
-- [ ] Footer
+- [x] Footer
   - [x] Top padding
   - [x] Copyright
   - [x] Useful links
@@ -95,8 +97,6 @@
 - [ ] Hover over work items not working on safari
 - [ ] First element animation error on chrome
         Does work with arrow keys, but not with Focused Enter or Click
-- [x] Setting minHeight to work items with javascript breaks mobile-view after resize, reset style after item has loaded?
-- [x] Footer responsiveness broken
 <!-- Deployment -->
 - [ ] Optimize images
 - [ ] Contact page arrows should be one image flipped or positionally changed to avoid spamming network request every time it's clicked
