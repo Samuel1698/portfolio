@@ -1,4 +1,4 @@
-var submit = document.querySelector("footer button[type='submit']");
+var submit = document.querySelector("footer button.applyChanges");
 var button = document.querySelector("footer button.select-button");
 var ul = document.querySelector("footer ul.select-items");
 var li = ul.querySelectorAll("li.select-item");
@@ -88,3 +88,24 @@ function changeLang(element) {
     submit.querySelector("span.text").innerText = "Save Change"
   }
 }
+submit.addEventListener("click", function () {
+  // Get the current URL
+  var currentURL = window.location.href;
+  // Parse the URL to extract the subdomain, domain, and top-level domain
+  var urlParts = currentURL.split(".");
+  var subdomain = urlParts[0];
+  var domain = urlParts[1];
+  var tld = urlParts[2];
+  // Modify the subdomain as needed
+  if (submit.querySelector("span.text").innerText == "Aplicar Cambio"){
+    var newSubdomain = "es";
+  }
+  else if (submit.querySelector("span.text").innerText == "Save Change") {
+    var newSubdomain = "en";
+  }
+  // Rebuild the URL with the modified subdomain
+  var newURL = newSubdomain + "." + domain + "." + tld;
+  // Update the location of the current page to the new URL
+  console.log(newURL);
+  // window.location.href = newURL;
+});

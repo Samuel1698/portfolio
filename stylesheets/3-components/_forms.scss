@@ -1,6 +1,6 @@
 @use '../1-utilities/variables' as v;
 
-form {
+form, .form {
   font-size: 0; // Get rid of whitespace
   > * {
     font-size: 1rem; //Reset font-size for all child elements
