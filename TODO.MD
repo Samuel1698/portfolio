@@ -16,12 +16,12 @@
   - [x] Logo
     - [x] Optimize Images
     - [x] image circle
-    - [ ] change circle color on hover
+    - [x] change circle color on hover
   - [x] Title
   - [x] Swoosh
   - [x] Make header hover match footer
   - [x] Filler
-- [ ] Main
+- [x] Main
   - [x] Certificates, Skills & Language columns
     - [x] Animate columns ul
   - [x] Carousel
@@ -40,7 +40,6 @@
     - [x] Swoosh 
       -[x] Remove fillers and position the svg better instead
     - [x] Position behind columns and use negative margins
-    - [ ] Read more button for expanded content using image svg's top border to draw the button itself
   - [x] Recent Work
     - [x] Box style
     - [x] Overlay
@@ -49,7 +48,6 @@
     - [x] Update Images
     - [x] Animate coming from the side on scroll
     - [x] Resize images as screen size changes
-    - [ ] Click me! thingy
     
   - [x] Why Hire a Developer?
     - [x] Content
@@ -64,10 +62,10 @@
   - [x] Useful links
   - [x] Link hover states
   - [x] Remove useful links title
-  - [ ] Language section
+  - [x] Language section
     - [x] Dropdown
     - [x] Form style
-    - [ ] Subdomain link change
+    - [x] Subdomain link change
     - [x] Flags
     - [x] Remove arrow class from button when closed
     - [x] Make it arrow navigable
@@ -105,3 +103,4 @@
 - [ ] Fix links
 - [ ] Make copy of folder and remove unused css/javascript (only include minified versions)
 - [ ] Consider moving all images to root folder and referencing them there all throughout the code. Sort of like webpack
+- [ ] Upload to folder named 'en' so that when Spanish version becomes available, it can be uploaded to 'es' folder and have the subdomain link to it
