@@ -7,8 +7,8 @@
 <!-- Certificates Page -->
 - [x] Main Certificate Image
 - [x] Informational box on the right of screen with info about main certificate
-- [ ] All other Certs that are part of Main Certificate below/on its side
-- [ ] Noble Desktop description/section
+- [x] All other Certs that are part of Main Certificate below/on its side
+- [x] Noble Desktop description/section
 
 <!-- Front page -->
 - [x] Header

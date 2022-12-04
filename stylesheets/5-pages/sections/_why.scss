@@ -1,7 +1,6 @@
 @use '../../1-utilities/variables' as v;
 
 section.why {
-  margin-bottom: 2em;
   /* prettier-ignore */
   h3, h4 {
     color: v.$dark-background;
