@@ -4,7 +4,7 @@
 // ------------------------------------------------------------------------
 // Media queries for certificates page
 // ------------------------------------------------------------------------
-main section.certList {
+main section.courses {
   @media (min-width: v.$small){
     ul li.certificate {
       width: 33.3%;
@@ -155,7 +155,12 @@ main section.about {
     max-width: calc(#{v.$medium} - 40px);
   }
   .small.container {
-    max-width: calc(#{v.$medium} - 10rem - 40px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .certs {
+      max-width: 75%;
+    }
   }
   main {
     .columns {
