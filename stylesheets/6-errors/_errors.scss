@@ -1,0 +1,24 @@
+@use "../1-utilities/variables" as v;
+
+main .container {
+  text-align: center;
+  .error {
+    margin: auto;
+    max-width: calc(#{v.$small} / 2);
+    h1 {
+      font-size: 3rem;
+    }
+    p {
+      display: inline-block;
+      width: 50%;
+    }
+    img {
+      float: right;
+      position: relative;
+      top: -100px;
+    }
+  }
+  .navigation {
+    display: inline-block;
+  }
+}

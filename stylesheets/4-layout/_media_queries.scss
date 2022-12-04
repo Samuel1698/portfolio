@@ -5,7 +5,7 @@
 // Media queries for certificates page
 // ------------------------------------------------------------------------
 main .small.container {
-  @media (min-width: v.$small){
+  @media (min-width: v.$small) {
     ul li.certificate {
       width: 33.33%;
     }

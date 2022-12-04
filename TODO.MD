@@ -93,6 +93,16 @@
   - [x] Language select doesn't work on different pages
   - [ ] Synch after it's done
   - [ ] Lower 'Send Email' box to match Main Page style
+<!-- Error page -->
+- [ ] Error page layout
+  - [x] Text
+  - [ ] image
+  - [ ] navigation
+- [ ] 403 (forbidden)
+- [ ] 404 (not found)
+- [ ] 408 (request timeout)
+- [ ] 410 (gone)
+- [ ] 500 (server error)
 <!-- Bugs -->
 - [ ] Hover over work items not working on safari
 - [ ] First element animation error on chrome
