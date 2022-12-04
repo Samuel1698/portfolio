@@ -22,9 +22,17 @@ function workItemAnimation(){
     if (checkVisible(WorkItem[i])) WorkItem[i].classList.add("animation");
   }
 }
-function contactAnimation(){
+function contactAnimation() {
   var contact = document.querySelector("section.contact");
   if (checkVisible(contact)) contact.classList.add("animation");
+}
+function checkVisible(elm) {
+  var rect = elm.getBoundingClientRect();
+  var viewHeight = Math.max(
+    document.documentElement.clientHeight,
+    window.innerHeight
+  );
+  return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
 }
 function checkVisible(elm) {
   var rect = elm.getBoundingClientRect();

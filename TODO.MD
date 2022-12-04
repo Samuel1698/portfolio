@@ -5,10 +5,9 @@
 - [x] Testimonial
 
 <!-- Certificates Page -->
-- [ ] Image gallery
-- [ ] Informational box on the right of screen with info about selected Cert/Class
-  - [ ] How to switch info depending on selected image?
-  - [ ] Get each certificate link
+- [x] Main Certificate Image
+- [x] Informational box on the right of screen with info about main certificate
+- [ ] All other Certs that are part of Main Certificate below/on its side
 - [ ] Noble Desktop description/section
 
 <!-- Front page -->
