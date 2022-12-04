@@ -52,7 +52,7 @@ main section.about {
 // ------------------------------------------------------------------------
 @media (min-width: v.$small) {
   :root {
-    --carousel-size: 70vw;
+    --carousel-size: 95vw;
   }
   .container {
     max-width: calc(#{v.$small} - 40px);
@@ -91,8 +91,8 @@ main section.about {
         }
       }
       .overlay .wrapper.active {
-        width: calc(var(--carousel-size) * 22 / 17);
-        height: var(--carousel-size);
+        width: var(--carousel-size);
+        height: calc(var(--carousel-size) * 17 / 22);
       }
     }
     section.cert {
@@ -157,7 +157,7 @@ main section.about {
 // ------------------------------------------------------------------------
 @media (min-width: v.$medium) {
   :root {
-    --carousel-size: 55vw;
+    --carousel-size: 72vw;
   }
   .container {
     max-width: calc(#{v.$medium} - 40px);
@@ -171,8 +171,8 @@ main section.about {
       }
       .overlay {
         .wrapper.active {
-          width: calc(var(--carousel-size) * 22 / 17);
-          height: var(--carousel-size);
+          width: var(--carousel-size);
+          height: calc(var(--carousel-size) * 17 / 22);
         }
         &.active button.arrow {
           position: relative;
@@ -238,6 +238,11 @@ main section.about {
 // Rules for landscape mobile devices
 // ------------------------------------------------------------------------
 @media screen and (orientation: landscape) {
+  @media (min-width: v.$small) {
+    :root {
+      --carousel-size: 70vw;
+    }
+  }
   main .columns .overlay.active button.arrow {
     position: relative;
     top: initial;

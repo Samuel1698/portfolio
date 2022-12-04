@@ -97,18 +97,30 @@
           <span class="sr-only">Previous</span>
         </button>
         <div class="wrapper">
-          <img src="images/certs/credential_webdev_1.jpg" alt="Web Development 1 Certificate" width="1px" height="1px"
-            class="web" tabindex="-1" />
-          <img src="images/certs/credential_webdev_2.jpg" alt="Web Development 2 Certificate" width="1px" height="1px"
-            class="web2" tabindex="-1" />
-          <img src="images/certs/credential_flexbox.jpg" alt="Flexbox, Grid, & Bootstrap Certificate" width="1px"
-            height="1px" class="flex" tabindex="-1" />
-          <img src="images/certs/credential_javascript.jpg" alt="Javascript Certificate" width="1px" height="1px"
-            class="js" tabindex="-1" />
-          <img src="images/certs/credential_ruby.jpg" alt="Ruby on Rails Certificate" width="1px" height="1px"
-            class="ruby" tabindex="-1" />
-          <img src="images/certs/credential.jpg" alt="Full-Stack Web Development Certificate" width="1px" height="1px"
-            class="stack" tabindex="-1" />
+          <picture>
+            <img src="images/certs/credential_webdev_1.jpg" alt="Web Development 1 Certificate" width="1px" height="1px"
+              class="web" tabindex="-1" />
+          </picture>
+          <picture>
+            <img src="images/certs/credential_webdev_2.jpg" alt="Web Development 2 Certificate" width="1px" height="1px"
+              class="web2" tabindex="-1" />
+          </picture>
+          <picture>
+            <img src="images/certs/credential_flexbox.jpg" alt="Flexbox, Grid, & Bootstrap Certificate" width="1px"
+              height="1px" class="flex" tabindex="-1" />
+          </picture>
+          <picture>
+            <img src="images/certs/credential_javascript.jpg" alt="Javascript Certificate" width="1px" height="1px"
+              class="js" tabindex="-1" />
+          </picture>
+          <picture>
+            <img src="images/certs/credential_ruby.jpg" alt="Ruby on Rails Certificate" width="1px" height="1px"
+              class="ruby" tabindex="-1" />
+          </picture>
+          <picture>
+            <img src="images/certs/credential.jpg" alt="Full-Stack Web Development Certificate" width="1px" height="1px"
+              class="stack" tabindex="-1" />
+          </picture>
           <button class="close">
             <span class="sr-only">close image</span>
           </button>
@@ -164,11 +176,15 @@
         <img src="images/samuel-g-munoz-drawn.png" alt="drawing of samuel g munoz" height="425px" width="238.86" />
         <h3>About Me</h3>
         <p>
-          Hi there! I'm a Web Developer based in NY who is passionate about creating beautiful and functional websites. With a strong background in front-end development, I'm skilled at designing, building, and maintaining websites that
-          are both user-friendly and visually appealing. Whether you're looking for a static page or a web application, I'm ready to bring your vision to life and help you share your unique message with the world. 
+          Hi there! I'm a Web Developer based in NY who is passionate about creating beautiful and functional websites.
+          With a strong background in front-end development, I'm skilled at designing, building, and maintaining
+          websites that
+          are both user-friendly and visually appealing. Whether you're looking for a static page or a web application,
+          I'm ready to bring your vision to life and help you share your unique message with the world.
         </p>
         <p>
-          I'm currently seeking a permanent or temporary position where I can continue to grow and learn as a developer. Let's work together to create something amazing!
+          I'm currently seeking a permanent or temporary position where I can continue to grow and learn as a developer.
+          Let's work together to create something amazing!
         </p>
         <svg class="swoosh" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 110.49"
           preserveAspectRatio="xMidYMid slice" x="0px" y="0px">
@@ -197,8 +213,28 @@
             </span>
           </div>
           <a href="/portfolio.html" class="link">
-            <img src="images/previews/portfolio/preview.png" alt="Samuel G Munoz portfolio preview" width="300px"
+            <picture>
+              <source type="image/webp" srcset="
+              images/previews/portfolio/preview_portfolio_small_@1x.webp 1x,
+              images/previews/portfolio/preview_portfolio_small_@2x.webp 2x
+              " media="(max-width: 939px)"/>
+              <source type="image/png" srcset="
+              images/previews/portfolio/preview_portfolio_small_@1x.png 1x,
+              images/previews/portfolio/preview_portfolio_small_@2x.png 2x
+              " media="(max-width: 939px)"/>
+              <source type="image/webp" srcset="
+              images/previews/portfolio/preview_portfolio_medium_@1x.webp 1x,
+              images/previews/portfolio/preview_portfolio_medium_@2x.webp 2x,
+              images/previews/portfolio/preview_portfolio_medium_@3x.webp 3x
+              " media="(min-width: 940px)" />
+              <source type="image/png" srcset="
+              images/previews/portfolio/preview_portfolio_medium_@1x.png 1x,
+              images/previews/portfolio/preview_portfolio_medium_@2x.png 2x,
+              images/previews/portfolio/preview_portfolio_medium_@3x.png 3x
+              " media="(min-width: 940px)" />
+              <img src="images/previews/portfolio/preview_portfolio.png" alt="Samuel G Munoz portfolio preview" width="300px"
               height="168.667px" />
+            </picture>
             <div class="overlay"></div>
           </a>
           <div class="hidden">
@@ -233,8 +269,28 @@
             </span>
           </div>
           <a href="/pinkwug.html" class="link">
-            <img src="images/previews/pinkwug/preview.png" alt="Pinkwug website preview" width="300px"
-              height="168.667px" />
+            <picture>
+              <source type="image/webp" srcset="
+              images/previews/pinkwug/preview_wug_small_@1x.webp 1x,
+              images/previews/pinkwug/preview_wug_small_@2x.webp 2x
+              " media="(max-width: 939px)" />
+              <source type="image/png" srcset="
+              images/previews/pinkwug/preview_wug_small_@1x.png 1x,
+              images/previews/pinkwug/preview_wug_small_@2x.png 2x
+              " media="(max-width: 939px)" />
+              <source type="image/webp" srcset="
+              images/previews/pinkwug/preview_wug_medium_@1x.webp 1x,
+              images/previews/pinkwug/preview_wug_medium_@2x.webp 2x,
+              images/previews/pinkwug/preview_wug_medium_@3x.webp 3x
+              " media="(min-width: 940px)" />
+              <source type="image/png" srcset="
+              images/previews/pinkwug/preview_wug_medium_@1x.png 1x,
+              images/previews/pinkwug/preview_wug_medium_@2x.png 2x,
+              images/previews/pinkwug/preview_wug_medium_@3x.png 3x
+              " media="(min-width: 940px)" />
+              <img src="images/previews/pinkwug/preview_wug.png" alt="Pinkwug website preview" width="300px"
+                height="168.667px" />
+            </picture>
             <div class="overlay"></div>
           </a>
           <div class="hidden">
