@@ -1,4 +1,4 @@
-import "./_footer-drop";
+import "./_footerDropdown.js";
 
 window.addEventListener("load", () => {
   contactHeight();

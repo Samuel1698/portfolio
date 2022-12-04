@@ -1,1 +1,1 @@
-import "./_footer-drop";
+import "./_footerDropdown.js";

@@ -1,5 +1,6 @@
 var wrapper, i, j, label_id, realSelect, button, content, option, span;
 // Look for any elements with the class "custom-select":
+// These elements will be used as containers for the custom dropdown menu.
 wrapper = document.getElementsByClassName("inline");
 
 for (i = 0; i < wrapper.length; i++) {
