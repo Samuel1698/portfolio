@@ -112,12 +112,11 @@
  - [x] Certificate images
  - [x] Work Item Images
  - [x] About page image
- - [ ] Mockups
+ - [x] Mockups
  - [ ] Certificate page
   - [ ] Big one same as the cert page?
   - [ ] Smaller size
 - [ ] Contact page arrows should be one image flipped or positionally changed to avoid spamming network request every time it's clicked
-- [ ] Fix links
 - [ ] Make copy of folder and remove unused css/javascript (only include minified versions)
 - [ ] Consider moving all images to root folder and referencing them there all throughout the code. Sort of like webpack
 - [ ] Upload to folder named 'en' so that when Spanish version becomes available, it can be uploaded to 'es' folder and have the subdomain link to it
