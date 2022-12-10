@@ -67,8 +67,29 @@
   </header>
   <main id="main">
     <section class="hero container">
-      <img src="images/previews/portfolio/mockup.png" alt="Preview of Portfolio site on an iPhone and iPad Pro"
-        width="100%">
+      <picture>
+          <source type="image/webp" srcset="
+            images/previews/portfolio/mockup_small_@1x.webp 600w,
+            images/previews/portfolio/mockup_small_@2x.webp 1199w,
+            images/previews/portfolio/mockup_small_@3x.webp 1800w          
+          " sizes="(max-width: 939px) 600px" />
+          <source type="image/png" srcset="
+            images/previews/portfolio/mockup_small_@1x.png 600w,
+            images/previews/portfolio/mockup_small_@2x.png 1199w,
+            images/previews/portfolio/mockup_small_@3x.png 1800w          
+          " sizes="(max-width: 939px) 600px" />
+          <source type="image/webp" srcset="
+            images/previews/portfolio/mockup_medium_@1x.webp 900w,
+            images/previews/portfolio/mockup_medium_@2x.webp 1800w,
+            images/previews/portfolio/mockup_medium_@3x.webp 2700w          
+          " sizes="(min-width: 940px) 900px" />
+          <source type="image/png" srcset="
+            images/previews/portfolio/mockup_medium_@1x.png 900w,
+            images/previews/portfolio/mockup_medium_@2x.png 1800w,
+            images/previews/portfolio/mockup_medium_@3x.png 2700w          
+          " sizes="(min-width: 940px) 900px" />
+          <img src="images/previews/portfolio/mockup.png" alt="Preview of PinkWug's website on an iPhone and iPad Pro" />
+        </picture>
     </section>
     <section class="container summary" tabindex="0">
       <h1>Purpose</h1>
