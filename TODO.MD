@@ -112,6 +112,7 @@
  - [x] Certificate images
  - [x] Work Item Images
  - [x] About page image
+ - [ ] Mockups
  - [ ] Certificate page
   - [ ] Big one same as the cert page?
   - [ ] Smaller size

@@ -1,9 +1,14 @@
 @use "../1-utilities/variables" as v;
 @use "../1-utilities/mixins" as m;
 
-main p a {
-  color: v.$white-outline;
-  &:hover, &:focus-visible {
-    text-decoration: underline 2px solid v.$white-outline;
+main {
+  img {
+    width: 100%;
+  }
+  p a {
+    color: v.$white-outline;
+    &:hover, &:focus-visible {
+      text-decoration: underline 2px solid v.$white-outline;
+    }
   }
 }
