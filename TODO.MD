@@ -111,7 +111,7 @@
  - [x] Logo
  - [x] Certificate images
  - [x] Work Item Images
- - [ ] About page image
+ - [x] About page image
  - [ ] Certificate page
   - [ ] Big one same as the cert page?
   - [ ] Smaller size
