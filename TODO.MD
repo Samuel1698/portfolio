@@ -92,7 +92,6 @@
 - [ ] Footer
   - [x] Language select doesn't work on different pages
   - [ ] Synch after it's done
-  - [ ] Lower 'Send Email' box to match Main Page style
 <!-- Error page -->
 - [x] Error page layout
   - [x] Text
@@ -109,6 +108,13 @@
         Does work with arrow keys, but not with Focused Enter or Click
 <!-- Deployment -->
 - [ ] Optimize images
+ - [x] Logo
+ - [x] Certificate images
+ - [x] Work Item Images
+ - [ ] About page image
+ - [ ] Certificate page
+  - [ ] Big one same as the cert page?
+  - [ ] Smaller size
 - [ ] Contact page arrows should be one image flipped or positionally changed to avoid spamming network request every time it's clicked
 - [ ] Fix links
 - [ ] Make copy of folder and remove unused css/javascript (only include minified versions)
