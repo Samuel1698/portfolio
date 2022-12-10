@@ -89,9 +89,8 @@
   - [x] Styling
   - [ ] Form validation
 - [x] Animate submit button left and right on hover
-- [ ] Footer
+- [x] Footer
   - [x] Language select doesn't work on different pages
-  - [ ] Synch after it's done
 <!-- Error page -->
 - [x] Error page layout
   - [x] Text
@@ -107,7 +106,7 @@
 - [ ] First element animation error on chrome
         Does work with arrow keys, but not with Focused Enter or Click
 <!-- Deployment -->
-- [ ] Optimize images
+- [x] Optimize images
  - [x] Logo
  - [x] Certificate images
  - [x] Work Item Images
@@ -119,3 +118,4 @@
 - [ ] Make copy of folder and remove unused css/javascript (only include minified versions)
 - [ ] Consider moving all images to root folder and referencing them there all throughout the code. Sort of like webpack
 - [ ] Upload to folder named 'en' so that when Spanish version becomes available, it can be uploaded to 'es' folder and have the subdomain link to it
+
