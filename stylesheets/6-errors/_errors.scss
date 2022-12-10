@@ -5,7 +5,11 @@ main .container {
   .error {
     margin: auto;
     max-width: calc(#{v.$small} / 2);
+    display: flex;
+    flex-wrap: wrap;
+    
     h1 {
+      width: 100%;
       font-size: 3rem;
     }
     p {
@@ -13,6 +17,7 @@ main .container {
       width: 50%;
     }
     img {
+      width: 150px;
       float: right;
       position: relative;
       top: -100px;
