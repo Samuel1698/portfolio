@@ -25,10 +25,10 @@ for (let i = 0; i < expand.length; i++) {
 document
   .querySelector(".pinkwug .hidden")
   .addEventListener("click", function (e) {
-    window.location("/pinkwug.html");
+    window.location = "/pinkwug.html";
   });
 document
   .querySelector(".portfolio .hidden")
   .addEventListener("click", function (e) {
-    window.location("/portfolio.html");
+    window.location = "/portfolio.html";
   });
