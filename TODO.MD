@@ -118,11 +118,11 @@
 - [x] Make copy of folder and remove unused css/javascript (only include minified versions)
 - [x] Consider moving all images to root folder and referencing them there all throughout the code. Sort of like webpack
 - [x] Upload to folder named 'en' so that when Spanish version becomes available, it can be uploaded to 'es' folder and have the subdomain link to it
+- [x] Footer apply change button is misaligned
+- [x] Footer in pages with no contact section should have less padding on top
 <!-- PageInsight -->
 - [ ] Carousel being 1x1 images is causing issues. Lazy loading/deferred loading is better
 - [x] Footer flags need alt attribute
 - [x] Meta description
 - [x] Footer links need to be at least 48px of height
-- [x] Footer in pages with no contact section should have less padding on top
 - [ ] Contact page has fonts connected through google
-- [ ] Footer apply change button is misaligned
