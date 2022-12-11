@@ -89,7 +89,7 @@
     top: calc(50% + (95vw * 17 / 22) / 2);
     transform: translate(-50%, 0%);
     &.prev {
-      background: url("../images/left.svg") center/100px no-repeat;
+      background: url("/left.svg") center/100px no-repeat;
       left: 10%;
       transition: left 0.5s cubic-bezier(0.55, 0.09, 0.68, 0.53);
       &.pressed {
@@ -98,7 +98,7 @@
       }
     }
     &.next {
-      background: url("../images/right.svg") center/100px no-repeat;
+      background: url("/right.svg") center/100px no-repeat;
       left: 90%;
       transition: left 0.5s cubic-bezier(0.55, 0.09, 0.68, 0.53);
       &.pressed {
@@ -129,7 +129,7 @@
     padding: 0;
     border: 0;
     border-radius: 0;
-    background: url("../images/close.svg") center center no-repeat;
+    background: url("/close.svg") center center no-repeat;
     background-size: 25px;
     @include m.hover {
       background-size: 30px;

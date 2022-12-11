@@ -124,3 +124,5 @@
 - [x] Meta description
 - [x] Footer links need to be at least 48px of height
 - [x] Footer in pages with no contact section should have less padding on top
+- [ ] Contact page has fonts connected through google
+- [ ] Footer apply change button is misaligned

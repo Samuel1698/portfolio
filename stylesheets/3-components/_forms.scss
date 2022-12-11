@@ -29,11 +29,11 @@ form, .form {
     user-select: none;
     text-align: left;
     margin: 0;
-    background: url("../images/caret-down.svg") right bottom/2em no-repeat
+    background: url("/caret-down.svg") right bottom/2em no-repeat
       v.$inputs;
     &.select-arrow-active {
       border-bottom-left-radius: 0;
-      background: url("../images/caret-up.svg") right top/2em no-repeat
+      background: url("/caret-up.svg") right top/2em no-repeat
       v.$inputs;
     }
   }
