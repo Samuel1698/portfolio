@@ -19,6 +19,17 @@
   <link rel="preload" href="../fonts/open_sans/opensans-regular.woff2" as="font" type="font/woff2"
     crossorigin="anonymous">
   <link rel="stylesheet" href="stylesheets/application.css" />
+
+  <link rel="preload" as="image" imagesrcset="
+    mockup_portfolio_small_@1x.webp 600w,
+    mockup_portfolio_small_@2x.webp 1199w,
+    mockup_portfolio_small_@3x.webp 1800w,
+  " media="(max-width: 939px)" imagesizes="600px" type="image/webp" />
+  <link rel="preload" as="image" imagesrcset="
+    mockup_portfolio_medium_@1x.webp 900w,
+    mockup_portfolio_medium_@2x.webp 1800w,
+    mockup_portfolio_medium_@3x.webp 2700w
+  " media="(min-width: 940px)" imagesizes="900px" type="image/webp" />
 </head>
 
 <body>
@@ -70,26 +81,26 @@
     <section class="hero container">
       <picture>
           <source type="image/webp" srcset="
-            images/previews/portfolio/mockup_small_@1x.webp 600w,
-            images/previews/portfolio/mockup_small_@2x.webp 1199w,
-            images/previews/portfolio/mockup_small_@3x.webp 1800w          
-          " sizes="(max-width: 939px) 600px" />
+            mockup_portfolio_small_@1x.webp 600w,
+            mockup_portfolio_small_@2x.webp 1199w,
+            mockup_portfolio_small_@3x.webp 1800w          
+          " media="(max-width: 939px)" sizes="600px" />
           <source type="image/png" srcset="
-            images/previews/portfolio/mockup_small_@1x.png 600w,
-            images/previews/portfolio/mockup_small_@2x.png 1199w,
-            images/previews/portfolio/mockup_small_@3x.png 1800w          
-          " sizes="(max-width: 939px) 600px" />
+            mockup_portfolio_small_@1x.png 600w,
+            mockup_portfolio_small_@2x.png 1199w,
+            mockup_portfolio_small_@3x.png 1800w          
+          " media="(max-width: 939px)" sizes="600px" />
           <source type="image/webp" srcset="
-            images/previews/portfolio/mockup_medium_@1x.webp 900w,
-            images/previews/portfolio/mockup_medium_@2x.webp 1800w,
-            images/previews/portfolio/mockup_medium_@3x.webp 2700w          
-          " sizes="(min-width: 940px) 900px" />
+            mockup_portfolio_medium_@1x.webp 900w,
+            mockup_portfolio_medium_@2x.webp 1800w,
+            mockup_portfolio_medium_@3x.webp 2700w          
+          " media="(min-width: 940px)" sizes="900px" />
           <source type="image/png" srcset="
-            images/previews/portfolio/mockup_medium_@1x.png 900w,
-            images/previews/portfolio/mockup_medium_@2x.png 1800w,
-            images/previews/portfolio/mockup_medium_@3x.png 2700w          
-          " sizes="(min-width: 940px) 900px" />
-          <img src="images/previews/portfolio/mockup.png" alt="Preview of PinkWug's website on an iPhone and iPad Pro" />
+            mockup_portfolio_medium_@1x.png 900w,
+            mockup_portfolio_medium_@2x.png 1800w,
+            mockup_portfolio_medium_@3x.png 2700w          
+          " media="(min-width: 940px)" sizes="900px" />
+          <img src="mockup_portfolio.png" alt="Preview of this website on an iPhone and iPad Pro" />
         </picture>
     </section>
     <section class="container summary" tabindex="0">
