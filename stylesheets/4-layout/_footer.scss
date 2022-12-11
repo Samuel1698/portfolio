@@ -1,10 +1,14 @@
 @use "../1-utilities/variables" as v;
 @use "../1-utilities/mixins" as m;
 
+footer.contact {
+  padding: 6.5em 0 0.625em;
+}
+
 footer {
   margin-top: auto;
   background-color: v.$dark-background;
-  padding: 6.5em 0 0.625em;
+  padding: 1.625em 0 0.625em;
   font-size: 1em;
   color: v.$dark-color-2;
   text-align: center;
