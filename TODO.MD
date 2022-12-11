@@ -121,8 +121,8 @@
 - [x] Footer apply change button is misaligned
 - [x] Footer in pages with no contact section should have less padding on top
 <!-- PageInsight -->
-- [ ] Carousel being 1x1 images is causing issues. Lazy loading/deferred loading is better
+- [x] Carousel being 1x1 images is causing issues. Lazy loading/deferred loading is better
 - [x] Footer flags need alt attribute
 - [x] Meta description
 - [x] Footer links need to be at least 48px of height
-- [ ] Contact page has fonts connected through google
+- [x] Contact page has fonts connected through google
