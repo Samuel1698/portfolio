@@ -106,6 +106,5 @@ submit.addEventListener("click", function () {
   // Rebuild the URL with the modified subdomain
   var newURL = newSubdomain + "." + domain + "." + tld;
   // Update the location of the current page to the new URL
-  // console.log(newURL);
-  window.location.href = newURL;
+  window.location.href = "https://" + newURL;
 });
