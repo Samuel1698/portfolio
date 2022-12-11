@@ -121,6 +121,6 @@
 <!-- PageInsight -->
 - [ ] Carousel being 1x1 images is causing issues. Lazy loading/deferred loading is better
 - [x] Footer flags need alt attribute
-- [ ] Meta description
+- [x] Meta description
 - [x] Footer links need to be at least 48px of height
-
+- [ ] Footer in pages with no contact section should have less padding on top
