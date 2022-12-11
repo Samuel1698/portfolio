@@ -19,6 +19,17 @@
   <link rel="preload" href="../fonts/open_sans/opensans-regular.woff2" as="font" type="font/woff2"
     crossorigin="anonymous">
   <link rel="stylesheet" href="stylesheets/application.css" />
+
+  <link rel="preload" as="image" imagesrcset="
+    main_certificate_small_@1x.webp 400w,
+    main_certificate_small_@2x.webp 800w,
+    main_certificate_small_@3x.webp 1200w,
+  " media="(max-width: 939px)" imagesizes="600px" type="image/webp" />
+  <link rel="preload" as="image" imagesrcset="
+    main_certificate_medium_@1x.webp 675w,
+    main_certificate_medium_@2x.webp 1350w,
+    main_certificate_medium_@3x.webp 2025w,
+  " media="(min-width: 940px)" imagesizes="675px" type="image/webp" />
 </head>
 
 <body>
@@ -73,26 +84,26 @@
         <a href="https://www.nobledesktop.com/credentials/25f2d73f-d5aa-420a-bc30-46dadc81c870" target="_blank">
           <picture>
             <source type="image/webp" srcset="
-              images/certs/page/main_certificate_small_@1x.webp 400w,
-              images/certs/page/main_certificate_small_@2x.webp 800w,
-              images/certs/page/main_certificate_small_@2x.webp 1200w,
-            " sizes="(max-width: 939px) 600px" />
+              main_certificate_small_@1x.webp 400w,
+              main_certificate_small_@2x.webp 800w,
+              main_certificate_small_@3x.webp 1200w,
+            " media="(max-width: 939px)" sizes="600px" />
             <source type="image/jpg" srcset="
-              images/certs/page/main_certificate_small_@1x.jpg 400w,
-              images/certs/page/main_certificate_small_@2x.jpg 800w,
-              images/certs/page/main_certificate_small_@2x.jpg 1200w,
-            " sizes="(max-width: 939px) 600px" />
+              main_certificate_small_@1x.jpg 400w,
+              main_certificate_small_@2x.jpg 800w,
+              main_certificate_small_@3x.jpg 1200w,
+            " media="(max-width: 939px)" sizes="600px" />
             <source type="image/webp" srcset="
-              images/certs/page/main_certificate_medium_@1x.webp 675w,
-              images/certs/page/main_certificate_medium_@2x.webp 1350w,
-              images/certs/page/main_certificate_medium_@2x.webp 2025w,
-            " sizes="(min-width: 940px) 675px" />
+              main_certificate_medium_@1x.webp 675w,
+              main_certificate_medium_@2x.webp 1350w,
+              main_certificate_medium_@3x.webp 2025w,
+            " media="(min-width: 940px)" sizes="675px" />
             <source type="image/jpg" srcset="
-              images/certs/page/main_certificate_medium_@1x.jpg 675w,
-              images/certs/page/main_certificate_medium_@2x.jpg 1350w,
-              images/certs/page/main_certificate_medium_@2x.jpg 2025w,
-            " sizes="(min-width: 940px) 675px" />
-            <img src="images/certs/page/main_certificate.jpg" alt="Noble Desktop Full Stack Web Development Certificate"
+              main_certificate_medium_@1x.jpg 675w,
+              main_certificate_medium_@2x.jpg 1350w,
+              main_certificate_medium_@3x.jpg 2025w,
+            " media="(min-width: 940px)" sizes="675px" />
+            <img src="main_certificate.jpg" alt="Noble Desktop Full Stack Web Development Certificate"
               width="100%">
           </picture>
           </a>
@@ -114,26 +125,26 @@
             <a href="https://www.nobledesktop.com/credentials/75a2918b-4442-4121-be6c-82f2d49b095e" target="_blank">
               <picture>
                 <source type="image/webp" srcset="
-                  images/certs/page/course_ruby_small_@1x.webp 300w,
-                  images/certs/page/course_ruby_small_@2x.webp 600w,
-                  images/certs/page/course_ruby_small_@3x.webp 900w
-                " sizes="(max-width: 939px) 300px" />
+                  course_ruby_small_@1x.webp 300w,
+                  course_ruby_small_@2x.webp 600w,
+                  course_ruby_small_@3x.webp 900w
+                " media="(max-width: 939px)" sizes="300px" />
                 <source type="image/jpg" srcset="
-                  images/certs/page/course_ruby_small_@1x.jpg 300w,
-                  images/certs/page/course_ruby_small_@2x.jpg 600w,
-                  images/certs/page/course_ruby_small_@3x.jpg 900w
-                " sizes="(max-width: 939px) 300px" />
+                  course_ruby_small_@1x.jpg 300w,
+                  course_ruby_small_@2x.jpg 600w,
+                  course_ruby_small_@3x.jpg 900w
+                " media="(max-width: 939px)" sizes="300px" />
                 <source type="image/webp" srcset="
-                  images/certs/page/course_ruby_medium_@1x.webp 450w,
-                  images/certs/page/course_ruby_medium_@2x.webp 900w,
-                  images/certs/page/course_ruby_medium_@3x.webp 1350w
-                " sizes="(min-width: 940px) 450px" />
+                  course_ruby_medium_@1x.webp 450w,
+                  course_ruby_medium_@2x.webp 900w,
+                  course_ruby_medium_@3x.webp 1350w
+                " media="(min-width: 940px)" sizes="450px" />
                 <source type="image/jpg" srcset="
-                  images/certs/page/course_ruby_medium_@1x.jpg 450w,
-                  images/certs/page/course_ruby_medium_@2x.jpg 900w,
-                  images/certs/page/course_ruby_medium_@3x.jpg 1350w
-                " sizes="(min-width: 940px) 450px" />
-                <img src="images/certs/page/course_ruby.jpg" alt="Ruby on Rails Bootcamp Certificate" />
+                  course_ruby_medium_@1x.jpg 450w,
+                  course_ruby_medium_@2x.jpg 900w,
+                  course_ruby_medium_@3x.jpg 1350w
+                " media="(min-width: 940px)" sizes="450px" />
+                <img src="course_ruby.jpg" alt="Ruby on Rails Bootcamp Certificate" />
               </picture>
             </a>
           </li>
@@ -141,26 +152,26 @@
             <a href="https://www.nobledesktop.com/credentials/e65c4068-3f23-4789-8313-5dd30a2a32d6" target="_blank">
               <picture>
                 <source type="image/webp" srcset="
-                  images/certs/page/course_flexbox_small_@1x.webp 300w,
-                  images/certs/page/course_flexbox_small_@2x.webp 600w,
-                  images/certs/page/course_flexbox_small_@3x.webp 900w
-                " sizes="(max-width: 939px) 300px" />
+                  course_flexbox_small_@1x.webp 300w,
+                  course_flexbox_small_@2x.webp 600w,
+                  course_flexbox_small_@3x.webp 900w
+                " media="(max-width: 939px)" sizes="300px" />
                 <source type="image/jpg" srcset="
-                  images/certs/page/course_flexbox_small_@1x.jpg 300w,
-                  images/certs/page/course_flexbox_small_@2x.jpg 600w,
-                  images/certs/page/course_flexbox_small_@3x.jpg 900w
-                " sizes="(max-width: 939px) 300px" />
+                  course_flexbox_small_@1x.jpg 300w,
+                  course_flexbox_small_@2x.jpg 600w,
+                  course_flexbox_small_@3x.jpg 900w
+                " media="(max-width: 939px)" sizes="300px" />
                 <source type="image/webp" srcset="
-                  images/certs/page/course_flexbox_medium_@1x.webp 450w,
-                  images/certs/page/course_flexbox_medium_@2x.webp 900w,
-                  images/certs/page/course_flexbox_medium_@3x.webp 1350w
-                " sizes="(min-width: 940px) 450px" />
+                  course_flexbox_medium_@1x.webp 450w,
+                  course_flexbox_medium_@2x.webp 900w,
+                  course_flexbox_medium_@3x.webp 1350w
+                " media="(min-width: 940px)" sizes="450px" />
                 <source type="image/jpg" srcset="
-                  images/certs/page/course_flexbox_medium_@1x.jpg 450w,
-                  images/certs/page/course_flexbox_medium_@2x.jpg 900w,
-                  images/certs/page/course_flexbox_medium_@3x.jpg 1350w
-                " sizes="(min-width: 940px) 450px" />
-                <img src="images/certs/page/course_flexbox.jpg" alt="Flexbox Certificate">
+                  course_flexbox_medium_@1x.jpg 450w,
+                  course_flexbox_medium_@2x.jpg 900w,
+                  course_flexbox_medium_@3x.jpg 1350w
+                " media="(min-width: 940px)" sizes="450px" />
+                <img src="course_flexbox.jpg" alt="Flexbox Certificate">
               </picture>
             </a>
           </li>
@@ -168,26 +179,26 @@
             <a href="https://www.nobledesktop.com/credentials/18d4f3e9-1688-409e-93a4-1cef0f56498d" target="_blank">
               <picture>
                 <source type="image/webp" srcset="
-                  images/certs/page/course_javascript_small_@1x.webp 300w,
-                  images/certs/page/course_javascript_small_@2x.webp 600w,
-                  images/certs/page/course_javascript_small_@3x.webp 900w
-                " sizes="(max-width: 939px) 300px" />
+                  course_javascript_small_@1x.webp 300w,
+                  course_javascript_small_@2x.webp 600w,
+                  course_javascript_small_@3x.webp 900w
+                " media="(max-width: 939px)" sizes="300px" />
                 <source type="image/jpg" srcset="
-                  images/certs/page/course_javascript_small_@1x.jpg 300w,
-                  images/certs/page/course_javascript_small_@2x.jpg 600w,
-                  images/certs/page/course_javascript_small_@3x.jpg 900w
-                " sizes="(max-width: 939px) 300px" />
+                  course_javascript_small_@1x.jpg 300w,
+                  course_javascript_small_@2x.jpg 600w,
+                  course_javascript_small_@3x.jpg 900w
+                " media="(max-width: 939px)" sizes="300px" />
                 <source type="image/webp" srcset="
-                  images/certs/page/course_javascript_medium_@1x.webp 450w,
-                  images/certs/page/course_javascript_medium_@2x.webp 900w,
-                  images/certs/page/course_javascript_medium_@3x.webp 1350w
-                " sizes="(min-width: 940px) 450px" />
+                  course_javascript_medium_@1x.webp 450w,
+                  course_javascript_medium_@2x.webp 900w,
+                  course_javascript_medium_@3x.webp 1350w
+                " media="(min-width: 940px)" sizes="450px" />
                 <source type="image/jpg" srcset="
-                  images/certs/page/course_javascript_medium_@1x.jpg 450w,
-                  images/certs/page/course_javascript_medium_@2x.jpg 900w,
-                  images/certs/page/course_javascript_medium_@3x.jpg 1350w
-                " sizes="(min-width: 940px) 450px" />
-                <img src="images/certs/page/course_javascript.jpg" alt="Javascript Certificate">
+                  course_javascript_medium_@1x.jpg 450w,
+                  course_javascript_medium_@2x.jpg 900w,
+                  course_javascript_medium_@3x.jpg 1350w
+                " media="(min-width: 940px)" sizes="450px" />
+                <img src="course_javascript.jpg" alt="Javascript Certificate">
               </picture>
             </a>
           </li>
@@ -195,26 +206,26 @@
             <a href="https://www.nobledesktop.com/credentials/f9d264ff-042a-4fa9-b94f-03cb3fb4adbb" target="_blank">
               <picture>
                 <source type="image/webp" srcset="
-                  images/certs/page/course_tools_small_@1x.webp 300w,
-                  images/certs/page/course_tools_small_@2x.webp 600w,
-                  images/certs/page/course_tools_small_@3x.webp 900w
-                " sizes="(max-width: 939px) 300px" />
+                  course_tools_small_@1x.webp 300w,
+                  course_tools_small_@2x.webp 600w,
+                  course_tools_small_@3x.webp 900w
+                " media="(max-width: 939px)" sizes="300px" />
                 <source type="image/jpg" srcset="
-                  images/certs/page/course_tools_small_@1x.jpg 300w,
-                  images/certs/page/course_tools_small_@2x.jpg 600w,
-                  images/certs/page/course_tools_small_@3x.jpg 900w
-                " sizes="(max-width: 939px) 300px" />
+                  course_tools_small_@1x.jpg 300w,
+                  course_tools_small_@2x.jpg 600w,
+                  course_tools_small_@3x.jpg 900w
+                " media="(max-width: 939px)" sizes="300px" />
                 <source type="image/webp" srcset="
-                  images/certs/page/course_tools_medium_@1x.webp 450w,
-                  images/certs/page/course_tools_medium_@2x.webp 900w,
-                  images/certs/page/course_tools_medium_@3x.webp 1350w
-                " sizes="(min-width: 940px) 450px" />
+                  course_tools_medium_@1x.webp 450w,
+                  course_tools_medium_@2x.webp 900w,
+                  course_tools_medium_@3x.webp 1350w
+                " media="(min-width: 940px)" sizes="450px" />
                 <source type="image/jpg" srcset="
-                  images/certs/page/course_tools_medium_@1x.jpg 450w,
-                  images/certs/page/course_tools_medium_@2x.jpg 900w,
-                  images/certs/page/course_tools_medium_@3x.jpg 1350w
-                " sizes="(min-width: 940px) 450px" />
-                <img src="images/certs/page/course_tools.jpg" alt="Front End Tools & Portfolio Certificate">
+                  course_tools_medium_@1x.jpg 450w,
+                  course_tools_medium_@2x.jpg 900w,
+                  course_tools_medium_@3x.jpg 1350w
+                " media="(min-width: 940px)" sizes="450px" />
+                <img src="course_tools.jpg" alt="Front End Tools & Portfolio Certificate">
               </picture>
             </a>
           </li>
@@ -222,26 +233,26 @@
             <a href="https://www.nobledesktop.com/credentials/629b1ceb-c0df-4cc1-90e5-42494c7b5ab0" target="_blank">
               <picture>
                 <source type="image/webp" srcset="
-                  images/certs/page/course_advanced_html_small_@1x.webp 300w,
-                  images/certs/page/course_advanced_html_small_@2x.webp 600w,
-                  images/certs/page/course_advanced_html_small_@3x.webp 900w
-                " sizes="(max-width: 939px) 300px" />
+                  course_advanced_html_small_@1x.webp 300w,
+                  course_advanced_html_small_@2x.webp 600w,
+                  course_advanced_html_small_@3x.webp 900w
+                " media="(max-width: 939px)" sizes="300px" />
                 <source type="image/jpg" srcset="
-                  images/certs/page/course_advanced_html_small_@1x.jpg 300w,
-                  images/certs/page/course_advanced_html_small_@2x.jpg 600w,
-                  images/certs/page/course_advanced_html_small_@3x.jpg 900w
-                " sizes="(max-width: 939px) 300px" />
+                  course_advanced_html_small_@1x.jpg 300w,
+                  course_advanced_html_small_@2x.jpg 600w,
+                  course_advanced_html_small_@3x.jpg 900w
+                " media="(max-width: 939px)" sizes="300px" />
                 <source type="image/webp" srcset="
-                  images/certs/page/course_advanced_html_medium_@1x.webp 450w,
-                  images/certs/page/course_advanced_html_medium_@2x.webp 900w,
-                  images/certs/page/course_advanced_html_medium_@3x.webp 1350w
-                " sizes="(min-width: 940px) 450px" />
+                  course_advanced_html_medium_@1x.webp 450w,
+                  course_advanced_html_medium_@2x.webp 900w,
+                  course_advanced_html_medium_@3x.webp 1350w
+                " media="(min-width: 940px)" sizes="450px" />
                 <source type="image/jpg" srcset="
-                  images/certs/page/course_advanced_html_medium_@1x.jpg 450w,
-                  images/certs/page/course_advanced_html_medium_@2x.jpg 900w,
-                  images/certs/page/course_advanced_html_medium_@3x.jpg 1350w
-                " sizes="(min-width: 940px) 450px" />
-                <img src="images/certs/page/course_advanced_html.jpg" alt="Advanced HTML & CSS Certificate">
+                  course_advanced_html_medium_@1x.jpg 450w,
+                  course_advanced_html_medium_@2x.jpg 900w,
+                  course_advanced_html_medium_@3x.jpg 1350w
+                " media="(min-width: 940px)" sizes="450px" />
+                <img src="course_advanced_html.jpg" alt="Advanced HTML & CSS Certificate">
               </picture>
             </a>
           </li>
@@ -249,26 +260,26 @@
             <a href="https://www.nobledesktop.com/credentials/2c611270-e172-4feb-b8bf-545582af6c92" target="_blank">
               <picture>
                 <source type="image/webp" srcset="
-                  images/certs/page/course_web_dev_small_@1x.webp 300w,
-                  images/certs/page/course_web_dev_small_@2x.webp 600w,
-                  images/certs/page/course_web_dev_small_@3x.webp 900w
-                " sizes="(max-width: 939px) 300px" />
+                  course_web_dev_small_@1x.webp 300w,
+                  course_web_dev_small_@2x.webp 600w,
+                  course_web_dev_small_@3x.webp 900w
+                " media="(max-width: 939px)" sizes="300px" />
                 <source type="image/jpg" srcset="
-                  images/certs/page/course_web_dev_small_@1x.jpg 300w,
-                  images/certs/page/course_web_dev_small_@2x.jpg 600w,
-                  images/certs/page/course_web_dev_small_@3x.jpg 900w
-                " sizes="(max-width: 939px) 300px" />
+                  course_web_dev_small_@1x.jpg 300w,
+                  course_web_dev_small_@2x.jpg 600w,
+                  course_web_dev_small_@3x.jpg 900w
+                " media="(max-width: 939px)" sizes="300px" />
                 <source type="image/webp" srcset="
-                  images/certs/page/course_web_dev_medium_@1x.webp 450w,
-                  images/certs/page/course_web_dev_medium_@2x.webp 900w,
-                  images/certs/page/course_web_dev_medium_@3x.webp 1350w
-                " sizes="(min-width: 940px) 450px" />
+                  course_web_dev_medium_@1x.webp 450w,
+                  course_web_dev_medium_@2x.webp 900w,
+                  course_web_dev_medium_@3x.webp 1350w
+                " media="(min-width: 940px)" sizes="450px" />
                 <source type="image/jpg" srcset="
-                  images/certs/page/course_web_dev_medium_@1x.jpg 450w,
-                  images/certs/page/course_web_dev_medium_@2x.jpg 900w,
-                  images/certs/page/course_web_dev_medium_@3x.jpg 1350w
-                " sizes="(min-width: 940px) 450px" />
-                <img src="images/certs/page/course_web_dev.jpg" alt="Web Development with HTML & CSS Certificate">
+                  course_web_dev_medium_@1x.jpg 450w,
+                  course_web_dev_medium_@2x.jpg 900w,
+                  course_web_dev_medium_@3x.jpg 1350w
+                " media="(min-width: 940px)" sizes="450px" />
+                <img src="course_web_dev.jpg" alt="Web Development with HTML & CSS Certificate">
               </picture>
             </a>
           </li>
