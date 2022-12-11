@@ -4,6 +4,7 @@
 .columns .overlay {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.6);
+  width: 0;
   height: 0;
   font-size: 0; //Remove inline whitespace
   transition: all 0.5s ease;
@@ -69,6 +70,7 @@
 }
 .columns .overlay.active {
   height: initial;
+  width: initial;
   top: 0;
   bottom: 0;
   left: 0;
