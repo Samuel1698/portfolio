@@ -1,8 +1,7 @@
 @use "../1-utilities/variables" as v;
 
-main .container {
-  text-align: center;
-  .error {
+main .error.container {
+  .message {
     margin: auto;
     max-width: calc(#{v.$small} / 2);
     display: flex;
