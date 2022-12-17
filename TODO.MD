@@ -118,9 +118,17 @@
 - [x] Upload to folder named 'en' so that when Spanish version becomes available, it can be uploaded to 'es' folder and have the subdomain link to it
 - [x] Footer apply change button is misaligned
 - [x] Footer in pages with no contact section should have less padding on top
+- [ ] Twitter-Facebook metadata
+- [ ] Reposition submit button of language dropdown menu on mobile
+- [ ] Dotted lines of certificate section to make it clearer they're clickable on mobile
 <!-- PageInsight -->
 - [x] Carousel being 1x1 images is causing issues. Lazy loading/deferred loading is better
 - [x] Footer flags need alt attribute
 - [x] Meta description
 - [x] Footer links need to be at least 48px of height
 - [x] Contact page has fonts connected through google
+<!-- Form submission -->
+- [x] Activate all forms
+  - [x] EN subdomain
+  - [x] ES subdomain
+  - [x] www subdomain
