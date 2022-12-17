@@ -98,6 +98,9 @@ submit.addEventListener("click", function () {
   else if (submit.querySelector("span.text").innerText == "Save Change") {
     var newDomain = "https://en.samuelgmunoz.com";
   }
+  if (!newDomain.length | newDomain == null || newDomain === undefined || newDomain === NaN){
+    newDomain = "https://www.samuelgmunoz.com";
+  }
   // Rebuild the URL with the modified subdomain
   var newURL = newDomain + pathURL;
   // Update the location of the current page to the new URL
