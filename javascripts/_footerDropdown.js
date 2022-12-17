@@ -93,10 +93,10 @@ submit.addEventListener("click", function () {
   var pathURL = window.location.pathname;
   // Modify the subdomain as needed
   if (submit.querySelector("span.text").innerText == "Aplicar Cambio"){
-    var newDomain = "es.samuelgmunoz.com";
+    var newDomain = "https://es.samuelgmunoz.com";
   }
   else if (submit.querySelector("span.text").innerText == "Save Change") {
-    var newDomain = "en.samuelgmunoz.com";
+    var newDomain = "https://en.samuelgmunoz.com";
   }
   // Rebuild the URL with the modified subdomain
   var newURL = newDomain + pathURL;
