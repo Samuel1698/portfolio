@@ -89,20 +89,17 @@ function changeLang(element) {
   }
 }
 submit.addEventListener("click", function () {
-  // Get the current URL
-  var currentURL = window.location.href;
-  // Parse the URL to extract the subdomain, domain, and top-level domain
-  var urlParts = currentURL.split(".");
-  var tld = urlParts[2];
+  // Get the current URL's pathname
+  var pathURL = window.location.pathname;
   // Modify the subdomain as needed
   if (submit.querySelector("span.text").innerText == "Aplicar Cambio"){
-    var newSubdomain = "es";
+    var newDomain = "es.samuelgmunoz.com";
   }
   else if (submit.querySelector("span.text").innerText == "Save Change") {
-    var newSubdomain = "en";
+    var newDomain = "en.samuelgmunoz.com";
   }
   // Rebuild the URL with the modified subdomain
-  var newURL = "https://" + newSubdomain + ".samuelgmunoz." + tld;
+  var newURL = newDomain + pathURL;
   // Update the location of the current page to the new URL
   window.location.href = newURL;
 });
