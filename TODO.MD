@@ -1,10 +1,12 @@
 <!-- Previous work Page -->
 - [ ] When more pages have been made, only showcase latest 2 on front page and have a separate page for everything else
+- [ ] Showcase Work In Project items
 <!-- Work Items -->
 - [x] Page template
 - [x] Explanation of technologies used, purpose of the website and relevant info
 - [x] Include SEO score, PageSpeed insights, and accessibility score
 - [x] Testimonial
+- [ ] Easter eggs
 
 <!-- Certificates Page -->
 - [x] Main Certificate Image
@@ -34,8 +36,6 @@
     - [x] Disabled buttons should not animate on hover
     - [x] Arrow navigation
     - [x] Left Arrow focus visible not properly positioned
-    - [x] Close icon not padded correctly on big screens
-            Seems fine
   - [x] About me
     - [x] Image
     - [x] Content
@@ -103,8 +103,6 @@
 - [x] 500 (server error)
 <!-- Bugs -->
 - [ ] Hover over work items not working on safari
-- [ ] First element animation error on chrome
-        Does work with arrow keys, but not with Focused Enter or Click
 <!-- Deployment -->
 - [x] Optimize images
  - [x] Logo
