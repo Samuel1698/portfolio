@@ -89,17 +89,16 @@ function changeLang(element) {
   }
 }
 submit.addEventListener("click", function () {
+  // default value of newDomain in case none of the queries work
+  var newDomain = "https://www.samuelgmunoz.com";
   // Get the current URL's pathname
   var pathURL = window.location.pathname;
   // Modify the subdomain as needed
-  if (submit.querySelector("span.text").innerText == "Aplicar Cambio"){
-    var newDomain = "https://es.samuelgmunoz.com";
+  if (button.querySelector("span span").innerText == "ES"){
+    newDomain = "https://es.samuelgmunoz.com";
   }
-  else if (submit.querySelector("span.text").innerText == "Save Change") {
-    var newDomain = "https://en.samuelgmunoz.com";
-  }
-  if (!newDomain.length | newDomain == null || newDomain === undefined || newDomain === NaN){
-    newDomain = "https://www.samuelgmunoz.com";
+  else if (button.querySelector("span span").innerText == "EN") {
+    newDomain = "https://en.samuelgmunoz.com";
   }
   // Rebuild the URL with the modified subdomain
   var newURL = newDomain + pathURL;
