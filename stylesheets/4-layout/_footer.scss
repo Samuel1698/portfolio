@@ -115,7 +115,7 @@ footer {
   }
   .footer_module {
     font-size: 0; // Reset whitespace
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
     margin-right: 1rem;
     text-align: left;
     a {
@@ -157,6 +157,8 @@ footer {
     bottom: 1rem;
     left: 0;
     right: 0;
+    max-width: 95%;
+    line-height: 2em;
     a {
       color: v.$dark-color-2;
       border-bottom: 2px solid v.$dark-outline;
@@ -164,6 +166,14 @@ footer {
         color: v.$dark-focus;
         border-color: v.$dark-focus;
       }
+    }
+    img {
+      height: 22px;
+      margin-left: 3px;
+      vertical-align: text-bottom;
+    }
+    .license {
+      white-space: nowrap;
     }
   }
 }
