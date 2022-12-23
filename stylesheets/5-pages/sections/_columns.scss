@@ -30,7 +30,7 @@
   width: 256px;
   padding: 12px;
   ul.animation li {
-    animation: bounce-in-top 1.5s both;
+    animation: down-from-top 1.5s both;
     animation-delay: calc(var(--order) * 400ms);
   }
   ul {
@@ -53,40 +53,16 @@
       }
     }
   }
-  @keyframes bounce-in-top {
+  @keyframes down-from-top {
     0% {
-      transform: translateY(-500px);
+      transform: translateY(-200px);
       animation-timing-function: ease-in;
       opacity: 0;
     }
-    38% {
+    33% {
       transform: translateY(0);
       animation-timing-function: ease-out;
       opacity: 1;
-    }
-    55% {
-      transform: translateY(-65px);
-      animation-timing-function: ease-in;
-    }
-    72% {
-      transform: translateY(0);
-      animation-timing-function: ease-out;
-    }
-    81% {
-      transform: translateY(-28px);
-      animation-timing-function: ease-in;
-    }
-    90% {
-      transform: translateY(0);
-      animation-timing-function: ease-out;
-    }
-    95% {
-      transform: translateY(-8px);
-      animation-timing-function: ease-in;
-    }
-    100% {
-      transform: translateY(0);
-      animation-timing-function: ease-out;
     }
   }
 }
