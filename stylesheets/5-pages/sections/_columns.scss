@@ -108,11 +108,12 @@ section.cert {
       span {
         font-weight: normal;
         font-size: 1em;
+        border-bottom: 2px solid;
+        margin-bottom: -2px;
       }
       @include m.hover {
         span {
-          border-bottom: 2px solid;
-          margin-bottom: -2px;
+          color: v.$white-outline;
         }
       }
     }
