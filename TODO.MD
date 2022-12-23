@@ -120,7 +120,7 @@
 - [x] Footer apply change button is misaligned
 - [x] Footer in pages with no contact section should have less padding on top
 - [x] Reposition submit button of language dropdown menu on mobile
-- [ ] Twitter-Facebook metadata
+- [x] Twitter-OG metadata
 - [ ] Dotted lines of certificate section to make it clearer they're clickable on mobile
 - [ ] More clear indication of what can be clicked
 - [ ] In showcase pages, include a reference in text that you can click the image to go to the website
