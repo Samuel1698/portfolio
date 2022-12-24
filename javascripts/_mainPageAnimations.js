@@ -9,28 +9,60 @@ window.onscroll = function () {
   contactAnimation();
 };
 function ulAnimation() {
-  var ul = document.querySelectorAll(
-    "main section.column ul"
-  );
+  var ul = document.querySelectorAll("main section.column ul");
   for (let i = 0; i < ul.length; i++) {
-    if (checkVisible(ul[i])) ul[i].classList.add("animation");
+    // If the `ul` element does not have the `animation` class
+    if (!ul[i].classList.contains("animation")) {
+      // Check if the `ul` element is visible on the screen
+      // and add the `animation` class if it is
+      if (checkVisible(ul[i])) {
+        ul[i].classList.add("animation");
+      }
+    }
   }
 }
 function workItemAnimation(){
   var WorkItem = document.querySelectorAll(".work .item");
+  // Loop through each `.work .item` element
   for (let i = 0; i < WorkItem.length; i++) {
-    if (checkVisible(WorkItem[i])) WorkItem[i].classList.add("animation");
+    // If the `.work .item` element does not have the `animation` class
+    if (!WorkItem[i].classList.contains("animation")) {
+      // Check if the `.work .item` element is visible on the screen
+      // and add the `animation` class if it is
+      if (checkVisible(WorkItem[i])) {
+        WorkItem[i].classList.add("animation");
+        setTimeout(() => {
+          WorkItem[i].classList.add("toggle");
+          WorkItem[i].querySelector(".expand").classList.add("on");
+          setTimeout(() => {
+            WorkItem[i].classList.remove("toggle");
+            WorkItem[i].querySelector(".expand").classList.remove("on");
+          }, 5000);
+        }, 2000);
+      }
+    }
   }
 }
 function contactAnimation() {
   var contact = document.querySelector("section.contact");
-  if (checkVisible(contact)) contact.classList.add("animation");
+  // If the `section.contact` element does not have the `animation` class
+  if (!contact.classList.contains("animation")) {
+    // Check if the `section.contact` element is visible on the screen
+    // and add the `animation` class if it is
+    if (checkVisible(contact)) {
+      contact.classList.add("animation");
+    }
+  }
 }
+// Define a function to check if an element is visible on the screen
 function checkVisible(elm) {
+  // Get the bounding rect for the element
   var rect = elm.getBoundingClientRect();
+  // Get the maximum of the document element's client height and the window's inner height
   var viewHeight = Math.max(
     document.documentElement.clientHeight,
     window.innerHeight
   );
+  // Return `true` if the element is not fully off the top or bottom of the screen and `false` otherwise
   return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
 }
