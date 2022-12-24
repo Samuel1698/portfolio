@@ -122,7 +122,7 @@
 - [x] Reposition submit button of language dropdown menu on mobile
 - [x] Twitter-OG metadata
 - [x] Lines of certificate section to make it clearer they're clickable on mobile
-- [x] Detect when workitems are visible on main page and animate them for the user as if they're hovering over them, stay like that for a few seconds, then animate it away from that.
+- [x] Detect when work items are visible on main page and animate them for the user as if they're hovering over them, stay like that for a few seconds, then animate it away from that.
 - [ ] In showcase pages, include a reference in text that you can click the image to go to the website
 - [ ] Header hamburger for more pages
 - [ ] Thanks page missing javascript for footer
