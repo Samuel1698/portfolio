@@ -1,5 +1,5 @@
-@use '../1-utilities/variables' as v;
-@use '../1-utilities/mixins' as m;
+@use "../1-utilities/variables" as v;
+@use "../1-utilities/mixins" as m;
 
 header {
   background-color: v.$dark-background;
@@ -26,39 +26,53 @@ header {
       transform: translate(-50%, 4px);
     }
   }
-  nav ul {
+  nav {
     display: flex;
     justify-content: flex-end;
-    li {
+    a.download {
       margin-top: 5px;
-      display: inline-block;
+      margin-right: auto;
       font-size: 0.9em;
       padding: 5px 10px;
-      &:not(:last-child) {
-        // Border to the right of all nav items except last item
-        border-right: 1px solid;
+      color: v.$dark-color-2;
+      svg {
+        vertical-align: top;
+        position: relative;
+        right: -2px;
+        top: -2px;
+        stroke: v.$dark-color-2;
       }
-      &:first-child {
-        border-right: 0;
-        margin-right: auto;
-      }
-      a {
-        padding: 5px 0;
-        color: v.$dark-color-2;
-        svg {
-          vertical-align: top;
-          position: relative;
-          right: -2px;
-          top: -2px;
-          stroke: v.$dark-color-2;
-        }
-      }
-      a:hover {
+      &:hover {
         color: v.$dark-focus;
         border-bottom: 2px solid v.$dark-focus;
         margin-bottom: -2px;
         svg {
           stroke: v.$dark-focus;
+        } 
+      }
+    }
+    ul {
+      li {
+        margin-top: 5px;
+        display: inline-block;
+        font-size: 0.9em;
+        padding: 5px 10px;
+        &:not(:last-child) {
+          // Border to the right of all nav items except last item
+          border-right: 1px solid;
+        }
+      }
+      a {
+        border-right: 0;
+        padding: 5px 0;
+        color: v.$dark-color-2;
+        &:hover {
+          color: v.$dark-focus;
+          border-bottom: 2px solid v.$dark-focus;
+          margin-bottom: -2px;
+          svg {
+            stroke: v.$dark-focus;
+          } 
         }
       }
     }
