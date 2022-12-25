@@ -1,6 +1,9 @@
 <!-- Previous work Page -->
-- [ ] When more pages have been made, only showcase latest 2 on front page and have a separate page for everything else
-- [ ] Showcase Work In Project items
+- [ ] Previous work
+  - [x] Design
+  - [ ] More Info, Visit Site, Github buttons
+  - [ ] 
+- [ ] Work In Project items
 <!-- Work Items -->
 - [x] Page template
 - [x] Explanation of technologies used, purpose of the website and relevant info

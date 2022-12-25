@@ -22,13 +22,11 @@ for (let i = 0; i < expand.length; i++) {
     this.classList.toggle("on");
   });
 }
-document
-  .querySelector(".pinkwug .hidden")
-  .addEventListener("click", function (e) {
-    window.location = "/pinkwug";
-  });
-document
-  .querySelector(".portfolio .hidden")
-  .addEventListener("click", function (e) {
-    window.location = "/portfolio";
-  });
+const pinkwugListener = function(e) {
+  window.location = "/pinkwug";
+}
+const portfolioListener = function(e) {
+  window.location = "/portfolio";
+}
+document.querySelector(".pinkwug .hidden").addEventListener("click", pinkwugListener);
+document.querySelector(".portfolio .hidden").addEventListener("click", portfolioListener);

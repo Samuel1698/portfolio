@@ -11,7 +11,7 @@
     .item {
       width: 100%;
       @include m.bigShadow;
-      a, .hidden ul {
+      .hidden ul {
         width: 100%;
       }
     }
