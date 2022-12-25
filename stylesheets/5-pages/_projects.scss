@@ -3,17 +3,23 @@
 
 #projects {
   section.work {
+    color: v.$dark-background;
+    background-color: initial;
     h1 {
       text-align: left;
     }
-    color: v.$dark-background;
-    background-color: initial;
     .item {
       width: 100%;
       @include m.bigShadow;
       .hidden ul {
         width: 100%;
       }
+      img {
+        height: 100%;
+      }
+    }
+    .flex_wrapper {
+      justify-content: space-between;
     }
   }
 }

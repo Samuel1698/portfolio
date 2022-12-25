@@ -7,6 +7,7 @@
 <!-- Work Items -->
 - [x] Page template
 - [x] Explanation of technologies used, purpose of the website and relevant info
+ - [ ] For pinkwug' explain that the images uploaded by him get automatically processed into separate versions for responsiveness
 - [x] Include SEO score, PageSpeed insights, and accessibility score
 - [x] Testimonial
 - [ ] Easter eggs
