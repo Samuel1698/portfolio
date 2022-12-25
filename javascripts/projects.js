@@ -1,5 +1,6 @@
 import "./_footerDropdown.js";
 import "./_customHeights";
+// Prepend necessary since we're referencing the same event listener function
 // @prepros-prepend "./_worklist";
 
 document
