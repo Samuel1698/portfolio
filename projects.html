@@ -20,8 +20,8 @@
   <meta property="og:image:alt" content="Preview of Samuel G Munoz's website" />
 
   <meta name="description"
-    content="Check out this stunning website design by Samuel G. Munoz created for PinkWug. This web application showcases his proficiency with Ruby on Rails, as well as his ability to make even a web application load as fast as a static website!">
-  <title>Previous Work</title>
+    content="Welcome to my portfolio page! On this page, you can see a selection of my work and learn more about my skills and experience. If you have any questions, or if you would like to get in touch with me, you can use the contact form on this page to send me a message. I'll be happy to hear from you, and I'll get back to you as soon as possible.">
+  <title>Projects</title>
 
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -35,17 +35,6 @@
   <link rel="preload" href="../fonts/open_sans/opensans-regular.woff2" as="font" type="font/woff2"
     crossorigin="anonymous">
   <link rel="stylesheet" href="stylesheets/application.css" />
-
-  <link rel="preload" as="image" imagesrcset="
-    mockup_pinkwug_small_@1x.webp 600w,
-    mockup_pinkwug_small_@2x.webp 1199w,
-    mockup_pinkwug_small_@3x.webp 1800w,
-  " media="(max-width: 939px)" imagesizes="600px" type="image/webp" />
-  <link rel="preload" as="image" imagesrcset="
-    mockup_pinkwug_medium_@1x.webp 900w,
-    mockup_pinkwug_medium_@2x.webp 1800w,
-    mockup_pinkwug_medium_@3x.webp 2700w
-  " media="(min-width: 940px)" imagesizes="900px" type="image/webp" />
 </head>
 
 <body>
@@ -68,7 +57,7 @@
         <li><a href="contact.html">Contact Me</a></li>
       </ul>
     </nav>
-    <a href="main.html" class="logo" style="width: 64px; height: 64px">
+    <a href="index.html" class="logo" style="width: 64px; height: 64px">
       <div class="underlay"></div>
       <picture>
         <source type="image/webp" srcset="
@@ -91,8 +80,137 @@
     <h2>Full-Stack Web Developer</h2>
     <div class="border"></div>
   </header>
-  <main id="main">
-    
+  <main id="projects">
+    <section class="work container">
+      <h1>Previous Work</h1>
+      <div class="flex_wrapper">
+        <div class="portfolio item toggle" style="--order: 1">
+          <div class="bar">
+            <h4>portfolio</h4>
+            <i></i>
+            <span class="expand on">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="20px" height="20px">
+                <path
+                  d="M 45.585938 1.585938 L 31 16.171875 L 31 9 L 27 9 L 27 23 L 41 23 L 41 19 L 33.828125 19 L 48.414063 4.414063 Z M 9 27 L 9 31 L 16.171875 31 L 1.585938 45.585938 L 4.414063 48.414063 L 19 33.828125 L 19 41 L 23 41 L 23 27 Z" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="20px" height="20px">
+                <path
+                  d="M 24.980469 3.9902344 A 1.0001 1.0001 0 0 0 24.869141 4 L 18 4 A 1.0001 1.0001 0 1 0 18 6 L 22.585938 6 L 6 22.585938 L 6 18 A 1.0001 1.0001 0 0 0 4.984375 16.986328 A 1.0001 1.0001 0 0 0 4 18 L 4 24.847656 A 1.0001 1.0001 0 0 0 5.1523438 26 L 12 26 A 1.0001 1.0001 0 1 0 12 24 L 7.4140625 24 L 24 7.4140625 L 24 12 A 1.0001 1.0001 0 1 0 26 12 L 26 5.1269531 A 1.0001 1.0001 0 0 0 24.980469 3.9902344 z" />
+              </svg>
+            </span>
+          </div>
+          <a href="/portfolio.html" class="link">
+            <picture>
+              <source type="image/webp" srcset="
+                  images/previews/portfolio/preview_portfolio_small_@1x.webp 1x,
+                  images/previews/portfolio/preview_portfolio_small_@2x.webp 2x
+                  " media="(max-width: 939px)" />
+              <source type="image/png" srcset="
+                  images/previews/portfolio/preview_portfolio_small_@1x.png 1x,
+                  images/previews/portfolio/preview_portfolio_small_@2x.png 2x
+                  " media="(max-width: 939px)" />
+              <source type="image/webp" srcset="
+                  images/previews/portfolio/preview_portfolio_medium_@1x.webp 1x,
+                  images/previews/portfolio/preview_portfolio_medium_@2x.webp 2x,
+                  images/previews/portfolio/preview_portfolio_medium_@3x.webp 3x
+                  " media="(min-width: 940px)" />
+              <source type="image/png" srcset="
+                  images/previews/portfolio/preview_portfolio_medium_@1x.png 1x,
+                  images/previews/portfolio/preview_portfolio_medium_@2x.png 2x,
+                  images/previews/portfolio/preview_portfolio_medium_@3x.png 3x
+                  " media="(min-width: 940px)" />
+              <img src="images/previews/portfolio/preview_portfolio.png" alt="Samuel G Munoz portfolio preview"
+                width="300px" height="168.667px" />
+            </picture>
+            <div class="overlay"></div>
+          </a>
+          <div class="hidden">
+            <ul>
+              <li>Static&nbsp;Page</li>
+              <li>SASS</li>
+              <li>UI/UX&nbsp;Design</li>
+              <li>Vanilla&nbsp;JS</li>
+              <li>Animations</li>
+              <li>Open&nbsp;Source</li>
+            </ul>
+            <div class="pageSpeed">
+              <p>PageSpeed Score</p>
+              <div class="image-cropper">
+                <span>100</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pinkwug item toggle" style="--order: 0">
+          <div class="bar">
+            <h4>pinkwug.live</h4>
+            <i></i>
+            <span class="expand on">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="20px" height="20px">
+                <path
+                  d="M 45.585938 1.585938 L 31 16.171875 L 31 9 L 27 9 L 27 23 L 41 23 L 41 19 L 33.828125 19 L 48.414063 4.414063 Z M 9 27 L 9 31 L 16.171875 31 L 1.585938 45.585938 L 4.414063 48.414063 L 19 33.828125 L 19 41 L 23 41 L 23 27 Z" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="20px" height="20px">
+                <path
+                  d="M 24.980469 3.9902344 A 1.0001 1.0001 0 0 0 24.869141 4 L 18 4 A 1.0001 1.0001 0 1 0 18 6 L 22.585938 6 L 6 22.585938 L 6 18 A 1.0001 1.0001 0 0 0 4.984375 16.986328 A 1.0001 1.0001 0 0 0 4 18 L 4 24.847656 A 1.0001 1.0001 0 0 0 5.1523438 26 L 12 26 A 1.0001 1.0001 0 1 0 12 24 L 7.4140625 24 L 24 7.4140625 L 24 12 A 1.0001 1.0001 0 1 0 26 12 L 26 5.1269531 A 1.0001 1.0001 0 0 0 24.980469 3.9902344 z" />
+              </svg>
+            </span>
+          </div>
+          <a href="/pinkwug.html" class="link">
+            <picture>
+              <source type="image/webp" srcset="
+                  images/previews/pinkwug/preview_wug_small_@1x.webp 1x,
+                  images/previews/pinkwug/preview_wug_small_@2x.webp 2x
+                  " media="(max-width: 939px)" />
+              <source type="image/png" srcset="
+                  images/previews/pinkwug/preview_wug_small_@1x.png 1x,
+                  images/previews/pinkwug/preview_wug_small_@2x.png 2x
+                  " media="(max-width: 939px)" />
+              <source type="image/webp" srcset="
+                  images/previews/pinkwug/preview_wug_medium_@1x.webp 1x,
+                  images/previews/pinkwug/preview_wug_medium_@2x.webp 2x,
+                  images/previews/pinkwug/preview_wug_medium_@3x.webp 3x
+                  " media="(min-width: 940px)" />
+              <source type="image/png" srcset="
+                  images/previews/pinkwug/preview_wug_medium_@1x.png 1x,
+                  images/previews/pinkwug/preview_wug_medium_@2x.png 2x,
+                  images/previews/pinkwug/preview_wug_medium_@3x.png 3x
+                  " media="(min-width: 940px)" />
+              <img src="images/previews/pinkwug/preview_wug.png" alt="Pinkwug website preview" width="300px"
+                height="168.667px" />
+            </picture>
+            <div class="overlay"></div>
+          </a>
+          <div class="hidden">
+            <ul>
+              <li>Web&nbsp;App</li>
+              <li>Online&nbsp;Store</li>
+              <li>Ruby</li>
+              <li>SASS</li>
+              <li>UI/UX&nbsp;Design</li>
+              <li>Vanilla&nbsp;JS</li>
+              <li>Open&nbsp;Source</li>
+            </ul>
+            <div class="pageSpeed">
+              <p>PageSpeed Score</p>
+              <div class="image-cropper">
+                <span>99</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="wip container">
+      <h1>Work In Progress</h1>
+    </section>
+    <section class="contact" tabindex="0">
+      <h3>Let's Build a Website!</h3>
+      <p>Interested in starting a project?</p>
+      <a href="contact.html">
+        <span>Contact Me</span>
+      </a>
+    </section>
   </main>
   <footer class="contact">
     <div class="container">
@@ -161,6 +279,6 @@
     </small>
   </footer>
 </body>
-<script src="javascripts/showcase-min.js"></script>
+<script src="javascripts/projects-min.js"></script>
 
 </html>

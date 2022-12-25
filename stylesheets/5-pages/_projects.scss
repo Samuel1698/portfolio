@@ -1,0 +1,15 @@
+@use "../1-utilities/variables" as v;
+@use "../1-utilities/mixins" as m;
+
+#projects {
+  section.work {
+    h1 {
+      text-align: left;
+    }
+    color: v.$dark-background;
+    background-color: initial;
+    .item {
+      @include m.bigShadow;
+    }
+  }
+}
