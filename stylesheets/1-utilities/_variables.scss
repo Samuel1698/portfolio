@@ -9,14 +9,8 @@
   --iron: #d4d4d6;
   --isabelline: #f6f0ed;
   --silver: #f1f0ea;
-  // Dracula
-  --grey: #44475a;
-  --pink: #ff79c6;
-  --purple: #bd93f9;
-  --blue: #8be9fd;
-  --orange: #ffb86c;
-  --yellow: #f1fa8c;
-  --green: #50fa7b;
+  // random colors
+  --green: #4e8356;
 }
 // Dark Mode
 $dark-background: var(--endeavor); //Blue
@@ -32,6 +26,7 @@ $white-color: black;
 $white-color-2: var(--endeavor);
 $white-outline: var(--ruby); //Red
 
+$progress-bar: var(--green); //Green
 $inputs: $dark-background;
 
 $small: 40rem; // 640px

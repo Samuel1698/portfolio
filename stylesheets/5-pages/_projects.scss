@@ -15,6 +15,35 @@
         cursor: initial;
         ul {
           width: 100%;
+          a {
+            margin-top: 2px;
+            padding: 1em;
+            display: inline-block;
+            border-radius: 7px;
+            background-color: v.$white-background-2;
+            color: v.$white-color-2;
+            font-size: 1em;
+            font-weight: bold;
+            position: relative;
+            svg {
+              position: absolute;
+              top: 11px;
+              left: 15px;
+            }
+            span {
+              padding-left: 1.8em;
+            }
+            @include m.hover {
+              background-color: v.$dark-color;
+              svg {
+                fill: v.$progress-bar;
+              }
+              span {
+                color: v.$progress-bar;
+                border-bottom: 2px solid;
+              }
+            }
+          }
         }
       }
       img {
@@ -22,15 +51,15 @@
       }
       div.progress {
         position: relative;
-        top: -42px;
         background-color: v.$white-background-2;
         text-align: left;
         overflow: hidden;
         span {
-          width: 10%;
           background-color: #4e8356;
           display: inline-block;
           text-align: center;
+          font-size: 0.9em;
+          line-height: 1.4em;
           font-weight: bold;
         }
       }
