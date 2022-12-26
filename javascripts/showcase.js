@@ -1,6 +1,3 @@
-import "./_header";
-import "./_footerDropdown.js";
-
 window.addEventListener("load", () => {
   contactHeight();
 });
