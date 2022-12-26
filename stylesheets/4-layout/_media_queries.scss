@@ -2,7 +2,7 @@
 @use "../1-utilities/mixins" as m;
 
 // ------------------------------------------------------------------------
-// Media queries for preview image
+// Media queries for preview page
 // ------------------------------------------------------------------------
 main#projects {
   @media (min-width: v.$small){
@@ -11,6 +11,14 @@ main#projects {
         width: 48%;
       }
     }
+  }
+}
+// ------------------------------------------------------------------------
+// Media queries for showcase page
+// ------------------------------------------------------------------------
+main#showcase section.features div.feature{
+  @media (min-width: v.$small){
+    width: 48%;
   }
 }
 // ------------------------------------------------------------------------

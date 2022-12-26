@@ -8,11 +8,9 @@
 <!-- Work Items -->
 - [x] Page template
 - [x] Explanation of technologies used, purpose of the website and relevant info
- - [ ] For pinkwug' explain that the images uploaded by him get automatically processed into separate versions for responsiveness
+ - [x] For pinkwug' explain that the images uploaded by him get automatically processed into separate versions for responsiveness
 - [x] Include SEO score, PageSpeed insights, and accessibility score
 - [x] Testimonial
-- [ ] Easter eggs
-
 <!-- Certificates Page -->
 - [x] Main Certificate Image
 - [x] Informational box on the right of screen with info about main certificate
@@ -128,7 +126,7 @@
 - [x] Twitter-OG metadata
 - [x] Lines of certificate section to make it clearer they're clickable on mobile
 - [x] Detect when work items are visible on main page and animate them for the user as if they're hovering over them, stay like that for a few seconds, then animate it away from that.
-- [ ] In showcase pages, include a reference in text that you can click the image to go to the website
+- [x] In showcase pages, include a reference in text that you can click the image to go to the website
 - [x] Header hamburger for more pages
   - [x] Logo
   - [x] Responsiveness 

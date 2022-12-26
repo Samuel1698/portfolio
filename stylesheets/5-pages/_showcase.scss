@@ -1,14 +1,40 @@
 @use "../1-utilities/variables" as v;
 @use "../1-utilities/mixins" as m;
 
-main {
+#showcase {
   img {
     width: 100%;
+  }
+  figcaption {
+    font-size: 0.9em;
+    text-align: center;
   }
   p a {
     color: v.$white-outline;
     &:hover, &:focus-visible {
       text-decoration: underline 2px solid v.$white-outline;
+    }
+  }
+  section.features {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    h1 {
+      width: 100%;
+    }
+    div.feature {
+      display: inline-block;
+      width: 100%;
+      p {
+        font-size: 0.9em;
+      }
+    }
+    h2 {
+      margin: 0.5em 0;
+    }
+    p {
+      margin: 5px 0px;
     }
   }
 }
