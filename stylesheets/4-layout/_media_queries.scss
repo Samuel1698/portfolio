@@ -64,6 +64,59 @@ main section.about {
   .container {
     max-width: calc(#{v.$small} - 40px);
   }
+  header nav {
+    button.menu-toggle, button.menu-toggle.visible {
+      display: none;
+    }
+    ul.menu {
+      // Reset invisible menu
+      display: inline-block;
+      position: initial;
+      background-color: initial;
+    }
+    ul.menu {
+      li:first-child {
+        display: none;
+      }
+      li {
+        // Reset invisible menu
+        width: initial;
+        text-align: initial;
+        // ---------------------
+        margin-top: 5px;
+        display: inline-block;
+        font-size: 0.9em;
+        padding: 16px 12px;
+        &:not(:last-child) {
+          // Border to the right of all nav items except last item
+          border-right: 1px solid;
+        }
+      }
+      a {
+        // Reset invisible menu
+        display: initial;
+        height: initial;
+        line-height: initial;
+        // ---------------------
+        border-right: 0;
+        padding: 5px 0;
+        color: v.$dark-color-2;
+        @include m.hover {
+          svg {
+            stroke: v.$dark-focus;
+          } 
+        }
+      }
+    }
+    div.overlay.visible {
+      top: initial;
+      bottom: initial;
+      right: initial;
+      left: initial;
+      z-index: -1;
+      background-color: rgba(0,0,0,0)
+    }
+  }
   main {
     .columns {
       width: 600px;

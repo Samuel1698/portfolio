@@ -1,3 +1,4 @@
+import "./_header";
 import "./_carousel.js";
 import "./_worklist.js";
 import "./_mainPageAnimations.js";

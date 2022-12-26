@@ -1,9 +1,10 @@
 <!-- Previous work Page -->
-- [ ] Previous work
+- [x] Previous work
   - [x] Design
-  - [ ] More Info, Visit Site, Github buttons
-  - [ ] 
+  - [x] More Info, Visit Site, Github buttons 
 - [ ] Work In Project items
+  - [x] One Piece Fights
+  - [ ] Date Ideas
 <!-- Work Items -->
 - [x] Page template
 - [x] Explanation of technologies used, purpose of the website and relevant info
@@ -129,7 +130,13 @@
 - [x] Detect when work items are visible on main page and animate them for the user as if they're hovering over them, stay like that for a few seconds, then animate it away from that.
 - [ ] In showcase pages, include a reference in text that you can click the image to go to the website
 - [ ] Header hamburger for more pages
+  - [x] Logo
+  - [x] Responsiveness 
+  - [ ] JS
+  - [ ] Style
+  - [ ] Overlay
 - [ ] Thanks page missing javascript for footer
+- [ ] Make one js file that is shared among all pages to avoid unnecessary downloads when navigating
 <!-- PageInsight -->
 - [x] Carousel being 1x1 images is causing issues. Lazy loading/deferred loading is better
 - [x] Footer flags need alt attribute

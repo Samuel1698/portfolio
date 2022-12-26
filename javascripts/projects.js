@@ -1,3 +1,4 @@
+import "./_header";
 import "./_footerDropdown.js";
 import "./_customHeights";
 // Prepend necessary since we're referencing the same event listener function

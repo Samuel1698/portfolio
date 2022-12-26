@@ -29,51 +29,94 @@ header {
   nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     a.download {
       margin-top: 5px;
       font-size: 0.9em;
-      padding: 5px 10px;
+      padding: 16px 12px;
       color: v.$dark-color-2;
+      span {
+        padding: 5px 24px 5px 0px;
+      }
       svg {
         vertical-align: top;
         position: relative;
-        right: -2px;
+        right: 24px;
         top: -2px;
         stroke: v.$dark-color-2;
       }
-      &:hover {
-        color: v.$dark-focus;
-        border-bottom: 2px solid v.$dark-focus;
-        margin-bottom: -2px;
-        svg {
-          stroke: v.$dark-focus;
-        } 
-      }
-    }
-    ul {
-      li {
-        margin-top: 5px;
-        display: inline-block;
-        font-size: 0.9em;
-        padding: 5px 10px;
-        &:not(:last-child) {
-          // Border to the right of all nav items except last item
-          border-right: 1px solid;
-        }
-      }
-      a {
-        border-right: 0;
-        padding: 5px 0;
-        color: v.$dark-color-2;
-        &:hover {
+      @include m.hover {
+        span {
           color: v.$dark-focus;
           border-bottom: 2px solid v.$dark-focus;
           margin-bottom: -2px;
-          svg {
-            stroke: v.$dark-focus;
-          } 
+        }
+        svg {
+          stroke: v.$dark-focus;
         }
       }
+    }
+    button.menu-toggle {
+      display: none;
+    }
+    button.menu-toggle.visible {
+      display: inline-block;
+      background-color: initial;
+      padding: 12px;
+      margin-top: 5px;
+      svg {
+        vertical-align: bottom;
+      }
+    }
+    ul.menu {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: absolute;
+      top: 0;
+      right: -250px;
+      background-color: v.$dark-background-2;
+      border-radius: 0 0 0 8px;
+      @include m.shadow;
+      li {
+        width: 100%;
+        text-align: left;
+        @include m.hover {
+          background-color: v.$dark-background;
+          span {
+            color: v.$dark-focus;
+            border-bottom: 2px solid;
+          }
+        }
+      }
+      span {
+        border-bottom: 2px solid;
+        margin-bottom: -2px; 
+      }
+      a {
+        display: inline-block;
+        color: v.$dark-color-2;
+        padding: 12px 120px 12px 24px;
+        height: 48px;
+        line-height: 48px;
+      }
+    }
+    ul.menu.visible {
+      position: fixed;
+      right: 0;
+      z-index: 4;
+      transition: all 450ms ease-in-out;
+    }
+    div.overlay {
+      position: fixed;
+    }
+    div.overlay.visible {
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      z-index: 3;
+      background-color: rgba(0,0,0,0.6)
     }
   }
   .logo {
