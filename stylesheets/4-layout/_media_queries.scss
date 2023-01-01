@@ -84,9 +84,6 @@ main section.about {
     }
     ul.menu {
       box-shadow: none;
-      li:first-child {
-        display: none;
-      }
       li {
         // Reset invisible menu
         width: initial;
@@ -96,10 +93,6 @@ main section.about {
         display: inline-block;
         font-size: 0.9em;
         padding: 16px 12px;
-        &:not(:last-child) {
-          // Border to the right of all nav items except last item
-          border-right: 1px solid;
-        }
       }
       a {
         // Reset invisible menu

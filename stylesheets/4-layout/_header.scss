@@ -26,6 +26,9 @@ header {
       transform: translate(-50%, 4px);
     }
   }
+  nav.short {
+    margin-bottom: 58px;
+  }
   nav {
     display: flex;
     justify-content: space-between;
@@ -35,6 +38,15 @@ header {
       font-size: 0.9em;
       padding: 16px 12px;
       color: v.$dark-color-2;
+      @include m.hover {
+        span {
+          color: v.$dark-focus;
+          border-bottom: 2px solid v.$dark-focus;
+          margin-bottom: -2px;
+        }
+      }
+    }
+    a.download:has(svg){
       span {
         padding: 5px 24px 5px 0px;
       }
@@ -46,11 +58,6 @@ header {
         stroke: v.$dark-color-2;
       }
       @include m.hover {
-        span {
-          color: v.$dark-focus;
-          border-bottom: 2px solid v.$dark-focus;
-          margin-bottom: -2px;
-        }
         svg {
           stroke: v.$dark-focus;
         }
@@ -86,12 +93,9 @@ header {
           span {
             color: v.$dark-focus;
             border-bottom: 2px solid;
+            margin-bottom: -2px; 
           }
         }
-      }
-      span {
-        border-bottom: 2px solid;
-        margin-bottom: -2px; 
       }
       a {
         display: inline-block;
