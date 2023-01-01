@@ -15,8 +15,12 @@
         cursor: initial;
         ul {
           width: 100%;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
           a {
-            margin-top: 2px;
+            margin: 2px;
             padding: 1em;
             display: inline-block;
             border-radius: 7px;

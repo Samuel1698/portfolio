@@ -16,6 +16,7 @@
     }
   }
   section.features {
+    // Also applies to the progress bar in WIP projects
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -28,6 +29,21 @@
       width: 100%;
       p {
         font-size: 0.9em;
+      }
+      div.progress {
+        position: relative;
+        background-color: v.$white-background-2;
+        border-radius: 7px;
+        text-align: left;
+        overflow: hidden;
+        span {
+          background-color: #4e8356;
+          display: inline-block;
+          text-align: center;
+          font-size: 0.9em;
+          line-height: 1.4em;
+          font-weight: bold;
+        }
       }
     }
     h2 {
