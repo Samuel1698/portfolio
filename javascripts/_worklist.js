@@ -23,10 +23,10 @@ for (let i = 0; i < expand.length; i++) {
   });
 }
 const pinkwugListener = function(e) {
-  window.location = "/pinkwug";
+  window.location = "/pinkwug.html";
 }
 const portfolioListener = function(e) {
-  window.location = "/portfolio";
+  window.location = "/portfolio.html";
 }
 document.querySelector(".pinkwug .hidden").addEventListener("click", pinkwugListener);
 document.querySelector(".portfolio .hidden").addEventListener("click", portfolioListener);
