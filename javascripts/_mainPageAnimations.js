@@ -31,13 +31,18 @@ function workItemAnimation(){
       // and add the `animation` class if it is
       if (checkVisible(WorkItem[i])) {
         WorkItem[i].classList.add("animation");
+      }
+    }
+    if (!WorkItem[i].classList.contains("v")){
+      if (checkFullyVisible(WorkItem[i])){
+        WorkItem[i].classList.add("v");
         setTimeout(() => {
           WorkItem[i].classList.add("toggle");
           WorkItem[i].querySelector(".expand").classList.add("on");
           setTimeout(() => {
             WorkItem[i].classList.remove("toggle");
             WorkItem[i].querySelector(".expand").classList.remove("on");
-          }, 5000);
+          }, 4500);
         }, 2000);
       }
     }
@@ -54,7 +59,7 @@ function contactAnimation() {
     }
   }
 }
-// Define a function to check if an element is visible on the screen
+// Function to check if an element is visible on the screen
 function checkVisible(elm) {
   // Get the bounding rect for the element
   var rect = elm.getBoundingClientRect();
@@ -65,4 +70,16 @@ function checkVisible(elm) {
   );
   // Return `true` if the element is not fully off the top or bottom of the screen and `false` otherwise
   return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
+}
+// Function to check if an element is fully visible on the screen
+function checkFullyVisible(elm) {
+  // Get the bounding rect for the element
+  var rect = elm.getBoundingClientRect();
+  // Return `true` if the element is fully within the viewport and `false` otherwise
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= window.innerHeight &&
+    rect.right <= window.innerWidth
+  );
 }
