@@ -30,7 +30,7 @@ main#showcase {
         & > *:not(:first-child){
           margin-left: auto;
           width: $right;
-          h2, p {
+          h2, p, a:not(:first-child) {
             margin: 0;
             margin-left: 2rem;
             width: calc(100% - 2rem);

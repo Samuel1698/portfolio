@@ -91,28 +91,38 @@
       border-radius: 7px;
     }
   }
-  section.features div.feature {    
-    p {
-      margin: 5px 0px;
-      font-size: 0.9em;
+  section.progress {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    h1 {
+      width: 100%;
     }
-    div.progress {
-      position: relative;
-      background-color: v.$white-background-2;
-      border-radius: 7px;
-      text-align: left;
-      overflow: hidden;
-      span {
-        background-color: #4e8356;
-        display: inline-block;
-        text-align: center;
+    div.stage {
+      width: 49%;
+      p {
+        margin: 5px 0px;
         font-size: 0.9em;
-        line-height: 1.4em;
-        font-weight: bold;
+      }
+      div.bar {
+        position: relative;
+        background-color: v.$white-background-2;
+        border-radius: 7px;
+        text-align: left;
+        overflow: hidden;
+        span {
+          background-color: #4e8356;
+          display: inline-block;
+          text-align: center;
+          font-size: 0.9em;
+          line-height: 1.4em;
+          font-weight: bold;
+        }
       }
     }
   }
-  section.contact {
+  section.contact.border {
     margin-top: 0;
     border: 2px solid v.$dark-background;
   }
