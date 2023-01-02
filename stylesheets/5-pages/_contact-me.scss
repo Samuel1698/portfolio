@@ -94,8 +94,7 @@ main.contact {
       border: 2px solid v.$dark-outline;
       background-color: v.$white-background-2;
       color: v.$white-color-2;
-      width: 100%;
-      margin: 10px auto;
+      margin: 5px auto;
       display: block;
       @include m.shadow;
       @keyframes wobble {
