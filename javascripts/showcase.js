@@ -12,9 +12,11 @@ function contactHeight() {
 }
 window.onload = function () {
   leftAnimation();
+  contactAnimation();
 };
 window.onscroll = function () {
   leftAnimation();
+  contactAnimation();
 };
 
 function leftAnimation(){
@@ -25,6 +27,17 @@ function leftAnimation(){
     // Check if it already was marked visible to avoid constant calls on the function on scroll
     if (!leftItem[i].classList.contains("visible"))
       if (checkVisibility(leftItem[i])) leftItem[i].classList.add("visible");
+  }
+}
+function contactAnimation() {
+  var contact = document.querySelector("section.contact");
+  // If the `section.contact` element does not have the `animation` class
+  if (!contact.classList.contains("animation")) {
+    // Check if the `section.contact` element is visible on the screen
+    // and add the `animation` class if it is
+    if (checkVisibility(contact)) {
+      contact.classList.add("animation");
+    }
   }
 }
 
