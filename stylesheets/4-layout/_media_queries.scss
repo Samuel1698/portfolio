@@ -1,6 +1,6 @@
 @use "../1-utilities/variables" as v;
 @use "../1-utilities/mixins" as m;
-
+@use "sass:math" as math;
 // ------------------------------------------------------------------------
 // Media queries for preview page
 // ------------------------------------------------------------------------
@@ -19,13 +19,15 @@ main#projects {
 main#showcase {
   @media (min-width: v.$small){
     .split {
-      --line: calc(30%);
+      --line: 30%;
       $right: calc(100% - #{var(--line)});
       &::before {
-        left: #{var(--line)};
-        margin-left: 4px;
+        left: var(--line);
       }
-      section.container {
+      section.testimonial {
+      margin: var(--space) 0;
+      }
+      section.side {
         padding: 0;
         & > *:not(:first-child){
           margin-left: auto;
@@ -52,7 +54,7 @@ main#showcase {
   }
   @media (min-width: v.$medium){
     .split {
-      --line: calc(35% - 16px); //padding
+      --line: 35%;
     }
   }
 }

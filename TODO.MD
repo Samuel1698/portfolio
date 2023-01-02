@@ -11,6 +11,7 @@
  - [x] For pinkwug' explain that the images uploaded by him get automatically processed into separate versions for responsiveness
 - [x] Include SEO score, PageSpeed insights, and accessibility score
 - [x] Testimonial
+- [ ] Animate elements
 <!-- Certificates Page -->
 - [x] Main Certificate Image
 - [x] Informational box on the right of screen with info about main certificate
