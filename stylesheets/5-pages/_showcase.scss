@@ -3,7 +3,8 @@
 
 #showcase {
   section.hero {
-    a, img {
+    a,
+    img {
       width: 100%;
     }
     @include m.hover {
@@ -20,7 +21,8 @@
   }
   p a {
     color: v.$white-outline;
-    &:hover, &:focus-visible {
+    &:hover,
+    &:focus-visible {
       text-decoration: underline 2px solid v.$white-outline;
     }
   }
@@ -48,7 +50,7 @@
       transform: translateY(-50%);
     }
     section.side h1 {
-    // Lines after the h1 elements
+      // Lines after the h1 elements
       display: inline-block;
       position: relative;
       max-width: 4.9375rem;
@@ -63,9 +65,11 @@
     }
     section.side > *:not(:first-child) {
       // sizes and margins of all elements that are children of 'section' but not first children
+      // aka everything that should be on the left
       max-width: 70%;
-      margin: var(--space) 0 var(--space) 8.8rem; 
+      margin: var(--space) 0 var(--space) 8.8rem;
       position: relative;
+      opacity: 0;
       h2 {
         position: relative;
         &::before {
@@ -75,6 +79,19 @@
           top: 50%;
           left: -2rem;
           width: 22px;
+        }
+      }
+      &.visible {
+        animation: slide-top 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 250ms both;
+        @keyframes slide-top {
+          0% {
+            opacity: 0;
+            transform: translateY(0);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(-100px);
+          }
         }
       }
     }

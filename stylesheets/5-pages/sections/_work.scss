@@ -23,9 +23,11 @@ section.work {
       calc(var(--order) * 400ms);
     @keyframes scale-up-center {
       0% {
+        opacity: 0;
         transform: scale(0);
       }
       33% {
+        opacity: 1;
         transform: scale(0.5);
       }
       50% {
