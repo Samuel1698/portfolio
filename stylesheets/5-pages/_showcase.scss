@@ -99,10 +99,15 @@
       position: relative;
       z-index: 1;
       background-color: v.$white-background-2;
-      margin: var(--space) 16px;
+      margin: var(--space) auto;
       padding: 12px 16px;
       border: 2px solid v.$dark-background;
       border-radius: 7px;
+      width: calc(100% - 68px); //This works as an outer padding of 16px
+      min-width: initial;
+      h1, p {
+        display: inline-block;
+      }
     }
   }
   section.progress {

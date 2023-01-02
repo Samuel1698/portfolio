@@ -25,7 +25,8 @@ main#showcase {
         left: var(--line);
       }
       section.testimonial {
-      margin: var(--space) 0;
+        margin: var(--space) 0;
+        width: initial;
       }
       section.side {
         padding: 0;
