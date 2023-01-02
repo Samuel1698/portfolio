@@ -2,12 +2,21 @@
 @use "../1-utilities/mixins" as m;
 
 #showcase {
-  img {
-    width: 100%;
-  }
-  figcaption {
-    font-size: 0.9em;
-    text-align: center;
+  section.hero {
+    a, img {
+      width: 100%;
+    }
+    @include m.hover {
+      figcaption span {
+        color: v.$white-outline;
+        border-bottom: 2px solid;
+        margin-bottom: -2px;
+      }
+    }
+    figcaption {
+      font-size: 0.9em;
+      text-align: center;
+    }
   }
   p a {
     color: v.$white-outline;
@@ -15,42 +24,96 @@
       text-decoration: underline 2px solid v.$white-outline;
     }
   }
-  section.features {
-    // Also applies to the progress bar in WIP projects
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    h1 {
-      width: 100%;
+  div.purpose {
+    background-color: v.$white-background-2;
+    margin: 2em auto 0;
+    padding: 12px 16px;
+    border-radius: 7px;
+    border: 2px solid v.$dark-background;
+  }
+  .split {
+    //whitespace
+    --space: 250px;
+    position: relative;
+    // making the line match border of top and bottom sections
+    padding: 1em 16px 4em;
+    section.container {
+      padding: 0;
     }
-    div.feature {
+    &::before {
+      // Border
+      content: "";
+      border-left: 2px solid v.$dark-background;
+      height: 100%;
+      position: absolute;
+      top: 50%;
+      left: 7.8125rem;
+      transform: translateY(-50%);
+    }
+    section.container h1 {
+    // Lines after the h1 elements
       display: inline-block;
-      width: 100%;
-      p {
-        font-size: 0.9em;
+      position: relative;
+      max-width: 4.9375rem;
+      &::after {
+        content: "";
+        border-bottom: 2px solid v.$dark-background;
+        position: absolute;
+        top: 50%;
+        right: -2rem;
+        width: 22px;
       }
-      div.progress {
+    }
+    section.container > *:not(:first-child) {
+      // sizes and margins of all elements that are children of 'section' but not first children
+      max-width: 70%;
+      margin: var(--space) 0 var(--space) 8.8rem; 
+      position: relative;
+      h2 {
         position: relative;
-        background-color: v.$white-background-2;
-        border-radius: 7px;
-        text-align: left;
-        overflow: hidden;
-        span {
-          background-color: #4e8356;
-          display: inline-block;
-          text-align: center;
-          font-size: 0.9em;
-          line-height: 1.4em;
-          font-weight: bold;
+        &::before {
+          content: "";
+          border-bottom: 2px solid v.$dark-background;
+          position: absolute;
+          top: 50%;
+          left: -2rem;
+          width: 22px;
         }
       }
     }
-    h2 {
-      margin: 0.5em 0;
+    section.testimonial {
+      position: relative;
+      z-index: 1;
+      background-color: v.$white-background-2;
+      margin: var(--space) auto;
+      padding: 12px 16px;
+      border: 2px solid v.$dark-background;
+      border-radius: 7px;
     }
+  }
+  section.features div.feature {    
     p {
       margin: 5px 0px;
+      font-size: 0.9em;
     }
+    div.progress {
+      position: relative;
+      background-color: v.$white-background-2;
+      border-radius: 7px;
+      text-align: left;
+      overflow: hidden;
+      span {
+        background-color: #4e8356;
+        display: inline-block;
+        text-align: center;
+        font-size: 0.9em;
+        line-height: 1.4em;
+        font-weight: bold;
+      }
+    }
+  }
+  section.contact {
+    margin-top: 0;
+    border: 2px solid v.$dark-background;
   }
 }
