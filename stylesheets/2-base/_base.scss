@@ -7,6 +7,9 @@ body {
   flex-direction: column;
   overflow: hidden;
 }
+body.no-scroll {
+  position: fixed;
+}
 .container {
   min-width: 300px;
   margin: 0 auto;
