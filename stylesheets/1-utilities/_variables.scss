@@ -11,6 +11,7 @@
   --silver: #f1f0ea;
   // random colors
   --green: #4e8356;
+  --grey: #8c8c8c;
 }
 // Dark Mode
 $dark-background: var(--endeavor); //Blue
@@ -27,6 +28,7 @@ $white-color-2: var(--endeavor);
 $white-outline: var(--ruby); //Red
 
 $progress-bar: var(--green); //Green
+$grey: var(--grey);
 $inputs: $dark-background;
 
 $small: 40rem; // 640px

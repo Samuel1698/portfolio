@@ -6,9 +6,13 @@ body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  width: 100%;
 }
 body.no-scroll {
   position: fixed;
+  overflow: hidden;
+  overflow-y: scroll;
+  touch-action: none;
 }
 .container {
   min-width: 300px;

@@ -101,6 +101,16 @@ main section.about {
   }
 }
 // ------------------------------------------------------------------------
+// Rules for screens from 480px forward (largest mobile screen)
+// ------------------------------------------------------------------------
+@media (min-width: 480px){
+  body header nav.short ul.menu {
+    position: relative;
+    width: 21.875rem;
+    margin-left: auto;
+  }
+}
+// ------------------------------------------------------------------------
 // Rules applying to screens from 640px forward
 // ------------------------------------------------------------------------
 @media (min-width: v.$small) {
@@ -109,53 +119,6 @@ main section.about {
   }
   .container {
     max-width: calc(#{v.$small} - 40px);
-  }
-  header nav {
-    button.menu-toggle, button.menu-toggle.visible {
-      display: none;
-    }
-    ul.menu {
-      // Reset invisible menu
-      display: inline-block;
-      position: initial;
-      background-color: initial;
-    }
-    ul.menu {
-      box-shadow: none;
-      li {
-        // Reset invisible menu
-        width: initial;
-        text-align: initial;
-        // ---------------------
-        margin-top: 5px;
-        display: inline-block;
-        font-size: 0.9em;
-        padding: 16px 12px;
-      }
-      a {
-        // Reset invisible menu
-        display: initial;
-        height: initial;
-        line-height: initial;
-        // ---------------------
-        border-right: 0;
-        padding: 5px 0;
-        color: v.$dark-color-2;
-        @include m.hover {
-          svg {
-            stroke: v.$dark-focus;
-          } 
-        }
-      }
-    }
-    div.overlay.visible {
-      top: initial;
-      bottom: initial;
-      right: initial;
-      left: initial;
-      z-index: -1;
-      background-color: rgba(0,0,0,0)
-    }
   }
   main {
     .columns {

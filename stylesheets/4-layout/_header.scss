@@ -2,12 +2,12 @@
 @use "../1-utilities/mixins" as m;
 
 header {
+  --bottom: 58px;
   background-color: v.$dark-background;
   color: v.$dark-color-2;
   text-align: center;
   position: relative;
   width: 100%;
-  overflow: hidden;
   a.skip-link {
     background: v.$dark-background-2;
     color: v.$dark-color-2;
@@ -27,100 +27,124 @@ header {
     }
   }
   nav.short {
-    margin-bottom: 58px;
-  }
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    a.download {
-      margin-top: 5px;
-      font-size: 0.9em;
-      padding: 16px 12px;
-      color: v.$dark-color-2;
-      @include m.hover {
-        span {
-          color: v.$dark-focus;
-          border-bottom: 2px solid v.$dark-focus;
-          margin-bottom: -2px;
-        }
-      }
-    }
-    a.download:has(svg){
-      span {
-        padding: 5px 24px 5px 0px;
-      }
-      svg {
-        vertical-align: top;
-        position: relative;
-        right: 24px;
-        top: -2px;
-        stroke: v.$dark-color-2;
-      }
-      @include m.hover {
-        svg {
-          stroke: v.$dark-focus;
-        }
-      }
-    }
-    button.menu-toggle {
-      display: none;
-    }
-    button.menu-toggle.visible {
-      display: inline-block;
-      background-color: initial;
-      padding: 12px;
-      margin-top: 5px;
-      svg {
-        vertical-align: bottom;
-      }
-    }
-    ul.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: visible;
+    // Top bar
+    .top {
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      position: absolute;
-      top: 0;
-      right: -250px;
-      background-color: v.$dark-background;
-      border-radius: 0 0 0 8px;
-      @include m.shadow;
-      li {
-        width: 100%;
-        text-align: left;
+      justify-content: space-between;
+      align-items: center;
+      a.home, a.download {
+        margin-top: 5px;
+        font-size: 0.9em;
+        padding: 16px 12px;
+        font-weight: bold;
+        color: v.$dark-color-2;
         @include m.hover {
-          background-color: v.$dark-background;
           span {
             color: v.$dark-focus;
-            border-bottom: 2px solid;
-            margin-bottom: -2px; 
+            border-bottom: 2px solid v.$dark-focus;
+            margin-bottom: -2px;
           }
         }
       }
-      a {
+      a.download {
+        span {
+          padding: 5px 24px 5px 0px;
+        }
+        svg {
+          vertical-align: top;
+          position: relative;
+          right: 24px;
+          top: -2px;
+          stroke: v.$dark-color-2;
+        }
+        @include m.hover {
+          svg {
+            stroke: v.$dark-focus;
+          }
+        }
+      }
+      button.menu-toggle {
+        display: none;
+      }
+      button.menu-toggle.visible {
         display: inline-block;
-        color: v.$dark-color-2;
-        padding: 12px 120px 12px 24px;
-        height: 48px;
-        line-height: 48px;
+        background-color: initial;
+        padding: 12px;
+        margin-top: 5px;
+        svg {
+          vertical-align: bottom;
+        }
       }
     }
-    ul.menu.visible {
-      position: fixed;
+    // Menu
+    ul.menu {
+      display: none;
+      opacity: 0;
+      background-color: v.$white-background;
+      overflow: hidden;
+      overflow-y: auto;
+      position: absolute;
+      left: 0;
       right: 0;
-      z-index: 4;
-      transition: all 450ms ease-in-out;
+      margin-top: 8px;
+      &.visible {
+        display: block;
+        opacity: 2;
+        z-index: 2;
+      }
+      li.category {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid v.$grey;
+        border-top: 1px solid v.$grey;
+        font-weight: bold;
+        span {
+          display: inline-block;
+          color: v.$white-color-2;
+          padding: 8px 24px;
+          line-height: 48px;
+        }
+        img {
+          padding: 8px 24px;
+        }
+      }
+      ul.sub {
+        width: 100%;
+        text-align: left;
+        li {
+          color: v.$dark-background;
+          padding: 12px 16px 12px 48px;
+          @include m.hover {
+            color: v.$white-outline;
+            background-color: v.$grey;
+          }
+          a {
+            display: inline-block;
+            color: inherit;
+            width: 100%;
+            white-space: nowrap;
+            line-height: 34px;
+          }
+        }
+      }
     }
+
     div.overlay {
       position: fixed;
-    }
-    div.overlay.visible {
-      top: 0;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      z-index: 3;
-      background-color: rgba(0,0,0,0.6)
+      &.visible {
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: 1;
+        background-color: rgba(0,0,0,0.6)
+      }
     }
   }
   .logo {
@@ -172,6 +196,9 @@ header {
     border-radius: 5px;
     @include m.shadow;
   }
+  .space {
+    height: calc(var(--bottom) * 2);
+  }
   .border {
     position: absolute;
     height: 3.6rem;
@@ -179,10 +206,9 @@ header {
     left: 0;
     right: 0;
     &::before {
-      background-color: v.$white-background;
-      z-index: 1;
-      position: absolute;
       content: "";
+      background-color: v.$white-background;
+      position: absolute;
       width: calc(100vw + 100rem);
       height: 7.2rem;
       top: 4px;
