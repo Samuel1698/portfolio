@@ -76,6 +76,7 @@ header {
         background-color: initial;
         padding: 12px;
         margin-top: 5px;
+        z-index: 2;
         svg {
           vertical-align: bottom;
         }
@@ -123,6 +124,7 @@ header {
         }
         img {
           padding: 17px;
+          margin-right: 8px; // align to close button
           line-height: 48px;
           rotate: 90deg; //default to open
           transition: rotate 250ms ease-in-out;

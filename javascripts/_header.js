@@ -1,4 +1,4 @@
-const toggleButton = document.querySelector("header .menu-toggle");
+const toggleButtons = document.querySelectorAll("header .menu-toggle");
 const menu = document.querySelector("header .menu");
 const overlay = document.querySelector("header .overlay");
 const buttons = document.querySelectorAll("button.category");
@@ -20,9 +20,12 @@ function updateMenuHeight(elm, called){
 function toggleVisibility(){
   menu.classList.toggle("visible");
   overlay.classList.toggle("visible");
+  toggleButtons[0].classList.toggle("visible");
+  toggleButtons[1].classList.toggle("visible");
   body.classList.toggle("no-scroll");
 }
-toggleButton.addEventListener("click", toggleVisibility);
+toggleButtons[0].addEventListener("click", toggleVisibility);
+toggleButtons[1].addEventListener("click", toggleVisibility);
 overlay.addEventListener("click", toggleVisibility);
 
 // Default category values
