@@ -162,7 +162,10 @@ section.work {
     }
     .hidden {
       cursor: pointer;
-      top: 0;
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+      top: 24px; //bar
       bottom: 0;
       right: 100%;
       left: -100%;
@@ -170,14 +173,11 @@ section.work {
       color: map.get(v.$navy-palette, text);
       padding: 0 16px;
       ul {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+        margin: 20% auto auto auto;
         width: 100%;
         li {
           padding: 8px;
-          margin-top: 4px;
+          margin-bottom: 4px;
           background-color: map.get(v.$navy-palette, diminished);
           border-radius: 4px;
         }
@@ -188,12 +188,8 @@ section.work {
       }
       .pageSpeed {
         transition: none;
-        bottom: 12px;
-        padding: 5px 0;
         width: 100%;
-        position: absolute;
-        left: 0;
-        right: 0;
+        margin-bottom: 8px;
         display: flex;
         justify-content: center;
         align-items: center;

@@ -195,7 +195,7 @@ main section.about {
         width: 70%;
       }
       .pageSpeed {
-        bottom: 40px;
+        margin-bottom: 40px;
       }
     }
     section.contact {
@@ -283,9 +283,9 @@ main section.about {
       width: calc(#{v.$medium} - 180px);
     }
     section.work .item {
-      width: 48%;
+      width: 48.5%;
       .hidden .pageSpeed {
-        bottom: 30px;
+        margin-bottom: 30px;
       }
     }
   }
