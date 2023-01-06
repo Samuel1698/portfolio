@@ -104,7 +104,7 @@ main section.about {
 // Rules for screens from 480px forward (largest mobile screen)
 // ------------------------------------------------------------------------
 @media (min-width: 480px){
-  body header nav.short ul.menu {
+  body header nav ul.menu {
     position: relative;
     width: 21.875rem;
     margin-left: auto;
