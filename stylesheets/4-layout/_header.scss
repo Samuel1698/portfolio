@@ -88,6 +88,8 @@ header {
       background-color: v.$white-background;
       overflow: hidden;
       overflow-y: auto;
+      height: calc(100vh - var(--bottom));
+      max-height: calc(37.625rem  - var(--collapsedHeight));
       position: absolute;
       left: 0;
       right: 0;
@@ -97,13 +99,22 @@ header {
         opacity: 2;
         z-index: 2;
       }
-      li.category {
+      button.category {
         width: 100%;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         border-bottom: 1px solid v.$grey;
         border-top: 1px solid v.$grey;
+        margin-bottom: -1px;
         font-weight: bold;
+        border-radius: 0;
+        padding: 0;
+        background-color: v.$dark-color;
+        overflow: hidden;
+        &.last {
+          margin-bottom: 0;
+        }
         span {
           display: inline-block;
           color: v.$white-color-2;
@@ -111,12 +122,22 @@ header {
           line-height: 48px;
         }
         img {
-          padding: 8px 24px;
+          padding: 17px;
+          line-height: 48px;
+          rotate: 90deg; //default to open
+          transition: rotate 250ms ease-in-out;
+          &.closed {
+            rotate: 0deg;
+          }
         }
       }
       ul.sub {
         width: 100%;
         text-align: left;
+        display: block;
+        &.closed {
+          display: none;
+        }
         li {
           color: v.$dark-background;
           padding: 12px 16px 12px 48px;
