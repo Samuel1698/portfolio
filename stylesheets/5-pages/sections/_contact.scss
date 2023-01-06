@@ -1,10 +1,11 @@
 @use "../../1-utilities/variables" as v;
 @use "../../1-utilities/mixins" as m;
+@use "sass:map";
 
 section.contact {
   @include m.shadow;
-  background-color: v.$white-background-2;
-  color: v.$white-color-2;
+  background-color: map.get(v.$lotion-palette, diminished);
+  color: map.get(v.$lotion-palette, text);
   padding: 12px 12px 20px;
   border-radius: 7px;
   position: relative;
@@ -20,14 +21,16 @@ section.contact {
   }
   a {
     display: inline-block;
-    border: 1px solid v.$white-outline;
+    color: map.get(v.$lotion-palette, background);
+    background-color: map.get(v.$lotion-palette, action);
     border-radius: 7px;
     padding: 12px;
     cursor: pointer;
     font-size: 1rem;
-    background-color: v.$white-background-2;
+    line-height: 24px;
+    // background-color: map.get(v.$lotion-palette, action);
     @include m.hover {
-      background-color: v.$white-background;
+      background-color: map.get(v.$lotion-palette, highlight);
     }
   }
 }

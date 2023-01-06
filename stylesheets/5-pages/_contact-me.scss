@@ -1,6 +1,7 @@
-@use '../1-utilities/variables' as v;
+@use "../1-utilities/variables" as v;
 @use '../1-utilities/mixins' as m;
-$inline-color: v.$dark-color;
+@use "sass:map";
+$inline-color: map.get(v.$navy-palette, text);
 $line-height: 1.375rem;
 
 main.contact {
@@ -10,7 +11,7 @@ main.contact {
       text-align: center;
       font-size: 2rem;
       margin: 0 0 1em;
-      color: v.$dark-background;
+      color: map.get(v.$navy-palette, background);
       span {
         padding-bottom: 0.3em;
         border-bottom: 2px solid;
@@ -47,8 +48,8 @@ main.contact {
       }
     }
     ul.select-items {
-      background-color: v.$dark-background-2;
-      color: v.$dark-color-2;
+      background-color: map.get(v.$navy-palette, diminished);
+      color: map.get(v.$lotion-palette, text);
       min-width: 8rem;
       width: 50%;
       border-bottom-left-radius: 7px;
@@ -92,9 +93,9 @@ main.contact {
       @include m.shadow;
     }
     button[type="submit"] {
-      border: 2px solid v.$dark-outline;
-      background-color: v.$white-background-2;
-      color: v.$white-color-2;
+      border: 2px solid map.get(v.$navy-palette, highlight);
+      background-color: map.get(v.$lotion-palette, background);
+      color: map.get(v.$lotion-palette, text);
       margin: 5px auto;
       display: block;
       @include m.shadow;
@@ -121,9 +122,9 @@ main.contact {
         }
       }
       @include m.hover {
-        // border: 2px solid v.$dark-outline-2;
-        background-color: v.$white-background;
-        color: v.$white-color-2;
+        // border: 2px solid map.get(v.$navy-palette, highlight)-2;
+        background-color: map.get(v.$lotion-palette, diminished);
+        color: map.get(v.$lotion-palette, text);
         span {
           display: inline-block;
           animation: wobble 0.8s both;

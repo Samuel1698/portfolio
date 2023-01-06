@@ -1,7 +1,9 @@
-@use '../1-utilities/variables' as v;
+@use "../1-utilities/variables" as v;
+@use "sass:map";
+
 body {
   min-width: 320px;
-  background-color: v.$white-background;
+  background-color: map.get(v.$lotion-palette, background);
   min-height: 100vh;
   display: flex;
   flex-direction: column;

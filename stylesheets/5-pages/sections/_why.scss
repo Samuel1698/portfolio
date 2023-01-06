@@ -1,9 +1,10 @@
 @use '../../1-utilities/variables' as v;
+@use "sass:map";
 
 section.why {
   /* prettier-ignore */
   h3, h4 {
-    color: v.$dark-background;
+    color: map.get(v.$lotion-palette, text);
     font-weight: bold;
     margin: 1em auto;
   }
@@ -15,6 +16,6 @@ section.why {
     font-size: 1.5em;
   }
   p {
-    color: black;
+    color: map.get(v.$lotion-palette, text);
   }
 }

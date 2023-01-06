@@ -1,9 +1,10 @@
 @use "../../1-utilities/variables" as v;
 @use "../../1-utilities/mixins" as m;
+@use "sass:map";
 
 section.work {
-  color: v.$dark-color;
-  background-color: v.$dark-background;
+  color: map.get(v.$navy-palette, text);
+  background-color: map.get(v.$navy-palette, background);
   text-align: center;
   h3 {
     font-weight: bold;
@@ -145,17 +146,13 @@ section.work {
       height: 35px;
       width: 35px;
       background-color: #e5f9ef;
-      margin: 0 auto;
-      position: absolute;
-      bottom: -8px;
-      right: -50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       span {
         color: #0cce6b;
         margin: 0;
         font-size: 16px;
-        position: relative;
-        bottom: -8px;
-        left: -1px;
       }
     }
     /* prettier-ignore */
@@ -170,36 +167,40 @@ section.work {
       right: 100%;
       left: -100%;
       opacity: 1;
-      color: v.$dark-color-2;
+      color: map.get(v.$navy-palette, text);
       padding: 0 16px;
       ul {
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        width: 80%;
+        width: 100%;
         li {
-          padding: 4px;
+          padding: 8px;
           margin-top: 4px;
-          background-color: grey;
+          background-color: map.get(v.$navy-palette, diminished);
           border-radius: 4px;
         }
       }
       /* prettier-ignore */
-      ul li, .pageSpeed, .image-cropper {
+      ul li, .pageSpeed {
         display: inline-block;
       }
       .pageSpeed {
         transition: none;
         bottom: 12px;
         padding: 5px 0;
+        width: 100%;
         position: absolute;
-        width: 132px;
-        left: 42%;
-        transform: translateX(-50%);
-        color: v.$dark-color-2;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        color: map.get(v.$navy-palette, text);
         p {
-          margin: 0;
+          margin: 0 16px 0 0;
         }
       }
     }
@@ -237,7 +238,7 @@ section.work {
     width: 100%;
     min-height: 85px;
     path {
-      fill: v.$white-background;
+      fill: map.get(v.$lotion-palette, background);
     }
   }
 }

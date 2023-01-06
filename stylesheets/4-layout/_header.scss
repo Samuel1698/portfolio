@@ -1,17 +1,18 @@
 @use "../1-utilities/variables" as v;
 @use "../1-utilities/mixins" as m;
+@use "sass:map";
 
 header {
   --bottom: 58px;
   --collapsedHeight: 0px;
-  background-color: v.$dark-background;
-  color: v.$dark-color-2;
+  background-color: map.get(v.$navy-palette, background);
+  color: map.get(v.$navy-palette, text);
   text-align: center;
   position: relative;
   width: 100%;
   a.skip-link {
-    background: v.$dark-background-2;
-    color: v.$dark-color-2;
+    background: map.get(v.$navy-palette, diminished);
+    color: map.get(v.$navy-palette, text);
     font-weight: bold;
     left: 50%;
     padding: 6px 12px;
@@ -43,11 +44,11 @@ header {
         font-size: 0.9em;
         padding: 16px 12px;
         font-weight: bold;
-        color: v.$dark-color-2;
+        color: map.get(v.$navy-palette, text);
         @include m.hover {
           span {
-            color: v.$dark-focus;
-            border-bottom: 2px solid v.$dark-focus;
+            color: map.get(v.$navy-palette, action);
+            border-bottom: 2px solid map.get(v.$navy-palette, action);
             margin-bottom: -2px;
           }
         }
@@ -61,11 +62,11 @@ header {
           position: relative;
           right: 24px;
           top: -2px;
-          stroke: v.$dark-color-2;
+          stroke: map.get(v.$navy-palette, text);
         }
         @include m.hover {
           svg {
-            stroke: v.$dark-focus;
+            stroke: map.get(v.$navy-palette, action);
           }
         }
       }
@@ -80,6 +81,12 @@ header {
         z-index: 4;
         svg {
           vertical-align: bottom;
+          & .outer {
+            fill: map.get(v.$navy-palette, text);
+          }
+          & .inner {
+            fill: map.get(v.$navy-palette, background);
+          }
         }
       }
     }
@@ -87,7 +94,7 @@ header {
     ul.menu {
       display: none;
       opacity: 0;
-      background-color: v.$white-background;
+      background-color: map.get(v.$lotion-palette, background);
       overflow: hidden;
       overflow-y: auto;
       height: calc(100vh - var(--bottom));
@@ -106,20 +113,20 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border-bottom: 1px solid v.$grey;
-        border-top: 1px solid v.$grey;
+        border-bottom: 1px solid map.get(v.$lotion-palette, diminished);
+        border-top: 1px solid map.get(v.$lotion-palette, diminished);
         margin-bottom: -1px;
         font-weight: bold;
         border-radius: 0;
         padding: 0;
-        background-color: v.$dark-color;
+        background-color: map.get(v.$lotion-palette, background);
         overflow: hidden;
         &.last {
           margin-bottom: 0;
         }
         span {
           display: inline-block;
-          color: v.$white-color-2;
+          color: map.get(v.$lotion-palette, text);
           padding: 8px 24px;
           line-height: 48px;
         }
@@ -142,11 +149,11 @@ header {
           display: none;
         }
         li {
-          color: v.$dark-background;
+          color: map.get(v.$lotion-palette, text);
           padding: 12px 16px 12px 48px;
           @include m.hover {
-            color: v.$white-outline;
-            background-color: v.$grey;
+            color: map.get(v.$lotion-palette, highlight);
+            background-color: map.get(v.$lotion-palette, diminished);
           }
           a {
             display: inline-block;
@@ -154,11 +161,11 @@ header {
             width: 100%;
             white-space: nowrap;
             line-height: 34px;
+            font-weight: bold;
           }
         }
       }
     }
-
     div.overlay {
       position: fixed;
       &.visible {
@@ -177,7 +184,7 @@ header {
     margin-top: var(--bottom);
     @include m.hover {
       .underlay {
-        background-color: v.$dark-focus;
+        background-color: map.get(v.$navy-palette, action);
       }
     }
     .underlay {
@@ -189,7 +196,7 @@ header {
       z-index: 0;
       bottom: 0;
       right: 5px;
-      background-color: v.$dark-background-2;
+      background-color: map.get(v.$navy-palette, diminished);
     }
     img {
       position: relative;
@@ -201,7 +208,7 @@ header {
       right: -4rem;
       left: -4rem;
       z-index: 1;
-      border-bottom: 1px solid v.$dark-color-2;
+      border-bottom: 1px solid map.get(v.$navy-palette, text);
     }
   }
   /* prettier-ignore */
@@ -217,7 +224,7 @@ header {
     display: inline-block;
     margin: 0 0 1.8rem;
     padding: 12px;
-    background-color: v.$dark-background-2;
+    background-color: map.get(v.$navy-palette, diminished);
     border-radius: 5px;
     @include m.shadow;
   }
@@ -232,7 +239,7 @@ header {
     right: 0;
     &::before {
       content: "";
-      background-color: v.$white-background;
+      background-color: map.get(v.$lotion-palette, background);
       position: absolute;
       width: calc(100vw + 100rem);
       height: 7.2rem;

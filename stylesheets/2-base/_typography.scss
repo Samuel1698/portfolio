@@ -1,4 +1,5 @@
-@use '../1-utilities/variables' as v;
+@use "../1-utilities/variables" as v;
+@use "sass:map";
 @font-face {
   font-family: "Open Sans";
   src: url("opensans-regular.woff2") format("woff2"),
@@ -45,6 +46,7 @@ html {
 }
 p {
   font-size: 1em;
+  line-height: 2em;
 }
 /* prettier-ignore */
 h1, h2, h3, h4, h5 {
@@ -54,7 +56,7 @@ h1, h2, h3, h4, h5 {
 img:focus-visible {
   margin: -2px;
   padding: 2px;
-  outline: 5px auto v.$white-outline;
+  outline: 5px auto map.get(v.$lotion-palette, highlight);
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
@@ -69,7 +71,7 @@ section:focus-visible, li:focus-visible {
     left: -2px;
     right: -2px;
     bottom: -2px;
-    outline: 5px auto v.$white-outline;
+    outline: 5px auto map.get(v.$lotion-palette, highlight);
     outline: 5px auto Highlight;
     outline: 5px auto -webkit-focus-ring-color;
   }

@@ -1,5 +1,6 @@
 @use '../../1-utilities/variables' as v;
 @use '../../1-utilities/mixins' as m;
+@use "sass:map";
 
 .columns {
   @include m.shadow;
@@ -10,8 +11,8 @@
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
-  background-color: v.$white-background-2;
-  color: v.$white-color-2;
+  background-color: map.get(v.$lotion-palette, diminished);
+  color: map.get(v.$lotion-palette, text);
   h3 {
     font-weight: normal;
     font-size: 1.2rem;
@@ -49,7 +50,7 @@
         width: 100%;
       }
       span {
-        color: v.$white-color-2;
+        color: map.get(v.$lotion-palette, text);
         font-size: 0.9em;
       }
     }
@@ -93,7 +94,7 @@ section.cert {
       }
       @include m.hover {
         span {
-          color: v.$white-outline;
+          color: map.get(v.$lotion-palette, highlight);
         }
       }
     }

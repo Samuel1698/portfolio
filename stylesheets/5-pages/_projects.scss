@@ -1,9 +1,12 @@
 @use "../1-utilities/variables" as v;
 @use "../1-utilities/mixins" as m;
+@use "sass:map";
 
 #projects {
+  --green: #4e8356;
+  $progress-bar: var(--green);
   section.work {
-    color: v.$dark-background;
+    color: map.get(v.$navy-palette, background);
     background-color: initial;
     h1 {
       text-align: left;
@@ -25,8 +28,8 @@
             padding: 1em;
             display: inline-block;
             border-radius: 7px;
-            background-color: v.$white-background-2;
-            color: v.$white-color-2;
+            background-color: map.get(v.$lotion-palette, background);
+            color: map.get(v.$lotion-palette, text);
             font-size: 1em;
             font-weight: bold;
             position: relative;
@@ -39,12 +42,12 @@
               padding-left: 1.8em;
             }
             @include m.hover {
-              background-color: v.$dark-color;
+              background-color: map.get(v.$navy-palette, text);
               svg {
-                fill: v.$progress-bar;
+                fill: $progress-bar;
               }
               span {
-                color: v.$progress-bar;
+                color: $progress-bar;
                 border-bottom: 2px solid;
               }
             }
@@ -57,7 +60,7 @@
       }
       div.progress {
         position: relative;
-        background-color: v.$white-background-2;
+        background-color: map.get(v.$lotion-palette, background);
         text-align: left;
         overflow: hidden;
         span {
