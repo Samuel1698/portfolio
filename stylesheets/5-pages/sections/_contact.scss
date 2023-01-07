@@ -33,6 +33,9 @@ section.contact {
       background-color: map.get(v.$lotion-palette, highlight);
     }
   }
+  &.a h3, &.a a {
+    opacity: 0;
+  }
 }
 section.contact.animation {
   h3 {
@@ -40,9 +43,11 @@ section.contact.animation {
     @keyframes slide-right {
       0% {
         transform: translateX(-200%);
+        opacity: 0;
       }
       100% {
         transform: translateX(0);
+        opacity: 1;
       }
     }
   }
@@ -51,9 +56,11 @@ section.contact.animation {
     @keyframes slide-left {
       0% {
         transform: translateX(200%);
+        opacity: 0;
       }
       100% {
         transform: translateX(0);
+        opacity: 1;
       }
     }
   }
