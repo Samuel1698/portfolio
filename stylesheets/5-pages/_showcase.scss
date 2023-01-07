@@ -127,12 +127,12 @@
       }
       div.bar {
         position: relative;
-        background-color: map.get(v.$lotion-palette, background);
+        background-color: map.get(v.$lotion-palette, diminished);
         border-radius: 7px;
         text-align: left;
         overflow: hidden;
         span {
-          background-color: #4e8356;
+          background-color: map.get(v.$lotion-palette, action);
           display: inline-block;
           text-align: center;
           font-size: 0.9em;

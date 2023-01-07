@@ -16,6 +16,7 @@
       opacity: 1;
       @include m.bigShadow;
       .hidden {
+        padding: 0;
         cursor: initial;
         ul {
           width: 100%;
@@ -23,6 +24,7 @@
           flex-direction: row;
           flex-wrap: wrap;
           justify-content: center;
+          margin: auto;
           a {
             margin: 2px;
             padding: 1em;
@@ -60,11 +62,12 @@
       }
       div.progress {
         position: relative;
-        background-color: map.get(v.$lotion-palette, background);
+        background-color: map.get(v.$lotion-palette, diminished);
         text-align: left;
         overflow: hidden;
         span {
-          background-color: #4e8356;
+          background-color: map.get(v.$lotion-palette, action);
+          color: map.get(v.$lotion-palette, background);
           display: inline-block;
           text-align: center;
           font-size: 0.9em;
