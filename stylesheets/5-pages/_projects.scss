@@ -3,8 +3,7 @@
 @use "sass:map";
 
 #projects {
-  --green: #4e8356;
-  $progress-bar: var(--green);
+  $progress-bar: map.get(v.$lotion-palette, highlight);
   section.work {
     color: map.get(v.$navy-palette, background);
     background-color: initial;
