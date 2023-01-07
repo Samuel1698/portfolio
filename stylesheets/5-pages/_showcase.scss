@@ -1,7 +1,8 @@
 @use "../1-utilities/variables" as v;
 @use "../1-utilities/mixins" as m;
 @use "sass:map";
-
+$fill: map.get(v.$lotion-palette, diminished);
+$border: 3px solid map.get(v.$lotion-palette, action);
 #showcase {
   section.hero {
     a,
@@ -16,23 +17,26 @@
       }
     }
     figcaption {
+      color: map.get(v.$lotion-palette, text);
       font-size: 0.9em;
       text-align: center;
     }
   }
+  h1, h2, p {
+    color: map.get(v.$lotion-palette, text);
+  }
   p a {
     color: map.get(v.$lotion-palette, highlight);
-    &:hover,
-    &:focus-visible {
+    @include m.hover{
       text-decoration: underline 2px solid map.get(v.$lotion-palette, highlight);
     }
   }
   div.purpose {
-    background-color: map.get(v.$lotion-palette, background);
+    background-color: $fill;
     margin: 2em auto 0;
     padding: 12px 16px;
     border-radius: 7px;
-    border: 2px solid map.get(v.$navy-palette, background);
+    border: $border;
   }
   .split {
     //whitespace
@@ -43,7 +47,7 @@
     &::before {
       // Border
       content: "";
-      border-left: 2px solid map.get(v.$navy-palette, background);
+      border-left: $border;
       height: 100%;
       position: absolute;
       top: 50%;
@@ -54,14 +58,15 @@
       // Lines after the h1 elements
       display: inline-block;
       position: relative;
-      max-width: 4.9375rem;
-      &::after {
-        content: "";
-        border-bottom: 2px solid map.get(v.$navy-palette, background);
-        position: absolute;
-        top: 50%;
-        right: -2rem;
-        width: 22px;
+      max-width: 6.3rem;
+      padding: 4px;
+      border: $border;
+      border-right: unset;
+      background-color: map.get(v.$lotion-palette, background);;
+      span {
+        min-width: 10rem;
+        display: inline-block;
+        vertical-align: text-top;
       }
     }
     section.side > *:not(:first-child) {
@@ -75,10 +80,10 @@
         position: relative;
         &::before {
           content: "";
-          border-bottom: 2px solid map.get(v.$navy-palette, background);
+          border-bottom: $border;
           position: absolute;
           top: 50%;
-          left: -2rem;
+          left: -1.9rem;
           width: 22px;
         }
       }
@@ -99,10 +104,10 @@
     section.testimonial {
       position: relative;
       z-index: 1;
-      background-color: map.get(v.$lotion-palette, background);
+      background-color: $fill;
       margin: var(--space) auto;
       padding: 12px 16px;
-      border: 2px solid map.get(v.$navy-palette, background);
+      border: $border;
       border-radius: 7px;
       width: calc(100% - 68px); //This works as an outer padding of 16px
       min-width: initial;
@@ -144,6 +149,6 @@
   }
   section.contact.border {
     margin-top: 0;
-    border: 2px solid map.get(v.$navy-palette, background);
+    border: $border;
   }
 }

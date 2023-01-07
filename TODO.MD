@@ -170,6 +170,9 @@
   - [ ] Coursera
 - [ ] Showcase
   - [ ] Hero image on mobile views
+    - [ ] New mockups with more zoomed in image in tablet mode
+    - [ ] Two different mockups
+  - [ ] Mobile view border needs to be bigger and realigned
   - [ ] Update portfolio image
   - [ ] Portfolio highlight features in same style as pinkwug
   - [ ] 'Features' in Spanish overflows
@@ -177,4 +180,3 @@
 - [ ] Optimize new images
 - [ ] Sync changes in the .html files across both folders
 - [ ] application.css and all .min.js files
-- [ ] Remove any 'images/' from .html

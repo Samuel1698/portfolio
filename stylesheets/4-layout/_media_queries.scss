@@ -44,10 +44,18 @@ main#showcase {
           max-width: unset;
           width: var(--line);
           text-align: right;
+          padding: 0;
+          border: unset;
           &::after {
+            content: "";
+            border-bottom: 3px solid map.get(v.$lotion-palette, action);
+            position: absolute;
+            top: 50%;
             right: 0;
+            width: 22px;
           }
           span {
+            min-width: unset;
             margin-right: 2rem;
           }
         }
