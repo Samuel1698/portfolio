@@ -1,5 +1,6 @@
 @use "../1-utilities/variables" as v;
 @use "sass:map";
+$inputs: map.get(v.$navy-palette, background);
 
 form, .form {
   font-size: 0; // Get rid of whitespace
@@ -31,11 +32,11 @@ form, .form {
     text-align: left;
     margin: 0;
     background: url("/caret-down.svg") right bottom/2em no-repeat
-      v.$inputs;
+      $inputs;
     &.select-arrow-active {
       border-bottom-left-radius: 0;
       background: url("/caret-up.svg") right top/2em no-repeat
-      v.$inputs;
+      $inputs;
     }
   }
   ul.select-items {
@@ -45,18 +46,6 @@ form, .form {
     left: 0;
     right: 0;
     z-index: 1;
-    li {
-      position: relative;
-    }
-    li:not(:last-child)::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 1px;
-      background-color: rgba(0, 0, 0, 0.2);
-    }
   }
   ul li:hover,
   .same-as-selected {

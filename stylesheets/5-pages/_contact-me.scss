@@ -1,9 +1,10 @@
 @use "../1-utilities/variables" as v;
 @use '../1-utilities/mixins' as m;
 @use "sass:map";
-$inline-color: map.get(v.$navy-palette, text);
-$line-height: 1.375rem;
-
+$inline-color: map.get(v.$lotion-palette, text);
+$label: map.get(v.$lotion-palette, text);
+$border: 2px solid map.get(v.$lotion-palette, action);
+$line-height: 2rem;
 main.contact {
   form {
     max-width: clamp(270px, 80%, 600px);
@@ -11,20 +12,23 @@ main.contact {
       text-align: center;
       font-size: 2rem;
       margin: 0 0 1em;
-      color: map.get(v.$navy-palette, background);
+      color: map.get(v.$lotion-palette, text);
       span {
-        padding-bottom: 0.3em;
-        border-bottom: 2px solid;
+        padding-bottom: 0.1em;
+        border-bottom: 3px solid;
       }
     }
     label {
       opacity: 0;
       display: block;
-      margin-bottom: 5px;
+      margin-bottom: 12px;
+      color: $label; 
+      font-weight: bold;
     }
     .inline {
       position: relative;
       display: inline-block;
+      vertical-align: top;
       width: 49%;
       margin-bottom: 10px;
       cursor: pointer;
@@ -38,17 +42,34 @@ main.contact {
     button.select-button {
       font-size: 0.9em;
       line-height: $line-height;
-      padding: 2%;
+      padding: 6px 8px;
       width: 100%;
       color: $inline-color;
-      @include m.shadow;
+      background: unset;
+      border: $border;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       span {
         font-size: 1em;
+        height: $line-height;
         display: inline-block;
+      }
+      svg {
+        overflow: visible;
+        path {
+          transition: transform 250ms ease-in-out;
+        }
+      }
+      &.select-arrow-active {
+        path {
+          transform: rotate(0deg);
+          transition: transform 250ms ease-in-out;
+        }
       }
     }
     ul.select-items {
-      background-color: map.get(v.$navy-palette, diminished);
+      background-color: map.get(v.$lotion-palette, diminished);
       color: map.get(v.$lotion-palette, text);
       min-width: 8rem;
       width: 50%;
@@ -59,6 +80,11 @@ main.contact {
         padding: 8px;
         padding-right: 0;
         min-height: $line-height;
+        line-height: $line-height;
+        font-weight: bold;
+        @include m.hover {
+          color: map.get(v.$lotion-palette, highlight);
+        }
       }
       @media (min-width: 410px) {
         min-width: 10rem;
@@ -76,29 +102,21 @@ main.contact {
         }
       }
     }
-    input {
-      width: 96%;
-      padding: 2%;
+    textarea, input {
+      width: 100%;
+      padding: 6px 8px;
+      box-sizing: border-box;
       line-height: $line-height;
-      background-color: v.$inputs;
+      background-color: unset;
       color: $inline-color;
-      @include m.shadow;
-    }
-    textarea {
-      width: 96%;
-      padding: 2%;
-      line-height: $line-height;
-      background-color: v.$inputs;
-      color: $inline-color;
-      @include m.shadow;
+      border: $border;
     }
     button[type="submit"] {
-      border: 2px solid map.get(v.$navy-palette, highlight);
-      background-color: map.get(v.$lotion-palette, background);
-      color: map.get(v.$lotion-palette, text);
+      background-color: map.get(v.$lotion-palette, action);
+      color: map.get(v.$lotion-palette, diminished);
+      font-weight: bold;
       margin: 5px auto;
       display: block;
-      @include m.shadow;
       @keyframes wobble {
         0%,
         100% {
@@ -122,9 +140,7 @@ main.contact {
         }
       }
       @include m.hover {
-        // border: 2px solid map.get(v.$navy-palette, highlight)-2;
-        background-color: map.get(v.$lotion-palette, diminished);
-        color: map.get(v.$lotion-palette, text);
+        background-color: map.get(v.$lotion-palette, highlight);
         span {
           display: inline-block;
           animation: wobble 0.8s both;
