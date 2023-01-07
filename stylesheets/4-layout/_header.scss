@@ -39,7 +39,8 @@ header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      a.home, a.download {
+      a.home,
+      a.download {
         margin-top: 5px;
         font-size: 0.9em;
         padding: 16px 12px;
@@ -81,11 +82,22 @@ header {
         z-index: 4;
         svg {
           vertical-align: bottom;
-          & .outer {
-            fill: map.get(v.$navy-palette, text);
-          }
-          & .inner {
-            fill: map.get(v.$navy-palette, background);
+          // ---------------------------------------------------
+          // Close button recolor
+          /* prettier-ignore */
+          path.outer {fill: map.get(v.$navy-palette, text);}
+          /* prettier-ignore */
+          path.inner {fill: map.get(v.$navy-palette, background);}
+          // ---------------------------------------------------
+          // Hamburger recolor
+          /* prettier-ignore */
+          g.right {fill: map.get(v.$lotion-palette, background);}
+          /* prettier-ignore */
+          path.left {fill: map.get(v.$navy-palette, text);}
+        }
+        @include m.hover {
+          svg .outer, svg g.right, svg path.left {
+            fill: map.get(v.$navy-palette, action);
           }
         }
       }
@@ -98,7 +110,7 @@ header {
       overflow: hidden;
       overflow-y: auto;
       height: calc(100vh - var(--bottom));
-      max-height: calc(37.625rem  - var(--collapsedHeight));
+      max-height: calc(37.625rem - var(--collapsedHeight));
       position: absolute;
       left: 0;
       right: 0;
@@ -174,7 +186,7 @@ header {
         right: 0;
         left: 0;
         z-index: 3;
-        background-color: rgba(0,0,0,0.6)
+        background-color: rgba(0, 0, 0, 0.6);
       }
     }
   }
