@@ -113,7 +113,7 @@ main.contact {
     }
     button[type="submit"] {
       background-color: map.get(v.$lotion-palette, action);
-      color: map.get(v.$lotion-palette, diminished);
+      color: map.get(v.$lotion-palette, background);
       font-weight: bold;
       margin: 5px auto;
       display: block;

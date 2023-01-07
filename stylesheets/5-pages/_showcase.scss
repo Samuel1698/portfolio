@@ -5,6 +5,10 @@ $fill: map.get(v.$lotion-palette, diminished);
 $border: 3px solid map.get(v.$lotion-palette, action);
 #showcase {
   section.hero {
+    padding-bottom: 2em;
+    background-color: map.get(v.$lotion-palette, background);
+    position: relative;
+    z-index: 2;
     a,
     img {
       width: 100%;
@@ -33,10 +37,12 @@ $border: 3px solid map.get(v.$lotion-palette, action);
   }
   div.purpose {
     background-color: $fill;
-    margin: 2em auto 0;
+    margin: 0 auto;
     padding: 12px 16px;
     border-radius: 7px;
     border: $border;
+    position: relative;
+    z-index: 2;
   }
   .split {
     //whitespace
@@ -54,6 +60,22 @@ $border: 3px solid map.get(v.$lotion-palette, action);
       left: 7.8125rem;
       transform: translateY(-50%);
     }
+    section.features {
+      position: relative;
+    }
+    button.top {
+      position: sticky;
+      top: 50%;
+      display: block;
+      z-index: 1;
+      background-color: map.get(v.$lotion-palette, action);
+      color: map.get(v.$lotion-palette, background);
+      font-weight: bold;
+      transform: rotate(-90deg) translate(-150px, -46px);
+      @include m.hover {
+        background-color: map.get(v.$lotion-palette, highlight);
+      }
+    }
     section.side h1 {
       // Lines after the h1 elements
       display: inline-block;
@@ -69,7 +91,7 @@ $border: 3px solid map.get(v.$lotion-palette, action);
         vertical-align: text-top;
       }
     }
-    section.side > *:not(:first-child) {
+    section.side > .right {
       // sizes and margins of all elements that are children of 'section' but not first children
       // aka everything that should be on the left
       max-width: 70%;

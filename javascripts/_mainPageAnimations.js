@@ -1,13 +1,32 @@
+// -----------------------------------------------------------------------------
+// debounce function by chatGPT to delay the execution of code on the scroll
+// eventListener
+// -----------------------------------------------------------------------------
+function debounce(func, wait) {
+  let timeout;
+  return function () {
+    const context = this,
+      args = arguments;
+    const later = function () {
+      timeout = null;
+      func.apply(context, args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
 window.onload = function () {
   ulAnimation();
   workItemAnimation();
   contactAnimation();
 };
-window.onscroll = function () {
+window.onscroll = debounce(function () {
   ulAnimation();
   workItemAnimation();
   contactAnimation();
-};
+}, 100);
+
 function ulAnimation() {
   var ul = document.querySelectorAll("main section.column ul");
   for (let i = 0; i < ul.length; i++) {
@@ -21,7 +40,7 @@ function ulAnimation() {
     }
   }
 }
-function workItemAnimation(){
+function workItemAnimation() {
   var WorkItem = document.querySelectorAll(".work .item");
   // Loop through each `.work .item` element
   for (let i = 0; i < WorkItem.length; i++) {
@@ -33,8 +52,8 @@ function workItemAnimation(){
         WorkItem[i].classList.add("animation");
       }
     }
-    if (!WorkItem[i].classList.contains("v")){
-      if (checkFullyVisible(WorkItem[i])){
+    if (!WorkItem[i].classList.contains("v")) {
+      if (checkFullyVisible(WorkItem[i])) {
         WorkItem[i].classList.add("v");
         setTimeout(() => {
           WorkItem[i].classList.add("toggle");
