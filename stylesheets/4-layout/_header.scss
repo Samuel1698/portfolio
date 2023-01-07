@@ -110,7 +110,8 @@ header {
       overflow: hidden;
       overflow-y: auto;
       height: calc(100vh - var(--bottom));
-      max-height: calc(37.625rem - var(--collapsedHeight));
+      // 605px - collapsedHeight - 2px for each uncollapsed category from the negative margins
+      max-height: calc(37.75rem - var(--collapsedHeight));
       position: absolute;
       left: 0;
       right: 0;
@@ -127,12 +128,16 @@ header {
         align-items: center;
         border-bottom: 1px solid map.get(v.$lotion-palette, diminished);
         border-top: 1px solid map.get(v.$lotion-palette, diminished);
-        margin-bottom: -1px;
+        // margin-bottom: -1px;
+        // margin-top: -1px;
         font-weight: bold;
         border-radius: 0;
         padding: 0;
         background-color: map.get(v.$lotion-palette, background);
         overflow: hidden;
+        @include m.hover {
+          background-color: map.get(v.$lotion-palette, diminished);
+        }
         &.last {
           margin-bottom: 0;
         }
@@ -142,10 +147,11 @@ header {
           padding: 8px 24px;
           line-height: 48px;
         }
-        img {
+        svg {
           padding: 17px;
           margin-right: 8px; // align to close button
           line-height: 48px;
+          fill: map.get(v.$lotion-palette, text);
           rotate: 90deg; //default to open
           transition: rotate 250ms ease-in-out;
           &.closed {

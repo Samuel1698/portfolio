@@ -35,7 +35,9 @@ for (let i=0; i < buttons.length; i++){
   buttons[i].addEventListener("click", function(){
     let sub = buttons[i].nextElementSibling;
     updateMenuHeight(sub, "before");
-    buttons[i].querySelector("img").classList.toggle("closed");
+    let svg = buttons[i].querySelector("svg");
+    let hasClass = svg.getAttribute("class");
+    hasClass ? svg.removeAttribute("class") : svg.setAttribute("class", "closed");
     sub.classList.toggle("closed");  
     updateMenuHeight(sub, "after");
   });
