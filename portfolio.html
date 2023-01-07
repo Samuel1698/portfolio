@@ -28,24 +28,11 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
 
-  <link rel="preload" href="yanonekaffeesatz-bold.woff2" as="font" type="font/woff2"
-    crossorigin="anonymous">
-  <link rel="preload" href="yanonekaffeesatz-regular.woff2" as="font" type="font/woff2"
-    crossorigin="anonymous">
+  <link rel="preload" href="yanonekaffeesatz-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="yanonekaffeesatz-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="opensans-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="opensans-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="stylesheet" href="stylesheets/application.css" />
-
-  <link rel="preload" as="image" imagesrcset="
-    images/mockup_portfolio_small_@1x.webp 600w,
-    images/mockup_portfolio_small_@2x.webp 1199w,
-    images/mockup_portfolio_small_@3x.webp 1800w,
-  " media="(max-width: 939px)" imagesizes="600px" type="image/webp" />
-  <link rel="preload" as="image" imagesrcset="
-    images/mockup_portfolio_medium_@1x.webp 900w,
-    images/mockup_portfolio_medium_@2x.webp 1800w,
-    images/mockup_portfolio_medium_@3x.webp 2700w
-  " media="(min-width: 940px)" imagesizes="900px" type="image/webp" />
 </head>
 
 <body>
@@ -57,11 +44,12 @@
           <span>Home</span>
         </a>
         <button class="menu-toggle visible">
+          <span class="sr-only">open menu</span>
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256"
             width="24px" height="24px" fill-rule="nonzero">
             <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
-              stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none"
-              font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+              stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+              font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
               <g transform="scale(10.66667,10.66667)">
                 <g class="right" fill="#f6f0ed">
                   <path
@@ -74,18 +62,23 @@
                     d="M19.5,16h-15c-0.829,0 -1.5,0.671 -1.5,1.5v1c0,0.829 0.671,1.5 1.5,1.5h15c0.829,0 1.5,-0.671 1.5,-1.5v-1c0,-0.829 -0.671,-1.5 -1.5,-1.5z">
                   </path>
                 </g>
-                <path class="left" d="M12,4h-7.5c-0.829,0 -1.5,0.671 -1.5,1.5v1c0,0.829 0.671,1.5 1.5,1.5h7.5z" fill="#d4d4d6"></path>
-                <path class="left" d="M12,10h-7.5c-0.829,0 -1.5,0.671 -1.5,1.5v1c0,0.829 0.671,1.5 1.5,1.5h7.5z" fill="#d4d4d6"></path>
-                <path class="left" d="M12,16h-7.5c-0.829,0 -1.5,0.671 -1.5,1.5v1c0,0.829 0.671,1.5 1.5,1.5h7.5z" fill="#d4d4d6"></path>
+                <path class="left" d="M12,4h-7.5c-0.829,0 -1.5,0.671 -1.5,1.5v1c0,0.829 0.671,1.5 1.5,1.5h7.5z"
+                  fill="#d4d4d6"></path>
+                <path class="left" d="M12,10h-7.5c-0.829,0 -1.5,0.671 -1.5,1.5v1c0,0.829 0.671,1.5 1.5,1.5h7.5z"
+                  fill="#d4d4d6"></path>
+                <path class="left" d="M12,16h-7.5c-0.829,0 -1.5,0.671 -1.5,1.5v1c0,0.829 0.671,1.5 1.5,1.5h7.5z"
+                  fill="#d4d4d6"></path>
               </g>
             </g>
           </svg>
         </button>
         <button class="menu-toggle">
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="24px" height="24px" fill-rule="nonzero">
-            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
-              stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
-              font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+          <span class="sr-only">close menu</span>
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256"
+            width="24px" height="24px" fill-rule="nonzero">
+            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+              stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+              font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
               <g transform="scale(2.81319,2.81319)">
                 <circle class="outer" cx="45.081" cy="45.133" r="33.407" fill="#d4d4d6"></circle>
                 <path class="outer"
@@ -103,18 +96,30 @@
         </button>
       </div>
       <ul class="menu">
-        <button class="category"><span>Projects</span><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="30px" height="30px"><path d="M18.278,40.219L15.09,37.03c-0.781-0.781-0.781-2.047,0-2.828L24.292,25l-9.202-9.202c-0.781-0.781-0.781-2.047,0-2.828	l3.188-3.188C19.059,9,20.326,9,21.107,9.781L34.91,23.585c0.781,0.781,0.781,2.047,0,2.828L21.107,40.218	C20.326,41,19.059,41,18.278,40.219z"/></svg></button>  
+        <button class="category"><span>Projects</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"
+            width="30px" height="30px">
+            <path
+              d="M18.278,40.219L15.09,37.03c-0.781-0.781-0.781-2.047,0-2.828L24.292,25l-9.202-9.202c-0.781-0.781-0.781-2.047,0-2.828	l3.188-3.188C19.059,9,20.326,9,21.107,9.781L34.91,23.585c0.781,0.781,0.781,2.047,0,2.828L21.107,40.218	C20.326,41,19.059,41,18.278,40.219z" />
+          </svg></button>
         <ul class="sub">
           <li><a href="projects.html">All Projects</a></li>
           <li><a href="pinkwug.html">Latest Web Application</a></li>
           <li><a href="portfolio.html">Latest Static Site</a></li>
         </ul>
-        <button class="category"><span>Credentials</span><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="30px" height="30px"><path d="M18.278,40.219L15.09,37.03c-0.781-0.781-0.781-2.047,0-2.828L24.292,25l-9.202-9.202c-0.781-0.781-0.781-2.047,0-2.828	l3.188-3.188C19.059,9,20.326,9,21.107,9.781L34.91,23.585c0.781,0.781,0.781,2.047,0,2.828L21.107,40.218	C20.326,41,19.059,41,18.278,40.219z"/></svg></button>
+        <button class="category"><span>Credentials</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"
+            width="30px" height="30px">
+            <path
+              d="M18.278,40.219L15.09,37.03c-0.781-0.781-0.781-2.047,0-2.828L24.292,25l-9.202-9.202c-0.781-0.781-0.781-2.047,0-2.828	l3.188-3.188C19.059,9,20.326,9,21.107,9.781L34.91,23.585c0.781,0.781,0.781,2.047,0,2.828L21.107,40.218	C20.326,41,19.059,41,18.278,40.219z" />
+          </svg></button>
         <ul class="sub">
           <li><a href="certificates.html">Certificates & Diplomas</a></li>
           <li><a href="Samuel_G_Munoz_Resume.pdf" download target="_blank">Resume</a></li>
         </ul>
-        <button class="last category"><span>Contact</span><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="30px" height="30px"><path d="M18.278,40.219L15.09,37.03c-0.781-0.781-0.781-2.047,0-2.828L24.292,25l-9.202-9.202c-0.781-0.781-0.781-2.047,0-2.828	l3.188-3.188C19.059,9,20.326,9,21.107,9.781L34.91,23.585c0.781,0.781,0.781,2.047,0,2.828L21.107,40.218	C20.326,41,19.059,41,18.278,40.219z"/></svg></button>
+        <button class="last category"><span>Contact</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"
+            width="30px" height="30px">
+            <path
+              d="M18.278,40.219L15.09,37.03c-0.781-0.781-0.781-2.047,0-2.828L24.292,25l-9.202-9.202c-0.781-0.781-0.781-2.047,0-2.828	l3.188-3.188C19.059,9,20.326,9,21.107,9.781L34.91,23.585c0.781,0.781,0.781,2.047,0,2.828L21.107,40.218	C20.326,41,19.059,41,18.278,40.219z" />
+          </svg></button>
         <ul class="sub">
           <li><a href="contact.html">Email me</a></li>
           <li><a href="https://www.linkedin.com/in/samuel-g-muñoz-16130521b/" target="_blank">LinkedIn</a></li>
@@ -126,54 +131,71 @@
     <div class="border"></div>
   </header>
   <main id="showcase">
-    <section class="hero container">
-      <picture>
-        <source type="image/webp" srcset="
-            images/mockup_portfolio_small_@1x.webp 600w,
-            images/mockup_portfolio_small_@2x.webp 1199w,
-            images/mockup_portfolio_small_@3x.webp 1800w          
-          " media="(max-width: 939px)" sizes="600px" />
-        <source type="image/png" srcset="
-            images/mockup_portfolio_small_@1x.png 600w,
-            images/mockup_portfolio_small_@2x.png 1199w,
-            images/mockup_portfolio_small_@3x.png 1800w          
-          " media="(max-width: 939px)" sizes="600px" />
-        <source type="image/webp" srcset="
-            images/mockup_portfolio_medium_@1x.webp 900w,
-            images/mockup_portfolio_medium_@2x.webp 1800w,
-            images/mockup_portfolio_medium_@3x.webp 2700w          
-          " media="(min-width: 940px)" sizes="900px" />
-        <source type="image/png" srcset="
-            images/mockup_portfolio_medium_@1x.png 900w,
-            images/mockup_portfolio_medium_@2x.png 1800w,
-            images/mockup_portfolio_medium_@3x.png 2700w          
-          " media="(min-width: 940px)" sizes="900px" />
-        <img src="images/mockup_portfolio.png"
-          alt="Preview of this website on an iPhone and iPad Pro" />
-      </picture>
+    <section class="container" tabindex="0">
+      <div class="purpose">
+        <h1>Purpose</h1>
+        <p>
+          This portfolio website is designed to showcase my work, skills, and achievements to potential clients or employers in a unique and engaging manner. Its structure is built with expandability in mind, with elements and pages styled and organized to accommodate future growth. The website serves as a powerful tool to present my portfolio and highlight my capabilities to potential clients or employers.
+        </p>
+      </div>
     </section>
-    <section class="container summary" tabindex="0">
-      <h1>Purpose</h1>
-      <p>
-        This portfolio website showcases my work, skills, and achievements to potential clients or employers in a unique
-        and engaging way. The website features a carousel built from scratch, an original layout, a preview of my recent
-        open source works in the form of a safari window, and a language selection dropdown for my potential Spanish
-        speaking clients. The contact page includes custom dropdowns to ensure a consistent experience across different
-        browsers. I used my skills in web development and design to create a website that effectively showcases my work
-        and highlights my talents.
-      </p>
-    </section>
-    <section class="container speed lastSection" tabindex="0">
-      <h2>SEO & Speed</h2>
-      <p>With Web Development's best practices implemented when it comes to structure, semantic HTML tags,
-        functionality, accessibility, and mobile-first development, this website is the top result when you search my
-        name.</p>
-      <p>In terms of speed, the website loads quickly and efficiently, providing a smooth and seamless user experience.
-        This is reflected on its <a href="https://pagespeed.web.dev/" target="_blank">PageSpeed Insights</a> score of
-        100 for both Mobile and Desktop. Overall, the website's performance in SEO and Speed is impressive and helps to
-        enhance its effectiveness and reach.</p>
-    </section>
-    <section class="a contact" tabindex="0">
+    <div class="split container">
+      <section class="container side features">
+        <h1><span>Features</span></h1>
+        <button class="top"><span>Back To Top</span></button>
+        <div class="feature right" tabindex="0">
+          <h2>Image Carousel</h2>
+          <p>The image carousel on the website was built from scratch and is used on the homepage to showcase all of my certificates. It is a useful way to present a large number of images in a compact space and allows users to easily browse through them.</p>
+        </div>
+        <div class="feature right" tabindex="0">
+          <h2>Vanilla Javascript</h2>
+          <p>Every animated or interactive element on the website has some form of javascript, all of which is implemented without the use of jQuery or any animation library. This provides a lightweight and efficient solution for adding interactive features to the website.</p>
+        </div>
+        <div class="feature right" tabindex="0">
+          <h2>Responsive Images</h2>
+          <p>The website uses responsive images to ensure that all images are displayed at the optimal size and resolution for the device they are being viewed on. To achieve this, the images have a wide range of sizes and formats, allowing the browser to choose the most appropriate one to display. This ensures that the images look sharp and clear on all devices, including smartphones, tablets, and desktop computers.</p>
+        </div>
+        <div class="feature right" tabindex="0">
+          <h2>Accessibility</h2>
+          <p>Accessibility has been a key consideration in the design and development of this website. The entire website can be
+          navigated using only keyboard inputs, and aria labels are used wherever they are needed to provide context and meaning
+          for screen readers. Alt attributes are provided for all images to describe their content for users with visual
+          impairments, and every interactive element is big enough to ensure that it is easy to use for users with motor control impairments. These features make the website more accessible and easier to use for users with disabilities.</p>
+        </div>
+        <div class="feature right" tabindex="0">
+          <h2>Spanish Translation</h2>
+          <p>The website includes a Spanish translation, which can be accessed through a dedicated subdomain. This allows Spanish-speaking visitors to access the content in their preferred language, with a language selection box at the bottom of the page providing an easy way to switch between languages. This is a useful feature for websites that target a bilingual or multilingual audience.</p>
+        </div>
+      </section>
+      <section class="container middle">
+        <h1>License</h1>
+        <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by/4.0/">
+          <img alt="Creative Commons License" style="border-width:0"
+            src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+        </a>
+        <br>
+        <p>This website is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>. You are free to copy and redistribute the material in any medium or format if you give appropriate credit. This means you can download a local copy of this website, change the colors and images to fit your needs, and publish it with no fear of legal claims.</p>
+        <p>All I ask is attribution, you may do so in any reasonable manner, but not in any way that suggests I endorse you or your use.</p>
+        <p><a href="https://github.com/Samuel1698/portfolio">Check it on Github</a></p>
+      </section>
+      <section class="container side lastSection">
+        <h1 tabindex="0"><span>SEO & Speed</span></h1>
+        <button class="top"><span>Back To Top</span></button>
+        <div class="seo right">
+          <h2>SEO</h2>
+          <p>With Web Development's best practices implemented when it comes to structure, semantic HTML tags,
+            functionality, accessibility, and mobile-first development, this website is the top result when you search
+            my
+            name.</p>
+        </div>
+        <div class="speed right">
+          <h2>Speed</h2>
+          <p>In terms of speed, the website loads quickly and efficiently, providing a smooth and seamless user experience.
+          This is reflected on its <a href="https://pagespeed.web.dev/" target="_blank">PageSpeed Insights</a> score of 100 for both Mobile and Desktop. Overall, the website's performance in SEO and Speed is impressive and helps to enhance its effectiveness and reach.</p>
+        </div>
+      </section>
+    </div>
+    <section class="a contact border" tabindex="0">
       <h3>Let's Build a Website!</h3>
       <p>Interested in starting a project?</p>
       <a href="contact.html">

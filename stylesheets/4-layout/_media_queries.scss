@@ -25,17 +25,19 @@ main#showcase {
       &::before {
         left: var(--line);
       }
-      section.testimonial {
+      section.middle {
         margin: var(--space) 0;
         width: initial;
       }
+      button.top {
+        transform: rotate(0) translate(0, 185px);
+      }
       section.side {
         padding: 0;
-        & > *:not(:first-child){
+        & > .right{
           margin-left: auto;
           width: $right;
           h2, p, a:not(:first-child) {
-            margin: 0;
             margin-left: 2rem;
             width: calc(100% - 2rem);
           }

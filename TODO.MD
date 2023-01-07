@@ -152,8 +152,9 @@
   - [x] Hamburger menu all views
   - [x] Close button
   - [x] Colors & Shadow
-  - [ ] Category hover & Down buttons
+  - [x] Category hover & Down buttons
   - [ ] Hint images next to the resume and linkedin buttons
+  - [ ] SR ONLY spans in buttons
 - [ ] Index page
   - [ ] Bigger column section
   - [x] Recent work hidden elements
@@ -169,13 +170,11 @@
   - [ ] Noble Desktop
   - [ ] Coursera
 - [ ] Showcase
-  - [ ] Hero image on mobile views
-    - [ ] New mockups with more zoomed in image in tablet mode
-    - [ ] Two different mockups
-  - [ ] Mobile view border needs to be bigger and realigned
+  - [x] Remove images
+  - [x] Mobile view border needs to be bigger and realigned
+  - [x] 'Features' in Spanish overflows
   - [ ] Update portfolio image
   - [ ] Portfolio highlight features in same style as pinkwug
-  - [ ] 'Features' in Spanish overflows
 <!-- Deploying new theme -->
 - [ ] Optimize new images
 - [ ] Sync changes in the .html files across both folders

@@ -4,30 +4,34 @@
 $fill: map.get(v.$lotion-palette, diminished);
 $border: 3px solid map.get(v.$lotion-palette, action);
 #showcase {
-  section.hero {
-    padding-bottom: 2em;
-    background-color: map.get(v.$lotion-palette, background);
-    position: relative;
-    z-index: 2;
-    a,
-    img {
-      width: 100%;
-    }
-    @include m.hover {
-      figcaption span {
-        color: map.get(v.$lotion-palette, highlight);
-        border-bottom: 2px solid;
-        margin-bottom: -2px;
-      }
-    }
-    figcaption {
-      color: map.get(v.$lotion-palette, text);
-      font-size: 0.9em;
-      text-align: center;
-    }
-  }
+  // section.hero {
+  //   padding-bottom: 2em;
+  //   background-color: map.get(v.$lotion-palette, background);
+  //   position: relative;
+  //   z-index: 2;
+  //   a,
+  //   img {
+  //     width: 100%;
+  //   }
+  //   @include m.hover {
+  //     figcaption span {
+  //       color: map.get(v.$lotion-palette, highlight);
+  //       border-bottom: 2px solid;
+  //       margin-bottom: -2px;
+  //     }
+  //   }
+  //   figcaption {
+  //     color: map.get(v.$lotion-palette, text);
+  //     font-size: 0.9em;
+  //     text-align: center;
+  //   }
+  // }
   h1, h2, p {
+    font-weight: bold;
     color: map.get(v.$lotion-palette, text);
+  }
+  p {
+    color: map.get(v.$lotion-palette, action);
   }
   p a {
     color: map.get(v.$lotion-palette, highlight);
@@ -71,7 +75,7 @@ $border: 3px solid map.get(v.$lotion-palette, action);
       background-color: map.get(v.$lotion-palette, action);
       color: map.get(v.$lotion-palette, background);
       font-weight: bold;
-      transform: rotate(-90deg) translate(-150px, -46px);
+      transform: rotate(-90deg) translate(-150px, -38px);
       @include m.hover {
         background-color: map.get(v.$lotion-palette, highlight);
       }
@@ -99,6 +103,7 @@ $border: 3px solid map.get(v.$lotion-palette, action);
       position: relative;
       opacity: 0;
       h2 {
+
         position: relative;
         &::before {
           content: "";
@@ -123,7 +128,7 @@ $border: 3px solid map.get(v.$lotion-palette, action);
         }
       }
     }
-    section.testimonial {
+    section.middle {
       position: relative;
       z-index: 1;
       background-color: $fill;
@@ -135,6 +140,9 @@ $border: 3px solid map.get(v.$lotion-palette, action);
       min-width: initial;
       h1, p {
         display: inline-block;
+      }
+      & > a {
+        margin-left: 1em;
       }
     }
   }
@@ -172,5 +180,8 @@ $border: 3px solid map.get(v.$lotion-palette, action);
   section.contact.border {
     margin-top: 0;
     border: $border;
+    p {
+      color: map.get(v.$lotion-palette, text);
+    }
   }
 }
