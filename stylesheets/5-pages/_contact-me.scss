@@ -1,9 +1,9 @@
 @use "../1-utilities/variables" as v;
 @use '../1-utilities/mixins' as m;
 @use "sass:map";
+$label: map.get(v.$lotion-palette, bold);
 $inline-color: map.get(v.$lotion-palette, text);
-$label: map.get(v.$lotion-palette, text);
-$border: 2px solid map.get(v.$lotion-palette, action);
+$border: 2px solid map.get(v.$lotion-palette, text);
 $line-height: 2rem;
 main.contact {
   form {
@@ -12,7 +12,7 @@ main.contact {
       text-align: center;
       font-size: 2rem;
       margin: 0 0 1em;
-      color: map.get(v.$lotion-palette, text);
+      color: map.get(v.$lotion-palette, bold);
       span {
         padding-bottom: 0.1em;
         border-bottom: 3px solid;
@@ -22,8 +22,7 @@ main.contact {
       opacity: 0;
       display: block;
       margin-bottom: 12px;
-      color: $label; 
-      font-weight: bold;
+      color: $label;
     }
     .inline {
       position: relative;
@@ -70,7 +69,7 @@ main.contact {
     }
     ul.select-items {
       background-color: map.get(v.$lotion-palette, diminished);
-      color: map.get(v.$lotion-palette, text);
+      color: map.get(v.$lotion-palette, bold);
       min-width: 8rem;
       width: 50%;
       border-bottom-left-radius: 7px;
@@ -81,7 +80,6 @@ main.contact {
         padding-right: 0;
         min-height: $line-height;
         line-height: $line-height;
-        font-weight: bold;
         @include m.hover {
           color: map.get(v.$lotion-palette, highlight);
         }
@@ -114,7 +112,6 @@ main.contact {
     button[type="submit"] {
       background-color: map.get(v.$lotion-palette, action);
       color: map.get(v.$lotion-palette, background);
-      font-weight: bold;
       margin: 5px auto;
       display: block;
       @keyframes wobble {

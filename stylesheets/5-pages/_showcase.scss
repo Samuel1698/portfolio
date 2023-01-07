@@ -21,14 +21,13 @@ $border: 3px solid map.get(v.$lotion-palette, action);
   //     }
   //   }
   //   figcaption {
-  //     color: map.get(v.$lotion-palette, text);
+  //     color: map.get(v.$lotion-palette, bold);
   //     font-size: 0.9em;
   //     text-align: center;
   //   }
   // }
   h1, h2, p {
-    font-weight: bold;
-    color: map.get(v.$lotion-palette, text);
+    color: map.get(v.$lotion-palette, bold);
   }
   p {
     color: map.get(v.$lotion-palette, action);
@@ -36,7 +35,8 @@ $border: 3px solid map.get(v.$lotion-palette, action);
   p a {
     color: map.get(v.$lotion-palette, highlight);
     @include m.hover{
-      text-decoration: underline 2px solid map.get(v.$lotion-palette, highlight);
+      border-bottom: 2px solid map.get(v.$lotion-palette, highlight);
+      margin-bottom: -2px;
     }
   }
   div.purpose {
@@ -74,7 +74,6 @@ $border: 3px solid map.get(v.$lotion-palette, action);
       z-index: 1;
       background-color: map.get(v.$lotion-palette, action);
       color: map.get(v.$lotion-palette, background);
-      font-weight: bold;
       transform: rotate(-90deg) translate(-150px, -38px);
       @include m.hover {
         background-color: map.get(v.$lotion-palette, highlight);
@@ -172,7 +171,6 @@ $border: 3px solid map.get(v.$lotion-palette, action);
           text-align: center;
           font-size: 0.9em;
           line-height: 1.4em;
-          font-weight: bold;
         }
       }
     }
@@ -181,7 +179,7 @@ $border: 3px solid map.get(v.$lotion-palette, action);
     margin-top: 0;
     border: $border;
     p {
-      color: map.get(v.$lotion-palette, text);
+      color: map.get(v.$lotion-palette, bold);
     }
   }
 }

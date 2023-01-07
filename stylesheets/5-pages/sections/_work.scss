@@ -3,11 +3,10 @@
 @use "sass:map";
 
 section.work {
-  color: map.get(v.$navy-palette, text);
+  color: map.get(v.$navy-palette, bold);
   background-color: map.get(v.$navy-palette, background);
   text-align: center;
   h3 {
-    font-weight: bold;
     font-size: 2em;
     margin: 0 auto 1em;
     padding-top: 0.5em;
@@ -170,7 +169,7 @@ section.work {
       right: 100%;
       left: -100%;
       opacity: 1;
-      color: map.get(v.$navy-palette, text);
+      color: map.get(v.$navy-palette, bold);
       padding: 0 16px;
       ul {
         margin: 20% auto auto auto;
@@ -194,7 +193,7 @@ section.work {
         justify-content: center;
         align-items: center;
         flex-wrap: nowrap;
-        color: map.get(v.$navy-palette, text);
+        color: map.get(v.$navy-palette, bold);
         p {
           margin: 0 16px 0 0;
         }

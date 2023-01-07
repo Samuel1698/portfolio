@@ -5,6 +5,7 @@
   // 32nd color pallette
   --maastrichtBlue: #08243B;
   --lightGrey: #D4D4D6;
+  --softBlue: #A1ACBD;
   --brownYellow: #C79360;
   --darkElectricBlue: #5E6F7C;
   --boyRed: #756151;
@@ -18,7 +19,8 @@
 
 $navy-palette: (
   background: var(--maastrichtBlue),
-  text: var(--lightGrey),
+  bold: var(--lightGrey),
+  text: var(--softBlue),
   action: var(--brownYellow),
   diminished: var(--darkElectricBlue),
   highlight: var(--boyRed)
@@ -26,7 +28,8 @@ $navy-palette: (
 
 $lotion-palette: (
   background: var(--lotion),
-  text: var(--japaneseIndigo),
+  bold: var(--japaneseIndigo),
+  text: var(--slateGrey),
   action: var(--slateGrey),
   diminished: var(--platinum),
   highlight: var(--fireOpal)

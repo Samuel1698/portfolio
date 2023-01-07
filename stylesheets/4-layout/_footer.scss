@@ -11,7 +11,7 @@ footer {
   background-color: map.get(v.$navy-palette, background);
   padding: 1.625em 0 0.625em;
   font-size: 1em;
-  color: map.get(v.$navy-palette, text);
+  color: map.get(v.$navy-palette, bold);
   text-align: center;
   position: relative;
   .container {
@@ -34,7 +34,6 @@ footer {
     button {
       font-size: 0.9rem;
       span {
-        font-weight: bold;
         font-size: 1em;
       }
     }
@@ -55,7 +54,7 @@ footer {
     button.select-button {
       margin-top: 8px;
       padding: 0.275rem 1.75rem 0.275rem 0.75rem;
-      color: map.get(v.$navy-palette, text);
+      color: map.get(v.$navy-palette, bold);
       border-radius: 0;
       border-right: 2px solid map.get(v.$navy-palette, highlight);
       border-bottom: 2px solid map.get(v.$navy-palette, highlight);
@@ -71,7 +70,6 @@ footer {
       li {
         text-align: left;
         font-size: 0.9rem;
-        font-weight: bold;
         padding: 8px 0.75rem;
         margin: 0 auto;
         background-color: map.get(v.$navy-palette, background);
@@ -89,7 +87,7 @@ footer {
       padding: 6px 6px 6px 12px;
       vertical-align: bottom;
       background-color: map.get(v.$navy-palette, diminished);
-      color: map.get(v.$navy-palette, text);
+      color: map.get(v.$navy-palette, bold);
       position: relative;
       overflow: hidden; // This needs to be on this button to prevent mozilla bug with block elements, overflow hidden causing layout shift
       &::before {
@@ -128,10 +126,10 @@ footer {
       font-size: 0; // Reset whitespace
       height: 1.5rem;
       min-height: 40px;
-      color: map.get(v.$navy-palette, text);
+      color: map.get(v.$navy-palette, bold);
       position: relative;
       svg {
-        fill: map.get(v.$navy-palette, text);
+        fill: map.get(v.$navy-palette, bold);
         position: absolute;
         top: 7px;
         left: 4px;
@@ -164,8 +162,9 @@ footer {
     max-width: 95%;
     margin: auto;
     line-height: 2em;
+    color: map.get(v.$navy-palette, text);
     a {
-      color: map.get(v.$navy-palette, text);
+      color: map.get(v.$navy-palette, bold);
       border-bottom: 2px solid map.get(v.$navy-palette, highlight);
       @include m.hover {
         color: map.get(v.$navy-palette, action);

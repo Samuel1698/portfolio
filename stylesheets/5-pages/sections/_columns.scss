@@ -12,9 +12,8 @@
   flex-direction: row;
   justify-content: space-around;
   background-color: map.get(v.$lotion-palette, diminished);
-  color: map.get(v.$lotion-palette, text);
+  color: map.get(v.$lotion-palette, bold);
   h3 {
-    font-weight: normal;
     font-size: 1.2rem;
     text-align: center;
     margin: 20px 0;
@@ -87,7 +86,6 @@ section.cert {
         width: 22px;
       }
       span {
-        font-weight: normal;
         font-size: 1em;
         border-bottom: 2px solid;
         margin-bottom: -2px;

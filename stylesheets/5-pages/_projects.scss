@@ -31,9 +31,8 @@
             display: inline-block;
             border-radius: 7px;
             background-color: map.get(v.$lotion-palette, background);
-            color: map.get(v.$lotion-palette, text);
+            color: map.get(v.$lotion-palette, bold);
             font-size: 1em;
-            font-weight: bold;
             position: relative;
             svg {
               position: absolute;
@@ -44,7 +43,7 @@
               padding-left: 1.8em;
             }
             @include m.hover {
-              background-color: map.get(v.$navy-palette, text);
+              background-color: map.get(v.$navy-palette, bold);
               svg {
                 fill: $progress-bar;
               }
@@ -72,7 +71,6 @@
           text-align: center;
           font-size: 0.9em;
           line-height: 1.4em;
-          font-weight: bold;
         }
       }
     }

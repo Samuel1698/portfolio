@@ -4,8 +4,7 @@
 section.why {
   /* prettier-ignore */
   h3, h4 {
-    color: map.get(v.$lotion-palette, text);
-    font-weight: bold;
+    color: map.get(v.$lotion-palette, bold);
     margin: 1em auto;
   }
   h3 {

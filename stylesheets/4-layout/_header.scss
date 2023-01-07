@@ -6,14 +6,13 @@ header {
   --bottom: 58px;
   --collapsedHeight: 0px;
   background-color: map.get(v.$navy-palette, background);
-  color: map.get(v.$navy-palette, text);
+  color: map.get(v.$navy-palette, bold);
   text-align: center;
   position: relative;
   width: 100%;
   a.skip-link {
     background: map.get(v.$navy-palette, diminished);
-    color: map.get(v.$navy-palette, text);
-    font-weight: bold;
+    color: map.get(v.$navy-palette, bold);
     left: 50%;
     padding: 6px 12px;
     border-radius: 5px;
@@ -44,8 +43,7 @@ header {
         margin-top: 5px;
         font-size: 0.9em;
         padding: 16px 12px;
-        font-weight: bold;
-        color: map.get(v.$navy-palette, text);
+        color: map.get(v.$navy-palette, bold);
         @include m.hover {
           span {
             color: map.get(v.$navy-palette, action);
@@ -63,7 +61,7 @@ header {
           position: relative;
           right: 24px;
           top: -2px;
-          stroke: map.get(v.$navy-palette, text);
+          stroke: map.get(v.$navy-palette, bold);
         }
         @include m.hover {
           svg {
@@ -85,7 +83,7 @@ header {
           // ---------------------------------------------------
           // Close button recolor
           /* prettier-ignore */
-          path.outer {fill: map.get(v.$navy-palette, text);}
+          path.outer {fill: map.get(v.$navy-palette, bold);}
           /* prettier-ignore */
           path.inner {fill: map.get(v.$navy-palette, background);}
           // ---------------------------------------------------
@@ -93,7 +91,7 @@ header {
           /* prettier-ignore */
           g.right {fill: map.get(v.$lotion-palette, background);}
           /* prettier-ignore */
-          path.left {fill: map.get(v.$navy-palette, text);}
+          path.left {fill: map.get(v.$navy-palette, bold);}
         }
         @include m.hover {
           svg .outer, svg g.right, svg path.left {
@@ -128,9 +126,6 @@ header {
         align-items: center;
         border-bottom: 1px solid map.get(v.$lotion-palette, diminished);
         border-top: 1px solid map.get(v.$lotion-palette, diminished);
-        // margin-bottom: -1px;
-        // margin-top: -1px;
-        font-weight: bold;
         border-radius: 0;
         padding: 0;
         background-color: map.get(v.$lotion-palette, background);
@@ -143,7 +138,7 @@ header {
         }
         span {
           display: inline-block;
-          color: map.get(v.$lotion-palette, text);
+          color: map.get(v.$lotion-palette, bold);
           padding: 8px 24px;
           line-height: 48px;
         }
@@ -151,7 +146,7 @@ header {
           padding: 17px;
           margin-right: 8px; // align to close button
           line-height: 48px;
-          fill: map.get(v.$lotion-palette, text);
+          fill: map.get(v.$lotion-palette, bold);
           rotate: 90deg; //default to open
           transition: rotate 250ms ease-in-out;
           &.closed {
@@ -179,7 +174,6 @@ header {
             width: 100%;
             white-space: nowrap;
             line-height: 34px;
-            font-weight: bold;
           }
         }
       }
@@ -226,12 +220,8 @@ header {
       right: -4rem;
       left: -4rem;
       z-index: 1;
-      border-bottom: 1px solid map.get(v.$navy-palette, text);
+      border-bottom: 1px solid map.get(v.$navy-palette, bold);
     }
-  }
-  /* prettier-ignore */
-  h1, h2 {
-    font-weight: bold;
   }
   h1 {
     margin-top: 0;

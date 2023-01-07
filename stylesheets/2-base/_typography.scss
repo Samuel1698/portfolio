@@ -2,29 +2,10 @@
 @use "sass:map";
 @font-face {
   font-family: "Open Sans";
-  src: url("opensans-regular.woff2") format("woff2"),
-    url("opensans-regular.woff") format("woff"),
-    url("opensans-regular.ttf") format("truetype");
-  font-weight: normal;
-  font-display: fallback;
-}
-@font-face {
-  font-family: "Open Sans";
   src: url("opensans-bold.woff2") format("woff2"),
     url("opensans-bold.woff") format("woff"),
     url("opensans-bold.ttf") format("truetype");
   font-weight: bold;
-  font-display: fallback;
-}
-@font-face {
-  font-family: "Yanone Kaffeesatz";
-  src: url("yanonekaffeesatz-regular.woff2")
-      format("woff2"),
-    url("yanonekaffeesatz-regular.woff")
-      format("woff"),
-    url("yanonekaffeesatz-regular.ttf")
-      format("truetype");
-  font-weight: normal;
   font-display: fallback;
 }
 @font-face {
@@ -42,7 +23,11 @@ html {
   overflow-x: hidden;
   overflow-y: auto;
   font-family: "Open Sans", sans-serif;
+  font-weight: bold;
   font-size: 16px;
+}
+button {
+  font-weight: bold;
 }
 p {
   font-size: 1em;

@@ -173,8 +173,9 @@
   - [x] Remove images
   - [x] Mobile view border needs to be bigger and realigned
   - [x] 'Features' in Spanish overflows
-  - [ ] Update portfolio image
-  - [ ] Portfolio highlight features in same style as pinkwug
+  - [x] Portfolio highlight features in same style as pinkwug
+  - [ ] Link to the website somewhere in pinkwug
+  - [ ] Remove github feature
 <!-- Deploying new theme -->
 - [ ] Optimize new images
 - [ ] Sync changes in the .html files across both folders

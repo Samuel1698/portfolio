@@ -19,9 +19,8 @@ section.about {
     height: initial; // 425px
     width: 238.8px;
   }
-  h3 {
-    font-weight: bold;
-    font-size: 1.5em;
+  h1 {
+    color: map.get(v.$navy-palette, bold);
   }
   p:last-of-type {
     margin-bottom: 0;
