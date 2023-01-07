@@ -55,7 +55,6 @@
     - [x] Update Images
     - [x] Animate coming from the side on scroll
     - [x] Resize images as screen size changes
-    
   - [x] Why Hire a Developer?
     - [x] Content
     - [x] Style
@@ -92,8 +91,6 @@
     - [x] Aria labels when opened and closed
   - [x] Responsiveness
   - [x] Styling
-  - [ ] Form validation
-    - [ ] Prevent submit if not a valid email
 - [x] Animate submit button left and right on hover
 - [x] Footer
   - [x] Language select doesn't work on different pages
@@ -148,3 +145,36 @@
   - [x] EN subdomain
   - [x] ES subdomain
   - [x] www subdomain
+  - [x] no subdomain
+<!-- Restyling -->
+- [x] More concise and consistent color palettes
+- [x] Header
+  - [x] Hamburger menu all views
+  - [x] Close button
+  - [x] Colors & Shadow
+  - [ ] Category hover & Down buttons
+  - [ ] Hint images next to the resume and linkedin buttons
+- [ ] Index page
+  - [ ] Bigger column section
+  - [x] Recent work hidden elements
+  - [x] Contact button
+  - [ ] New work item portfolio image 
+- [x] Contact page
+  - [x] Form
+  - [x] Inputs & Caret image
+  - [x] Email button
+- [ ] Certificates
+  - [ ] New layout
+  - [ ] College diploma
+  - [ ] Noble Desktop
+  - [ ] Coursera
+- [ ] Showcase
+  - [ ] Hero image on mobile views
+  - [ ] Update portfolio image
+  - [ ] Portfolio highlight features in same style as pinkwug
+  - [ ] 'Features' in Spanish overflows
+<!-- Deploying new theme -->
+- [ ] Optimize new images
+- [ ] Sync changes in the .html files across both folders
+- [ ] application.css and all .min.js files
+- [ ] Remove any 'images/' from .html
