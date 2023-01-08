@@ -1,27 +1,27 @@
 @use "../1-utilities/variables" as v;
 @use "sass:map";
 
-main.error .container {
+#error .container {
   text-align: center;
   .message {
     margin: auto;
-    max-width: calc(#{v.$small} / 2);
     display: flex;
     flex-wrap: wrap;
-    
+    align-items: center;
+    justify-content: space-around;
     h1 {
       width: 100%;
       font-size: 3rem;
     }
-    p {
+    p, img {
       display: inline-block;
       width: 50%;
+      max-width: 250px;
     }
     img {
       width: 150px;
-      float: right;
       position: relative;
-      top: -52px;
+      top: -46px;
     }
   }
   .navigation {
