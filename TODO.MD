@@ -153,7 +153,7 @@
   - [x] Close button
   - [x] Colors & Shadow
   - [x] Category hover & Down buttons
-  - [ ] Hint images next to the resume and linkedin buttons
+  - [x] Hint images next to the resume and linkedin buttons
   - [x] SR ONLY spans in buttons
 - [x] Footer 
   - [x] change language button highlight color
@@ -168,17 +168,18 @@
   - [x] Inputs & Caret image
   - [x] Email button
 - [ ] Certificates
+  - [ ] WIP 
   - [ ] New layout
   - [ ] College diploma
   - [ ] Noble Desktop
   - [ ] Coursera
-- [ ] Showcase
+- [ ] Error page redesign
+- [x] Showcase
   - [x] Remove images
   - [x] Mobile view border needs to be bigger and realigned
   - [x] 'Features' in Spanish overflows
   - [x] Portfolio highlight features in same style as pinkwug
-  - [ ] Link to the website somewhere in pinkwug
-  - [ ] Remove github feature
+  - [x] Link to the website somewhere in pinkwug
 <!-- Deploying new theme -->
 - [ ] Optimize new images
 - [ ] Sync changes in the .html files across both folders

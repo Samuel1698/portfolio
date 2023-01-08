@@ -167,6 +167,13 @@ header {
           @include m.hover {
             color: map.get(v.$lotion-palette, highlight);
             background-color: map.get(v.$lotion-palette, diminished);
+            svg {
+              fill: map.get(v.$lotion-palette, highlight);
+            }
+            svg.no-fill {
+              fill:  none;
+              stroke: map.get(v.$lotion-palette, highlight);
+            }
           }
           a {
             display: inline-block;
@@ -174,6 +181,20 @@ header {
             width: 100%;
             white-space: nowrap;
             line-height: 34px;
+          }
+        }
+        a.svg {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          svg {
+            padding: 5px;
+            margin-right: 8px;
+            fill: map.get(v.$lotion-palette, bold);
+          }
+          svg.no-fill {
+            fill: none;
+            stroke: map.get(v.$lotion-palette, bold);
           }
         }
       }
