@@ -7,9 +7,11 @@ const wrapper = overlay.querySelector(".wrapper");
 const button = document.querySelectorAll(".overlay .arrow");
 const listItem = document.querySelectorAll(".cert ul li");
 const closeBtn = wrapper.querySelector(".close");
+const body = document.querySelector("body");
 
 overlay.addEventListener("click", function () {
   // Reset all classes that could be added
+  body.classList.remove("no-scroll");
   this.classList.remove("active");
   wrapper.classList.remove("active");
   for (let i = 0; i < img.length; i++) {
@@ -144,6 +146,7 @@ function assignClasses(i) {
 }
 function activateOverlay(e) {
   // Activate overlay on click and enter
+  body.classList.add("no-scroll");
   overlay.classList.add("active");
   wrapper.classList.add("active");
   button[0].tabIndex = 0;

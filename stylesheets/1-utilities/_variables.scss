@@ -15,6 +15,8 @@
   --slateGrey: #6D7C8B;
   --platinum: #DFE4E5;
   --fireOpal: #EE5555;
+  // other
+  --margin: 100px;
 }
 
 $navy-palette: (
@@ -36,6 +38,7 @@ $lotion-palette: (
 );
 
 $inputs: map.get($navy-palette, background);
+$margin: var(--margin);
 
 $small: 40rem; // 640px
 $medium: 58.75rem; // 940px

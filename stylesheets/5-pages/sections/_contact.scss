@@ -9,7 +9,7 @@ section.contact {
   padding: 12px 12px 20px;
   border-radius: 7px;
   position: relative;
-  margin: 1em auto -5.5em;
+  margin: calc(v.$margin / 2) auto -5.5em;
   text-align: center;
   width: clamp(260px, 80%, 940px);
   position: relative;

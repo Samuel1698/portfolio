@@ -2,6 +2,7 @@
 @use "sass:map";
 
 section.why {
+  margin-top: v.$margin;
   /* prettier-ignore */
   h3, h4 {
     color: map.get(v.$lotion-palette, bold);
@@ -9,12 +10,13 @@ section.why {
   }
   h3 {
     font-size: 2em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.7em;
   }
   h4 {
     font-size: 1.5em;
   }
   p {
     color: map.get(v.$lotion-palette, text);
+    margin-bottom: 1.5em;
   }
 }

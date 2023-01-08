@@ -77,7 +77,7 @@ header {
         background-color: initial;
         padding: 12px;
         margin-top: 5px;
-        z-index: 4;
+        z-index: 6;
         svg {
           vertical-align: bottom;
           // ---------------------------------------------------
@@ -117,7 +117,7 @@ header {
       &.visible {
         display: block;
         opacity: 2;
-        z-index: 4;
+        z-index: 6;
       }
       button.category {
         width: 100%;
@@ -206,7 +206,7 @@ header {
         bottom: 0;
         right: 0;
         left: 0;
-        z-index: 3;
+        z-index: 5;
         background-color: rgba(0, 0, 0, 0.6);
       }
     }

@@ -9,7 +9,7 @@ section.work {
   h3 {
     font-size: 2em;
     margin: 0 auto 1em;
-    padding-top: 0.5em;
+    padding-top: v.$margin;
   }
   .flex_wrapper {
     display: flex;
@@ -232,6 +232,7 @@ section.work {
     bottom: -1px;
     width: 100%;
     min-height: 85px;
+    margin-top: calc(v.$margin / 2);
     path {
       fill: map.get(v.$lotion-palette, background);
     }

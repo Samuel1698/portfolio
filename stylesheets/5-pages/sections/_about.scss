@@ -10,7 +10,6 @@ section.about {
   position: relative;
   top: -52px; //This -32 is the margin between columns and about me
   margin-bottom: -52px;
-  z-index: -1;
   // End of offset
   img {
     position: absolute;
@@ -30,6 +29,7 @@ section.about {
     padding: 0 0 2em 142px;
     min-width: 0;
     width: calc(100% - 152px);
+    margin-top: v.$margin;
   }
   .swoosh {
     vertical-align: top; //Needed to remove whitespace below

@@ -4,9 +4,11 @@
 
 .columns {
   @include m.shadow;
-  margin: 0 auto;
+  margin: calc(v.$margin / 2) auto 0;
   width: 300px;
   border-radius: 12px;
+  position: relative;
+  z-index: 4; // Needs to be bigger than the header nav and h2
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
