@@ -86,10 +86,14 @@ footer {
       margin-top: 10px;
       padding: 6px 6px 6px 12px;
       vertical-align: bottom;
-      background-color: map.get(v.$navy-palette, diminished);
-      color: map.get(v.$navy-palette, bold);
+      background-color: map.get(v.$navy-palette, action);
+      color: map.get(v.$navy-palette, background);
       position: relative;
       overflow: hidden; // This needs to be on this button to prevent mozilla bug with block elements, overflow hidden causing layout shift
+      @include m.hover {
+        padding: 8px 8px 8px 14px;
+        margin-top: 8px;
+      }
       &::before {
         position: absolute;
         content: "";

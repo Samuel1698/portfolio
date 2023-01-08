@@ -82,10 +82,10 @@ for (let i = 0; i < li.length; i++) {
 }
 function changeLang(element) {
   if (element.querySelector("span").innerText == "ES") {
-    submit.querySelector("span.text").innerText = "Aplicar Cambio"
+    submit.querySelector("span.text").innerText = "Aplicar"
   }
   else if (element.querySelector("span").innerText == "EN"){
-    submit.querySelector("span.text").innerText = "Save Change"
+    submit.querySelector("span.text").innerText = "Apply"
   }
 }
 submit.addEventListener("click", function () {
