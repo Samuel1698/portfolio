@@ -1,6 +1,7 @@
 // ----------------------------------------------------------
 // Certificate carousel
 // ----------------------------------------------------------
+const columns = document.querySelector(".columns");
 const overlay = document.querySelector(".columns .overlay");
 const img = overlay.querySelectorAll("img");
 const wrapper = overlay.querySelector(".wrapper");
@@ -12,6 +13,7 @@ const body = document.querySelector("body");
 overlay.addEventListener("click", function () {
   // Reset all classes that could be added
   body.classList.remove("no-scroll");
+  columns.classList.remove("overlayed");
   this.classList.remove("active");
   wrapper.classList.remove("active");
   for (let i = 0; i < img.length; i++) {
@@ -145,8 +147,10 @@ function assignClasses(i) {
   }
 }
 function activateOverlay(e) {
-  // Activate overlay on click and enter
+  // Prevent scroll
   body.classList.add("no-scroll");
+  columns.classList.add("overlayed");
+  // Activate overlay on click and enter
   overlay.classList.add("active");
   wrapper.classList.add("active");
   button[0].tabIndex = 0;
