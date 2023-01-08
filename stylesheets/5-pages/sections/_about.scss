@@ -32,6 +32,9 @@ section.about {
     width: calc(100% - 152px);
     margin-top: calc(v.$margin - var(--offset));
   }
+  .top-swoosh {
+    display: none;
+  }
   .swoosh {
     vertical-align: top; //Needed to remove whitespace below
     position: absolute;

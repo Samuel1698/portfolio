@@ -289,8 +289,30 @@ main section.about {
     }
     section.about {
       --offset: 0px;
+      --swoosh: 85px;
+      $swoosh: var(--swoosh);
+      // Required for top swoosh
+      overflow: visible;
       // This margin makes sure the .columns section is centered
-      margin-top: calc(v.$margin + 57px); //57px from header
+      margin-top: calc(v.$margin + 57px + ($swoosh / 2));
+      .container {
+        padding-top: $swoosh;
+      }
+      .top-swoosh {
+        display: inline-block;
+        position: absolute;
+        top: calc($swoosh * -1);
+        vertical-align: top; //Needed to remove whitespace below
+        width: 100%;
+        height: $swoosh;
+        z-index: 1;
+        path {
+          fill: map.get(v.$navy-palette, background);
+        }
+      }
+      img {
+        padding-top: v.$margin;
+      }
     }
     section.about .container {
       width: calc(#{v.$medium} - 180px);
