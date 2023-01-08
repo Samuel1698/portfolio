@@ -173,11 +173,13 @@ footer {
       @include m.hover {
         color: map.get(v.$navy-palette, action);
         border-color: map.get(v.$navy-palette, action);
+        svg circle {
+          fill: map.get(v.$navy-palette, action);
+        }
       }
     }
-    img {
+    svg {
       height: 22px;
-      margin-left: 3px;
       vertical-align: text-bottom;
     }
     .license {
