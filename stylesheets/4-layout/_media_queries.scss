@@ -245,6 +245,7 @@ main section.about {
   main {
     .columns {
       width: 900px;
+      margin: v.$margin auto;
       .border.two {
         width: 0;
         border-left: 1px solid;
@@ -279,15 +280,17 @@ main section.about {
       width: 256px;
     }
     section.cert {
-      ul {
-        display: initial;
-        li {
-          width: 100%;
-          img {
-            margin-right: 0;
-          }
+      ul li {
+        width: 100%;
+        img {
+          margin-right: 0;
         }
       }
+    }
+    section.about {
+      --offset: 0px;
+      // This margin makes sure the .columns section is centered
+      margin-top: calc(v.$margin + 57px); //57px from header
     }
     section.about .container {
       width: calc(#{v.$medium} - 180px);

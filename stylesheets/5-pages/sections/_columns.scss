@@ -18,7 +18,7 @@
   h3 {
     font-size: 1.2rem;
     text-align: center;
-    margin: 20px 0;
+    margin: 0.6em 0;
     font-size: 1.7rem;
   }
   .border {
@@ -38,15 +38,17 @@
   ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin: auto 0 0;
+    align-content: space-between;
+    height: 100%;
+    margin: 0;
     li {
       width: 50%;
       display: inline-block;
       text-align: center;
       padding: 0.5em 0;
-      line-height: 18.4px;
+      line-height: 2rem;
       opacity: 0;
+      margin: 0.7em 0;
       img {
         width: 100%;
       }
@@ -103,7 +105,6 @@ section.cert {
 /* prettier-ignore */
 section.languages, section.skills {
   ul li {
-    padding: 0.5em 0 0;
-    height: calc(2.4rem + 48px); // 48px is the height of the image
+    padding: 8px 0 0;
   }
 }

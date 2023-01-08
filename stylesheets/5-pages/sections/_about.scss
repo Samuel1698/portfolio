@@ -1,15 +1,16 @@
 @use "../../1-utilities/variables" as v;
 @use "sass:map";
 
+
 section.about {
+  --offset: -120px;
   background-color: map.get(v.$navy-palette, background);
   color: map.get(v.$navy-palette, text);
   overflow: hidden;
   // Top offset
-  padding-top: 52px;
   position: relative;
-  top: -52px; //This -32 is the margin between columns and about me
-  margin-bottom: -52px;
+  top: var(--offset); 
+  margin-bottom: var(--offset);
   // End of offset
   img {
     position: absolute;
@@ -29,7 +30,7 @@ section.about {
     padding: 0 0 2em 142px;
     min-width: 0;
     width: calc(100% - 152px);
-    margin-top: v.$margin;
+    margin-top: calc(v.$margin - var(--offset));
   }
   .swoosh {
     vertical-align: top; //Needed to remove whitespace below

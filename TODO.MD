@@ -155,11 +155,13 @@
   - [x] Category hover & Down buttons
   - [x] Hint images next to the resume and linkedin buttons
   - [x] SR ONLY spans in buttons
+  - [ ] aria labels
 - [x] Footer 
   - [x] change language button highlight color
   - [x] Small section svg color change
 - [ ] Index page
-  - [ ] Bigger column section
+  - [x] Bigger column section
+  - [ ] overlay close button needs to be bigger and out of the picture
   - [x] Recent work hidden elements
   - [x] Contact button
   - [ ] New work item portfolio image 
