@@ -173,7 +173,7 @@
   - [ ] College diploma
   - [ ] Noble Desktop
   - [ ] Coursera
-- [ ] Error page redesign
+- [x] Error page
 - [x] Showcase
   - [x] Remove images
   - [x] Mobile view border needs to be bigger and realigned
