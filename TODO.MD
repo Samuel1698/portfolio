@@ -154,10 +154,10 @@
   - [x] Colors & Shadow
   - [x] Category hover & Down buttons
   - [ ] Hint images next to the resume and linkedin buttons
-  - [ ] SR ONLY spans in buttons
-- [ ] Footer 
+  - [x] SR ONLY spans in buttons
+- [x] Footer 
   - [x] change language button highlight color
-  - [ ] Small section svg color change
+  - [x] Small section svg color change
 - [ ] Index page
   - [ ] Bigger column section
   - [x] Recent work hidden elements
