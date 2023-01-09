@@ -345,7 +345,12 @@ main section.about {
 @media screen and (orientation: landscape) {
   @media (min-width: v.$small) {
     :root {
-      --carousel-size: 70vw;
+      --carousel-size: 42vw;
+    }
+  }
+  main .columns .overlay {
+    h1 {
+      margin-bottom: 0.5rem;
     }
   }
   main .columns .overlay.active button.arrow {

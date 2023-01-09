@@ -50,7 +50,8 @@
       opacity: 0;
       margin: 0.7em 0;
       img {
-        width: 100%;
+        display: block;
+        margin: 0 auto;
       }
       span {
         color: map.get(v.$lotion-palette, text);

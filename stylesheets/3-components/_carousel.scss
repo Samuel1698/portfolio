@@ -2,16 +2,22 @@
 @use '../1-utilities/mixins' as m;
 @use "sass:map";
 
+$width: 95vw;
 .columns.overlayed {
   z-index: 10;
 }
 .columns .overlay {
   position: fixed;
   right: 9999px;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: map.get(v.$lotion-palette, background);
   width: 0;
   height: 0;
   font-size: 0; //Remove inline whitespace
+  text-align: center;
+  h1 {
+    font-size: 2rem;
+    margin-top: 0;
+  }
   button.arrow {
     border: none;
     cursor: pointer;
@@ -30,10 +36,10 @@
     position: relative;
     overflow: hidden;
     &.active {
-      width: calc(75vw * 22 / 17);
-      height: 75vw;
-      max-width: calc(100vh * 22 / 17);
-      max-height: 100vh;
+      width: $width;
+      max-width: 100vh;
+      height: calc($width * 17 / 22);
+      max-height: calc(100vh * 17 / 22);
     }
   }
   .img-border {
@@ -47,14 +53,14 @@
   img {
     position: absolute;
     right: 100%;
-    bottom: 50%;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
     &.active {
       position: absolute;
       transition: left 1s ease-in-out;
       left: 0%;
       bottom: 0;
-      width: 100%;
-      height: 100%;
       &.after {
         left: 100%;
       }
@@ -75,7 +81,7 @@
 .columns .overlay.active {
   height: initial;
   width: initial;
-  top: 0;
+  top: 58px;
   bottom: 0;
   left: 0;
   right: 0;
@@ -87,12 +93,17 @@
   justify-content: center;
   button.arrow {
     position: absolute;
-    height: 80px;
-    width: 80px;
-    top: calc(50% + (95vw * 17 / 22) / 2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    top: calc(50% + ($width * 17 / 22) / 2 + 2rem);
     transform: translate(-50%, 0%);
+    // svg {
+    //   stroke: map.get(v.$lotion-palette, background);
+    // }
     &.prev {
-      background: url("/left.svg") center/100px no-repeat;
       left: 10%;
       transition: left 0.5s cubic-bezier(0.55, 0.09, 0.68, 0.53);
       &.pressed {
@@ -101,7 +112,6 @@
       }
     }
     &.next {
-      background: url("/right.svg") center/100px no-repeat;
       left: 90%;
       transition: left 0.5s cubic-bezier(0.55, 0.09, 0.68, 0.53);
       &.pressed {
@@ -110,32 +120,30 @@
       }
     }
     @include m.hover {
-      background-size: 120px;
+      // background-size: 120px;
     }
     &.disabled {
       @include m.hover {
-        background-size: 100px;
+        // background-size: 100px;
       }
     }
-  }
-  button.close.hide {
-    display: none;
   }
   button.close {
     display: initial;
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 40px;
-    height: 40px;
+    top: 16px;
+    right: 16px;
+    width: 48px;
+    height: 48px;
     cursor: pointer;
     padding: 0;
     border: 0;
     border-radius: 0;
-    background: url("/close.svg") center center no-repeat;
-    background-size: 25px;
+    background-color: unset;
     @include m.hover {
-      background-size: 30px;
+      svg {
+        fill: map.get(v.$navy-palette, action);
+      }
     }
   }
 }

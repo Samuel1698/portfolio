@@ -162,6 +162,15 @@
 - [ ] Index page
   - [x] Bigger column section
   - [ ] overlay close button needs to be bigger and out of the picture
+    - [ ] Restyle carousel
+      - [x] Overlay
+      - [ ] h1 sizes on bigger screens
+      - [ ] General Responsiveness
+      - [ ] Bottom circle/lines with amount of carousel items and visual indicator of where people are
+      - [ ] Close button next to header nav?
+      - [ ] 'Verified by Noble Desktop' figcaption 
+    - [ ] Solve bug with first image
+  - [x] Get rid of background: url in css
   - [x] Recent work hidden elements
   - [x] Contact button
   - [ ] New work item portfolio image 
@@ -170,7 +179,7 @@
   - [x] Inputs & Caret image
   - [x] Email button
 - [ ] Certificates
-  - [ ] WIP 
+  - [x] WIP 
   - [ ] New layout
   - [ ] College diploma
   - [ ] Noble Desktop
@@ -186,3 +195,4 @@
 - [ ] Optimize new images
 - [ ] Sync changes in the .html files across both folders
 - [ ] application.css and all .min.js files
+
