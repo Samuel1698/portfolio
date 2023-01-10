@@ -159,7 +159,7 @@ function activateOverlay(e) {
       event.stopPropagation();
     });
     if (img[i].classList[0] == e.target.classList[0]) {
-      assignClasses(i);
+      assignClasses(i); // Index is here
     }
   }
   // Add event listener to the image border to stop propagation to the overlay
