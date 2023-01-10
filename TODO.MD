@@ -167,7 +167,7 @@
       - [x] h1 sizes on bigger screens
       - [x] General Responsiveness: Use columns as container
       - [x] Progress bar visual indicator + Numbers. Ex: 4 of 6
-        - [ ] Assign first 'x' value depending on LI clicked
+        - [x] Assign first 'x' value depending on LI clicked
       - [x] 'Verified by Noble Desktop' figcaption
       - [ ] Link to noble desktop on click or in description
       - [x] Remove overlay click closing

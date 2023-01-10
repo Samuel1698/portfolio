@@ -13,7 +13,6 @@ overlay.querySelector("nav .y").innerHTML = img.length;
 
 closeBtn.addEventListener("click", function () {
   // Reset all classes that could be added
-  columns.classList.remove("overlayed");
   overlay.classList.remove("active");
   wrapper.classList.remove("active");
   for (let i = 0; i < img.length; i++) {
@@ -142,8 +141,6 @@ function assignClasses(i) {
   }
 }
 function activateOverlay(e) {
-  // Prevent scroll
-  columns.classList.add("overlayed");
   // Activate overlay on click and enter
   overlay.classList.add("active");
   wrapper.classList.add("active");
@@ -159,7 +156,8 @@ function activateOverlay(e) {
       event.stopPropagation();
     });
     if (img[i].classList[0] == e.target.classList[0]) {
-      assignClasses(i); // Index is here
+      assignClasses(i);
+      updateCounter(i);
     }
   }
   // Add event listener to the image border to stop propagation to the overlay
