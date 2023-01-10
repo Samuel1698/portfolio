@@ -3,20 +3,21 @@
 @use "sass:map";
 
 $width: 95vw;
-.columns.overlayed {
-  z-index: 10;
-}
+// .columns.overlayed {
+//   z-index: 10;
+// }
 .columns .overlay {
-  position: fixed;
+  position: absolute;
   right: 9999px;
-  background-color: map.get(v.$lotion-palette, background);
+  background-color: map.get(v.$lotion-palette, diminished);
   width: 0;
   height: 0;
   font-size: 0; //Remove inline whitespace
   text-align: center;
   h1 {
     font-size: 2rem;
-    margin-top: 0;
+    line-height: 42px;
+    margin: 1.2rem 0;
   }
   button.arrow {
     border: none;
@@ -36,10 +37,12 @@ $width: 95vw;
     position: relative;
     overflow: hidden;
     &.active {
+      display: inline-block;
       width: $width;
       max-width: 100vh;
       height: calc($width * 17 / 22);
       max-height: calc(100vh * 17 / 22);
+      @include m.bigShadow;
     }
   }
   .img-border {
@@ -81,16 +84,23 @@ $width: 95vw;
 .columns .overlay.active {
   height: initial;
   width: initial;
-  top: 58px;
+  top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 1;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
+  border-radius: 12px;
+  // display: flex;
+  // flex-direction: row;
+  // align-items: center;
+  // flex-wrap: wrap;
+  // justify-content: center;
+  nav {
+    display: inline-block;
+    p {
+      font-size: 1.5rem;
+    }
+  }
   button.arrow {
     position: absolute;
     display: flex;
@@ -100,9 +110,11 @@ $width: 95vw;
     width: 100px;
     top: calc(50% + ($width * 17 / 22) / 2 + 2rem);
     transform: translate(-50%, 0%);
-    // svg {
-    //   stroke: map.get(v.$lotion-palette, background);
-    // }
+    svg {
+      width: 50px; 
+      height: 50px;
+      // stroke: map.get(v.$lotion-palette, background);
+    }
     &.prev {
       left: 10%;
       transition: left 0.5s cubic-bezier(0.55, 0.09, 0.68, 0.53);

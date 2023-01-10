@@ -2,19 +2,19 @@
 // Certificate carousel
 // ----------------------------------------------------------
 const columns = document.querySelector(".columns");
-const overlay = document.querySelector(".columns .overlay");
-const img = overlay.querySelectorAll("img");
-const wrapper = overlay.querySelector(".wrapper");
-const button = document.querySelectorAll(".overlay .arrow");
 const listItem = document.querySelectorAll(".cert ul li");
+const overlay = columns.querySelector(".overlay");
 const closeBtn = columns.querySelector("button.close");
-const body = document.querySelector("body");
+const wrapper = overlay.querySelector(".wrapper");
+const img =     wrapper.querySelectorAll("img");
+const button =   overlay.querySelectorAll(".arrow");
+const x = overlay.querySelector("nav .x");
+overlay.querySelector("nav .y").innerHTML = img.length;
 
-overlay.addEventListener("click", function () {
+closeBtn.addEventListener("click", function () {
   // Reset all classes that could be added
-  body.classList.remove("no-scroll");
   columns.classList.remove("overlayed");
-  this.classList.remove("active");
+  overlay.classList.remove("active");
   wrapper.classList.remove("active");
   for (let i = 0; i < img.length; i++) {
     img[i].tabIndex = -1;
@@ -37,7 +37,10 @@ document.querySelector(".cert ul").addEventListener("keyup", function (e) {
     activateOverlay(e);
   }
 });
-
+// Update the 'x of y' numbers
+function updateCounter(index){
+  x.innerHTML = index + 1; //indexed at 0 by default
+}
 // Switch the certificate shown to the previous one
 function previousImage(event) {
   // Reset the other button
@@ -54,6 +57,7 @@ function previousImage(event) {
     button[1].tabIndex = 0;
     resetClasses(index);
     assignClasses(index - 1);
+    updateCounter(index - 1);
   }
 }
 // Switch the certificate shown to the next one
@@ -73,6 +77,7 @@ function nextImage(event) {
     button[0].tabIndex = 0;
     resetClasses(index);
     assignClasses(index + 1);
+    updateCounter(index + 1);
   }
 }
 // Add 'click' event to the button
@@ -138,7 +143,6 @@ function assignClasses(i) {
 }
 function activateOverlay(e) {
   // Prevent scroll
-  body.classList.add("no-scroll");
   columns.classList.add("overlayed");
   // Activate overlay on click and enter
   overlay.classList.add("active");

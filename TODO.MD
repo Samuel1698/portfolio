@@ -164,11 +164,14 @@
   - [ ] overlay close button needs to be bigger and out of the picture
     - [ ] Restyle carousel
       - [x] Overlay
-      - [ ] h1 sizes on bigger screens
-      - [ ] General Responsiveness
-      - [ ] Bottom circle/lines with amount of carousel items and visual indicator of where people are
-      - [ ] Close button next to header nav?
-      - [ ] 'Verified by Noble Desktop' figcaption 
+      - [x] h1 sizes on bigger screens
+      - [x] General Responsiveness: Use columns as container
+      - [x] Progress bar visual indicator + Numbers. Ex: 4 of 6
+      - [x] 'Verified by Noble Desktop' figcaption
+      - [ ] Link to noble desktop on click or in description
+      - [x] Remove overlay click closing
+      - [ ] Swipe on mobile support
+      - [ ] Mobile buttons closer to each other
     - [ ] Solve bug with first image
   - [x] Get rid of background: url in css
   - [x] Recent work hidden elements
@@ -191,6 +194,8 @@
   - [x] 'Features' in Spanish overflows
   - [x] Portfolio highlight features in same style as pinkwug
   - [x] Link to the website somewhere in pinkwug
+  - [ ] Visual indicator/Progress bar
+  - [ ] Navigational Buttons
 <!-- Deploying new theme -->
 - [ ] Optimize new images
 - [ ] Sync changes in the .html files across both folders

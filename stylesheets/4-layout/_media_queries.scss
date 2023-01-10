@@ -139,32 +139,22 @@ main section.about {
         width: 0;
         border-left: 1px solid;
       }
-      .overlay.active button.arrow {
-        width: 100px;
-        height: 100px;
-        /* prettier-ignore */
-        &.next, &.prev {
-          background-size: 150px;
-          @include m.hover {
-            background-size: 170px;
-          }
-        }
-        &.disabled {
-          @include m.hover {
-            background-size: 150px;
-          }
-        }
-      }
-      .overlay button.close {
-        top: 10px;
-        right: 10px;
-        width: 50px;
-        height: 50px;
-        background-size: 30px;
-        @include m.hover {
-          background-size: 35px;
-        }
-      }
+      // .overlay.active button.arrow {
+      //   width: 100px;
+      //   height: 100px;
+      //   /* prettier-ignore */
+      //   &.next, &.prev {
+      //     background-size: 150px;
+      //     @include m.hover {
+      //       background-size: 170px;
+      //     }
+      //   }
+      //   &.disabled {
+      //     @include m.hover {
+      //       background-size: 150px;
+      //     }
+      //   }
+      // }
       .overlay .wrapper.active {
         width: var(--carousel-size);
         height: calc(var(--carousel-size) * 17 / 22);
@@ -237,7 +227,7 @@ main section.about {
 // ------------------------------------------------------------------------
 @media (min-width: v.$medium) {
   :root {
-    --carousel-size: 72vw;
+    --width: 480px;
   }
   .container {
     max-width: calc(#{v.$medium} - 40px);
@@ -252,13 +242,14 @@ main section.about {
       }
       .overlay {
         .wrapper.active {
-          width: var(--carousel-size);
-          height: calc(var(--carousel-size) * 17 / 22);
+          width: var(--width);
+          height: calc(var(--width) * 17 / 22);
         }
         &.active button.arrow {
           position: relative;
           top: initial;
           transform: initial;
+          display: inline-block;
           &.prev {
             left: -4px;
             &.pressed {
@@ -325,49 +316,30 @@ main section.about {
     }
   }
 }
-// ------------------------------------------------------------------------
-// Rules applying to screens from 1240px forward
-// ------------------------------------------------------------------------
-@media (min-width: v.$big) {
-  :root {
-    --carousel-size: 60vw;
-  }
-  main .columns {
-    .overlay .wrapper.active {
-      width: var(--carousel-size);
-      height: calc(var(--carousel-size) * 17 / 22);
-    }
-  }
-}
-// ------------------------------------------------------------------------
+//------------------------------------------------------------------------
 // Rules for landscape mobile devices
 // ------------------------------------------------------------------------
-@media screen and (orientation: landscape) {
-  @media (min-width: v.$small) {
-    :root {
-      --carousel-size: 42vw;
-    }
-  }
-  main .columns .overlay {
-    h1 {
-      margin-bottom: 0.5rem;
-    }
-  }
-  main .columns .overlay.active button.arrow {
-    position: relative;
-    top: initial;
-    transform: initial;
-    &.prev {
-      left: 0;
-      &.pressed {
-        left: -2%;
-      }
-    }
-    &.next {
-      left: 0;
-      &.pressed {
-        left: 2%;
-      }
-    }
-  }
-}
+// @media screen and (orientation: landscape) {
+//   @media (min-width: v.$small) {
+//     :root {
+//       --carousel-size: 42vw;
+//     }
+//   }
+//   main .columns .overlay.active button.arrow {
+//     position: relative;
+//     top: initial;
+//     transform: initial;
+//     &.prev {
+//       left: 0;
+//       &.pressed {
+//         left: -2%;
+//       }
+//     }
+//     &.next {
+//       left: 0;
+//       &.pressed {
+//         left: 2%;
+//       }
+//     }
+//   }
+// }
