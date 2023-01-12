@@ -12,7 +12,6 @@ $width: 95vw;
   background-color: map.get(v.$lotion-palette, diminished);
   width: 0;
   height: 0;
-  font-size: 0; //Remove inline whitespace
   text-align: center;
   h1 {
     font-size: 2rem;
@@ -38,6 +37,7 @@ $width: 95vw;
     overflow: hidden;
     &.active {
       display: inline-block;
+      vertical-align: top;
       width: $width;
       max-width: 100vh;
       height: calc($width * 17 / 22);
@@ -95,8 +95,23 @@ $width: 95vw;
   // align-items: center;
   // flex-wrap: wrap;
   // justify-content: center;
+  .nav-description {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    vertical-align: top;
+    margin-left: 2%;
+    width: 40%; // Should be based on image width
+    // height: should be same as img height
+    p {
+      margin: 0;
+    }
+  }
   nav {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
     p {
       font-size: 1.5rem;
     }

@@ -244,6 +244,11 @@ main section.about {
         .wrapper.active {
           width: var(--width);
           height: calc(var(--width) * 17 / 22);
+          margin-right: 2%;
+        }
+        .nav-description {
+          //Height of wrapper + 25px from nav buttons
+          height: calc(var(--width) * (17 / 22) + 25px);
         }
         &.active button.arrow {
           position: relative;
