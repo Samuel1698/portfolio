@@ -23,6 +23,9 @@ function toggleVisibility(){
   toggleButtons[0].classList.toggle("visible");
   toggleButtons[1].classList.toggle("visible");
   body.classList.toggle("no-scroll");
+
+  // Aria expanded toggle
+  menu.setAttribute("aria-expanded", menu.getAttribute("aria-expanded") === "true" ? "false" : "true");
 }
 toggleButtons[0].addEventListener("click", toggleVisibility);
 toggleButtons[1].addEventListener("click", toggleVisibility);

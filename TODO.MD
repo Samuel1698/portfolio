@@ -12,7 +12,7 @@
 - [x] Include SEO score, PageSpeed insights, and accessibility score
 - [x] Testimonial
 - [x] Animate elements
-- [ ] Back to top button
+- [x] Back to top button
 <!-- Certificates Page -->
 - [x] Main Certificate Image
 - [x] Informational box on the right of screen with info about main certificate
@@ -155,7 +155,7 @@
   - [x] Category hover & Down buttons
   - [x] Hint images next to the resume and linkedin buttons
   - [x] SR ONLY spans in buttons
-  - [ ] aria labels
+  - [x] aria labels
 - [x] Footer 
   - [x] change language button highlight color
   - [x] Small section svg color change

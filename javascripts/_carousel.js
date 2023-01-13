@@ -128,8 +128,8 @@ function assignClasses(i) {
     img[i - 1].classList.add("active");
   } else {
     button[0].classList.add("disabled");
-    // First image bug is here
     setTimeout(() => {
+      // First image bug is caused by this tab index
       button[0].tabIndex = -1;
     }, 100);
   }
