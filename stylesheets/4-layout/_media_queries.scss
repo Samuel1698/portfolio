@@ -124,7 +124,8 @@ main section.about {
       margin-left: auto;
       margin-right: auto;
       .column {
-        display: flex;
+        position: static;
+        opacity: 1;
       }
       .overlay {
         position: absolute;
@@ -135,6 +136,9 @@ main section.about {
       .border.one {
         width: 0;
         border-left: 1px solid;
+      }
+      .overlay .nav-description {
+        height: 28%;
       }
     }
     section.cert {

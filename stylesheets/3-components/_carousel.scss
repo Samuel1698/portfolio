@@ -10,6 +10,10 @@
   margin-left: 16px;
   margin-right: 16px;
   .column {
+    position: absolute;
+    opacity: 0;
+  }
+  & > .border {
     display: none;
   }
   .overlay {
@@ -116,7 +120,6 @@
     justify-content: space-between;
     vertical-align: top;
     width: 100%;
-    height: 30%;
     margin-top: 4%;
     p {
       margin: 0;
@@ -160,7 +163,8 @@
   border-radius: 12px;
   .wrapper {
     width: var(--width);
-    height: calc(var(--width) * 17 / 22);
+    aspect-ratio: 22 / 17;
+    // height: calc(var(--width) * 17 / 22);
     @include m.bigShadow;
   }
   button.arrow {
