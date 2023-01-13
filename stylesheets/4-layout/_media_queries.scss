@@ -120,25 +120,15 @@ main section.about {
   }
   main {
     .container.columns {
-      // Reset the resetting lmao
+      // Reset the margin to the default value
       margin-left: auto;
       margin-right: auto;
-      .column {
-        position: static;
-        opacity: 1;
-      }
-      .overlay {
-        position: absolute;
-      }
     }
     .normal.columns {
       width: 600px;
       .border.one {
         width: 0;
         border-left: 1px solid;
-      }
-      .overlay .nav-description {
-        height: 28%;
       }
     }
     section.cert {
@@ -214,6 +204,15 @@ main section.about {
     max-width: calc(#{v.$medium} - 40px);
   }
   main {
+    .container.columns {
+      .column {
+        position: static;
+        opacity: 1;
+      }
+      .overlay {
+        position: absolute;
+      }
+    }
     .normal.columns {
       width: 900px;
       margin: v.$margin auto;
@@ -226,32 +225,16 @@ main section.about {
           margin-right: 2%;
         }
         .nav-description {
-          //Height of wrapper + 25px from nav buttons
           width: 40%;
-          height: calc(var(--width) * (17 / 22) + 25px);
+          //Height of wrapper
+          height: calc(var(--width) * (17 / 22));
           margin-left: 2%;
           margin-top: 0;
+          flex-direction: column;
         }
         nav {
+          margin-bottom: 0;
           justify-content: space-between;
-        }
-        &.active button.arrow {
-          position: relative;
-          top: initial;
-          transform: initial;
-          display: inline-block;
-          &.prev {
-            left: -4px;
-            &.pressed {
-              left: -2%;
-            }
-          }
-          &.next {
-            left: 4px;
-            &.pressed {
-              left: 2%;
-            }
-          }
         }
       }
     }

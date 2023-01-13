@@ -172,8 +172,8 @@
       - [ ] Link to noble desktop on click or in description
       - [x] Remove overlay click closing
       - [ ] Swipe on mobile support
-      - [ ] Mobile buttons closer to each other
-      - [ ] Use data-* attribute to change the description element
+      - [x] Mobile buttons closer to each other
+      - [x] Use data-* attribute to change the description element
     - [ ] Solve bug with first image
   - [x] Get rid of background: url in css
   - [x] Recent work hidden elements

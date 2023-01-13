@@ -1,2 +1,4 @@
 # Ignore all HTML files:
 *.html
+# Unstyled files
+Stylesheets/3-components/_carousel.scss

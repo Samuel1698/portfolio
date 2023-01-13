@@ -7,6 +7,7 @@ const overlay = columns.querySelector(".overlay");
 const closeBtn = columns.querySelector("button.close");
 const img =     overlay.querySelectorAll(".wrapper img");
 const button =   overlay.querySelectorAll(".arrow");
+const p = overlay.querySelector("p.description");
 const x = overlay.querySelector("nav .x");
 overlay.querySelector("nav .y").innerHTML = img.length;
 
@@ -38,6 +39,7 @@ document.querySelector(".cert ul").addEventListener("keyup", function (e) {
 // Update the 'x of y' numbers
 function updateCounter(index){
   x.innerHTML = index + 1; //indexed at 0 by default
+  p.innerHTML = img[index].dataset.description;
 }
 // Switch the certificate shown to the previous one
 function previousImage(event) {
