@@ -113,7 +113,8 @@ main section.about {
 // ------------------------------------------------------------------------
 @media (min-width: v.$small) {
   :root {
-    --width: 600px;
+    --width: 600px; // for carousel image
+    --columns: clamp(600px, 95%, 680px);
   }
   .container {
     max-width: calc(#{v.$small} - 40px);
@@ -125,11 +126,15 @@ main section.about {
       margin-right: auto;
     }
     .normal.columns {
-      width: 600px;
+      width: var(--columns);
       .border.one {
         width: 0;
         border-left: 1px solid;
       }
+    }
+    section.languages, section.skills {
+      box-sizing: border-box;
+      width: calc(50% - 0.5px); // Half the border width
     }
     section.cert {
       order: 1;
@@ -198,7 +203,9 @@ main section.about {
 // ------------------------------------------------------------------------
 @media (min-width: v.$medium) {
   :root {
-    --width: 480px;
+    --width: 480px; // for carousel image
+    // Total width of columns
+    --columns: clamp(#{v.$medium} - 40px, 80%, #{v.$medium} + 60px);
   }
   .container {
     max-width: calc(#{v.$medium} - 40px);
@@ -214,7 +221,7 @@ main section.about {
       }
     }
     .normal.columns {
-      width: 900px;
+      width: var(--columns);
       margin: v.$margin auto;
       .border.two {
         width: 0;
@@ -245,9 +252,14 @@ main section.about {
       }
     }
     /* prettier-ignore */
-    section.languages, .border.one, section.skills, .border.two, section.cert {
+    .border.one, .border.two {
       order: initial;
-      width: 256px;
+    }
+    /* prettier-ignore */
+    section.languages, section.skills, section.cert {
+      order: initial;
+      box-sizing: border-box;
+      width: calc(33.3% - 2px);
     }
     section.cert {
       ul li {
@@ -271,7 +283,7 @@ main section.about {
       .top-swoosh {
         display: inline-block;
         position: absolute;
-        top: calc($swoosh * -1);
+        top: calc(($swoosh * -1) + 1px);
         vertical-align: top; //Needed to remove whitespace below
         width: 100%;
         height: $swoosh;

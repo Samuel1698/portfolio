@@ -8,7 +8,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  overflow-x: hidden;
+  // Overflow: hidden of any kind will break the 'sticky' return to top button
 }
 body.no-scroll {
   position: fixed;

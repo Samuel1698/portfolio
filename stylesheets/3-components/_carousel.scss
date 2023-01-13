@@ -22,10 +22,8 @@
 }
 .columns .overlay {
   position: absolute;
-  right: 9999px;
+  display: none;
   background-color: map.get(v.$lotion-palette, diminished);
-  width: 0;
-  height: 0;
   text-align: center;
   h1 {
     font-size: 2rem;
@@ -177,8 +175,7 @@
   }
 }
 .columns .overlay.active {
-  height: initial;
-  width: initial;
+  display: initial;
   top: 0;
   bottom: 0;
   left: 0;
