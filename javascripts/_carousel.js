@@ -13,6 +13,7 @@ overlay.querySelector("nav .y").innerHTML = img.length;
 closeBtn.addEventListener("click", function () {
   // Reset all classes that could be added
   overlay.classList.remove("active");
+  columns.classList.remove("container");
   for (let i = 0; i < img.length; i++) {
     img[i].tabIndex = -1;
     img[i].classList.remove("active", "before", "after");
@@ -141,6 +142,7 @@ function assignClasses(i) {
 function activateOverlay(e) {
   // Activate overlay on click and enter
   overlay.classList.add("active");
+  columns.classList.add("container");
   button[0].tabIndex = 0;
   button[1].tabIndex = 0;
   // Change tabindex of all list items

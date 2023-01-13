@@ -113,13 +113,24 @@ main section.about {
 // ------------------------------------------------------------------------
 @media (min-width: v.$small) {
   :root {
-    --width: 568px;
+    --width: 600px;
   }
   .container {
     max-width: calc(#{v.$small} - 40px);
   }
   main {
-    .columns {
+    .container.columns {
+      // Reset the resetting lmao
+      margin-left: auto;
+      margin-right: auto;
+      .column {
+        display: flex;
+      }
+      .overlay {
+        position: absolute;
+      }
+    }
+    .normal.columns {
       width: 600px;
       .border.one {
         width: 0;
@@ -199,7 +210,7 @@ main section.about {
     max-width: calc(#{v.$medium} - 40px);
   }
   main {
-    .columns {
+    .normal.columns {
       width: 900px;
       margin: v.$margin auto;
       .border.two {
@@ -215,6 +226,7 @@ main section.about {
           width: 40%;
           height: calc(var(--width) * (17 / 22) + 25px);
           margin-left: 2%;
+          margin-top: 0;
         }
         nav {
           justify-content: space-between;

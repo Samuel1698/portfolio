@@ -2,7 +2,19 @@
 @use '../1-utilities/mixins' as m;
 @use "sass:map";
 :root {
-  --width: 300px;
+  --width: clamp(300px, 100%, 600px);
+}
+.container.columns {
+  // Styles resetting the 'columns' width and margin so that the 'container' class' styles apply properly on small screens
+  width: initial;
+  margin-left: 16px;
+  margin-right: 16px;
+  .column {
+    display: none;
+  }
+  .overlay {
+    position: static;
+  }
 }
 .columns .overlay {
   position: absolute;
