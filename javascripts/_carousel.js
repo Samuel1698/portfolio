@@ -5,8 +5,7 @@ const columns = document.querySelector(".columns");
 const listItem = document.querySelectorAll(".cert ul li");
 const overlay = columns.querySelector(".overlay");
 const closeBtn = columns.querySelector("button.close");
-const wrapper = overlay.querySelector(".wrapper");
-const img =     wrapper.querySelectorAll("img");
+const img =     overlay.querySelectorAll(".wrapper img");
 const button =   overlay.querySelectorAll(".arrow");
 const x = overlay.querySelector("nav .x");
 overlay.querySelector("nav .y").innerHTML = img.length;
@@ -14,7 +13,6 @@ overlay.querySelector("nav .y").innerHTML = img.length;
 closeBtn.addEventListener("click", function () {
   // Reset all classes that could be added
   overlay.classList.remove("active");
-  wrapper.classList.remove("active");
   for (let i = 0; i < img.length; i++) {
     img[i].tabIndex = -1;
     img[i].classList.remove("active", "before", "after");
@@ -143,7 +141,6 @@ function assignClasses(i) {
 function activateOverlay(e) {
   // Activate overlay on click and enter
   overlay.classList.add("active");
-  wrapper.classList.add("active");
   button[0].tabIndex = 0;
   button[1].tabIndex = 0;
   // Change tabindex of all list items

@@ -161,7 +161,7 @@
   - [x] Small section svg color change
 - [ ] Index page
   - [x] Bigger column section
-  - [ ] overlay close button needs to be bigger and out of the picture
+  - [x] overlay close button needs to be bigger and out of the picture
     - [ ] Restyle carousel
       - [x] Overlay
       - [x] h1 sizes on bigger screens
@@ -173,6 +173,7 @@
       - [x] Remove overlay click closing
       - [ ] Swipe on mobile support
       - [ ] Mobile buttons closer to each other
+      - [ ] Use data-* attribute to change the description element
     - [ ] Solve bug with first image
   - [x] Get rid of background: url in css
   - [x] Recent work hidden elements

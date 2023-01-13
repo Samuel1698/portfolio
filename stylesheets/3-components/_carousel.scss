@@ -1,11 +1,9 @@
 @use "../1-utilities/variables" as v;
 @use '../1-utilities/mixins' as m;
 @use "sass:map";
-
-$width: 95vw;
-// .columns.overlayed {
-//   z-index: 10;
-// }
+:root {
+  --width: 300px;
+}
 .columns .overlay {
   position: absolute;
   right: 9999px;
@@ -18,32 +16,11 @@ $width: 95vw;
     line-height: 42px;
     margin: 1.2rem 0;
   }
-  button.arrow {
-    border: none;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-    background-color: transparent;
-    &.disabled {
-      opacity: 0.4;
-      cursor: initial;
-    }
-  }
-  button.close {
-    display: none;
-  }
   .wrapper {
     position: relative;
     overflow: hidden;
-    &.active {
-      display: inline-block;
-      vertical-align: top;
-      width: $width;
-      max-width: 100vh;
-      height: calc($width * 17 / 22);
-      max-height: calc(100vh * 17 / 22);
-      @include m.bigShadow;
-    }
+    display: inline-block;
+    vertical-align: top;
   }
   .img-border {
     position: absolute;
@@ -80,55 +57,17 @@ $width: 95vw;
       }
     }
   }
-}
-.columns .overlay.active {
-  height: initial;
-  width: initial;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  border-radius: 12px;
-  // display: flex;
-  // flex-direction: row;
-  // align-items: center;
-  // flex-wrap: wrap;
-  // justify-content: center;
-  .nav-description {
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: space-between;
-    vertical-align: top;
-    margin-left: 2%;
-    width: 40%; // Should be based on image width
-    // height: should be same as img height
-    p {
-      margin: 0;
-    }
-  }
-  nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    p {
-      font-size: 1.5rem;
-    }
-  }
   button.arrow {
-    position: absolute;
-    display: flex;
+    border: none;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    background-color: transparent;
     justify-content: center;
     align-items: center;
-    height: 100px;
-    width: 100px;
-    top: calc(50% + ($width * 17 / 22) / 2 + 2rem);
-    transform: translate(-50%, 0%);
     svg {
       width: 50px; 
       height: 50px;
-      // stroke: map.get(v.$lotion-palette, background);
     }
     &.prev {
       left: 10%;
@@ -154,12 +93,36 @@ $width: 95vw;
         // background-size: 100px;
       }
     }
+    &.disabled {
+      opacity: 0.4;
+      cursor: initial;
+    }
+  }
+  .nav-description {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    vertical-align: top;
+    width: 100%;
+    height: 30%;
+    margin-top: 4%;
+    p {
+      margin: 0;
+    }
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+      font-size: 1.3rem;
+    }
   }
   button.close {
-    display: initial;
+    display: none;
     position: absolute;
     top: 16px;
-    right: 16px;
+    right: 12px;
     width: 48px;
     height: 48px;
     cursor: pointer;
@@ -172,5 +135,28 @@ $width: 95vw;
         fill: map.get(v.$navy-palette, action);
       }
     }
+  }
+}
+.columns .overlay.active {
+  height: initial;
+  width: initial;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  border-radius: 12px;
+  .wrapper {
+    width: var(--width);
+    height: calc(var(--width) * 17 / 22);
+    @include m.bigShadow;
+  }
+  button.arrow {
+    display: flex;
+    height: 100px;
+    width: 100px;
+  }
+  button.close {
+    display: initial;
   }
 }

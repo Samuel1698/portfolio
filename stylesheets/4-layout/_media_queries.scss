@@ -71,20 +71,6 @@ main#showcase {
   }
 }
 // ------------------------------------------------------------------------
-// Media queries for certificates page
-// ------------------------------------------------------------------------
-main .small.container {
-  @media (min-width: v.$medium) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    .certs {
-      max-width: 75%;
-    }
-  }
-}
-
-// ------------------------------------------------------------------------
 // Media queries for about me image
 // ------------------------------------------------------------------------
 main section.about {
@@ -127,7 +113,7 @@ main section.about {
 // ------------------------------------------------------------------------
 @media (min-width: v.$small) {
   :root {
-    --carousel-size: 95vw;
+    --width: 568px;
   }
   .container {
     max-width: calc(#{v.$small} - 40px);
@@ -138,26 +124,6 @@ main section.about {
       .border.one {
         width: 0;
         border-left: 1px solid;
-      }
-      // .overlay.active button.arrow {
-      //   width: 100px;
-      //   height: 100px;
-      //   /* prettier-ignore */
-      //   &.next, &.prev {
-      //     background-size: 150px;
-      //     @include m.hover {
-      //       background-size: 170px;
-      //     }
-      //   }
-      //   &.disabled {
-      //     @include m.hover {
-      //       background-size: 150px;
-      //     }
-      //   }
-      // }
-      .overlay .wrapper.active {
-        width: var(--carousel-size);
-        height: calc(var(--carousel-size) * 17 / 22);
       }
     }
     section.cert {
@@ -241,14 +207,17 @@ main section.about {
         border-left: 1px solid;
       }
       .overlay {
-        .wrapper.active {
-          width: var(--width);
-          height: calc(var(--width) * 17 / 22);
+        .wrapper {
           margin-right: 2%;
         }
         .nav-description {
           //Height of wrapper + 25px from nav buttons
+          width: 40%;
           height: calc(var(--width) * (17 / 22) + 25px);
+          margin-left: 2%;
+        }
+        nav {
+          justify-content: space-between;
         }
         &.active button.arrow {
           position: relative;
