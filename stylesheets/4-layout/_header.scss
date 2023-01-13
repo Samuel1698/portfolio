@@ -108,8 +108,8 @@ header {
       overflow: hidden;
       overflow-y: auto;
       height: calc(100vh - var(--bottom));
-      // 605px - collapsedHeight - 2px for each uncollapsed category from the negative margins
-      max-height: calc(37.75rem - var(--collapsedHeight));
+      // 605px - collapsedHeight
+      max-height: calc(30rem - var(--collapsedHeight));
       position: absolute;
       left: 0;
       right: 0;
