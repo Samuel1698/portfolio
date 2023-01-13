@@ -225,6 +225,7 @@ main section.about {
           margin-right: 2%;
         }
         .nav-description {
+          position: static;
           width: 40%;
           //Height of wrapper
           height: calc(var(--width) * (17 / 22));
@@ -232,9 +233,14 @@ main section.about {
           margin-top: 0;
           flex-direction: column;
         }
-        nav {
+        nav.navigation {
           margin-bottom: 0;
           justify-content: space-between;
+        }
+        figcaption {
+          top: initial;
+          bottom: 2rem;
+          left: 22px;
         }
       }
     }

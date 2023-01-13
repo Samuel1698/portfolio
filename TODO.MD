@@ -162,19 +162,18 @@
 - [ ] Index page
   - [x] Bigger column section
   - [x] overlay close button needs to be bigger and out of the picture
-    - [ ] Restyle carousel
+    - [x] Restyle carousel
       - [x] Overlay
       - [x] h1 sizes on bigger screens
       - [x] General Responsiveness: Use columns as container
       - [x] Progress bar visual indicator + Numbers. Ex: 4 of 6
         - [x] Assign first 'x' value depending on LI clicked
       - [x] 'Verified by Noble Desktop' figcaption
-      - [ ] Link to noble desktop on click or in description
+      - [x] Link to noble desktop on click or in description
       - [x] Remove overlay click closing
-      - [ ] Swipe on mobile support
       - [x] Mobile buttons closer to each other
       - [x] Use data-* attribute to change the description element
-    - [ ] Solve bug with first image
+    - [x] Solve bug with first image
   - [x] Get rid of background: url in css
   - [x] Recent work hidden elements
   - [x] Contact button

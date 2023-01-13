@@ -37,6 +37,13 @@
     overflow: hidden;
     display: inline-block;
     vertical-align: top;
+    margin-bottom: 2rem;
+    // Make link red when hovering the wrapper itself
+    @include m.hover {
+      & ~ div figcaption a {
+        color: map.get(v.$lotion-palette, highlight);
+      }
+    }
   }
   .img-border {
     position: absolute;
@@ -108,16 +115,19 @@
   }
   .nav-description {
     display: none;
+    position: relative;
     flex-direction: column-reverse;
     justify-content: space-between;
     vertical-align: top;
     width: 100%;
-    margin-top: 4%;
-    margin-bottom: 4%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     text-align: justify;
     text-justify: auto;
     color: map.get(v.$lotion-palette, text);
+    // Description
     p {
+      font-size: 0.9em;
       margin: 0;
     }
   }
@@ -129,8 +139,22 @@
     color: map.get(v.$lotion-palette, bold);
     // numbers
     p {
-      margin: 0 16px;
+      margin: 0 3rem;
       font-size: 1.3rem;
+    }
+  }
+  figcaption {
+    position: absolute;
+    top: -3rem;
+    left: 2px;
+    font-size: 0.8rem;
+    a {
+      color: map.get(v.$lotion-palette, bold);
+      border-bottom: 2px solid;
+      margin-bottom: -2px;
+      @include m.hover {
+        color: map.get(v.$lotion-palette, highlight);
+      }
     }
   }
   button.close {
@@ -164,7 +188,7 @@
   .wrapper {
     width: var(--width);
     aspect-ratio: 22 / 17;
-    // height: calc(var(--width) * 17 / 22);
+    background-color: map.get(v.$lotion-palette, background);
     @include m.bigShadow;
   }
   button.arrow {

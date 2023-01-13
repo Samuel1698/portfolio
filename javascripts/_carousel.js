@@ -5,19 +5,23 @@ const columns = document.querySelector(".columns");
 const listItem = document.querySelectorAll(".cert ul li");
 const overlay = columns.querySelector(".overlay");
 const closeBtn = columns.querySelector("button.close");
+const wrapper = overlay.querySelector(".wrapper");
 const img =     overlay.querySelectorAll(".wrapper img");
 const button =   overlay.querySelectorAll(".arrow");
 const p = overlay.querySelector("p.description");
 const x = overlay.querySelector("nav .x");
+const fig = overlay.querySelector(".nav-description figcaption a");
+
 overlay.querySelector("nav .y").innerHTML = img.length;
 
 closeBtn.addEventListener("click", function () {
   // Reset all classes that could be added
   overlay.classList.remove("active");
   columns.classList.remove("container");
+  fig.tabIndex = -1;
   for (let i = 0; i < img.length; i++) {
     img[i].tabIndex = -1;
-    img[i].classList.remove("active", "before", "after");
+    img[i].classList.remove("active", "after");
   }
   button[0].classList.remove("disabled");
   button[0].tabIndex = -1;
@@ -38,8 +42,10 @@ document.querySelector(".cert ul").addEventListener("keyup", function (e) {
 });
 // Update the 'x of y' numbers
 function updateCounter(index){
-  x.innerHTML = index + 1; //indexed at 0 by default
-  p.innerHTML = img[index].dataset.description;
+  x.innerText = index + 1; //indexed at 0 by default
+  p.innerText = img[index].dataset.description;
+  fig.href = img[index].dataset.link;
+  wrapper.href = img[index].dataset.link;
 }
 // Switch the certificate shown to the previous one
 function previousImage(event) {
@@ -49,11 +55,6 @@ function previousImage(event) {
   event.stopPropagation();
   let index = detectActive();
   if (index !== 0) {
-    // Add pressed class to button
-    button[0].classList.add("pressed");
-    setTimeout(function () {
-      button[0].classList.remove("pressed");
-    }, 500);
     button[1].tabIndex = 0;
     resetClasses(index);
     assignClasses(index - 1);
@@ -68,12 +69,6 @@ function nextImage(event) {
   event.stopPropagation();
   let index = detectActive();
   if (index !== img.length - 1) {
-
-    // Add pressed class to button
-    button[1].classList.add("pressed");
-    setTimeout(function () {
-      button[1].classList.remove("pressed");
-    }, 500);
     button[0].tabIndex = 0;
     resetClasses(index);
     assignClasses(index + 1);
@@ -104,7 +99,7 @@ document.addEventListener("keydown", (event) => {
 // Detect which image is the current active one
 function detectActive() {
   for (let i = 0; i < img.length; i++) {
-    if (img[i].classList.contains("active") && img[i].classList.length == 2) {
+    if (img[i].classList.contains("active") && img[i].classList.contains("front")) {
       var index = i;
       break;
     }
@@ -114,11 +109,11 @@ function detectActive() {
 // Completely reset all the active classes for the images
 function resetClasses(i) {
   if (img[i - 1]) {
-    img[i - 1].classList.remove("active", "before");
+    img[i - 1].classList.remove("active");
   }
   if (img[i]) {
     img[i].tabIndex = -1;
-    img[i].classList.remove("active");
+    img[i].classList.remove("active", "front");
   }
   if (img[i + 1]) {
     img[i + 1].classList.remove("active", "after");
@@ -127,13 +122,18 @@ function resetClasses(i) {
 // Assigns active classes based on the image index
 function assignClasses(i) {
   img[i].tabIndex = 0;
-  img[i].classList.add("active");
+  img[i].classList.add("active", "front");
+  // If the image before the 'front' one doesn't exists, disable the button
   if (img[i - 1]) {
-    img[i - 1].classList.add("active", "before");
+    img[i - 1].classList.add("active");
   } else {
     button[0].classList.add("disabled");
-    button[0].tabIndex = -1;
+    // First image bug is here
+    setTimeout(() => {
+      button[0].tabIndex = -1;
+    }, 100);
   }
+  // If the image after the 'front' one doesn't exists, disable the button
   if (img[i + 1]) {
     img[i + 1].classList.add("active", "after");
   } else {
@@ -145,6 +145,7 @@ function activateOverlay(e) {
   // Activate overlay on click and enter
   overlay.classList.add("active");
   columns.classList.add("container");
+  fig.tabIndex = 0;
   button[0].tabIndex = 0;
   button[1].tabIndex = 0;
   // Change tabindex of all list items
@@ -156,6 +157,7 @@ function activateOverlay(e) {
     img[i].addEventListener("click", function (event) {
       event.stopPropagation();
     });
+    // Detect which list item was clicked
     if (img[i].classList[0] == e.target.classList[0]) {
       assignClasses(i);
       updateCounter(i);
