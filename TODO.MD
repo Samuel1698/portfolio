@@ -198,7 +198,7 @@
   - [ ] Visual indicator/Progress bar
   - [ ] Navigational Buttons
 <!-- Deploying new theme -->
-- [ ] Optimize new images
+- [x] Optimize new images
 - [ ] Sync changes in the .html files across both folders
 - [ ] application.css and all .min.js files
 
