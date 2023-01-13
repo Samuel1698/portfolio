@@ -116,7 +116,7 @@ header {
       margin-top: 8px;
       &.visible {
         display: block;
-        opacity: 2;
+        opacity: 1;
         z-index: 6;
       }
       button.category {
@@ -163,24 +163,32 @@ header {
         }
         li {
           color: map.get(v.$lotion-palette, text);
-          padding: 12px 16px 12px 48px;
-          @include m.hover {
-            color: map.get(v.$lotion-palette, highlight);
-            background-color: map.get(v.$lotion-palette, diminished);
-            svg {
-              fill: map.get(v.$lotion-palette, highlight);
-            }
-            svg.no-fill {
-              fill:  none;
-              stroke: map.get(v.$lotion-palette, highlight);
-            }
-          }
           a {
+            box-sizing: border-box; 
             display: inline-block;
+            padding: 12px 16px 12px 48px;
             color: inherit;
             width: 100%;
-            white-space: nowrap;
+            white-space: nowrap;  
             line-height: 34px;
+            &:focus-visible:after {
+              position: fixed;
+              top: 0;
+              right: 0;
+              bottom: unset;
+              left: unset;
+            }
+            @include m.hover {
+              color: map.get(v.$lotion-palette, highlight);
+              background-color: map.get(v.$lotion-palette, diminished);
+              svg {
+                fill: map.get(v.$lotion-palette, highlight);
+              }
+              svg.no-fill {
+                fill:  none;
+                stroke: map.get(v.$lotion-palette, highlight);
+              }
+            }
           }
         }
         a.svg {

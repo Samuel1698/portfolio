@@ -12,7 +12,7 @@
     }
     .item {
       width: 100%;
-      opacity: 1;
+      opacity: 1; 
       @include m.bigShadow;
       .hidden {
         padding: 0;
@@ -57,6 +57,9 @@
       img {
         height: 100%;
         width: 100%;
+      }
+      a:focus-visible:after {
+        content: none;
       }
       div.progress {
         position: relative;
