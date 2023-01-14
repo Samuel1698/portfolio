@@ -173,7 +173,12 @@
     - [x] Remove overlay click closing
     - [x] Mobile buttons closer to each other
     - [x] Use data-* attribute to change the description element
-    - [ ] Use new fullstack image
+    - [x] Use new fullstack image
+    - [x] Rewrite srcset ranges based on new sizes
+      - [x] Small: 600x463.63
+                   1200X927.26
+      - [x] Medium: 480x370.91
+                    960X741.82
   - [ ] Make other columns their own carousel
     - [ ] Generalize code to obtain the elements based on which list it was clicked from
     - [ ] Languages
