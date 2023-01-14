@@ -108,38 +108,10 @@
 - [ ] Hover over work items not working on safari
 <!-- Deployment -->
 - [x] Optimize images
- - [x] Logo
- - [x] Certificate images
- - [x] Work Item Images
- - [x] About page image
- - [x] Mockups
- - [x] Certificate page
-  - [x] Hero image
-  - [x] Courses
-- [x] Make copy of folder and remove unused css/javascript (only include minified versions)
-- [x] Consider moving all images to root folder and referencing them there all throughout the code. Sort of like webpack
-- [x] Upload to folder named 'en' so that when Spanish version becomes available, it can be uploaded to 'es' folder and have the subdomain link to it
-- [x] Footer apply change button is misaligned
-- [x] Footer in pages with no contact section should have less padding on top
-- [x] Reposition submit button of language dropdown menu on mobile
-- [x] Twitter-OG metadata
-- [x] Lines of certificate section to make it clearer they're clickable on mobile
-- [x] Detect when work items are visible on main page and animate them for the user as if they're hovering over them, stay like that for a few seconds, then animate it away from that.
-- [x] In showcase pages, include a reference in text that you can click the image to go to the website
-- [x] Header hamburger for more pages
   - [x] Logo
-  - [x] Responsiveness 
-  - [x] JS
-  - [x] Style
-  - [x] Overlay
-- [x] Thanks page missing javascript for footer
-- [x] Make one js file that is shared among all pages to avoid unnecessary downloads when navigating
-<!-- PageInsight -->
-- [x] Carousel being 1x1 images is causing issues. Lazy loading/deferred loading is better
-- [x] Footer flags need alt attribute
-- [x] Meta description
-- [x] Footer links need to be at least 48px of height
-- [x] Contact page has fonts connected through google
+  - [x] Certificate images
+  - [x] Work Item Images
+  - [x] About page image
 <!-- Form submission -->
 - [x] Activate all forms
   - [x] EN subdomain
@@ -159,6 +131,7 @@
 - [x] Footer 
   - [x] change language button highlight color
   - [x] Small section svg color change
+  - [ ] swoosh for pages without contact section
 - [x] Index page
   - [x] Bigger column section
   - [x] overlay close button needs to be bigger and out of the picture
@@ -175,10 +148,6 @@
     - [x] Use data-* attribute to change the description element
     - [x] Use new fullstack image
     - [x] Rewrite srcset ranges based on new sizes
-      - [x] Small: 600x463.63
-                   1200X927.26
-      - [x] Medium: 480x370.91
-                    960X741.82
   - [ ] Make other columns their own carousel
     - [ ] Generalize code to obtain the elements based on which list it was clicked from
     - [ ] Languages
@@ -201,15 +170,15 @@
   - [ ] Noble Desktop
   - [ ] Coursera
 - [x] Error page
+  - [x] New text
+  - [x] Better width
+  - [ ] New image
 - [x] Showcase
   - [x] Remove images
   - [x] Mobile view border needs to be bigger and realigned
   - [x] 'Features' in Spanish overflows
   - [x] Portfolio highlight features in same style as pinkwug
   - [x] Link to the website somewhere in pinkwug
-  - [ ] Visual indicator/Progress bar
-  - [ ] Navigational Buttons
-- [ ] Footer swoosh for pages without contact section
 <!-- Deploying new theme -->
 - [x] Optimize new images
 - [x] Sync changes in the .html files across both folders
