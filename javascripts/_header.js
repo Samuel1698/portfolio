@@ -17,19 +17,38 @@ function updateMenuHeight(elm, called){
   menu.style.setProperty("--collapsedHeight", totalHeight + "px");
 }
 
-function toggleVisibility(){
+function toggleVisibility(e){
+  // Prevents Safari bullshit
+  e.preventDefault();
+  e.stopPropagation();
+  // ------------------------------------
   menu.classList.toggle("visible");
   overlay.classList.toggle("visible");
   toggleButtons[0].classList.toggle("visible");
   toggleButtons[1].classList.toggle("visible");
   body.classList.toggle("no-scroll");
-
   // Aria expanded toggle
   menu.setAttribute("aria-expanded", menu.getAttribute("aria-expanded") === "true" ? "false" : "true");
 }
-toggleButtons[0].addEventListener("click", toggleVisibility);
-toggleButtons[1].addEventListener("click", toggleVisibility);
-overlay.addEventListener("click", toggleVisibility);
+toggleButtons[0].addEventListener("click", function(e){
+  toggleVisibility(e);
+});
+toggleButtons[1].addEventListener("click", function(e){
+  toggleVisibility(e);
+});
+overlay.addEventListener("click", function(e){
+  toggleVisibility(e);
+});
+
+toggleButtons[0].addEventListener("touchstart", function(e){
+  toggleVisibility(e);
+});
+toggleButtons[1].addEventListener("touchstart", function(e){
+  toggleVisibility(e);
+});
+overlay.addEventListener("touchstart", function(e){
+  toggleVisibility(e);
+});
 
 // Default category values
 let totalHeight = 0;

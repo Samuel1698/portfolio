@@ -157,12 +157,13 @@
   - [x] Get rid of background: url in css
   - [x] Recent work hidden elements
   - [x] Contact button
-  - [x] New work item portfolio image 
-  - [ ] Infinite scroll on mobile?
+  - [x] New work item portfolio image
 - [x] Contact page
   - [x] Form
   - [x] Inputs & Caret image
   - [x] Email button
+  - [ ] Pesos
+  - [ ] Contact through phone
 - [ ] Certificates
   - [x] WIP 
   - [ ] New layout
@@ -179,6 +180,7 @@
   - [x] 'Features' in Spanish overflows
   - [x] Portfolio highlight features in same style as pinkwug
   - [x] Link to the website somewhere in pinkwug
+- [ ] Menu not working on safari
 <!-- Deploying new theme -->
 - [x] Optimize new images
 - [x] Sync changes in the .html files across both folders
