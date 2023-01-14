@@ -17,9 +17,6 @@ toggleButtons[0].addEventListener("click", toggleVisibility);
 toggleButtons[1].addEventListener("click", toggleVisibility);
 overlay.addEventListener("click", toggleVisibility);
 
-toggleButtons[0].addEventListener("touchend", toggleVisibility, false);
-toggleButtons[1].addEventListener("touchend", toggleVisibility, false);
-overlay.addEventListener("touchend", toggleVisibility, false);
 
 // Update the variable --collapsedHeight
 // This is subtracted from the viewHeight and 58px to get the total viewable menu
