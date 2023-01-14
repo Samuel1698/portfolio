@@ -1,10 +1,12 @@
 const toggleButtons = document.querySelectorAll("header .menu-toggle");
 const menu = document.querySelector("header .menu");
 const overlay = document.querySelector("header .overlay");
-const buttons = document.querySelectorAll("button.category");
+const buttons = document.querySelectorAll("header button.category");
 const body = document.querySelector("body");
 
 function toggleVisibility(e){
+  e.preventDefault();
+  e.stopPropagation();
   menu.classList.toggle("visible");
   overlay.classList.toggle("visible");
   toggleButtons[0].classList.toggle("visible");
@@ -12,10 +14,6 @@ function toggleVisibility(e){
   body.classList.toggle("no-scroll");
   // Aria expanded toggle
   menu.setAttribute("aria-expanded", menu.getAttribute("aria-expanded") === "true" ? "false" : "true");
-  // Prevents Safari bullshit
-  e.preventDefault();
-  e.stopPropagation();
-  // ------------------------------------
 }
 toggleButtons[0].addEventListener("click", function(e){
   toggleVisibility(e);
@@ -29,13 +27,13 @@ overlay.addEventListener("click", function(e){
 
 toggleButtons[0].addEventListener("touchend", function(e){
   toggleVisibility(e);
-});
+}, false);
 toggleButtons[1].addEventListener("touchend", function(e){
   toggleVisibility(e);
-});
+}, false);
 overlay.addEventListener("touchend", function(e){
   toggleVisibility(e);
-});
+}, false);
 
 // Update the variable --collapsedHeight
 // This is subtracted from the viewHeight and 58px to get the total viewable menu
