@@ -181,9 +181,9 @@
   - [x] Portfolio highlight features in same style as pinkwug
   - [x] Link to the website somewhere in pinkwug
 - [ ] Safari
-  - [ ] Menu not working on safari
+  - [x] Menu not working on safari
+  - [x] Detect language preference and automatically switch to es. domain
   - [ ] About-Work border 1px too high
-  - [ ] Detect language preference and automatically switch to es. domain
 <!-- Deploying new theme -->
 - [x] Optimize new images
 - [x] Sync changes in the .html files across both folders

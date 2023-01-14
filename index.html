@@ -24,14 +24,14 @@
   <title>Samuel G. Muñoz | FullStack Developer</title>
 
   <script>
-    onDOMContentLoaded = () => {
+    document.addEventListener("DOMContentLoaded", function(){
       var currentUrl = new URL(window.location.href);
       var subdomain = currentUrl.host.split('.')[0]
       if (/^es\b/.test(navigator.language)){
         if (subdomain != "es" || subdomain != "en" || subdomain != "beta")
-          window.location.href = "https://es." + currentUrl.hostname + currentUrl.pathname + currentUrl.search;
+          window.location.href = "https://es.samuelgmunoz.com" + currentUrl.pathname + currentUrl.search;
       }
-    };
+    });
   </script>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
