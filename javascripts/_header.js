@@ -7,13 +7,15 @@ const body = document.querySelector("body");
 function toggleVisibility(e){
   e.preventDefault();
   e.stopPropagation();
-  menu.classList.toggle("visible");
-  overlay.classList.toggle("visible");
-  toggleButtons[0].classList.toggle("visible");
-  toggleButtons[1].classList.toggle("visible");
-  body.classList.toggle("no-scroll");
-  // Aria expanded toggle
-  menu.setAttribute("aria-expanded", menu.getAttribute("aria-expanded") === "true" ? "false" : "true");
+  setTimeout(() => {
+    menu.classList.toggle("visible");
+    overlay.classList.toggle("visible");
+    toggleButtons[0].classList.toggle("visible");
+    toggleButtons[1].classList.toggle("visible");
+    body.classList.toggle("no-scroll");
+    // Aria expanded toggle
+    menu.setAttribute("aria-expanded", menu.getAttribute("aria-expanded") === "true" ? "false" : "true");
+  }, 100);
 }
 toggleButtons[0].addEventListener("click", function(e){
   toggleVisibility(e);
