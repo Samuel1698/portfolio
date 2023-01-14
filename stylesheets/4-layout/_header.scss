@@ -208,13 +208,12 @@ header {
       }
     }
     div.overlay {
-      position: fixed;
-      transition: all 250ms ease-in-out;
+      position: absolute; // Cannot be 'fixed' because of safari fuckery
       &.visible {
         top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
+        bottom: -100vh;
+        right: -100vw;
+        left: -100vw;
         z-index: 5;
         background-color: rgba(0, 0, 0, 0.6);
       }
