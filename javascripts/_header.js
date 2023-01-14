@@ -17,7 +17,7 @@ function updateMenuHeight(elm, called){
   menu.style.setProperty("--collapsedHeight", totalHeight + "px");
 }
 
-function toggleVisibility(e){
+function toggleVisibility(){
   menu.classList.toggle("visible");
   overlay.classList.toggle("visible");
   toggleButtons[0].classList.toggle("visible");
@@ -25,29 +25,49 @@ function toggleVisibility(e){
   body.classList.toggle("no-scroll");
   // Aria expanded toggle
   menu.setAttribute("aria-expanded", menu.getAttribute("aria-expanded") === "true" ? "false" : "true");
-  // Prevents Safari bullshit
+}
+toggleButtons[0].addEventListener("click", function(e){
+    // Prevents Safari bullshit
   e.preventDefault();
   e.stopPropagation();
   // ------------------------------------
-}
-toggleButtons[0].addEventListener("click", function(e){
-  toggleVisibility(e);
+  toggleVisibility();
 });
 toggleButtons[1].addEventListener("click", function(e){
-  toggleVisibility(e);
+    // Prevents Safari bullshit
+  e.preventDefault();
+  e.stopPropagation();
+  // ------------------------------------
+  toggleVisibility();
 });
 overlay.addEventListener("click", function(e){
-  toggleVisibility(e);
+    // Prevents Safari bullshit
+  e.preventDefault();
+  e.stopPropagation();
+  // ------------------------------------
+  toggleVisibility();
 });
 
 toggleButtons[0].addEventListener("touchend", function(e){
-  toggleVisibility(e);
+    // Prevents Safari bullshit
+  e.preventDefault();
+  e.stopPropagation();
+  // ------------------------------------
+  toggleVisibility();
 });
 toggleButtons[1].addEventListener("touchend", function(e){
-  toggleVisibility(e);
+    // Prevents Safari bullshit
+  e.preventDefault();
+  e.stopPropagation();
+  // ------------------------------------
+  toggleVisibility();
 });
 overlay.addEventListener("touchend", function(e){
-  toggleVisibility(e);
+    // Prevents Safari bullshit
+  e.preventDefault();
+  e.stopPropagation();
+  // ------------------------------------
+  toggleVisibility();
 });
 
 // Default category values
