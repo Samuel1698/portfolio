@@ -183,7 +183,7 @@
 - [ ] Safari
   - [ ] Menu not working on safari
   - [ ] About-Work border 1px too high
-  - [ ] Detect translation to Spanish and automatically switch to es. domain
+  - [x] Detect language preference and automatically switch to es. domain
 <!-- Deploying new theme -->
 - [x] Optimize new images
 - [x] Sync changes in the .html files across both folders
