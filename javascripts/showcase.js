@@ -1,6 +1,6 @@
 var contact = document.querySelector("section.contact");
 var leftItem = document.querySelectorAll(".split section.side > .right");
-var button = document.querySelectorAll("button.top");
+// var button = document.querySelectorAll("button.top");
 var contactSection = document.querySelector("section.contact");
 
 window.addEventListener("resize", () => {
@@ -10,8 +10,8 @@ window.onload = function () {
   contactHeight();
   leftAnimation();
   contactAnimation();
-  button[0].addEventListener("click", returnToTop);
-  button[1].addEventListener("click", returnToTop);
+  // button[0].addEventListener("click", returnToTop);
+  // button[1].addEventListener("click", returnToTop);
 };
 // -----------------------------------------------------------------------------
 // debounce function by chatGPT to delay the execution of code on the scroll 

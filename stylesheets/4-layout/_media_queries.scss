@@ -48,6 +48,9 @@ main#showcase {
           text-align: right;
           padding: 0;
           border: unset;
+          &::before {
+            content: none;
+          }
           &::after {
             content: "";
             border-bottom: 3px solid map.get(v.$lotion-palette, action);

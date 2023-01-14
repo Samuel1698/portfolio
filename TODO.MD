@@ -209,6 +209,7 @@
   - [x] Link to the website somewhere in pinkwug
   - [ ] Visual indicator/Progress bar
   - [ ] Navigational Buttons
+- [ ] Footer swoosh for pages without contact section
 <!-- Deploying new theme -->
 - [x] Optimize new images
 - [x] Sync changes in the .html files across both folders

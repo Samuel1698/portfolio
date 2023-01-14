@@ -87,8 +87,17 @@ $border: 3px solid map.get(v.$lotion-palette, action);
       padding: 4px;
       border: $border;
       border-right: unset;
-      background-color: map.get(v.$lotion-palette, background);;
+      &::before {
+        content: "";
+        background-color: map.get(v.$lotion-palette, background);
+        position: absolute;
+        right: -4px;
+        left: 0;
+        top: 0;
+        bottom: 0;
+      }
       span {
+        position: relative;
         min-width: 10rem;
         display: inline-block;
         vertical-align: text-top;
