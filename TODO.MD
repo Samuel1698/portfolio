@@ -173,6 +173,7 @@
     - [x] Remove overlay click closing
     - [x] Mobile buttons closer to each other
     - [x] Use data-* attribute to change the description element
+    - [ ] Use new fullstack image
   - [ ] Make other columns their own carousel
     - [ ] Generalize code to obtain the elements based on which list it was clicked from
     - [ ] Languages
