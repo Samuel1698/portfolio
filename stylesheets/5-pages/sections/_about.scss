@@ -9,7 +9,7 @@ section.about {
   overflow: hidden;
   // Top offset
   position: relative;
-  top: var(--offset); 
+  top: calc(var(--offset) + 1px); // 1px to prevent safari rendering errors 
   margin-bottom: var(--offset);
   // End of offset
   img {

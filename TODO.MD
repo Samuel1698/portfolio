@@ -180,10 +180,10 @@
   - [x] 'Features' in Spanish overflows
   - [x] Portfolio highlight features in same style as pinkwug
   - [x] Link to the website somewhere in pinkwug
-- [ ] Safari
+- [x] Safari
   - [x] Menu not working on safari
   - [x] Detect language preference and automatically switch to es. domain
-  - [ ] About-Work border 1px too high
+  - [x] About-Work border 1px too high
 <!-- Deploying new theme -->
 - [x] Optimize new images
 - [x] Sync changes in the .html files across both folders
