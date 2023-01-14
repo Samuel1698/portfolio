@@ -184,6 +184,7 @@
   - [x] Recent work hidden elements
   - [x] Contact button
   - [x] New work item portfolio image 
+  - [ ] Infinite scroll on mobile?
 - [x] Contact page
   - [x] Form
   - [x] Inputs & Caret image

@@ -8,7 +8,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  // Overflow: hidden of any kind will break the 'sticky' return to top button
+  overflow: hidden; // Required to avoid infinite scroll on mobile
 }
 body.no-scroll {
   position: fixed;
