@@ -159,7 +159,7 @@
 - [x] Footer 
   - [x] change language button highlight color
   - [x] Small section svg color change
-- [ ] Index page
+- [x] Index page
   - [x] Bigger column section
   - [x] overlay close button needs to be bigger and out of the picture
     - [x] Restyle carousel
@@ -177,7 +177,7 @@
   - [x] Get rid of background: url in css
   - [x] Recent work hidden elements
   - [x] Contact button
-  - [ ] New work item portfolio image 
+  - [x] New work item portfolio image 
 - [x] Contact page
   - [x] Form
   - [x] Inputs & Caret image
@@ -199,6 +199,6 @@
   - [ ] Navigational Buttons
 <!-- Deploying new theme -->
 - [x] Optimize new images
-- [ ] Sync changes in the .html files across both folders
-- [ ] application.css and all .min.js files
+- [x] Sync changes in the .html files across both folders
+- [x] application.css and all .min.js files
 
