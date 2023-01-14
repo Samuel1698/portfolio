@@ -4,6 +4,39 @@ const overlay = document.querySelector("header .overlay");
 const buttons = document.querySelectorAll("button.category");
 const body = document.querySelector("body");
 
+function toggleVisibility(e){
+  menu.classList.toggle("visible");
+  overlay.classList.toggle("visible");
+  toggleButtons[0].classList.toggle("visible");
+  toggleButtons[1].classList.toggle("visible");
+  body.classList.toggle("no-scroll");
+  // Aria expanded toggle
+  menu.setAttribute("aria-expanded", menu.getAttribute("aria-expanded") === "true" ? "false" : "true");
+  // Prevents Safari bullshit
+  e.preventDefault();
+  e.stopPropagation();
+  // ------------------------------------
+}
+toggleButtons[0].addEventListener("click", function(e){
+  toggleVisibility(e);
+});
+toggleButtons[1].addEventListener("click", function(e){
+  toggleVisibility(e);
+});
+overlay.addEventListener("click", function(e){
+  toggleVisibility(e);
+});
+
+toggleButtons[0].addEventListener("touchend", function(e){
+  toggleVisibility(e);
+});
+toggleButtons[1].addEventListener("touchend", function(e){
+  toggleVisibility(e);
+});
+overlay.addEventListener("touchend", function(e){
+  toggleVisibility(e);
+});
+
 // Update the variable --collapsedHeight
 // This is subtracted from the viewHeight and 58px to get the total viewable menu
 function updateMenuHeight(elm, called){
@@ -17,64 +50,13 @@ function updateMenuHeight(elm, called){
   menu.style.setProperty("--collapsedHeight", totalHeight + "px");
 }
 
-function toggleVisibility(){
-  menu.classList.toggle("visible");
-  overlay.classList.toggle("visible");
-  toggleButtons[0].classList.toggle("visible");
-  toggleButtons[1].classList.toggle("visible");
-  body.classList.toggle("no-scroll");
-  // Aria expanded toggle
-  menu.setAttribute("aria-expanded", menu.getAttribute("aria-expanded") === "true" ? "false" : "true");
-}
-toggleButtons[0].addEventListener("click", function(e){
-    // Prevents Safari bullshit
-  e.preventDefault();
-  e.stopPropagation();
-  // ------------------------------------
-  toggleVisibility();
-});
-toggleButtons[1].addEventListener("click", function(e){
-    // Prevents Safari bullshit
-  e.preventDefault();
-  e.stopPropagation();
-  // ------------------------------------
-  toggleVisibility();
-});
-overlay.addEventListener("click", function(e){
-    // Prevents Safari bullshit
-  e.preventDefault();
-  e.stopPropagation();
-  // ------------------------------------
-  toggleVisibility();
-});
-
-toggleButtons[0].addEventListener("touchend", function(e){
-    // Prevents Safari bullshit
-  e.preventDefault();
-  e.stopPropagation();
-  // ------------------------------------
-  toggleVisibility();
-});
-toggleButtons[1].addEventListener("touchend", function(e){
-    // Prevents Safari bullshit
-  e.preventDefault();
-  e.stopPropagation();
-  // ------------------------------------
-  toggleVisibility();
-});
-overlay.addEventListener("touchend", function(e){
-    // Prevents Safari bullshit
-  e.preventDefault();
-  e.stopPropagation();
-  // ------------------------------------
-  toggleVisibility();
-});
-
 // Default category values
 let totalHeight = 0;
 // Category collapse
 for (let i=0; i < buttons.length; i++){
-  buttons[i].addEventListener("click", function(){
+  buttons[i].addEventListener("click", function(e){
+    e.preventDefault();
+    e.stopPropagation();
     let sub = buttons[i].nextElementSibling;
     updateMenuHeight(sub, "before");
     let svg = buttons[i].querySelector("svg");
