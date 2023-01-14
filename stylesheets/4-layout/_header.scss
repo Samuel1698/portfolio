@@ -209,6 +209,7 @@ header {
     }
     div.overlay {
       position: fixed;
+      transition: all 250ms ease-in-out;
       &.visible {
         top: 0;
         bottom: 0;

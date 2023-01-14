@@ -12,10 +12,6 @@ function toggleVisibility(){
   body.classList.toggle("no-scroll");
   // Aria expanded toggle
   menu.setAttribute("aria-expanded", menu.getAttribute("aria-expanded") === "true" ? "false" : "true");
-  // Update a style to force safari to update the menu's styles
-  // setTimeout(() => {
-    body.style.setProperty("--fuckSafari", "0");
-  // }, 200);
 }
 toggleButtons[0].addEventListener("click", toggleVisibility);
 toggleButtons[1].addEventListener("click", toggleVisibility);

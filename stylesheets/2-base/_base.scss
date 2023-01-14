@@ -9,7 +9,6 @@ body {
   flex-direction: column;
   width: 100%;
   overflow: hidden; // Required to avoid infinite scroll on mobile
-  margin-bottom: var(--fuckSafari);
 }
 body.no-scroll {
   position: fixed;
