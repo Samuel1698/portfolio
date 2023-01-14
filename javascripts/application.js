@@ -1,10 +1,10 @@
 import "./_header";
 import "./_footerDropdown.js";
 
-windows.onload = function(){
+document.onload = function(){
   var host = window.location.host
   var subdomain = host.split('.')[0]
   if (/^es\b/.test(navigator.language) && subdomain != "en"){
-    window.location.href = "https://es.samuelgmunoz.com";
+    window.location.href = "https://es." + window.location.hostname;
   }
-}
+};
