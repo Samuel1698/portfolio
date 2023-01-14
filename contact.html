@@ -24,6 +24,18 @@
     content="If you would like to get in touch with me, you can use the contact form on this page to send me a message. I'll be happy to hear from you, and I'll get back to you as soon as possible.">
   <title>Contact Me</title>
 
+  <script>
+    onDOMContentLoaded = () => {
+      var currentUrl = new URL(window.location.href);
+      var subdomain = currentUrl.host.split('.')[0]
+      if (/^es\b/.test(navigator.language)){
+        // check if it's already one of my subdomains that I don't wish to switch
+        if (subdomain != "es" || subdomain != "en" || subdomain != "beta")
+          window.location.href = "https://es." + currentUrl.hostname + currentUrl.pathname + currentUrl.search;
+      }
+    };
+  </script>
+
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">

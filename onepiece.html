@@ -23,6 +23,18 @@
     content="OnePieceFights is a web application that allows users to predict the outcomes of battles between characters from the popular manga series One Piece. With a suggestion box and an admin dashboard, OnePieceFights is the ultimate destination for fans to see who comes out on top in the world of One Piece.">
   <title>One Piece</title>
 
+  <script>
+    onDOMContentLoaded = () => {
+      var currentUrl = new URL(window.location.href);
+      var subdomain = currentUrl.host.split('.')[0]
+      if (/^es\b/.test(navigator.language)){
+        // check if it's already one of my subdomains that I don't wish to switch
+        if (subdomain != "es" || subdomain != "en" || subdomain != "beta")
+          window.location.href = "https://es." + currentUrl.hostname + currentUrl.pathname + currentUrl.search;
+      }
+    };
+  </script>
+
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">

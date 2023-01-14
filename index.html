@@ -23,6 +23,16 @@
     content="Welcome to my portfolio website! Here, you can explore a selection of my work and learn more about my skills, experience, and accomplishments. Whether you're looking for a specific project or just want to browse my portfolio, I hope you find this site useful and informative.">
   <title>Samuel G. Muñoz | FullStack Developer</title>
 
+  <script>
+    onDOMContentLoaded = () => {
+      var currentUrl = new URL(window.location.href);
+      var subdomain = currentUrl.host.split('.')[0]
+      if (/^es\b/.test(navigator.language)){
+        if (subdomain != "es" || subdomain != "en" || subdomain != "beta")
+          window.location.href = "https://es." + currentUrl.hostname + currentUrl.pathname + currentUrl.search;
+      }
+    };
+  </script>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
