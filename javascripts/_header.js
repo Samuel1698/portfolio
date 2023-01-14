@@ -4,35 +4,24 @@ const overlay = document.querySelector("header .overlay");
 const buttons = document.querySelectorAll("header button.category");
 const body = document.querySelector("body");
 
-function toggleVisibility(e){
-  e.preventDefault();
-  e.stopPropagation();
-  setTimeout(() => {
-    menu.classList.toggle("visible");
-    overlay.classList.toggle("visible");
-    toggleButtons[0].classList.toggle("visible");
-    toggleButtons[1].classList.toggle("visible");
-    body.classList.toggle("no-scroll");
-    // Aria expanded toggle
-    menu.setAttribute("aria-expanded", menu.getAttribute("aria-expanded") === "true" ? "false" : "true");
-  }, 100);
+function toggleVisibility(){
+  menu.classList.toggle("visible");
+  overlay.classList.toggle("visible");
+  toggleButtons[0].classList.toggle("visible");
+  toggleButtons[1].classList.toggle("visible");
+  body.classList.toggle("no-scroll");
+  // Aria expanded toggle
+  menu.setAttribute("aria-expanded", menu.getAttribute("aria-expanded") === "true" ? "false" : "true");
+  // Update a style to force safari to update the menu's styles
+  body.style.marginBottom = "0";
 }
-toggleButtons[0].addEventListener("click", function(e){
-  toggleVisibility(e);
-});
-toggleButtons[1].addEventListener("click", function(e){
-  toggleVisibility(e);
-});
-overlay.addEventListener("click", function(e){
-  toggleVisibility(e);
-});
+toggleButtons[0].addEventListener("click", toggleVisibility);
+toggleButtons[1].addEventListener("click", toggleVisibility);
+overlay.addEventListener("click", toggleVisibility);
 
-function touchEnd(event) {
-  toggleVisibility(event);
-}
-toggleButtons[0].addEventListener("touchend", touchEnd, false);
-toggleButtons[1].addEventListener("touchend", touchEnd, false);
-overlay.addEventListener("touchend", touchEnd, false);
+toggleButtons[0].addEventListener("touchend", toggleVisibility, false);
+toggleButtons[1].addEventListener("touchend", toggleVisibility, false);
+overlay.addEventListener("touchend", toggleVisibility, false);
 
 // Update the variable --collapsedHeight
 // This is subtracted from the viewHeight and 58px to get the total viewable menu
