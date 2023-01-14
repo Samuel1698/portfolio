@@ -162,18 +162,23 @@
 - [x] Index page
   - [x] Bigger column section
   - [x] overlay close button needs to be bigger and out of the picture
-    - [x] Restyle carousel
-      - [x] Overlay
-      - [x] h1 sizes on bigger screens
-      - [x] General Responsiveness: Use columns as container
-      - [x] Progress bar visual indicator + Numbers. Ex: 4 of 6
-        - [x] Assign first 'x' value depending on LI clicked
-      - [x] 'Verified by Noble Desktop' figcaption
-      - [x] Link to noble desktop on click or in description
-      - [x] Remove overlay click closing
-      - [x] Mobile buttons closer to each other
-      - [x] Use data-* attribute to change the description element
-    - [x] Solve bug with first image
+  - [x] Restyle carousel
+    - [x] Overlay
+    - [x] h1 sizes on bigger screens
+    - [x] General Responsiveness: Use columns as container
+    - [x] Progress bar visual indicator + Numbers. Ex: 4 of 6
+      - [x] Assign first 'x' value depending on LI clicked
+    - [x] 'Verified by Noble Desktop' figcaption
+    - [x] Link to noble desktop on click or in description
+    - [x] Remove overlay click closing
+    - [x] Mobile buttons closer to each other
+    - [x] Use data-* attribute to change the description element
+  - [ ] Make other columns their own carousel
+    - [ ] Generalize code to obtain the elements based on which list it was clicked from
+    - [ ] Languages
+    - [ ] Skills
+    - [ ] Visual indicator that everything can be clicked
+  - [x] Solve bug with first image
   - [x] Get rid of background: url in css
   - [x] Recent work hidden elements
   - [x] Contact button
