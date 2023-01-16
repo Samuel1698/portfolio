@@ -180,6 +180,16 @@
   - [x] 'Features' in Spanish overflows
   - [x] Portfolio highlight features in same style as pinkwug
   - [x] Link to the website somewhere in pinkwug
+- [ ] Projects page
+  - [ ] Better sizing on desktop view
+  - [ ] No 'browser' mini window
+  - [ ] Color palette instead of picture
+  - [ ] Indicator of project type
+    - [ ] Open source
+    - [ ] Own site
+    - [ ] Client
+    - [ ] WIP
+    - [ ] Colored lines next to the project?
 - [x] Safari
   - [x] Menu not working on safari
   - [x] Detect language preference and automatically switch to es. domain
@@ -189,5 +199,5 @@
 - [x] Sync changes in the .html files across both folders
 - [x] application.css and all .min.js files
 - [x] Title of project in showcase page
-- [ ] Make sure all skip to content have appropriate links to their respective #main
+- [x] Make sure all skip to content have appropriate links to their respective #main
 - [ ] Jump to top on footer
