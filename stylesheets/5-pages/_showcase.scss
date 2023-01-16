@@ -117,7 +117,7 @@ $border: 3px solid map.get(v.$lotion-palette, action);
           content: "";
           border-bottom: $border;
           position: absolute;
-          top: 50%;
+          top: calc(50% - 3px);
           left: -1.9rem;
           width: 22px;
         }

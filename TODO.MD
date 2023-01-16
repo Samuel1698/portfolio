@@ -188,4 +188,6 @@
 - [x] Optimize new images
 - [x] Sync changes in the .html files across both folders
 - [x] application.css and all .min.js files
+- [x] Title of project in showcase page
 - [ ] Make sure all skip to content have appropriate links to their respective #main
+- [ ] Jump to top on footer
