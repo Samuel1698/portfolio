@@ -12,6 +12,7 @@
   // 31st Color Palette
   --lotion: #FAFAFA;
   --japaneseIndigo: #23434F;
+  --policeBlue: #3C5667;
   --slateGrey: #6D7C8B;
   --platinum: #DFE4E5;
   --fireOpal: #EE5555;
@@ -31,7 +32,7 @@ $navy-palette: (
 $lotion-palette: (
   background: var(--lotion),
   bold: var(--japaneseIndigo),
-  text: var(--slateGrey),
+  text: var(--policeBlue),
   action: var(--slateGrey),
   diminished: var(--platinum),
   highlight: var(--fireOpal)
