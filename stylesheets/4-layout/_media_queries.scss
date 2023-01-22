@@ -314,26 +314,4 @@ main section.about {
 // Rules for landscape mobile devices
 // ------------------------------------------------------------------------
 // @media screen and (orientation: landscape) {
-//   @media (min-width: v.$small) {
-//     :root {
-//       --carousel-size: 42vw;
-//     }
-//   }
-//   main .columns .overlay.active button.arrow {
-//     position: relative;
-//     top: initial;
-//     transform: initial;
-//     &.prev {
-//       left: 0;
-//       &.pressed {
-//         left: -2%;
-//       }
-//     }
-//     &.next {
-//       left: 0;
-//       &.pressed {
-//         left: 2%;
-//       }
-//     }
-//   }
 // }

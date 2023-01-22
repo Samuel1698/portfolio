@@ -5,6 +5,7 @@
 - [ ] Work In Project items
   - [x] One Piece Fights
   - [ ] Date Ideas
+  - [ ] Miguel Garbage Removal
 <!-- Work Items -->
 - [x] Page template
 - [x] Explanation of technologies used, purpose of the website and relevant info
@@ -104,8 +105,6 @@
 - [x] 408 (request timeout)
 - [x] 410 (gone)
 - [x] 500 (server error)
-<!-- Bugs -->
-- [ ] Hover over work items not working on safari
 <!-- Deployment -->
 - [x] Optimize images
   - [x] Logo
@@ -162,8 +161,6 @@
   - [x] Form
   - [x] Inputs & Caret image
   - [x] Email button
-  - [ ] Pesos
-  - [ ] Contact through phone
 - [ ] Certificates
   - [x] WIP 
   - [ ] New layout
@@ -201,3 +198,4 @@
 - [x] Title of project in showcase page
 - [x] Make sure all skip to content have appropriate links to their respective #main
 - [ ] Jump to top on footer
+- [ ] New mockup for og meta tags
