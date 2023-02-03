@@ -25,8 +25,8 @@ for (let i = 0; i < expand.length; i++) {
 const pinkwugListener = function(e) {
   window.location = "/pinkwug.html";
 }
-const portfolioListener = function(e) {
-  window.location = "/portfolio.html";
+const miguelListener = function(e) {
+  window.location = "/miguelgarbageremoval.html";
 }
 document.querySelector(".pinkwug .hidden").addEventListener("click", pinkwugListener);
-document.querySelector(".portfolio .hidden").addEventListener("click", portfolioListener);
+document.querySelector(".miguel .hidden").addEventListener("click", miguelListener);

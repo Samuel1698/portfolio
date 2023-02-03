@@ -6,8 +6,8 @@ document
   .querySelector(".pinkwug .hidden")
   .removeEventListener("click", pinkwugListener);
 document
-  .querySelector(".portfolio .hidden")
-  .removeEventListener("click", portfolioListener);
+  .querySelector(".miguel .hidden")
+  .removeEventListener("click", miguelListener);
 
 window.addEventListener("load", () => {
   var expand = document.querySelectorAll(".bar .expand");
